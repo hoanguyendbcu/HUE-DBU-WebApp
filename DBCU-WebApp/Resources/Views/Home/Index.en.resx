@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="AccidentsVictims" xml:space="preserve">
+    <value>Accidents &amp; Victims</value>
+  </data>
+  <data name="CHAComment_Land_Use" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CHADescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CHAID" xml:space="preserve">
+    <value>CHA ID</value>
+  </data>
+  <data name="CHAName" xml:space="preserve">
+    <value>CHA Name / Internal ID</value>
+  </data>
+  <data name="CHASlopee" xml:space="preserve">
+    <value>Slopee</value>
+  </data>
+  <data name="CHASoilCondition" xml:space="preserve">
+    <value>Soil Condition</value>
+  </data>
+  <data name="CHASoilType" xml:space="preserve">
+    <value>Soil Type</value>
+  </data>
+  <data name="CHAStartDate" xml:space="preserve">
+    <value>Established Date</value>
+  </data>
+  <data name="CHATypeArea" xml:space="preserve">
+    <value>Area type</value>
+  </data>
+  <data name="CHAVegetation" xml:space="preserve">
+    <value>Vegetation</value>
+  </data>
+  <data name="CHAVegetationDensity" xml:space="preserve">
+    <value>Vegetation density</value>
+  </data>
+  <data name="ClcAreasize" xml:space="preserve">
+    <value>Area size</value>
+  </data>
+  <data name="ClcDateIdentification" xml:space="preserve">
+    <value>CHA Identification date</value>
+  </data>
+  <data name="ClcEnddate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="ClcInformation" xml:space="preserve">
+    <value>Detail information</value>
+  </data>
+  <data name="ClcLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ClcLr_ID" xml:space="preserve">
+    <value>Task ID</value>
+  </data>
+  <data name="ClcLr_Name" xml:space="preserve">
+    <value>Clc name/ Internal ID</value>
+  </data>
+  <data name="ClcReporting_org_name" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="ClcReporting_team" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="ClcStartdate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="ClcStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Clearance" xml:space="preserve">
+    <value>Clearance</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="CTD" xml:space="preserve">
+    <value>Quang Binh Red Cross Society</value>
+  </data>
+  <data name="DataAndFigures" xml:space="preserve">
+    <value>Data &amp; Figures</value>
+  </data>
+  <data name="Department of State" xml:space="preserve">
+    <value>Department of State DoS</value>
+  </data>
+  <data name="Donors" xml:space="preserve">
+    <value>Donors</value>
+  </data>
+  <data name="GoMore" xml:space="preserve">
+    <value>Go More...</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="KOICA" xml:space="preserve">
+    <value>KOICA</value>
+  </data>
+  <data name="LabelCLC" xml:space="preserve">
+    <value>Mission Clearance</value>
+  </data>
+  <data name="LabelEOD" xml:space="preserve">
+    <value>Mission EOD</value>
+  </data>
+  <data name="LabelNTS" xml:space="preserve">
+    <value>Mission NTS</value>
+  </data>
+  <data name="LabelTS" xml:space="preserve">
+    <value>Mission TS</value>
+  </data>
+  <data name="lblClearanceQB" xml:space="preserve">
+    <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+  </data>
+  <data name="lblHeroTop1" xml:space="preserve">
+    <value>If you find a Bomb suspicious object, Call the hotline number at 18001741</value>
+  </data>
+  <data name="lblHeroTop2" xml:space="preserve">
+    <value>Database and coordination Unit of Mine Action in Quang Binh Province</value>
+  </data>
+  <data name="lblMineActionQB" xml:space="preserve">
+    <value>Post-War Clearance Efforts to Release Land</value>
+  </data>
+  <data name="MAG" xml:space="preserve">
+    <value>MAG</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="NPA" xml:space="preserve">
+    <value>NPA</value>
+  </data>
+  <data name="OperationPlan" xml:space="preserve">
+    <value>Operation Plan</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="PostClearanceDevelopment" xml:space="preserve">
+    <value>Post Cleared Development</value>
+  </data>
+  <data name="PTVN" xml:space="preserve">
+    <value>PTVN</value>
+  </data>
+  <data name="QBDOFA" xml:space="preserve">
+    <value>Department of Foreign Affairs of Quang Binh</value>
+  </data>
+  <data name="QBPPM" xml:space="preserve">
+    <value>Military Command of Quang Binh</value>
+  </data>
+  <data name="RiskEducation" xml:space="preserve">
+    <value>Risk Education</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>History of overcoming UXO</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>Number of UXO that are safely</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>In the period 2016-2020:</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>cleared, in which:</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Military:</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>UXO was found and destroyed</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>MAG's site clearance chart</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Surveyed CHA area</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>The total Area of land released</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>Number of EOD tasks completed</value>
+  </data>
+  <data name="Survey" xml:space="preserve">
+    <value>Survey</value>
+  </data>
+  <data name="tabs1" xml:space="preserve">
+    <value>According to the definition of IMAS (2013), this activity refers to the collection and analysis of data, without the use of technical interventions or using appropriate technical interventions, about the presence, type, distribution and surrounding environment of mine/ERW contamination, in order to define better where mine/ERW contamination is present, and where it is not, and to support land release prioritisation and decision-making processes through the provision of evidence.</value>
+  </data>
+  <data name="tabs1s" xml:space="preserve">
+    <value>Survey activity includes non-technical and technical survey.</value>
+  </data>
+  <data name="tabs2" xml:space="preserve">
+    <value>In the context of mine action, the term “Clearance” refers to tasks or actions to ensure the removal and/or the destruction of all mine and ERW hazards from a specified area to a specified depth. In Quang Tri Province, beside the “static clearance” of a particular area size, a lot of mobile explosive ordnance disposal activities (EOD) have been conducted to immediately remove and destroyed ERW found on the ground and reported by the local people.</value>
+  </data>
+  <data name="tabs2s" xml:space="preserve">
+    <value>According to the definition of IMAS (2013)</value>
+  </data>
+  <data name="tabs3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabs3s" xml:space="preserve">
+    <value>Accidents and Victims</value>
+  </data>
+  <data name="tabs4" xml:space="preserve">
+    <value>Mine Risk Education (MRE) is activities which seek to reduce the risk of injury from mines/ERW by raising awareness of men, women, and children in accordance with their different vulnerabilities, roles and needs, and promoting behavioural change including public information dissemination, education and training, and community mine action liaison…</value>
+  </data>
+  <data name="tabs4s" xml:space="preserve">
+    <value>According to the definition of IMAS (2009)</value>
+  </data>
+  <data name="tabs5" xml:space="preserve">
+    <value>Victims Assistance / Survivor Assistance refers to all aid, relief, comfort and support provided to victims (including survivors) with the purpose of reducing the immediate and long-term medical and psychological implications of their trauma.</value>
+  </data>
+  <data name="tabs5s" xml:space="preserve">
+    <value>According to the definition of IMAS (2004)</value>
+  </data>
+  <data name="tabs6" xml:space="preserve">
+    <value>Post-clearance development plays an important role in improving the socio-economic situation, strongly concerned by the local people as well as local authorities, and has contributed to the effectiveness of “clearance” in a specified area. Organizations such as Quang Binh Military Command, KOICA, MAG, PTVN… … have supported in building up resettlement villages and other social welfare projects in some particular “cleared lands”.</value>
+  </data>
+  <data name="tabs6s" xml:space="preserve">
+    <value>Post-clearance development plays an important</value>
+  </data>
+  <data name="UNDP" xml:space="preserve">
+    <value>UNDP</value>
+  </data>
+  <data name="VictimsAssistance" xml:space="preserve">
+    <value>Victims Assistance</value>
+  </data>
+  <data name="VNMAC" xml:space="preserve">
+    <value>VNMAC</value>
+  </data>
+</root>

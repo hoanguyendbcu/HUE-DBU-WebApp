@@ -1,0 +1,158 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@{ ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Document"].Value; }
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["Library"]</li>
+            <li>@ViewLocalizer["Document"]</li>
+        </ol>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+
+<div class="container">
+    <div class="main-content-inner">
+            <!-- table success start -->
+            <div class="col-lg-12 col-md-5 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="title">@ViewLocalizer["DocumentTitle1"]</h4>
+                        <div class="single-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="text-uppercase bg-success">
+                                        <tr class="text-white">
+                                            <th class="text-center" width="5%">@ViewLocalizer["No"]</th>
+                                            <th width="57%">@ViewLocalizer["Title"]</th>
+                                            <th width="15%">@ViewLocalizer["Source"]</th>
+                                            <th width="13%">@ViewLocalizer["Format"]</th>
+                                            <th class="text-center" width="10%">@ViewLocalizer["Download"]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td  class="text-center" scope="row">1</td>
+                                            <td>@ViewLocalizer["Title11"]</td>
+                                            <td>@ViewLocalizer["Source11"]</td>
+                                            <td>@ViewLocalizer["Format11"]</td>
+                                            <td  class="text-center"><a href="~/document/Bao-cao-hien-trang-o-nhiem-bom-min-1.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- table success end -->
+            <!-- table success start -->
+            <div class="col-lg-12 col-md-5 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="title">@ViewLocalizer["DocumentTitle2"]</h4>
+                        <div class="single-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="text-uppercase bg-success">
+                                        <tr class="text-white">
+                                            <th class="text-center" width="5%">@ViewLocalizer["No"]</th>
+                                            <th width="57%">@ViewLocalizer["Title"]</th>
+                                            <th width="15%">@ViewLocalizer["Source"]</th>
+                                            <th width="13%">@ViewLocalizer["Format"]</th>
+                                            <th class="text-center" width="10%">@ViewLocalizer["Download"]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td  class="text-center" scope="row">1</td>
+                                            <td>@ViewLocalizer["Title21"]</td>
+                                            <td>@ViewLocalizer["Source21"]</td>
+                                            <td>@ViewLocalizer["Format21"]</td>
+                                            <td class="text-center" ><a href="~/document/ERW BOOK.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- table success end -->
+            <!-- table success start -->
+            <div class="col-lg-12 col-md-5 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="title">@ViewLocalizer["DocumentTitle3"]</h4>
+                        <div class="single-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="text-uppercase bg-success">
+                                        <tr class="text-white">
+                                            <th class="text-center" width="5%">@ViewLocalizer["No"]</th>
+                                            <th width="57%">@ViewLocalizer["Title"]</th>
+                                            <th width="15%">@ViewLocalizer["Source"]</th>
+                                            <th width="13%">@ViewLocalizer["Format"]</th>
+                                            <th class="text-center" width="10%">@ViewLocalizer["Download"]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td  class="text-center" scope="row">1</td>
+                                            <td>@ViewLocalizer["Title31"]</td>
+                                            <td>@ViewLocalizer["Source31"]</td>
+                                            <td>@ViewLocalizer["Format31"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-lop1.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td  class="text-center" scope="row">3</td>
+                                            <td>@ViewLocalizer["Title32"]</td>
+                                            <td>@ViewLocalizer["Source32"]</td>
+                                            <td>@ViewLocalizer["Format32"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-lop2.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="text-center" scope="row">4</td>
+                                            <td>@ViewLocalizer["Title33"]</td>
+                                            <td>@ViewLocalizer["Source33"]</td>
+                                            <td>@ViewLocalizer["Format33"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-lop3.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="text-center" scope="row">5</td>
+                                            <td>@ViewLocalizer["Title34"]</td>
+                                            <td>@ViewLocalizer["Source34"]</td>
+                                            <td>@ViewLocalizer["Format34"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-lop4.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="text-center" scope="row">6</td>
+                                            <td>@ViewLocalizer["Title35"]</td>
+                                            <td>@ViewLocalizer["Source35"]</td>
+                                            <td>@ViewLocalizer["Format35"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-lop5.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="text-center" scope="row">6</td>
+                                            <td>@ViewLocalizer["Title36"]</td>
+                                            <td>@ViewLocalizer["Source36"]</td>
+                                            <td>@ViewLocalizer["Format36"]</td>
+                                            <td  class="text-center"><a href="~/document/CRS-sachtichhop.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- table success end -->
+        </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@{ ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Video"].Value; }
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["Library"]</li>
+            <li>@ViewLocalizer["Video"]</li>
+        </ol>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+
+<div class="main-content container">
+    <div class="main-content-inner">
+        <div class="card-area">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mt-5">
+                    <div class="card card-bordered">
+                       
+                        <div class="card-body">
+                            <iframe width="470" height="315" src="https://www.youtube.com/embed/-vdBJzPp0oY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-5">
+                    <div class="card card-bordered">
+                       
+                        <div class="card-body">
+                            <iframe width="470" height="315" src="https://www.youtube.com/embed/jaG7M2fJmPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+</div>

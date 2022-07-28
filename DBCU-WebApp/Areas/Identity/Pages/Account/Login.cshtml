@@ -1,0 +1,104 @@
+﻿@page
+@model LoginModel
+
+@{
+    Layout = "/Views/Shared/Admin/_LoginLayout.cshtml";
+    ViewData["Title"] = "Log in";
+}
+
+<!-- login area start -->
+<div class="login-area">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <form id="account" method="post">
+                <div class="login-form-head">
+                    <h4>Log In</h4>
+                </div>
+                <div class="login-form-body">
+                    <div class="form-gp">
+                        @*<label asp-for="Input.Email"></label>*@
+                        User <input asp-for="Input.Email" class="form-control" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        @*<label>Email address</label>
+                        <input type="email" id="exampleInputEmail1">
+                        <i class="ti-email"></i>
+                        <div class="text-danger"></div>*@
+                    </div>
+                    <div class="form-gp">
+                        @*<label asp-for="Input.Password"></label>*@
+                        Password <input asp-for="Input.Password" class="form-control" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        @*<label>Password</label>
+        <input type="password" id="exampleInputPassword1">
+        <i class="ti-lock"></i>
+        <div class="text-danger"></div>*@
+                    </div>
+                    <div class="row mb-4 rmber-area">
+                        <div class="col-6">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <div class="submit-btn-area">
+                        <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h4>Use a local account to log in.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe">
+                            <input asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>*@
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

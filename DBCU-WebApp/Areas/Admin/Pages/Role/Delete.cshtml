@@ -1,0 +1,26 @@
+@page
+@model DBCU_WebApp.Areas.Admin.Pages.Role.DeleteModel
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{ ViewData["Title"] = "Xóa role";
+   ViewData["ActivePagePar"] = ManageNavPages.Administrator;
+    }
+
+<h1 class="h3 mb-1 text-gray-800">@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-6">
+        <p>Bạn có chăc chắn xóa Role <strong>@Model.Input.Name</strong> </p>
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Input.ID">
+            <input type="hidden" asp-for="isConfirmed">
+            <a class="btn btn-primary" asp-page="./Index">Danh sách</a>
+            <button type="submit" asp-page="./Delete" class="btn btn-danger">Xóa</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

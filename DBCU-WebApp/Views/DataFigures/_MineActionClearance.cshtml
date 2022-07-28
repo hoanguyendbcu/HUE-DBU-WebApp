@@ -1,0 +1,530 @@
+﻿@model IEnumerable<DBCU_WebApp.Models.DataFigures.UXOCategory>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+
+@{
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    int i = 1;
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid" id="data-mineactionclearance">
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Border Left Utilities -->
+        <div class="col-xl-12 col-md-12 mb-1">
+            @ViewLocalizer["lblIntrodution"]
+        </div>
+    </div>
+    <div class="row">
+        <!-- Border Left Utilities -->
+        <div class="col-lg-3  mt-1">
+            <label style="display: flex; align-items: center;" class="control-label">@ViewLocalizer["lblOrg"]</label>
+            <select style="margin: 0; flex-basis: 350px;" id="cboOrg" class="form-control select2bs4" asp-items="ViewBag.listOrganization"></select>
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+
+        <!-- Border Left Utilities -->
+        <div class="col-xl-8 col-md-8 mb-1">
+            <b>&nbsp;@ViewLocalizer["lblTitleCHAchart1"]</b>
+            <div id="CLCchartByYear"></div>
+        </div>
+        <!-- Border Left Utilities -->
+        <div class="col-xl-4 col-md-4 mb-1">
+            <b>&nbsp;@ViewLocalizer["lblUXOModelClearance"]</b>
+            <div class="single-table">
+                <div class="table-responsive">
+                    <table class="table-hover">
+                        <thead class="">
+                            <tr>
+                                <th style="width: 70%" scope="col">@ViewLocalizer["lblUXOModel"]</th>
+                                <th style="width: 30%" scope="col">@ViewLocalizer["lblUXOModelQty"]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.category)</td>
+                                        <th scope="row">@Html.DisplayFor(modelItem => item.qty)</th>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td></td>
+                                    <td scope="row"></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+
+                <!-- Border Left Utilities -->
+                <div class="col-xl-8 col-md-8 mb-1">
+                    <b>&nbsp;@ViewLocalizer["lblTitleCHAchart"]</b>
+                    <div id="CLCchartByDistrict"></div>
+                </div>
+                <!-- Border Left Utilities -->
+                <div class="col-xl-4 col-md-4 mb-1">
+                    @*<b>&nbsp;@ViewLocalizer["lblUXOModelClearanceCategory"]</b>*@
+
+                    <div id=""></div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row justify-content-center">
+                <div style="height:600px; width:1200px;" class="col-lg-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+<script>
+    $(document).ready(function () {
+        $('#cboOrg').change(function () {
+            loadDataMineActionClearance();
+        });
+
+    });
+
+    var json =  @Html.Raw(ViewData["DataCLCByYear"]);
+    var chartByYear = AmCharts.makeChart("CLCchartByYear", {
+        "type": "serial",
+        "addClassNames": true,
+        "theme": "light",
+        "autoMargins": false,
+        "marginLeft": 80,
+        "marginRight": 8,
+        "marginTop": 10,
+        "marginBottom": 26,
+        "balloon": {
+            "adjustBorderColor": false,
+            "horizontalPadding": 10,
+            "verticalPadding": 8,
+            "color": "#ffffff"
+        },
+
+        "dataProvider": json,
+        "startDuration": 1,
+        "graphs": [{
+            "id": "graph2",
+            "balloonText": "<span style='font-size:12px;'> @ViewLocalizer["lblYear"] - [[Year]]:<br><span style='font-size:20px;'>[[value]]</span></span>",
+            "bullet": "round",
+            "lineThickness": 3,
+            "bulletSize": 7,
+            "bulletBorderAlpha": 1,
+            "bulletColor": "#FFFFFF",
+            "lineColor": "#20AB02",
+            "useLineColorForBulletBorder": true,
+            "bulletBorderThickness": 3,
+            "fillAlphas": 0,
+            "lineAlpha": 1,
+            "title": "Year",
+            "labelText": "[[value]]",
+            "valueField": "Areasize",
+            "dashLengthField": "dashLengthLine"
+        }],
+        "categoryField": "Year",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "axisAlpha": 1000,
+            "tickLength": 0
+        },
+        "export": {
+            "enabled": false
+        }
+    });
+
+    var json =  @Html.Raw(ViewData["DataCLCByDistrict"]);
+    var chartByDistrict = AmCharts.makeChart("CLCchartByDistrict", {
+                "type": "serial",
+                "theme": "light",
+                "categoryField": "District",
+                "rotate": true,
+                "startDuration": 0,
+                "categoryAxis": {
+                    "gridPosition": "start",
+                    "position": "left"
+                },
+                "trendLines": [],
+                "graphs": [{
+                    "balloonText": " [[District]]:[[value]]",
+                    "fillAlphas": 1,
+                    "id": "AmGraph-1",
+                    "lineAlpha": 0.2,
+                    "title": "Areasize",
+                    "type": "column",
+                    "labelText": "[[value]]",
+                    "valueField": "Areasize",
+                    "fillColorsField": "Color"
+                }
+                ],
+                "guides": [],
+                "valueAxes": [{
+                    "id": "ValueAxis-1",
+                    "position": "top",
+                    "axisAlpha": 0
+                }],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [],
+                "dataProvider": json,
+                "export": {
+                    "enabled": false
+                }
+
+            });
+ 
+    function loadDataMineActionClearance() {
+        var Org = $('#cboOrg').val();
+        var param = {
+            'Org': Org
+        };
+
+        $.ajax({
+            url: 'ByMineActionClearance/Index',
+            type: 'get',
+            dataType: 'html',
+            data: param,
+            success: function (data) {
+                $("#data-mineactionclearance").html(data);
+                chartByYear.dataProvider = data;
+                chartByYear.validateNow();
+                chartByDistrict.dataProvider = data;
+                chartByDistrict.validateNow();             
+                loadDataMapMineClearance();
+                $('#cboOrg').val(Org);
+            }
+        });
+    }
+
+    function loadDataMapMineClearance() {
+        // TO MAKE THE MAP APPEAR YOU MUST
+        // ADD YOUR ACCESS TOKEN FROM
+        // https://account.mapbox.com
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG9hbmMxOTgxIiwiYSI6ImNram95YW9uYzB0M24yd3BlbXVkOWNmN3QifQ.Z681DzM2rasHXmZKEcyYbQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v11',
+            center: [106.619344, 17.457754],
+            zoom: 11
+        });
+
+        map.addControl(new mapboxgl.FullscreenControl());
+        map.addControl(new mapboxgl.NavigationControl());
+        map.resize();
+
+        var geojsonCLCCM =  @Html.Raw(ViewData["lstGeoCLCCM"]);
+        var geojsonCLCTM =  @Html.Raw(ViewData["lstGeoCLCTM"]);
+
+        let hoveredStateId = null;
+
+        map.on('load', function () {
+
+            // Add a data source containing GeoJSON data.
+
+            map.addSource('clcpolygonCM', {
+                'type': 'geojson',
+                'data': geojsonCLCCM
+            });
+
+            map.addSource('clcpolygonTM', {
+                'type': 'geojson',
+                'data': geojsonCLCTM
+            });
+
+            // Add a new layer to visualize the polygon - CHA.
+            map.addLayer({
+                'id': 'clcpolygonCM-layer',
+                'type': 'fill',
+                'source': 'clcpolygonCM', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#1AFF00', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'clcpolygonCM-outline',
+                'type': 'line',
+                'source': 'clcpolygonCM',
+                'layout': {
+                    'text-field': ['get', 'lr_id'],
+                    'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+                    'text-offset': [0, 0.6],
+                    'text-anchor': 'top'
+                },
+                'paint': {
+                    'line-color': '#0E8801',
+                    'line-width': 2
+                }
+            })
+
+            // Add a new layer to visualize the clcpolygonTM - .
+            map.addLayer({
+                'id': 'clcpolygonTM-layer',
+                'type': 'fill',
+                'source': 'clcpolygonTM', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#01E6E6', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'clcpolygonTM-outline',
+                'type': 'line',
+                'source': 'clcpolygonTM',
+                'layout': {
+                    'text-field': ['get', 'lr_id'],
+                    'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+                    'text-offset': [0, 0.6],
+                    'text-anchor': 'top'
+                },
+                'paint': {
+                    'line-color': '#018088',
+                    'line-width': 5
+                }
+            });
+
+            // Add a title.
+            map.addLayer({
+                'id': 'Title-CLC-CM',
+                'type': 'symbol',
+                'source': 'clcpolygonCM',
+                'layout': {
+                    'text-field': ['get', 'lr_name'],
+                    "text-size": 11,
+                    "text-transform": "uppercase",
+                    "text-letter-spacing": 0.05,
+                    "text-offset": [0, 1.5],
+                    'text-justify': 'auto',
+                    'text-anchor': 'top'
+                },
+                paint: {
+                    //"text-color": "#ffffff"
+                    "text-color": "#000",
+                    "text-halo-color": "#fff",
+                    "text-halo-width": 1
+                }
+            });
+
+            // Add a title.
+            map.addLayer({
+                'id': 'Title-CLC-TM',
+                'type': 'symbol',
+                'source': 'clcpolygonTM',
+                'layout': {
+                    'text-field': ['get', 'lr_name'],
+                    "text-size": 11,
+                    "text-transform": "uppercase",
+                    "text-letter-spacing": 0.05,
+                    "text-offset": [0, 1.5],
+                    'text-justify': 'auto',
+                    'text-anchor': 'top'
+                },
+                paint: {
+                    //"text-color": "#ffffff"
+                    "text-color": "#000",
+                    "text-halo-color": "#fff",
+                    "text-halo-width": 1
+                }
+            });
+
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            // When the user moves their mouse over the state-fill layer, we'll update the  --- CHA OPEN
+            // feature state for the feature under the mouse.
+            map.on('mousemove', 'clcpolygonCM-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'clcpolygonCM', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'clcpolygonCM', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'clcpolygonCM-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'clcpolygonCM', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            ///////////////////////////////
+            map.on('mousemove', 'clcpolygonTM-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'clcpolygonTM', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'clcpolygonTM', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'clcpolygonTM-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'clcpolygonTM', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            // When a click event occurs on a feature in the states layer, open a popup at the
+            // location of the click, with description HTML from its properties.
+            map.on('click', 'clcpolygonCM-layer', function (e) {
+
+
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+                        + '<table  class="table-bordered table">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_id + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["ClcLr_ID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["ClcReporting_org_name"]</td> <td class="text-center" >' + e.features[0].properties.reporting_org_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcReporting_team"]</td> <td class="text-center" >' + e.features[0].properties.reporting_team + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStartdate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcEnddate"]</td> <td class="text-center" >' + e.features[0].properties.enddate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });
+            map.on('click', 'clcpolygonTM-layer', function (e) {
+
+
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+                        + '<table  class="table-bordered table">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_id + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["ClcLr_ID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["ClcReporting_org_name"]</td> <td class="text-center" >' + e.features[0].properties.reporting_org_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcReporting_team"]</td> <td class="text-center" >' + e.features[0].properties.reporting_team + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStartdate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcEnddate"]</td> <td class="text-center" >' + e.features[0].properties.enddate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });
+        });
+
+        map.on('idle', () => {
+            // If these two layers were not added to the map, abort
+            if (!map.getLayer('Title-CLC')) {
+                return;
+            }
+
+            // Enumerate ids of the layers.
+            const toggleableLayerIds = ['Title-CLC'];
+
+            // Set up the corresponding toggle button for each layer.
+            for (const id of toggleableLayerIds) {
+                // Skip layers that already have a button set up.
+                if (document.getElementById(id)) {
+                    continue;
+                }
+
+                // Create a link.
+                const link = document.createElement('a');
+                link.id = id;
+                link.href = '#';
+                link.textContent = id;
+                link.className = 'active';
+
+                // Show or hide layer when the toggle is clicked.
+                link.onclick = function (e) {
+                    const clickedLayer = this.textContent;
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const visibility = map.getLayoutProperty(
+                        clickedLayer,
+                        'visibility'
+                    );
+
+                    // Toggle layer visibility by changing the layout object's visibility property.
+                    if (visibility === 'visible') {
+                        map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                        this.className = '';
+                    } else {
+                        this.className = 'active';
+                        map.setLayoutProperty(
+                            clickedLayer,
+                            'visibility',
+                            'visible'
+                        );
+                    }
+                };
+
+                const layers = document.getElementById('menu');
+                layers.appendChild(link);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DataAndFigures" xml:space="preserve">
+    <value>Data And Figures</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="lblButtonLeft1" xml:space="preserve">
+    <value>Dong Hoi City</value>
+  </data>
+  <data name="lblButtonLeft2" xml:space="preserve">
+    <value>Ba Don Town</value>
+  </data>
+  <data name="lblButtonLeft3" xml:space="preserve">
+    <value>Minh Hoa</value>
+  </data>
+  <data name="lblButtonLeft4" xml:space="preserve">
+    <value>Tuyen Hoa</value>
+  </data>
+  <data name="lblButtonLeft5" xml:space="preserve">
+    <value>Quang Trach</value>
+  </data>
+  <data name="lblButtonLeft6" xml:space="preserve">
+    <value>Bo Trach</value>
+  </data>
+  <data name="lblButtonLeft7" xml:space="preserve">
+    <value>Quang Ninh</value>
+  </data>
+  <data name="lblButtonLeft8" xml:space="preserve">
+    <value>Le Thuy</value>
+  </data>
+  <data name="lblContent1" xml:space="preserve">
+    <value>Quang Trach is a large district located in the North of Quang Binh province and stretching from 17042’ N to 17059’ N. The district has a coastline of about 35 km with a clean and beautiful environment in the communes of Quang Dong, Canh Duong, Quang Phu, and Quang Xuan. The National Highway 1A runs through the district from Ngang Pass to Gianh river with the length of 34km.</value>
+  </data>
+  <data name="lblContent2" xml:space="preserve">
+    <value>Administrative border:</value>
+  </data>
+  <data name="lblContent3" xml:space="preserve">
+    <value>The geographical coordinates of the mainland are:</value>
+  </data>
+  <data name="lblContent4" xml:space="preserve">
+    <value>Adjacent to Ha Tinh province to the North</value>
+  </data>
+  <data name="lblContent41" xml:space="preserve">
+    <value>Adjacent to Ba Don township to the South</value>
+  </data>
+  <data name="lblContent42" xml:space="preserve">
+    <value>Adjacent to Tuyen Hoa district to the West</value>
+  </data>
+  <data name="lblContent43" xml:space="preserve">
+    <value>Adjacent to East Sea to the East</value>
+  </data>
+  <data name="lblContent5" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="lblContentLeft1" xml:space="preserve">
+    <value>Area: </value>
+  </data>
+  <data name="lblContentLeft2" xml:space="preserve">
+    <value>Population:</value>
+  </data>
+  <data name="lblContentLeft21" xml:space="preserve">
+    <value>people</value>
+  </data>
+  <data name="lblContentLeft3" xml:space="preserve">
+    <value>Capital: Dong Hoi</value>
+  </data>
+  <data name="lblContentLeft4" xml:space="preserve">
+    <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
+  </data>
+  <data name="lblContentLeft5" xml:space="preserve">
+    <value>Administrative Division:</value>
+  </data>
+  <data name="lblContentLeft6" xml:space="preserve">
+    <value>Quang Phuong (district capital)</value>
+  </data>
+  <data name="lblContentLeft7" xml:space="preserve">
+    <value>17 communes: Canh Duong, Canh Hoa, Lien Truong, Phu Hoa, Quang Chau, Quang Dong, Quang Hop, Quang Hung, Quang Kim, Quang Luu, Quang Phu, Quang Phuong, Quang Tien, Quang Tung, Quang Thach, Quang Thanh , Quang Xuan.</value>
+  </data>
+  <data name="lblGenaeral" xml:space="preserve">
+    <value>General information</value>
+  </data>
+  <data name="lblImgCaption" xml:space="preserve">
+    <value>Vung Chua - Yen Island</value>
+  </data>
+  <data name="lblOtherAdministrative" xml:space="preserve">
+    <value>Other administrative units</value>
+  </data>
+  <data name="lblQuangBinhProvince" xml:space="preserve">
+    <value>Quang Binh Province</value>
+  </data>
+  <data name="lblQuangTrach" xml:space="preserve">
+    <value>Quang Trach District</value>
+  </data>
+  <data name="lblStatitictis" xml:space="preserve">
+    <value>Statistic after survey , clearance and risk education activities</value>
+  </data>
+  <data name="lblStatitictis1" xml:space="preserve">
+    <value>Area of released land</value>
+  </data>
+  <data name="lblStatitictis10" xml:space="preserve">
+    <value> MRE by child gender </value>
+  </data>
+  <data name="lblStatitictis11" xml:space="preserve">
+    <value> Gender</value>
+    <comment>s</comment>
+  </data>
+  <data name="lblStatitictis12" xml:space="preserve">
+    <value> Child gender </value>
+  </data>
+  <data name="lblStatitictis2" xml:space="preserve">
+    <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
+  </data>
+  <data name="lblStatitictis3" xml:space="preserve">
+    <value>Number of people that received Mine risk education</value>
+  </data>
+  <data name="lblStatitictis4" xml:space="preserve">
+    <value>Land released information since 2010</value>
+  </data>
+  <data name="lblStatitictis5" xml:space="preserve">
+    <value> Most 5 UXO Category</value>
+  </data>
+  <data name="lblStatitictis6" xml:space="preserve">
+    <value>Most 5 UXO Model</value>
+  </data>
+  <data name="lblStatitictis7" xml:space="preserve">
+    <value> UXO Category</value>
+  </data>
+  <data name="lblStatitictis8" xml:space="preserve">
+    <value> UXO Model</value>
+  </data>
+  <data name="lblStatitictis9" xml:space="preserve">
+    <value> MRE by gender</value>
+  </data>
+  <data name="lblUnit" xml:space="preserve">
+    <value>Unit (m2)</value>
+  </data>
+  <data name="QuangBinhProvince" xml:space="preserve">
+    <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>
+  </data>
+</root>

@@ -1,0 +1,70 @@
+@model DBCU_WebApp.Models.News
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{ ViewData["Title"] = "Detail news";
+                Layout = "_Layout";
+                ViewData["ActivePagePar"] = ManageNavPages.News;
+                ViewData["ActivePage"] = ManageNavPages.NewsIndex; }
+
+<div>
+    <h4>Detail news</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateUpdated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateUpdated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slug)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slug)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @* @Html.DisplayFor(model => model.Content) *@
+            @Html.Raw(Model.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+    </dl>
+</div>
+
+
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.NewsId">Edit</a> |
+    <a asp-action="Index">Back to list</a>
+</div>

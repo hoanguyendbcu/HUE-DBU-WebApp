@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@{
+    ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Introduction"].Value;
+}
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["Introduction"]</li>
+        </ol>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+            <div class="content col-xl-5 d-flex align-items-stretch">
+                <div class="content">
+                    <h3>@ViewLocalizer["Intro"]</h3>
+                    <p>@ViewLocalizer["lblIntro"]</p>
+                    <p>@ViewLocalizer["lblIntro1"]</p>
+
+                </div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-stretch">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <i class="bx bx-data"></i>
+                            <h4>@ViewLocalizer["lblDatabaseUnit"]</h4>
+                            <p>@ViewLocalizer["DatabaseUnit"]</p>
+
+                            <p></p>
+                        </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bx bx-repost"></i>
+                            <h4>@ViewLocalizer["lblCoordinationFunction"]</h4>
+                            <p>@ViewLocalizer["CoordinationFunction"]</p>
+                           
+                        </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bx bx-list-ol"></i>
+                            <h4>@ViewLocalizer["lblOrganizationalStructure"]</h4>
+                            <p><img src="~/images/About/@ViewLocalizer["OrganizationalStructure"]"/></p>
+                        </div>
+                        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bx bx-shield"></i>
+                            <h4>@ViewLocalizer["lblPolicyAndTerms"]</h4>
+                            <p>@ViewLocalizer["PolicyAndTerms"]</p>
+                            <p>@ViewLocalizer["PolicyAndTerms1"]</p>
+                        </div>
+                    </div>
+                </div><!-- End .content-->
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Section -->

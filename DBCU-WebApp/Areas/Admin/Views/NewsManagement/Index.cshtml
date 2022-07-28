@@ -1,0 +1,84 @@
+@model IEnumerable<DBCU_WebApp.Models.News>
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{
+    ViewData["Title"] = "Index";
+                Layout = "_Layout";
+    ViewData["ActivePagePar"] = ManageNavPages.News;
+    ViewData["ActivePage"] = ManageNavPages.NewsIndex; 
+    }
+
+<h1>List News</h1>
+
+<p>
+    <a asp-action="Create">Create News</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                Date create
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        <a title="View detail" asp-action="Details" asp-route-id="@item.NewsId">
+            <strong>@Html.DisplayFor(modelItem => item.Title)</strong>
+        </a>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Author)
+    </td>
+    <td>
+        @item.DateCreated.ToShortDateString()
+
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Published)
+    </td>
+    @*<td>
+            @Html.Raw(string.Join("<br>",
+                item.NewsCategories
+                .Select(p => p.Category)
+                .ToList()
+                .Select(c => $"<i>{c.Title}</i>")))
+        </td>*@
+
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.NewsId">Edit</a> |
+        <a asp-action="Delete" asp-route-id="@item.NewsId">Delete</a>
+    </td>
+</tr>}
+    </tbody>
+</table>
+
+
+@{ Func<int?, string> generateUrl = (int? _pagenumber) =>
+                {
+                    return Url.ActionLink("Index", null, new { page = _pagenumber });
+                };
+
+                var datapaging = new
+                {
+                    currentPage = ViewBag.pageNumber,
+                    countPages = ViewBag.totalPages,
+                    generateUrl = generateUrl
+                }; }
+<partial name="_Paging" model="@datapaging" />

@@ -1,0 +1,45 @@
+﻿@model DBCU_WebApp.Models.Organization
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["ActivePagePar"] = ManageNavPages.OperationPlan;
+    ViewData["ActivePage"] = ManageNavPages.OperationPlanOrg;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Organization</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrganizationCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrganizationCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrganizationName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrganizationName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OganizationNameEN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OganizationNameEN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentOrganization)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParentOrganization.OganizationNameEN)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

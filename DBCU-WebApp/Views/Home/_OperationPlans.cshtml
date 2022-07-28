@@ -1,0 +1,192 @@
+﻿@model IEnumerable<DBCU_WebApp.Models.OperationPlans>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@{
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    int i = 1;
+}
+
+<table id="example1" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">@ViewLocalizer["No"]</th>
+            <th scope="col">@ViewLocalizer["Org"]  <br /></th>
+            <th scope="col">@ViewLocalizer["Team"] <br /></th>
+            <th scope="col">@ViewLocalizer["activities"]</th>
+            <th scope="col">@ViewLocalizer["District"] <br /></th>
+            <th scope="col">@ViewLocalizer["Commune"] <br /></th>
+            <th scope="col">@ViewLocalizer["Village"] <br /></th>
+            <th scope="col">@ViewLocalizer["TaskID"]</th>
+            <th scope="col">@ViewLocalizer["Area"]</th>
+            <th scope="col">@ViewLocalizer["StartDate"]</th>
+            <th scope="col">@ViewLocalizer["EndDate"]</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@i</th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Organization.OrganizationName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Teams.OrganizationName)
+                    </td>
+                    <td>
+                        @if (lang == "vi")
+                        {
+                            @Html.DisplayFor(modelItem => item.ActivityMA.ActivityName)
+                        }
+                        else if (lang == "en")
+                        {
+                            @Html.DisplayFor(modelItem => item.ActivityMA.ActivityNameEN)
+                        }
+                    </td>
+                    <td>
+                        @if (lang == "vi")
+                        {
+                            @Html.DisplayFor(modelItem => item.District.Gazetteername)
+                        }
+                        else if (lang == "en")
+                        {
+                            @Html.DisplayFor(modelItem => item.District.Gazetteername_eng)
+                        }
+
+                    </td>
+                    <td>
+                        @if (lang == "vi")
+                        {
+                            @Html.DisplayFor(modelItem => item.Commune.Gazetteername)
+                        }
+                        else if (lang == "en")
+                        {
+                            @Html.DisplayFor(modelItem => item.Commune.Gazetteername_eng)
+                        }
+                    </td>
+                    <td>
+                        @if (lang == "vi")
+                        {
+                            @Html.DisplayFor(modelItem => item.Village.Gazetteername)
+                        }
+                        else if (lang == "en")
+                        {
+                            @Html.DisplayFor(modelItem => item.Village.Gazetteername_eng)
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaskID)
+                    </td>
+                    <td style="text-align:right;">
+                       
+                        @*@Html.DisplayFor(modelItem => string.Format("{0:n}", item.Areas))*@
+                        @Html.DisplayFor(modelItem => item.Areas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EndDate)
+                    </td>
+
+                </tr>
+                i++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="38">
+                    @if (lang == "vi")
+                    {
+
+                    }
+                    else if (lang == "en")
+                    {
+
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+ 
+<script>
+
+function loadDataMap() {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaG9hbmMxOTgxIiwiYSI6ImNram95YW9uYzB0M24yd3BlbXVkOWNmN3QifQ.Z681DzM2rasHXmZKEcyYbQ';
+
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/satellite-streets-v11',
+                center: [106.619344, 17.467754],
+                zoom: 10
+            });
+            map.addControl(new mapboxgl.FullscreenControl());
+             map.addControl(new mapboxgl.NavigationControl());
+    map.resize();
+
+            geojson =  @Html.Raw(ViewData["lstGeoOperationPlan"]);
+
+
+            // add markers to map
+            geojson.features.forEach(function (marker) {
+                // create a DOM element for the marker
+                var el = document.createElement('div');
+                el.className = 'marker';
+
+                if (marker.properties.org == 'NPA') {
+                    el.style.backgroundImage =
+                        'url(../images/icon/NPA.png)';
+                    el.style.width = '45px';
+                    el.style.height = '45px';
+                }
+                else if (marker.properties.org == 'PTVN') {
+                    el.style.backgroundImage =
+                        'url(../images/icon/PTVN.png)';
+                    el.style.width = '60px';
+                    el.style.height = '45px';
+                }
+                else if (marker.properties.org == 'MAG') {
+                    el.style.backgroundImage =
+                        'url(../images/icon/MAG.png)';
+                    el.style.width = '60px';
+                    el.style.height = '40px';
+                }
+
+                el.style.backgroundSize = '100%';
+
+                 //create the popup
+                var popup = new mapboxgl.Popup({ offset: 5 }).setHTML(
+                    //marker.properties.message
+                    '<table class="table table-bordered table-hover"> '
+                    + '<tr><th scope="col"> @ViewLocalizer["Org"]</th> <th>' + marker.properties.org + '</th> </tr>'
+                    + '<tr><td scope="col"> @ViewLocalizer["Team"] </td> <td>' + marker.properties.team + '</td></tr>'
+                    + '<tr><td scope="col"> @ViewLocalizer["activities"]</td> <td>' + marker.properties.activity + '</td></tr>'
+                    + '<tr><td scope="col"> @ViewLocalizer["Location"]</td> <td>' + marker.properties.location + '</td></tr>'
+                    + '<tr><td scope="col"> @ViewLocalizer["TaskID"]</td> <td>' + marker.properties.taskID + '</td></tr>'
+                    //+ '<tr><td scope="col">Ngày bắt đầu/startDate </td> <td>' + marker.properties.startDate + '</td></tr>'
+                    //+ '<tr><td scope="col">Ngày kết thúc/End Date </td> <td>' + marker.properties.endDate + '</td></tr>'
+
+                    + '</table>'
+                );  
+
+                //el.addEventListener('click', function () {
+                //    window.alert(marker.properties.message);
+                //});
+
+
+                // add marker to map
+                new mapboxgl.Marker(el)
+                    .setLngLat(marker.geometry.coordinates)
+                    .setPopup(popup)
+                    .addTo(map);
+            });
+        }
+
+</script>
+ 

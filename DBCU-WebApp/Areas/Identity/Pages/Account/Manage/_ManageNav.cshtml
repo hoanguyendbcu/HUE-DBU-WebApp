@@ -1,0 +1,55 @@
+﻿@using DBCU_WebApp.core
+
+<!-- sidebar menu area start -->
+<div class="sidebar-menu">
+    <div class="main-menu">
+        <div class="menu-inner">
+            <nav>
+                <ul class="metismenu" id="menu">
+                    <li class="@ManageNavPages.AccountManaGement(ViewContext)">
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Account</span></a>
+                        <ul class="collapse">
+                            <li class="nav-item @ManageNavPages.IndexNavClass(ViewContext)"><a class="nav-link" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index">Profile</a></li>
+                            <li class="nav-item  @ManageNavPages.EmailNavClass(ViewContext)"><a class="nav-link" id="email" asp-area="Identity" asp-page="/Account/Manage/Email">Email</a></li>
+                            <li class="nav-item @ManageNavPages.ChangePasswordNavClass(ViewContext)"><a class="nav-link " id="change-password" asp-area="Identity" asp-page="/Account/Manage/ChangePassword">Password</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="@ManageNavPages.Admin(ViewContext)">
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="ti-settings"></i><span>Administrator</span></a>
+                        <ul class="collapse">
+                            <li class="nav-item @ManageNavPages.RegisterClass(ViewContext)"><a class="nav-link" id="register" asp-area="Identity" asp-page="/Account/Manage/Register">Register User</a></li>
+                            @*<li class="nav-item"><a class="nav-link " id="setPassword" asp-page="./SetPassword">Set Password</a></li>*@
+
+                            <li class="nav-item @ManageNavPages.AdminRoles(ViewContext)"><a class="collapse-item" asp-page="/Role/Index" asp-area="Admin">Role Manager</a></li>
+                            <li class="nav-item @ManageNavPages.AdminAddRoles(ViewContext)"><a class="collapse-item" asp-page="/Role/User" asp-area="Admin">Add Role to User</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="@ManageNavPages.OperationPlans(ViewContext)">
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-cta-left"></i><span>Operation Plan</span></a>
+                        <ul class="collapse">
+                            <li class="nav-item @ManageNavPages.OperationPlanOrgClass(ViewContext)"><a asp-action="Index" asp-controller="Organizations" asp-area="Admin"><i class="ti-layout-tab-v"></i> <span>Organization - Team</span></a></li>
+                            <li class="nav-item @ManageNavPages.ActivityMAClass(ViewContext)"><a asp-action="Index" asp-controller="ActivityMAs" asp-area="Admin"><i class="ti-layout-list-thumb-alt"></i> <span>Activity</span></a></li>
+                            <li class="nav-item @ManageNavPages.OperationPlanWeekClasss(ViewContext)"><a asp-action="Index" asp-controller="OperationPlanWeeks" asp-area="Admin"><i class="ti-layout-list-post"></i> <span>Operation Plan Week</span></a></li>
+                            <li class="nav-item @ManageNavPages.OperationPlansClass(ViewContext)"><a asp-action="Index" asp-controller="OperationPlans" asp-area="Admin"><i class="ti-agenda"></i> <span>Operation Plan</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="@ManageNavPages.Newss(ViewContext)">
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-newspaper-o"></i><span>News</span></a>
+                        <ul class="collapse">
+                            <li class="nav-item @ManageNavPages.NewsCategoryClass(ViewContext)"><a class="collapse-item" asp-controller="Category" asp-area="Admin" asp-action="Index"><i class=""></i> Category News</a></li>
+                            <li class="nav-item @ManageNavPages.NewsIndexClass(ViewContext)"><a cclass="collapse-item" asp-controller="NewsManagement" asp-area="Admin" asp-action="Index"><i class=""></i>News</a></li>
+                            @*<li><a cclass="collapse-item" asp-controller="NewsManagement" asp-area="Admin" asp-action="Create"><i class=""></i>Add News</a></li>*@
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- sidebar menu area end -->

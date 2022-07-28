@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DBCU_WebApp.Models.OperationPlans>
+
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Week)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Org)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Team)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Activity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProvinceID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DistictID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CommuneID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VillageID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TaskID)
+                </th>
+                 
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndDate)
+                </th>
+                 
+                <th>
+                    @Html.DisplayNameFor(model => model.DateCreated)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OperationPlanWeek.Week) - @Html.DisplayFor(modelItem => item.OperationPlanWeek.Year)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Organization.OrganizationName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Teams.OrganizationName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ActivityMA.ActivityName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Province.Gazetteername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.District.Gazetteername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Commune.Gazetteername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Village.Gazetteername)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TaskID)
+                        </td>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDate)
+                        </td>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateCreated)
+                        </td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="38">
+                        Not found data
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+ 

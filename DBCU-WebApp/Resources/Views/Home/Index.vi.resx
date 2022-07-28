@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Giới thiệu</value>
+  </data>
+  <data name="AccidentsVictims" xml:space="preserve">
+    <value>Tai nạn &amp; Nạn nhân</value>
+  </data>
+  <data name="CHAComment_Land_Use" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="CHADescription" xml:space="preserve">
+    <value>Thông tin thêm</value>
+  </data>
+  <data name="CHAID" xml:space="preserve">
+    <value>CHA ID</value>
+  </data>
+  <data name="CHAName" xml:space="preserve">
+    <value>CHA Name / Mã nội bộ</value>
+  </data>
+  <data name="CHASlopee" xml:space="preserve">
+    <value>Độ dốc</value>
+  </data>
+  <data name="CHASoilCondition" xml:space="preserve">
+    <value>Loại hình địa chất</value>
+  </data>
+  <data name="CHASoilType" xml:space="preserve">
+    <value>Loại đất</value>
+  </data>
+  <data name="CHAStartDate" xml:space="preserve">
+    <value>Ngày thiết lập</value>
+  </data>
+  <data name="CHATypeArea" xml:space="preserve">
+    <value>Loại hình khu vực</value>
+  </data>
+  <data name="CHAVegetation" xml:space="preserve">
+    <value>Thảm thực vật</value>
+  </data>
+  <data name="CHAVegetationDensity" xml:space="preserve">
+    <value>Mật độ thảm thực vật</value>
+  </data>
+  <data name="ClcAreasize" xml:space="preserve">
+    <value>Diện tích(m2)</value>
+  </data>
+  <data name="ClcDateIdentification" xml:space="preserve">
+    <value>Ngày khẳng định CHA</value>
+  </data>
+  <data name="ClcEnddate" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="ClcInformation" xml:space="preserve">
+    <value>Thông tin chi tiết</value>
+  </data>
+  <data name="ClcLocation" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="ClcLr_ID" xml:space="preserve">
+    <value>Mã nhiệm vụ</value>
+  </data>
+  <data name="ClcLr_Name" xml:space="preserve">
+    <value>Clc name/ Mã nội bộ</value>
+  </data>
+  <data name="ClcReporting_org_name" xml:space="preserve">
+    <value>Tổ chức</value>
+  </data>
+  <data name="ClcReporting_team" xml:space="preserve">
+    <value>Đội</value>
+  </data>
+  <data name="ClcStartdate" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="ClcStatus" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Clearance" xml:space="preserve">
+    <value>Rà phá      </value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Liên hệ</value>
+  </data>
+  <data name="CTD" xml:space="preserve">
+    <value>Chữ thập đỏ Quảng Bình</value>
+  </data>
+  <data name="DataAndFigures" xml:space="preserve">
+    <value>Dữ liệu và số liệu</value>
+  </data>
+  <data name="Department of State" xml:space="preserve">
+    <value>Bộ ngoại giao Hoa Kỳ</value>
+  </data>
+  <data name="Donors" xml:space="preserve">
+    <value>Nhà tài trợ</value>
+  </data>
+  <data name="GoMore" xml:space="preserve">
+    <value>Xem thêm...</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="KOICA" xml:space="preserve">
+    <value>KOICA</value>
+  </data>
+  <data name="LabelCLC" xml:space="preserve">
+    <value>Hiện trường rà phá</value>
+  </data>
+  <data name="LabelEOD" xml:space="preserve">
+    <value>Nhiệm vụ EOD</value>
+  </data>
+  <data name="LabelNTS" xml:space="preserve">
+    <value>Nhiệm vụ NTS</value>
+  </data>
+  <data name="LabelTS" xml:space="preserve">
+    <value>Nhiệm vụ TS</value>
+  </data>
+  <data name="lblClearanceQB" xml:space="preserve">
+    <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+  </data>
+  <data name="lblHeroTop1" xml:space="preserve">
+    <value>Khi phát hiện bom mìn, hãy gọi 18001741</value>
+  </data>
+  <data name="lblHeroTop2" xml:space="preserve">
+    <value>Đơn vị Cơ sở dữ liệu và Điều phối hoạt động khắc phục hậu quả bom mìn tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblMineActionQB" xml:space="preserve">
+    <value>Nỗ lực rà phá bom mìn, giải phóng đất đai</value>
+  </data>
+  <data name="MAG" xml:space="preserve">
+    <value>MAG</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="NPA" xml:space="preserve">
+    <value>NPA</value>
+  </data>
+  <data name="OperationPlan" xml:space="preserve">
+    <value>Kế hoạch hoạt động</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="PostClearanceDevelopment" xml:space="preserve">
+    <value>Phát triển sau rà phá</value>
+  </data>
+  <data name="PTVN" xml:space="preserve">
+    <value>PTVN</value>
+  </data>
+  <data name="QBDOFA" xml:space="preserve">
+    <value>Sở ngoại vụ Quảng Bình</value>
+  </data>
+  <data name="QBPPM" xml:space="preserve">
+    <value>Bộ CHQS Tỉnh Quảng Bình</value>
+  </data>
+  <data name="RiskEducation" xml:space="preserve">
+    <value>Giáo dục      </value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Lịch sử khắc phục hậu quả bom mìn</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>Số vật nỗ được hủy nổ an toàn</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Trong khoảng 2016-2020:</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>được rà phá, trong đó:</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>BCH QS tỉnh</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>bom mìn vật nổ được tìm thấy và phá hủy</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Biểu đồ rà phá hiện trường của MAG</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Diện tích CHA đã khảo sát</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>Tổng diện tích đất được giải phóng</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>Số nhiệm vụ EOD đã hoàn thành</value>
+  </data>
+  <data name="Survey" xml:space="preserve">
+    <value>Khảo sát</value>
+  </data>
+  <data name="tabs1" xml:space="preserve">
+    <value>Theo định nghĩa của IMAS (2013), hoạt động này là sự tập hợp và phân tích dữ liệu (không sử dụng can thiệp kỹ thuật hoặc có sử dụng những can thiệp kỹ thuật thích hợp) về sự hiện diện, chủng loại, phân bổ và môi trường xung quanh của một khu vực ô nhiễm bom mìn vật nổ, để xác định tốt hơn vị trí có sự hiện diện của ô nhiễm bom mìn vật nổ và những vị trí không ô nhiễm, nhằm hỗ trợ việc xác định ưu tiên giải phóng đất và những quy trình ra quyết định thông qua cung cấp các bằng chứng.</value>
+  </data>
+  <data name="tabs1s" xml:space="preserve">
+    <value>Hoạt động Khảo sát bao gồm Khảo sát phi kỹ thuật và Khảo sát kỹ thuật.</value>
+  </data>
+  <data name="tabs2" xml:space="preserve">
+    <value>Trong hoạt động khắc phục hậu quả bom mìn, thuật ngữ “Rà phá bom mìn” nói đến những nhiệm vụ hay hoạt động nhằm đảm bảo sự gỡ bỏ và/hoặc phá hủy tất cả mối nguy hiểm từ bom mìn vật nổ sót lại sau chiến tranh trên một khu vực xác định và đến một độ sâu xác định. ên cạnh “rà phá hiện trường cố định” với một diện tích đất, rất nhiều những hoạt động gom nhặt phá hủy lưu động (EOD) đã được thực hiện để nhanh chóng gỡ bỏ hay phá hủy bom mìn vật nổ sau chiến tranh được phát hiện trên mặt đất và do người dân địa phương báo cáo.</value>
+  </data>
+  <data name="tabs2s" xml:space="preserve">
+    <value>Theo định nghĩa của IMAS (2013)</value>
+  </data>
+  <data name="tabs3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabs3s" xml:space="preserve">
+    <value>Tại nạn bom mìn</value>
+  </data>
+  <data name="tabs4" xml:space="preserve">
+    <value>Giáo dục Nguy cơ Bom mìn (MRE) là những hoạt động nhằm giảm thiểu nguy cơ thương vong do mìn và các vật nổ sót lại sau chiến tranh bằng cách nâng cao nhận thức của nam giới, phụ nữ, trẻ em tùy theo nhóm nguy cơ, vai trò và nhu cầu khác nhau của họ, và thúc đẩy thay đổi hành vi, bao gồm tuyên truyền thông tin cho cộng đồng, giáo dục và tập huấn, liên lạc cộng đồng phục vụ hoạt động khắc phục hậu quả bom mìn</value>
+  </data>
+  <data name="tabs4s" xml:space="preserve">
+    <value>Theo định nghĩa của IMAS (2009)</value>
+  </data>
+  <data name="tabs5" xml:space="preserve">
+    <value>Hoạt động hỗ trợ Nạn nhân (Victims Assistance / Survivor Assistance) là tất cả sự viện trợ, hỗ trợ, cứu trợ, xoa dịu và giúp đỡ cho những nạn nhân (bao gồm cả nạn nhân bom mìn còn sống sót) nhằm mục đích giảm thiểu những ảnh hưởng tức thời và lâu dài về mặt tinh thần và thể chất của tai nạn gây ra bi kịch cho họ.</value>
+  </data>
+  <data name="tabs5s" xml:space="preserve">
+    <value>Theo định nghĩa của IMAS (2004)</value>
+  </data>
+  <data name="tabs6" xml:space="preserve">
+    <value>Phát triển sau rà phá đóng vai trò quan trọng trong việc phát triển kinh tế xã hội, được người dân cũng như chính quyền quan tâm, nâng cao hiệu quả của việc rà phá bom mìn trên một khu vực xác định. Một số tổ chức như BCHQS,KOICA, MAG, PTVN…  đã có những hỗ trợ trong việc lập làng tái định cư, xây dựng những công trình phúc lợi trên những vùng đất ô nhiễm bom mìn đã được rà phá.</value>
+  </data>
+  <data name="tabs6s" xml:space="preserve">
+    <value>Phát triển sau rà phá đóng vai trò quan trọng</value>
+  </data>
+  <data name="UNDP" xml:space="preserve">
+    <value>UNDP</value>
+  </data>
+  <data name="VictimsAssistance" xml:space="preserve">
+    <value>Hỗ trợ nạn nhân     </value>
+  </data>
+  <data name="VNMAC" xml:space="preserve">
+    <value>VNMAC</value>
+  </data>
+</root>

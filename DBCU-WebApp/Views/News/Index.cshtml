@@ -1,0 +1,166 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+ 
+@using DBCU_WebApp
+
+@{
+    ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["News"].Value;
+    Category category = ViewBag.CurrentCategory;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["News"]</li>
+        </ol>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+
+<!-- ======= Blog Section ======= -->
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+            <div class="col-lg-8 entries">
+
+                @foreach (var item in Model)
+                {
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="@Url.Content("~/images/News/" + @item.StrUrlImage)"  alt="" class="img-fluid">
+                        </div>
+
+                        <h4 class="entry-title">
+                            <a asp-action="DisplayNews"
+                               asp-route-slug="@item.Slug">
+                            
+                             @if (lang == "vi")
+                            {                                
+                                @item.Title
+                            }
+                            else if (lang == "en")
+                            {
+                                @item.TitleEn
+                            }
+                            </a>
+                        </h4>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="icofont-user"></i> @item.Author</li>
+                                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <time datetime="2020-01-01">@item.DateUpdated.ToShortDateString()</time></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                               
+                                
+                             @if (lang == "vi")
+                            {                                
+                                @item.Description
+                            }
+                            else if (lang == "en")
+                            {
+                                @item.DescriptionEn
+                            }
+                            </p>
+                            <div class="read-more">
+                                <a asp-action="DisplayNews"
+                                   asp-route-slug="@item.Slug">@ViewLocalizer["ReadMore"]</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->}
+
+                @{ Func<int?, string> generateUrl = (int? _pagenumber) =>
+                                  {
+                                      if (_pagenumber == 1) _pagenumber = null;
+                                      return Url.Link("listpost", new { page = _pagenumber, slug = ViewBag.slugCategory });
+                                  };
+
+                    var datapaging = new
+                    {
+                        currentPage = ViewBag.pageNumber,
+                        countPages = ViewBag.totalPages,
+                        generateUrl = generateUrl
+                    }; }
+            <div class="blog-pagination">
+                <partial name="_Paging" model="@datapaging" />
+               </div>
+
+                @*<div class="blog-pagination">
+            <ul class="justify-content-center">
+                <li class="disabled"><i class="icofont-rounded-left"></i></li>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+            </ul>
+        </div>*@
+
+            </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar">
+
+                        <h3 class="sidebar-title">@ViewLocalizer["Search"]</h3>
+                        <div class="sidebar-item search-form">
+                            <form action="">
+                                <input type="text">
+                                <button type="submit"><i class="icofont-search"></i></button>
+                            </form>
+                        </div><!-- End sidebar search formn-->
+
+                        <h3 class="sidebar-title">@ViewLocalizer["Recent posts"]</h3>
+                        <div class="sidebar-item recent-posts">
+                            @*<div class="post-item clearfix">
+                        <img src="assets/img/blog/blog-recent-1.jpg" alt="">
+                        <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                        <img src="assets/img/blog/blog-recent-2.jpg" alt="">
+                        <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                        <img src="assets/img/blog/blog-recent-3.jpg" alt="">
+                        <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                        <img src="assets/img/blog/blog-recent-4.jpg" alt="">
+                        <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>
+
+                    <div class="post-item clearfix">
+                        <img src="assets/img/blog/blog-recent-5.jpg" alt="">
+                        <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                        <time datetime="2020-01-01">Jan 1, 2020</time>
+                    </div>*@
+
+                        </div><!-- End sidebar recent posts-->
+
+
+
+                    </div><!-- End sidebar -->
+
+                </div><!-- End blog sidebar -->
+
+            </div>
+
+    </div>
+</section><!-- End Blog Section -->

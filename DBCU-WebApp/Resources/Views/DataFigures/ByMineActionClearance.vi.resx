@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ClcAreasize" xml:space="preserve">
+    <value>Diện tích(m2)</value>
+  </data>
+  <data name="ClcDateIdentification" xml:space="preserve">
+    <value>Ngày khẳng định CHA</value>
+  </data>
+  <data name="ClcEnddate" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="ClcInformation" xml:space="preserve">
+    <value>Thông tin chi tiết</value>
+  </data>
+  <data name="ClcLocation" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="ClcLr_ID" xml:space="preserve">
+    <value>Mã nhiệm vụ</value>
+  </data>
+  <data name="ClcLr_Name" xml:space="preserve">
+    <value>Clc name/ Mã nội bộ</value>
+  </data>
+  <data name="ClcReporting_org_name" xml:space="preserve">
+    <value>Tổ chức</value>
+  </data>
+  <data name="ClcReporting_team" xml:space="preserve">
+    <value>Đội</value>
+  </data>
+  <data name="ClcStartdate" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="ClcStatus" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="DataAndFigures" xml:space="preserve">
+    <value>Dữ liệu &amp; số liệu</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="lblArea" xml:space="preserve">
+    <value>Diện tích</value>
+  </data>
+  <data name="lblByAction" xml:space="preserve">
+    <value>Theo hoạt động</value>
+  </data>
+  <data name="lblDashboard" xml:space="preserve">
+    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblDistrict" xml:space="preserve">
+    <value>Huyện</value>
+  </data>
+  <data name="lblIntrodution" xml:space="preserve">
+    <value>Dashboard sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblMineActionClearance" xml:space="preserve">
+    <value>Rà phá</value>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Tình trạng: Dã rà</value>
+  </data>
+  <data name="lblStatus1" xml:space="preserve">
+    <value>Tình trạng: Chưa rà</value>
+  </data>
+  <data name="lblTitleCHAchart" xml:space="preserve">
+    <value>Tổng diện tích rà phá  theo huyện</value>
+  </data>
+  <data name="lblTitleCHAchart1" xml:space="preserve">
+    <value>Tổng diện tích rà phá theo năm</value>
+  </data>
+  <data name="lblTitleCHAchart2" xml:space="preserve">
+    <value>Tổng diện tích Vùng khẳng định nguy hiểm theo huyện và tình trạng</value>
+  </data>
+  <data name="lblTitleCHAchart3" xml:space="preserve">
+    <value>5 loại vật nổ tìm thấy nhiều nhất</value>
+  </data>
+  <data name="lblTitleCHAchart4" xml:space="preserve">
+    <value>5 vật nổ tìm thấy nhiều nhất</value>
+  </data>
+  <data name="lblTotalClearedAreasize" xml:space="preserve">
+    <value>Tổng diện tích đã rà phá</value>
+  </data>
+  <data name="lblTotalContaminatedAreasize" xml:space="preserve">
+    <value>Tổng diện tích ô nhiễm</value>
+  </data>
+  <data name="lblTotalOpenAreasize" xml:space="preserve">
+    <value>Tổng diện tích chưa rà phá</value>
+  </data>
+  <data name="lblTotalSuspendedAreasize" xml:space="preserve">
+    <value>Tổng diện tích đang tạm dừng</value>
+  </data>
+  <data name="lblTotalWorkedOnAreasize" xml:space="preserve">
+    <value>Tổng diện đang rà</value>
+  </data>
+  <data name="lblUnit" xml:space="preserve">
+    <value>Đơn vị (m2)</value>
+  </data>
+  <data name="lblUXOModelClearance" xml:space="preserve">
+    <value>5 vật nổ tìm thấy</value>
+  </data>
+  <data name="lblUXOModelClearanceCategory" xml:space="preserve">
+    <value>Tổng vật nổ theo chủng loại</value>
+  </data>
+  <data name="lblYear" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+</root>

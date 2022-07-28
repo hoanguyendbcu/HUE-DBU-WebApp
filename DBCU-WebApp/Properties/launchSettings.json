@@ -1,0 +1,16 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:60895",
+      "sslPort": 44321
+    }
+  },
+  "profiles": {
+    "DBCU-WebApp": {
+      "commandName": "IISExpress",
+      "nativeDebugging": true
+    }
+  }
+}

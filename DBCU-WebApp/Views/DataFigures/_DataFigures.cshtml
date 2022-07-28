@@ -1,0 +1,179 @@
+﻿@model IEnumerable<DBCU_WebApp.Models.OperationPlans>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+
+@{
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    int i = 1;
+}
+
+<div class="col-lg-4 mt-3">    
+    <button type="button" class="btn btn-primary mb-3">
+        @ViewLocalizer["lblEOD"]  
+    </button>
+    <div class="single-table">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td scope="row"> <span>@ViewLocalizer["lblEODNumberReport"]</span> </td>
+                        <td class="text-right"> <span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblEODNumberERW"]</span></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblEODNumberCM"]</span></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text"> @ViewLocalizer["lblEODNUmberLM"]</span></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><span class="card-text">@ViewLocalizer["lblEODOther"]</span></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="card-text">@ViewLocalizer["lblEODOrg"]<select></select>&nbsp; @ViewLocalizer["lblEODYear"]<select></select> </p>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 mt-3">
+    <button type="button" class="btn btn-primary mb-3">
+        @ViewLocalizer["lblSurvey"]
+    </button>
+    <div class="single-table">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblSurveyTotalArea"]</span> </td>
+                        <td class="text-right"><span class="card-text status-p bg-warning">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblSurveyCHAArea"]</span></td>
+                        <td class="text-right"><span class="card-text status-p bg-primary">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblSurveyOpenCHAArea"]</span></td>
+                        <td class="text-right"><span class="card-text status-p bg-danger">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text"> @ViewLocalizer["lblSurveyClosedCHAArea"]</span></td>
+                        <td class="text-right"><span class="card-text status-p bg-success">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br />
+
+    <button type="button" class="btn btn-danger mb-3">
+        @ViewLocalizer["lblAccidentVitim"]
+    </button>
+    <div class="single-table">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td scope="row"> <p class="card-text">@ViewLocalizer["lblAccidentVitimNbrAcc"]</p> </td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <p class="card-text">@ViewLocalizer["lblAccidentVitimNbrVic"]</p></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <p class="card-text">@ViewLocalizer["lblAccidentVitimNbrDeath"]</p></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <p class="card-text">@ViewLocalizer["lblAccidentVitimNbrInjured"]</p></td>
+                        <td class="text-right"><span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" checked class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">@ViewLocalizer["lblMale"]</label>
+                            </div>
+                       
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" checked class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">@ViewLocalizer["lblFemale"]</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</div>
+
+<div class="col-lg-4 mt-3">
+    <button type="button" class="btn btn-primary mb-3">
+        @ViewLocalizer["lblClearance"]
+    </button>
+    <div class="single-table">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblClearanceTotalArea"]</span> </td>
+                        <td class="text-right"><span class="card-text status-p bg-success">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblClearanceCM"]</span></td>
+                        <td class="text-right"><span class="card-text status-p bg-danger">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span class="card-text">@ViewLocalizer["lblClearanceDEV"]</span></td>
+                        <td class="text-right"><span class="card-text status-p bg-secondary">0 &nbsp;<span class="badge badge-light">m2</span></span></td>
+                    </tr>
+                    <tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br />
+    <button type="button" class="btn btn-success mb-3">
+        @ViewLocalizer["lblMRE"]
+    </button>    
+    <div class="single-table">
+        <div class="table-responsive">
+            <table class="table table-bordered ">
+                <tbody>
+                    <tr>
+                        <td scope="row"> <span>@ViewLocalizer["lblMREPeople"]</span> </td>
+                        <td class="text-right"> <span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span>@ViewLocalizer["lblMREBoyGirl"]</span> </td>
+                        <td class="text-right"> <span class="text-right">0</span> </td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> <span>@ViewLocalizer["lblMREMaleFemale"]</span> </td>
+                        <td class="text-right"> <span class="text-right">0</span> </td>
+                    </tr>
+                    <tr span>
+                        <td colspan="2"> @ViewLocalizer["lblEODOrg"] <select></select>&nbsp; @ViewLocalizer["lblEODYear"] <select></select></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

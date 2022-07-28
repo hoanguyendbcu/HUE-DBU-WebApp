@@ -1,0 +1,51 @@
+﻿@model DBCU_WebApp.Models.OperationPlanWeek
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["ActivePagePar"] = ManageNavPages.OperationPlan;
+    ViewData["ActivePage"] = ManageNavPages.OperationPlanWeek;
+}
+
+<h1>Create</h1>
+
+<h4>OperationPlanWeek</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Week" class="control-label"></label>
+                <input asp-for="Week" class="form-control" />
+                <span asp-validation-for="Week" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromDate" class="control-label"></label>
+                <input asp-for="FromDate" asp-format="{0:yyyy-MM-dd}" class="form-control" />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDate" class="control-label"></label>
+                <input asp-for="ToDate" asp-format="{0:yyyy-MM-dd}" class="form-control" />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

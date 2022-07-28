@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DBCU_WebApp.Models.OperationPlanWeek>
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{
+    ViewData["Title"] = "List Operation plans";
+    ViewData["ActivePagePar"] = ManageNavPages.OperationPlan;
+    ViewData["ActivePage"] = ManageNavPages.OperationPlanWeek;
+}
+
+<h1>List Operation plans</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Week)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Week)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FromDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.OperationPlanWeekID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.OperationPlanWeekID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.OperationPlanWeekID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

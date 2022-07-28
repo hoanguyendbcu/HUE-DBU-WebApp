@@ -1,0 +1,47 @@
+@model DBCU_WebApp.Models.Category
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{ ViewData["Title"] = "Delete";
+    Layout = "_Layout";
+    ViewData["ActivePagePar"] = ManageNavPages.News;
+    ViewData["ActivePage"] = ManageNavPages.NewsCategory; }
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure delete?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Slug)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Slug)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParentCategory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParentCategory.Title)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to list</a>
+    </form>
+</div>

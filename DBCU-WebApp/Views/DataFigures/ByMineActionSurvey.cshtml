@@ -1,0 +1,937 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@{
+    var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
+    ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["DataAndFigures"].Value + " - " + ViewLocalizer["lblMineActionSurvey"].Value;
+}
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+
+<style>
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 120px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family: 'Open Sans', sans-serif;
+    }
+
+        #menu a {
+            font-size: 11px;
+            color: #404040;
+            display: block;
+            margin: 0;
+            padding: 0;
+            padding: 5px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+            #menu a:last-child {
+                border: none;
+            }
+
+            #menu a:hover {
+                background-color: #f8f8f8;
+                color: #404040;
+            }
+
+            #menu a.active {
+                background-color: #3887be;
+                color: #ffffff;
+            }
+
+                #menu a.active:hover {
+                    background: #3074a4;
+                }
+</style>
+
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["DataAndFigures"]</li>
+            <li>@ViewLocalizer["lblByAction"]</li>
+            <li>@ViewLocalizer["lblMineActionSurvey"]</li>
+        </ol>
+
+    </div>
+</section>
+<!-- End Breadcrumbs -->
+<!-- ======= Blog Section ======= -->
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Content Row -->
+            <div class="row">
+                <!-- Border Left Utilities -->
+                <div class="col-xl-6 col-md-6 mb-1">
+                    @ViewLocalizer["lblIntrodution"]
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+
+                <!-- Border Left Utilities -->
+                <div class="col-xl-9 col-md-9 mb-1">
+                    <div id="CHAchartByDistrict"></div>
+                </div>
+                <!-- Border Left Utilities -->
+                <div class="col-xl-3 col-md-3 mb-1">
+                    <b>&nbsp;@ViewLocalizer["lblUXOModelSurvey"]</b>
+
+                    <div id="ampiechart1111"></div>
+                </div>
+
+
+            </div>
+            <br />
+
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- Border Left Utilities -->
+                <div class="col-xl-6 col-md-6 mb-1">
+                    <div id="amlinechartCHA"></div>
+                </div>
+
+                <!-- Border Bottom Utilities -->
+                <div class="col-xl-6 col-md-6 mb-1">
+
+                    <div id="CHAchart"></div>
+                </div>
+
+            </div>
+            <br />
+
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary"> @ViewLocalizer["lblDashboard"]</h6>
+
+
+            </div>
+            <br />
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- Border Left Utilities -->
+                <div class="col-lg-6">
+                    <!--<div class="row">-->
+                    <!-- Earnings (Monthly) Card Example -->
+                    <!--<div class="col">
+                             <div id="ampiechart22"></div>
+                        </div>
+                    </div>-->
+
+                    <div class="row">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                @ViewLocalizer["lblTotalContaminatedAreasize"]
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-gray-800"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["getDataCHATotal"]) m2</div>
+                                        </div>
+                                        @*<div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-4 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                @ViewLocalizer["lblTotalClearedAreasize"]
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-gray-800">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["getDataCHACompleted"]) m2</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                @ViewLocalizer["lblTotalOpenAreasize"]
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-gray-800">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["getDataCHAUnCompleted"]) m2</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-bottom-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                @ViewLocalizer["lblTotalWorkedOnAreasize"]
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-gray-800">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["getDataCHAOngoing"]) m2</div>
+                                        </div>
+                                        @*<div class="col-auto">
+                                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-bottom-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                @ViewLocalizer["lblTotalSuspendedAreasize"]
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-gray-800"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["getDataCHASuspended"]) m2</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Border Bottom Utilities -->
+                <div class="col-lg-6">
+
+                    <div style="height:400px; width:100%;">
+                        <nav id="menu"></nav>
+                        <div id="map"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- /.container-fluid -->
+
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        /*--------------  bar chart 08 amchart start ------------*/
+        if ($('#CHAchartByDistrict').length) {
+            var json =  @Html.Raw(ViewData["DataCHAByDistrict"]);
+            var chart = AmCharts.makeChart("CHAchartByDistrict", {
+                "type": "serial",
+                "theme": "light",
+                //"marginRight": 70,
+                "titles": [{
+                    "text": "@ViewLocalizer["lblTitleCHAchart"]",
+                    "size": 16
+                }],
+
+                "dataProvider": json,
+                "valueAxes": [{
+                    "axisAlpha": 0,
+                    "position": "left"
+                    //"title": "@ViewLocalizer["lblUnit"]"
+                }],
+                "startDuration": 1,
+                "graphs": [{
+                    "balloonText": "<b>[[District]]: [[value]]</b>",
+                    "fillColorsField": "Color",
+                    "fillAlphas": 0.9,
+                    "lineAlpha": 0.2,
+                    "labelText": "[[Areasize]]",
+                    "lineAlpha": 0.5,
+                    "fillAlphas": 0.9,
+                    "fontSize": 11,
+                    "type": "column",
+                    "valueField": "Areasize"
+                }],
+                "chartCursor": {
+                    "categoryBalloonEnabled": false,
+                    "cursorAlpha": 0,
+                    "zoomable": true
+                },
+                "categoryField": "District",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "export": {
+                    "enabled": false
+                }
+
+            });
+        }
+
+     if ($('#ampiechart1111').length) {
+            var  json =  @Html.Raw(ViewData["UXOModelSurvey"]);
+
+            var chart = AmCharts.makeChart("ampiechart1111", {
+                "type": "pie",
+                "labelRadius": -35,
+                "labelText": "[[percents]]%",
+                "dataProvider": json,
+                "color": "#fff",
+                "colorField": "backgroundColor",
+                "valueField": "qty",
+                "titleField": "category",
+
+                "titles": [{
+                    "text": "@ViewLocalizer["lblUXOModelSurvey"]",
+                    "size": 14
+                }],
+                "legend": {
+                    "valueText": "[[qty]]"
+                    // ...
+                }
+            });
+        }
+
+
+        if ($('#CHAchart').length) {
+             var  json =  @Html.Raw(ViewData["DataCHAByStatus"]);
+            var chart = AmCharts.makeChart("CHAchart", {
+                "theme": "light",
+                "type": "serial",
+                "balloon": {
+                    "adjustBorderColor": false,
+                    "horizontalPadding": 10,
+                    "verticalPadding": 8,
+                    "color": "#fff"
+                },
+
+                "titles": [
+                    {
+                        "size": 15,
+                        "text": "@ViewLocalizer["lblTitleCHAchart2"]"
+                    }
+                ],
+                "dataProvider": json,
+
+                "startDuration": 1,
+                "graphs": [{
+                    "balloonText": "@ViewLocalizer["lblDistrict"] :[[category]] <br> @ViewLocalizer["lblStatus"] <br> @ViewLocalizer["lblArea"] <b>[[value]]</b>",
+                    "fillAlphas": 0.9,
+                    "fillColorsField": "color",
+                    "lineAlpha": 0.2,
+                    "labelText": "[[value]]",
+                    "title": "[[name]]",
+                    "type": "column",
+                    "valueField": "closed"
+                }, {
+                    "balloonText": " @ViewLocalizer["lblDistrict"] : [[category]] <br> @ViewLocalizer["lblStatus1"]<br> @ViewLocalizer["lblArea"]  <b>[[value]]</b>",
+                    "fillAlphas": 0.9,
+                    "fillColorsField": "color2",
+                    "lineAlpha": 0.2,
+                    "title": "12345",
+                    "Text": "12345",
+                    "labelText": "[[value]]",
+                    "type": "column",
+                    "clustered": true,
+
+                    "valueField": "areasize",
+                    "valueField": "open"
+                }],
+                "plotAreaFillAlphas": 0.1,
+                "categoryField": "district",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "export": {
+                    "enabled": false
+                }
+
+            });
+        }
+
+
+        if ($('#amlinechartCHA').length) {
+            var  json =  @Html.Raw(ViewData["DataCHAByYear"]);
+            var chart = AmCharts.makeChart("amlinechartCHA", {
+                "type": "serial",
+                "theme": "light",
+                "titles": [{
+                    "text": "@ViewLocalizer["lblTitleCHAchart1"]",
+                    "size": 16
+                }],
+                "dataProvider": json,
+                "startDuration": 0.5,
+                "graphs": [{
+                    "balloonText": "@ViewLocalizer["lblYear"] [[category]]: [[value]]",
+                    "bullet": "round",
+                    "title": "United Kingdom",
+                    "labelText": "[[Areasize]]",
+                    "valueField": "Areasize",
+                    "fillAlphas": 0,
+                    "lineColor": "#31aeef",
+                    "lineThickness": 2,
+                    "negativeLineColor": "#31aeef",
+                }],
+                "chartCursor": {
+                    "cursorAlpha": 0,
+                    "zoomable": false
+                },
+                "categoryField": "Year",
+                "categoryAxis": {
+                    "gridPosition": "start",
+                    "axisAlpha": 0,
+                    "fillAlpha": 0.05,
+                    "fillColor": "#000000",
+                    "gridAlpha": 0,
+                    "position": "top"
+                },
+                "export": {
+                    "enabled": false
+                }
+            });
+        }
+
+
+        // TO MAKE THE MAP APPEAR YOU MUST
+        // ADD YOUR ACCESS TOKEN FROM
+        // https://account.mapbox.com
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG9hbmMxOTgxIiwiYSI6ImNram95YW9uYzB0M24yd3BlbXVkOWNmN3QifQ.Z681DzM2rasHXmZKEcyYbQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v11',
+            center: [106.619344, 17.457754],
+            zoom: 11
+        });
+
+        map.addControl(new mapboxgl.FullscreenControl());
+        map.addControl(new mapboxgl.NavigationControl());
+        map.resize();
+
+        var geojsonCHA =  @Html.Raw(ViewData["lstGeoCHA"]);
+        var geojsonCHAOpen =  @Html.Raw(ViewData["lstGeoCHAOpen"]);
+        var geojsonCHASuspend =  @Html.Raw(ViewData["lstGeoCHASuspended"]);
+        var geojsonCHAOngoing =  @Html.Raw(ViewData["lstGeoCHAOngoing"]);
+        var geojsonCHACompleted =  @Html.Raw(ViewData["lstGeoCHACompleted"]);
+        let hoveredStateId = null;
+
+        map.on('load', function () {
+
+            // Add a data source containing GeoJSON data.
+
+            map.addSource('chapolygonTitle', {
+                'type': 'geojson',
+                'data': geojsonCHA
+            });
+
+            map.addSource('chapolygon', {
+                'type': 'geojson',
+                'data': geojsonCHAOpen
+            });
+
+            map.addSource('chapolygonSuspend', {
+                'type': 'geojson',
+                'data': geojsonCHASuspend
+            });
+
+            map.addSource('chapolygonOngoing', {
+                'type': 'geojson',
+                'data': geojsonCHAOngoing
+            });
+
+            map.addSource('chapolygonCompleted', {
+                'type': 'geojson',
+                'data': geojsonCHACompleted
+            });
+
+
+            // Add a new layer to visualize the polygon - CHA.
+            map.addLayer({
+                'id': 'chapolygon-layer',
+                'type': 'fill',
+                'source': 'chapolygon', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#FC0602', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'chapolygon-outline',
+                'type': 'line',
+                'source': 'chapolygon',
+                'layout': {
+
+                },
+                'paint': {
+                    'line-color': '#FC0703',
+                    'line-width': 2
+                }
+            });
+
+            // Add a new layer to visualize the polygon - CHA Suspend.
+            map.addLayer({
+                'id': 'chapolygonSuspend-layer',
+                'type': 'fill',
+                'source': 'chapolygonSuspend', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#0373FC', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'chapolygonSuspend-outline',
+                'type': 'line',
+                'source': 'chapolygonSuspend',
+                'layout': {
+
+                },
+                'paint': {
+                    'line-color': '#0000FF',
+                    'line-width': 2
+                }
+            });
+
+            // Add a new layer to visualize the polygon - CHA Ongoing.
+            map.addLayer({
+                'id': 'chapolygonOngoing-layer',
+                'type': 'fill',
+                'source': 'chapolygonOngoing', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#FC0602', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'chapolygonOngoing-outline',
+                'type': 'line',
+                'source': 'chapolygonOngoing',
+                'layout': {
+
+                },
+                'paint': {
+                    'line-color': '#13FC03',
+                    'line-width': 2
+                }
+            });
+
+            // Add a new layer to visualize the polygon - CHA Completed.
+            map.addLayer({
+                'id': 'chapolygonCompleted-layer',
+                'type': 'fill',
+                'source': 'chapolygonCompleted', // reference the data source
+                'layout': {
+                },
+                'paint': {
+                    'fill-color': '#1AFF00', //  color fill
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        1,
+                        0.5
+                    ]
+                }
+            });
+            // Add a black outline around the polygon.
+            map.addLayer({
+                'id': 'chapolygonCompleted-outline',
+                'type': 'line',
+                'source': 'chapolygonCompleted',
+                'layout': {
+
+                },
+                'paint': {
+                    'line-color': '#0E8801',
+                    'line-width': 2
+                }
+            });
+
+            map.addLayer({
+                'id': 'Title-CHA',
+                'type': 'symbol',
+                'source': 'chapolygonTitle',
+                'layout': {
+                    'text-field': ['get', 'lr_name'],
+                    "text-size": 11,
+                    "text-transform": "uppercase",
+                    "text-letter-spacing": 0.05,
+                    "text-offset": [0, 1.5],
+                    'text-justify': 'auto',
+                    'text-anchor': 'top'
+                },
+                paint: {
+                    //"text-color": "#ffffff"
+                    "text-color": "#000",
+                    "text-halo-color": "#fff",
+                    "text-halo-width": 1
+                }
+            });
+
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            // When the user moves their mouse over the state-fill layer, we'll update the  --- CHA OPEN
+            // feature state for the feature under the mouse.
+            map.on('mousemove', 'chapolygon-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'chapolygon', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'chapolygon', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'chapolygon-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'chapolygon', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            // When the user moves their mouse over the state-fill layer, we'll update the  --- CHA Suspended
+            // feature state for the feature under the mouse.
+            map.on('mousemove', 'chapolygonSuspend-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'chapolygonSuspend', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'chapolygonSuspend', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'chapolygonSuspend-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'chapolygonSuspend', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            // When the user moves their mouse over the state-fill layer, we'll update the  --- CHA chapolygonOngoing
+            // feature state for the feature under the mouse.
+            map.on('mousemove', 'chapolygonOngoing-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'chapolygonOngoing', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'chapolygonOngoing', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'chapolygonOngoing-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'chapolygonOngoing', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            // When the user moves their mouse over the state-fill layer, we'll update the  --- CHA chapolygonCompleted
+            // feature state for the feature under the mouse.
+            map.on('mousemove', 'chapolygonCompleted-layer', (e) => {
+                debugger
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'chapolygonCompleted', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'chapolygonCompleted', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+
+            // When the mouse leaves the state-fill layer, update the feature state of the
+            // previously hovered feature.
+            map.on('mouseleave', 'chapolygonCompleted-layer', () => {
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'chapolygonCompleted', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+
+             // When a click event occurs on a feature in the states layer, open a popup at the
+            // location of the click, with description HTML from its properties.
+            map.on('click', 'chapolygon-layer', function (e) {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+
+                        +'<table  class="table-bordered ">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_name + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAName"]</td> <td class="text-center" >' + e.features[0].properties.lr_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAStartDate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAComment_Land_Use"]</td> <td class="text-center" >' + e.features[0].properties.comment_Land_Use + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHATypeArea"]</td> <td class="text-center" >' + e.features[0].properties.comment_Land_Use + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASlopee"]</td> <td class="text-center" >' + e.features[0].properties.slopee + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetation"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_Type + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetationDensity"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_Type + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilType"]</td> <td class="text-center" >' + e.features[0].properties.soiltype + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilCondition"]</td> <td class="text-center" >' + e.features[0].properties.soil_Condition + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHADescription"]</td> <td class="text-center" >' + e.features[0].properties.additional_Information + '</td></tr>'
+
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });
+
+               // When a click event occurs on a feature in the states layer, open a popup at the
+            // location of the click, with description HTML from its properties.
+            map.on('click', 'chapolygonSuspend-layer', function (e) {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+
+                        +'<table  class="table-bordered ">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_name + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAName"]</td> <td class="text-center" >' + e.features[0].properties.lr_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAStartDate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAComment_Land_Use"]</td> <td class="text-center" >' + e.features[0].properties.comment_Land_Use + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHATypeArea"]</td> <td class="text-center" >' + e.features[0].properties.type_of_Area + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASlopee"]</td> <td class="text-center" >' + e.features[0].properties.slopee + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetation"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_Type + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetationDensity"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_density + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilType"]</td> <td class="text-center" >' + e.features[0].properties.soiltype + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilCondition"]</td> <td class="text-center" >' + e.features[0].properties.soil_Condition + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHADescription"]</td> <td class="text-center" >' + e.features[0].properties.additional_Information + '</td></tr>'
+
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });   // When a click event occurs on a feature in the states layer, open a popup at the
+            // location of the click, with description HTML from its properties.
+            map.on('click', 'chapolygonCompleted-layer', function (e) {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+
+                        +'<table  class="table-bordered ">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_name + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAName"]</td> <td class="text-center" >' + e.features[0].properties.lr_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAStartDate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAComment_Land_Use"]</td> <td class="text-center" >' + e.features[0].properties.comment_Land_Use + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHATypeArea"]</td> <td class="text-center" >' + e.features[0].properties.type_of_Area + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASlopee"]</td> <td class="text-center" >' + e.features[0].properties.slopee + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetation"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_Type + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetationDensity"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_density + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilType"]</td> <td class="text-center" >' + e.features[0].properties.soiltype + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilCondition"]</td> <td class="text-center" >' + e.features[0].properties.soil_Condition + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHADescription"]</td> <td class="text-center" >' + e.features[0].properties.additional_Information + '</td></tr>'
+
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });   // When a click event occurs on a feature in the states layer, open a popup at the
+            // location of the click, with description HTML from its properties.
+            map.on('click', 'chapolygonOngoing-layer', function (e) {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                        '<div style="overflow-y: auto; max-height: 350px;"> '
+
+                        +'<table  class="table-bordered ">'
+                        + '<tr><th colspan="2"> ' + e.features[0].properties.lr_name + '</th> </tr>'
+
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAID"]</td> <td class="text-center" >' + e.features[0].properties.lr_id + '</td></tr>'
+                        + '<tr><td class="text-center" > @ViewLocalizer["CHAName"]</td> <td class="text-center" >' + e.features[0].properties.lr_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcStatus"]</td> <td class="text-center" >' + e.features[0].properties.status + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAStartDate"]</td> <td class="text-center" >' + e.features[0].properties.startdate + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAComment_Land_Use"]</td> <td class="text-center" >' + e.features[0].properties.comment_Land_Use + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHATypeArea"]</td> <td class="text-center" >' + e.features[0].properties.type_of_Area + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASlopee"]</td> <td class="text-center" >' + e.features[0].properties.slopee + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetation"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_Type + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHAVegetationDensity"]</td> <td class="text-center" >' + e.features[0].properties.vegetation_density + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilType"]</td> <td class="text-center" >' + e.features[0].properties.soiltype + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHASoilCondition"]</td> <td class="text-center" >' + e.features[0].properties.soil_Condition + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcAreasize"]</td> <td class="text-center" >' + Number(e.features[0].properties.areasize) + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["ClcLocation"]</td> <td class="text-center" >' + e.features[0].properties.district_name + ', ' + e.features[0].properties.commune_name + ', ' + e.features[0].properties.village_name + '</td></tr>'
+                        + '<tr><td class="text-center"  > @ViewLocalizer["CHADescription"]</td> <td class="text-center" >' + e.features[0].properties.additional_Information + '</td></tr>'
+
+                        + '</table>'
+                        + '</div>'
+                    )
+                    .addTo(map);
+            });
+        });
+
+        map.on('idle', () => {
+            // If these two layers were not added to the map, abort
+            if ( !map.getLayer( 'Title-CHA')) {
+                return;
+            }
+
+            // Enumerate ids of the layers.
+            const toggleableLayerIds = [ 'Title-CHA'];
+
+            // Set up the corresponding toggle button for each layer.
+            for (const id of toggleableLayerIds) {
+                // Skip layers that already have a button set up.
+                if (document.getElementById(id)) {
+                    continue;
+                }
+
+                // Create a link.
+                const link = document.createElement('a');
+                link.id = id;
+                link.href = '#';
+                link.textContent = id;
+                link.className = 'active';
+
+                // Show or hide layer when the toggle is clicked.
+                link.onclick = function (e) {
+                    const clickedLayer = this.textContent;
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const visibility = map.getLayoutProperty(
+                        clickedLayer,
+                        'visibility'
+                    );
+
+                    // Toggle layer visibility by changing the layout object's visibility property.
+                    if (visibility === 'visible') {
+                        map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                        this.className = '';
+                    } else {
+                        this.className = 'active';
+                        map.setLayoutProperty(
+                            clickedLayer,
+                            'visibility',
+                            'visible'
+                        );
+                    }
+                };
+
+                const layers = document.getElementById('menu');
+                layers.appendChild(link);
+            }
+        });
+
+
+    </script>
+}

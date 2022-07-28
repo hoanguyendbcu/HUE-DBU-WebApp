@@ -1,0 +1,160 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{ 
+    ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Photos"].Value;
+    ViewData["ActivePagePar"] = ManageNavPages.Library;
+    }
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["Photos"]</li>
+        </ol>
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>@ViewLocalizer["Photos"]</h2>
+            <p></p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">@ViewLocalizer["All"]</li>
+                    <li data-filter=".filter-education">@ViewLocalizer["Edu"]</li>
+                    <li data-filter=".filter-card">@ViewLocalizer["Scene"]</li>
+                    <li data-filter=".filter-event">@ViewLocalizer["Event"]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture11.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture11.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/IMGP0357.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/IMGP0357.jpg" data-gall="portfolioGallery" class="venobox" title="Hiện trường"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/IMGP0365.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/IMGP0365.jpg" data-gall="portfolioGallery" class="venobox" title="Hiện trường"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture4.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture4.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture5.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture5.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture6.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture6.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/IMGP0328.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/IMGP0328.jpg" data-gall="portfolioGallery" class="venobox" title="Hiện trường"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture3.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture3.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-education">
+                <div class="portfolio-wrap">
+                    <img src="~/images/portfolio/Picture1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+
+                        <div class="portfolio-links">
+                            <a href="~/images/portfolio/Picture1.jpg" data-gall="portfolioGallery" class="venobox" title="Đào tạo"><i class="bx bx-plus"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section><!-- End Portfolio Section -->

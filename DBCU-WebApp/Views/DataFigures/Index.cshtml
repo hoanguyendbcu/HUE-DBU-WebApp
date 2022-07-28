@@ -1,0 +1,140 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer ViewLocalizer
+@model DBCU_WebApp.Models.Location
+
+@{ ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["DataFigures"].Value; }
+@*<h1>Create</h1>*@
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+            <li>@ViewLocalizer["DataFigures"]</li>
+            <li>@ViewLocalizer["Title"]</li>
+        </ol>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<!-- ======= About Section ======= -->
+<section id="dataFigures"  >
+    <div class="container" data-aos="fade-up">   
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>@ViewLocalizer["Province"]</label>
+                    <select id="cboProvince" asp-for="ProvinceID" class="custom-select form-control select2bs4" style="font-size:9px;" asp-items="ViewBag.listprovince"></select>
+                </div>               
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>@ViewLocalizer["District"]</label>
+                    <select id="cboDistict" asp-for="DistictID" class="custom-select form-control select2bs4" style="font-size:9px;" asp-items="ViewBag.listdistrict"></select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>@ViewLocalizer["Commune"]</label>
+                    <select asp-for="CommuneID" id="cboCommune" class="custom-select form-control select2bs4"></select>
+                </div>
+            </div>
+            <div class="col-md-3">               
+                <div class="form-group">
+                    <label>@ViewLocalizer["Village"]</label>
+                    <select asp-for="VillageID" id="cboVillage" class="custom-select form-control select2bs4"></select>
+                </div>
+            </div>
+        </div>
+
+        <div  class="row" id="data-grid">
+            <partial name="_DataFigures" model="@Model" />
+        </div>
+    </div>
+</section>
+    <!-- End About Section -->
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#cboCommune').change(function () {
+                loadVillage();
+                //loadData();
+            });
+
+            $('#cboDistict').change(function () {
+                loadCommune();
+                $("#cboVillage").empty();
+                //loadData();
+            });
+
+        });
+
+        function loadData() {
+            var param = {
+                'ProvinceID': $('#cboDistict').val(),
+                'DistictID': $('#cboProvince').val(),
+                'CommuneID': $('#cboCommune').val(),
+                'VillageID': $('#cboVillage').val()
+            };
+
+            $.ajax({
+                url: 'DataFigures/Index',
+                type: 'get',
+                dataType: 'html',
+                data: param,
+                success: function (data) {
+                    $("#data-grid").html(data);
+                }
+            });
+        }
+
+         function loadCommune() {
+             var url = '@Url.Content("~/")' + "DataFigures/GetCommune";
+            var ddlsource = "#cboDistict";
+            $.getJSON(url, { DistictID: $(ddlsource).val() }, function (data) {
+                var items = '';
+                $("#cboCommune").empty();
+                $.each(data, function (i, item) {
+
+                    items += "<option value='" + item.value + "'>" + item.text + "</option>";
+
+                });
+                $('#cboCommune').html(items);
+            });
+        }
+
+        function loadVillage() {
+
+            var url = '@Url.Content("~/")' + "DataFigures/GetVillage";
+                var ddlsource = "#cboCommune";
+                $.getJSON(url, { CommuneID: $(ddlsource).val() }, function (data) {
+                    var items = '';
+                    $("#cboVillage").empty();
+                    $.each(data, function (i, item) {
+
+                        items += "<option value='" + item.value + "'>" + item.text + "</option>";
+
+                    });
+                    $('#cboVillage').html(items);
+                });
+
+        }
+
+        function isEmpty(property) {
+            return property === null || property === "" || typeof property === "undefined";
+        }
+    </script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+        })
+    </script>
+}

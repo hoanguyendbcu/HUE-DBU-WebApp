@@ -1,0 +1,39 @@
+﻿@model DBCU_WebApp.Models.ActivityMA
+@using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["ActivePagePar"] = ManageNavPages.OperationPlan;
+    ViewData["ActivePage"] = ManageNavPages.ActivityMA;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Activity</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ActivityCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivityCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ActivityName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivityName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ActivityNameEN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivityNameEN)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

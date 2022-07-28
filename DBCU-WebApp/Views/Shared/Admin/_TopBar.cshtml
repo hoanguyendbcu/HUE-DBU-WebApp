@@ -1,0 +1,52 @@
+@*@inject SignInManager<IdentityUser> SignInManager
+    @{
+        var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+    }*@
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@*<ul class="nav nav-pills flex-column">
+        <li class="nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile</a></li>
+        <li class="nav-item"><a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email</a></li>
+        <li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a></li>
+        @if (hasExternalLogins)
+        {
+            <li id="external-logins" class="nav-item"><a id="external-login" class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">External logins</a></li>
+        }
+        <li class="nav-item"><a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a></li>
+        <li class="nav-item"><a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>
+    </ul>*@
+<!-- page title area start -->
+
+<div class="page-title-area">
+    <div class="row align-items-center">       
+        <div class="col-sm-6">
+            <div class="nav-btn pull-left">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="breadcrumbs-area clearfix">
+
+                <ul class="breadcrumbs pull-left">
+                    <li><a class="nav-link" id="profile" asp-area="Identity" asp-page="/Account/Manage/Index">Home</a></li>
+                    <li><span>@ViewData["Title"]</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6 clearfix">
+            <div class="user-profile pull-right">
+
+                <h6 class="user-name dropdown-toggle" data-toggle="dropdown">Hello @UserManager.GetUserName(User)!<i class="fa fa-angle-down"></i></h6>
+                <div class="dropdown-menu">
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Account/Login", new { area = "" })">
+                        <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page title area end -->
