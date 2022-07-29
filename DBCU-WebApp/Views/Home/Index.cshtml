@@ -4,6 +4,7 @@
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
     ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Home"].Value;
+       string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 
 
@@ -68,287 +69,245 @@
     
 </style>
 
-<!-- ======= Hero Section ======= -->
-<section id="herotop" class="d-flex align-items-center">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-            <div class="col-xl-9">
-                <div class="row">
-                    <div class="col-xl-8">
-                        <h1>@ViewLocalizer["lblHeroTop1"]</h1>
-                        <h2>@ViewLocalizer["lblHeroTop2"]</h2>
-                        @*<a href="#about" class="btn-get-started scrollto">Get Started</a>*@
-                    </div>
-                </div>
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(images/slide/slide-1.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Khi phát hiện bom mìn, hãy gọi <span>18001741</span></h2>
+              <p>Đơn vị Cơ sở dữ liệu và Điều phối hoạt động khắc phục hậu quả bom mìn tỉnh Quảng Bình.</p>
+ 
             </div>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(images/slide/slide-2.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+               <h2>VẤN ĐỀ ĐƯỢC GIẢI QUYẾT</h2>
+              <p>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự tỉnh và các tổ chức, đơn vị liên quan</p>
+			  
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(images/slide/slide-3.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+               <h2>MỤC TIÊU</h2>
+              <p>Giảm thiểu đến mức thấp nhất tai nạn bom mìn và ảnh hưởng của bom mìn, vật nổ đối với cộng đồng, hướng tới tỉnh “an toàn”.</p> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
     </div>
+  </section><!-- End Hero -->
 
-</section><!-- End Hero -->
+ 
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="newsposts" class="newsposts">
 
+      <div class="container" data-aos="fade-up">
 
-
-
-<section id="hero" class="hero">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>@ViewLocalizer["lblMineActionQB"]</h2>
+		<div class="sectiondbu-title">
+          <h2>News</h2>
+          <p>News & Event</p>
         </div>
+		 <div class="newsposts-slider swiper">
+		 
+		 <div class="swiper-wrapper">
+              @foreach (var item in Model)
+                {
+			        <div class="swiper-slide">
+	 
+				        <div class="post-box d-flex flex-column">
+				          <div class="post-img"><img src="@Url.Content("~/images/News/" + @item.StrUrlImage)" class="img-fluid" alt="">  <span class="post-date">@item.DateUpdated.ToShortDateString()</span></div>	
+				          <h5 class="post-title">
+                                    
+                                        @if (lang == "vi")
+                                        {
+                                            @item.Title  
+                                        }
+                                        else if (lang == "en")
+                                        {
+                                            @item.TitleEn 
+                                        }
+                             
+                                </h5>
+				            <hr>
+					        <a  asp-controller="News" asp-action="DisplayNews" asp-route-slug="@item.Slug" class="readmore stretched-link"><span>Read More</span></a>
+				        </div>				 
+			        </div>
+			  } 
+			</div>
+
+		  </div>
+      </div>
+
+    </section><!-- End Recent Blog Posts Section -->
+
+ <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+           <div class="sectiondbu1-header">
+          <h2>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN</h2>          
+        </div> 
+
         <div class="row">
 
-            <!-- seo fact area start -->
-            <!--<div class="col-lg-12 ">
-            <div class="row">
-                <div class="col-md-3 mt-5 mb-3">
-                    <div class="card">
-
-                        <div class="seo-fact sbg1">
-                            <div class="p-4 d-flex justify-content-between align-items-center">
-                                <div class="seofct-icon">@ViewLocalizer["LabelEOD"] </div>
-                                <h2> @ViewData["missonEOD"]</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-5 mb-3">
-                    <div class="card">
-                        <div class="seo-fact sbg2">
-                            <div class="p-4 d-flex justify-content-between align-items-center">
-                                <div class="seofct-icon">@ViewLocalizer["LabelNTS"]</div>
-                                <h2>@ViewData["missonNTS"]</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-5 mb-3">
-                    <div class="card">
-                        <div class="seo-fact sbg3">
-                            <div class="p-4 d-flex justify-content-between align-items-center">
-                                <div class="seofct-icon">@ViewLocalizer["LabelTS"]</div>
-                                <h2>@ViewData["missonTS"]</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-5 mb-3">
-                    <div class="card">
-                        <div class="seo-fact sbg4">
-                            <div class="p-4 d-flex justify-content-between align-items-center">
-                                <div class="seofct-icon">@ViewLocalizer["LabelCLC"]</div>
-                                <h2>@ViewData["missonCLC"]</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+               <i><img src="~/images/icon-web/images1.png" /> </i>
+                <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCHA"])</span>(m2)
+                <p>@ViewLocalizer["String7"]</p>
             </div>
-        </div>-->
-            <!-- seo fact area end -->
-            <!-- Approach -->
-            <div class="col-lg-4 mt-1">
-                <div class="card card-bordered">
+          </div>
 
-                    <div class="card-body">
-                        <h5 class="mb-0 font-weight-bold">@ViewLocalizer["String1"]</h5>
-                        <p class="mb-0">
-                            @ViewLocalizer["String2"]
-                        </p>
-                        <p class="mb-0">
-                            + 3.179 ha @ViewLocalizer["String3"]
-                        </p>
-                        <p class="mb-0">
-                            - @ViewLocalizer["String4"] 170 ha
-                        </p>
-                        <p class="mb-0">
-                            - MAG 1.566 ha
-                        </p>
-                        <p class="mb-0">
-                            - KOICA 1.443 ha
-                        </p>
-                        <p class="mb-0">
-                            - 28.194 @ViewLocalizer["String5"]
-                        </p>
-
-                    </div>
-                    <canvas id="seolinechart8" height="233"></canvas>
-                </div>
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i><img src="~/images/icon-web/Clearance.png" /> </i>
+             <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"])</span> (m2)
+           <p>@ViewLocalizer["String8"]</p>
             </div>
+          </div>
 
-            <!-- timeline area end -->
-
-            <div class="col-lg-8 mt-1">
-                
-                        <!--<h4 class="m-0 font-weight-bold">@ViewLocalizer["String6"]</h4>-->
-                        @*<div id="ambarchart1"></div>*@
-                        <!--<div id="socialads"></div>-->
-
-                  
-                            <div style="height:480px; width:100%;" class="col-lg-12">
-                                <nav id="menu"></nav>
-                                <div id="map"></div>
-
-                            </div>
-                    
-                   
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+               <i><img src="~/images/icon-web/EOD.png" /> </i>
+                    <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["missonEOD"])  </span>
+               <p>@ViewLocalizer["String9"]</p>
             </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+                    <i><img src="~/images/icon-web/UXO.png" /> </i>
+                    <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])  </span>
+              <p>@ViewLocalizer["String10"]</p>
+            </div>
+          </div>
+
+
         </div>
-    </div>
-</section><!-- End Hero -->
-
-@*<section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
 
 
+      </div>
+    </section><!-- End Counts Section -->
 
-        <div class="row">
-            <div style="height:600px; width:100%;" class="col-lg-12">
+ <section class="">
+     <div class="container" data-aos="fade-up">
+         
+            <div style="height:680px; width:100%">
                 <nav id="menu"></nav>
                 <div id="map"></div>
 
             </div>
-        </div>
 
     </div>
+ </section><!-- End Counts Section -->
 
-</section>*@
-<!-- End About Section -->
-<!-- ======= Counts Section ======= -->
-<section id="counts" class="counts">
-    <div class="container" data-aos="fade-up">
+
+   <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+          <div class="sectiondbu1-header">
+          <h2>Các hợp phần hoạt động bom mìn</h2>          
+        </div> 
+
         <div class="row">
-            <div class="col-lg-3 col-md-2">
-                <div class="count-box">
-                    @*<i class="icofont-exclamation-tringle"> </i>*@
-                    <i><img src="~/images/icon-web/images1.png" /> </i>
-                    <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCHA"])</span>(m2)
-                    <p>@ViewLocalizer["String7"]</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-2">
-                <div class="count-box">
-                    @*<i class="icofont-layout"></i>*@
-                    <i><img src="~/images/icon-web/Clearance.jpg" /> </i>
-
-                    <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"])</span> (m2)
-                    <p>@ViewLocalizer["String8"]</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-2">
-                <div class="count-box">
-                    @*<i class="icofont-record "></i>*@
-                    <i><img src="~/images/icon-web/EOD.jpg" /> </i>
-                    <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["missonEOD"])  </span>
-                    <p> </p>
-                    <p>@ViewLocalizer["String9"]</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-2">
-                <div class="count-box">
-                    @*<i class="icofont-record "></i>*@
-                    <i><img src="~/images/icon-web/UXO.jpg" /> </i>
-                    <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])  </span>
-                    <p></p>
-                    <p>@ViewLocalizer["String10"]</p>
-                </div>
-            </div>
-
-            @*<div class="col-lg-3 col-md-2">
-                    <div class="count-box">
-                        <i class="icofont-users-alt-5"></i>
-                        <span data-toggle="counter-up"></span>
-                        <p>@ViewLocalizer["String10"]</p>
-                    </div>
-                </div>*@
-
-
-        </div>
-
-    </div>
-</section><!-- End Counts Section -->
-<!-- ======= Tabs Section ======= -->
-<section id="tabs" class="tabs">
-    <div class="container" data-aos="fade-up">
-
-        <ul class="nav nav-tabs row d-flex">
-
-            <li class="nav-item col-2">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
-                    <img src="~/images/icon-web/i3.jpg" />&nbsp;&nbsp;
-                    <h6 class="d-none d-lg-block">@ViewLocalizer["Survey"]</h6>
-                  
+          <div class="col-lg-3 mb-5 mb-lg-0" data-aos="fade-right">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  <h4>@ViewLocalizer["Survey"]</h4>
+ 
                 </a>
-            </li>
-            <li class="nav-item col-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">
-                    <img src="~/images/icon-web/i6.jpg" />&nbsp;&nbsp;
-                    <h6 class="d-none d-lg-block">@ViewLocalizer["Clearance"]</h6>
-
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  <h4>@ViewLocalizer["Clearance"]</h4>
+             
                 </a>
-            </li>
-            <li class="nav-item col-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-3">
-                    <img src="~/images/icon-web/i1.jpg" />&nbsp;
-                    <h6 class="d-none d-lg-block">
-                        @ViewLocalizer["AccidentsVictims"]
-                    </h6>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  <h4>      @ViewLocalizer["AccidentsVictims"]</h4>
+               
                 </a>
-            </li>
-            <li class="nav-item col-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-4">
-                    <img src="~/images/icon-web/i4.jpg" />&nbsp;&nbsp;
-                    <h6 class="d-none d-lg-block">  @ViewLocalizer["RiskEducation"]</h6>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                  <h4> @ViewLocalizer["RiskEducation"]</h4>
+         
                 </a>
-            </li>
-            <li class="nav-item col-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-5">
-                    <img src="~/images/icon-web/i5.jpg" />&nbsp;
-                    <h6 class="d-none d-lg-block">@ViewLocalizer["VictimsAssistance"]</h6>
+              </li>
+               <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
+                  <h4>@ViewLocalizer["VictimsAssistance"]</h4>
+       
                 </a>
-            </li>
-
-            <li class="nav-item col-2">
-                <a class="nav-link" data-toggle="tab" href="#tab-6">
-                    <img src="~/images/icon-web/i2.jpg" />&nbsp;
-                    <h6 class="d-none d-lg-block">@ViewLocalizer["PostClearanceDevelopment"]</h6>
+              </li>
+               <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
+                  <h4>@ViewLocalizer["PostClearanceDevelopment"]</h4>
+           
                 </a>
-            </li>
-        </ul>
-
-        <div class="tab-content">
-            <div class="tab-pane active show" id="tab-1">
-                <div class="row">
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 ml-auto" data-aos="fade-left" data-aos-delay="100">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                   <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                         <h3>@ViewLocalizer["tabs1s"]</h3>
                         <p>
                             @ViewLocalizer["tabs1"]
                         </p>
-                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey" class="btn btn-outline-success">@ViewLocalizer["GoMore"]</a>
+                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey" >@ViewLocalizer["GoMore"]</a>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
                         <img src="~/images/card/maxresdefault.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane" id="tab-2">
+               
+              </div>
+              <div class="tab-pane" id="tab-2">
                 <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                         <h3>@ViewLocalizer["tabs2s"]</h3>
                         <p>
                             @ViewLocalizer["tabs2"]
                         </p>
-                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance" class="btn btn-outline-success">@ViewLocalizer["GoMore"]</a>
+                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance" >@ViewLocalizer["GoMore"]</a>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                         <img src="~/images/card/ra-pha-bom-min.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane" id="tab-3">
-                <div class="row">
+              </div>
+              <div class="tab-pane" id="tab-3">
+                 <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                         <h3>@ViewLocalizer["tabs3s"]</h3>
                         <p>
@@ -360,23 +319,22 @@
                         <img src="~/images/card/victim.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane" id="tab-4">
-                <div class="row">
+              </div>
+              <div class="tab-pane" id="tab-4">
+                 <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                         <h3>@ViewLocalizer["tabs4s"]</h3>
                         <p>
                             @ViewLocalizer["tabs4"]
                         </p>
-                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE" class="btn btn-outline-success">@ViewLocalizer["GoMore"]</a>
+                        <a asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["GoMore"]</a>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                         <img src="~/images/card/GDbom_min.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
-
-            <div class="tab-pane" id="tab-5">
+              </div>
+                <div class="tab-pane" id="tab-5">
                 <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                         <h3>@ViewLocalizer["tabs5s"]</h3>
@@ -388,10 +346,9 @@
                         <img src="~/images/card/hotro.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
-            </div>
-
-            <div class="tab-pane" id="tab-6">
-                <div class="row">
+              </div>
+                <div class="tab-pane" id="tab-6">
+               <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                         <h3>@ViewLocalizer["tabs6s"]</h3>
                         <p>
@@ -402,103 +359,171 @@
                         <img src="~/images/card/saurapha.jpg" alt="" class="img-fluid">
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+       <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+         <div class="sectiondbu1-header">
+          <h2>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</h2>          
+        </div> 
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter=".filter-act" class="filter-active">Hiện trường</li> 
+              <li data-filter=".filter-edu">Đào tạo</li>
+              <li data-filter=".filter-event">Sự kiện</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+       
+          <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+             <img src="~/images/portfolio/IMGP0357.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Hiện trường - DBCU & PTVN khảo sát hiện trường</h4>
+           <a href="~/images/portfolio/IMGP0357.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=Hiện trường"><i class="bx bx-plus"></i></a>
+ 
+     
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+            <img src="~/images/portfolio/IMGP0365.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                  <h4>Hiện trường - DBCU & PTVN khảo sát hiện trường</h4>
+         
+            <a href="~/images/portfolio/IMGP0365.jpg" data-gall="portfolioGallery" class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
+     
+            </div>
+          </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+            <img src="~/images/portfolio/IMGP0328.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                  <h4>Hiện trường - DBCU & PTVN khảo sát hiện trường</h4>
+         
+            <a href="~/images/portfolio/IMGP0328.JPG" data-gall="portfolioGallery"  class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
+     
+            </div>
+          </div>
+
+           <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+            <img src="~/images/portfolio/IMGP1117.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                  <h4>Hiện trường - DBCU Chấm điểm CHA</h4>
+         
+            <a href="~/images/portfolio/IMGP1117.JPG" data-gall="portfolioGallery"  class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
+     
+            </div>
+          </div>
+
+             <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+            <img src="~/images/portfolio/IMGP1118.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                  <h4>Hiện trường - DBCU Chấm điểm CHA</h4>
+         
+            <a href="~/images/portfolio/IMGP1118.JPG" data-gall="portfolioGallery"  class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
+     
+            </div>
+          </div>
+               
+          <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+            <img src="~/images/portfolio/IMGP1122.JPG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                  <h4>Hiện trường - DBCU Chấm điểm CHA</h4>
+         
+            <a href="~/images/portfolio/IMGP1122.JPG" data-gall="portfolioGallery"  class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
+     
+            </div>
+          </div>
+
+             <div class="col-lg-4 col-md-6 portfolio-item filter-edu">
+            <img src="~/images/portfolio/Picture11.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Đào tạo - Phát chứng chỉ IMSMA</h4>      
+              <a href="~/images/portfolio/Picture11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Đào tạo"><i class="bx bx-plus"></i></a>
+              
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-edu">
+            <img src="~/images/portfolio/Picture3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Đào tạo -  IMSMA</h4>      
+              <a href="~/images/portfolio/Picture3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Đào tạo"><i class="bx bx-plus"></i></a>
+              
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-edu">
+            <img src="~/images/portfolio/Picture4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Đào tạo - IMSMA</h4>      
+              <a href="~/images/portfolio/Picture4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Đào tạo"><i class="bx bx-plus"></i></a>
+              
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+<!-- ======= donor Section ======= -->
+<section id="donor" class="donor">
+<div class="container" data-aos="fade-up">
+       <div class="sectiondbu1-header">
+          <h2>@ViewLocalizer["Donors"]</h2>        
+          <p> Trân trọng cảm ơn các nhà tài trợ và đối tác đã hỗ trợ cho hoạt động khắc phục hậu quả bom mìn vật nổ sau chiến tranh tại Quảng Bình.</p>
+        </div> 
+
+    <div class="section-title">
+         <a title="@ViewLocalizer["Department of State"]" data-toggle="tooltip" href="https://www.state.gov" target="_blank"><img src="~/images/icon/Logo_US_DoS.png"></a>
+                  
     </div>
-    <br>
-    <!-- ======= Contact Section ======= -->
-    <div id="partners" class="partners">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 footer-links">
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            <h5>@ViewLocalizer["Donors"]</h5>
-                            <hr />
-                        </div>
-                    </div>
+		 
+	<!-- ======= Clients Section ======= -->
+	<div id="clients" class="clients">
+		<div class="container" data-aos="zoom-in">
 
-                    <div class="row">
-                        <div class="col-md-4 mt-1">
-                            <div class="card text-center">
-                                <a title="@ViewLocalizer["Department of State"]" data-toggle="tooltip" href="https://www.state.gov" target="_blank"><img src="~/images/icon/Logo_US_DoS.png"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+		<div class="clients-slider swiper">
+			<div class="swiper-wrapper align-items-center">
+			<div class="swiper-slide"> <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.quangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo DOFA.png"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/Logo QSQB.png"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["VNMAC"]" data-toggle="tooltip" href="http://vnmac.gov.vn" target="_blank"><img src="~/images/icon/Logo VNMAC.png"></a></div>
+			<div class="swiper-slide"> <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["MAG"]" data-toggle="tooltip" href="https://www.maginternational.org" target="_blank"><img src="~/images/icon/Logo MAG.png"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["PTVN"]" data-toggle="tooltip" href="https://www.peacetreesvietnam.org" target="_blank"><img src="~/images/icon/Logo PTVN.png"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["UNDP"]" data-toggle="tooltip" href="https://www.vn.undp.org/content/vietnam/vi/home.html" target="_blank"><img src="~/images/icon/Logo UNDP.png"></a></div>
+			<div class="swiper-slide"> <a title="@ViewLocalizer["KOICA"]" data-toggle="tooltip" href="http://www.koica.go.kr/sites/koica_en/index.do" target="_blank"><img src="~/images/icon/Logo KOICA.png"></a></div>
+			<div class="swiper-slide"> <a title="@ViewLocalizer["CRD VietNam"]" data-toggle="tooltip" href="https://www.crs.org/our-work-overseas/where-we-work/vietnam" target="_blank"><img src="~/images/icon/CRS-logo.jpg"></a></div>
+			<div class="swiper-slide">    <a title="@ViewLocalizer["CTD"]" data-toggle="tooltip" href="http://hoichuthapdoquangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo CTD.png"></a></div>
 
-                <div class="col-lg-8 footer-links">
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5>@ViewLocalizer["Partners"]</h5>
-                            <hr />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.quangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo DOFA.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/Logo QSQB.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["VNMAC"]" data-toggle="tooltip" href="http://vnmac.gov.vn" target="_blank"><img src="~/images/icon/Logo VNMAC.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["MAG"]" data-toggle="tooltip" href="https://www.maginternational.org" target="_blank"><img src="~/images/icon/Logo MAG.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["PTVN"]" data-toggle="tooltip" href="https://www.peacetreesvietnam.org" target="_blank"><img src="~/images/icon/Logo PTVN.png"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["UNDP"]" data-toggle="tooltip" href="https://www.vn.undp.org/content/vietnam/vi/home.html" target="_blank"><img src="~/images/icon/Logo UNDP.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["KOICA"]" data-toggle="tooltip" href="http://www.koica.go.kr/sites/koica_en/index.do" target="_blank"><img src="~/images/icon/Logo KOICA.png"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["CRD VietNam"]" data-toggle="tooltip" href="https://www.crs.org/our-work-overseas/where-we-work/vietnam" target="_blank"><img src="~/images/icon/CRS-logo.jpg"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-2 mt-1 text-center">
-                            <div class="card">
-                                <a title="@ViewLocalizer["CTD"]" data-toggle="tooltip" href="http://hoichuthapdoquangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo CTD.png"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div><!-- End Contact Section -->
-
-</section><!-- End Tabs Section -->
+		</div>
+	</div><!-- End Clients Section -->
+ 
+		 
+</div>
+</section><!-- End About Us Section -->
+	
+ 
 
 @section Scripts {
     <script>

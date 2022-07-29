@@ -43,6 +43,15 @@ namespace DBCU_WebApp.Controllers
             var features = new List<Models.GeoClearance.Feature>();
             int i = 0;
 
+            // Truy vấn lấy các post
+            var posts = _context.News
+                //.Include(p => p.AuthorId) // Load Author cho post  
+                .Include(p => p.NewsCategories) // Load các Category của Post
+                .ThenInclude(c => c.Category)
+                .OrderByDescending(c => c.NewsId)
+                 .Take(5);
+
+
             foreach (var results in data)
             {
                 var feature = new Models.GeoClearance.Feature();
@@ -310,7 +319,7 @@ namespace DBCU_WebApp.Controllers
             lstGeoCHAOngoing.Features = featuresCHAOngoing;
             ViewData["lstGeoCHAOngoing"] = JsonConvert.SerializeObject(lstGeoCHAOngoing);
 
-            return View();
+            return View(await posts.ToListAsync());
         }
 
         public IActionResult Privacy()
