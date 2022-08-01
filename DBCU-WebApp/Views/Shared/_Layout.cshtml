@@ -148,9 +148,10 @@
                             <li ><a class="@Html.IsActive("Home", "Contact")" asp-area="" asp-controller="Home" asp-action="Contact">@ViewLocalizer["Contact"]</a></li>
        
         </ul>
+          @await Html.PartialAsync("_SetLanguagePartial")
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-        @*   &nbsp;&nbsp;@await Html.PartialAsync("_SetLanguagePartial")*@
+    
     </div>
   </header><!-- End Header -->
     <!-- ======= Header ======= -->

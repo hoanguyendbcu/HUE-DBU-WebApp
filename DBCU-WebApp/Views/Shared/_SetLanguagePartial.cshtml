@@ -20,13 +20,14 @@
        
         <div class="dropdown col-lg-6 col-md-4 col-sm-6">
            
-                <select  class="btn btn-rounded btn-success dropdown-toggle" type="button" data-toggle="dropdown" name="culture"
+                <select  name="culture"
                         onchange="this.form.submit();"
                         asp-for="@requestCulture.RequestCulture.UICulture.Name"
                         asp-items="cultureItems">
                 </select>
             
         </div>
+ 
     </form>
    
 </div>

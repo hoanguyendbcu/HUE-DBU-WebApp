@@ -566,7 +566,7 @@ namespace DBCU_WebApp.Repository
             {
                 dbConnection.Open();
 
-                string strQuery = " 	select gazetteername district,areasize,'#20AB02' color   from( ";
+                string strQuery = " 	select gazetteername district,areasize,CAST('#20AB02' as varchar)  color   from( ";
                 strQuery = strQuery + "     select coalesce(areasize,0) as areasize,gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
                 strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
                 strQuery = strQuery + "     ) a left join(";
