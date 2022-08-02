@@ -276,8 +276,32 @@
   <data name="String10" xml:space="preserve">
     <value>Number of UXO that are safely</value>
   </data>
+  <data name="String17" xml:space="preserve">
+    <value>The total area of confirm hazardous areas established after survey activities.</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>The total area of land contaminated by cluster munitions and other UXO are released.</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value> </value>
+  </data>
   <data name="String2" xml:space="preserve">
     <value>In the period 2016-2020:</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>The number of explosive ordnances including cluster submunitions, mines, and other UXO that are detected and safely destroyed.</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>NUMBER OF PERSONS SUPPORTED</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>The number of people receiving support from organizations and individuals to improve their quality of life.</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>THE NUMBER TURN OF PEOPLE RECEIVED EORE</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>The number turns of people who received explosive ordnance risk education (EORE) to live safely before the land was completely released.</value>
   </data>
   <data name="String3" xml:space="preserve">
     <value>cleared, in which:</value>

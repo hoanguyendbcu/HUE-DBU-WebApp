@@ -15,11 +15,11 @@ namespace DBCU_WebApp.Repository
     public class DataFiguresRepository : IDataFiguresRepository<WebDataHome>
     {
         private string connectionString;
-        private string connectionString1;
+        private string connectionStringStaging;
         public DataFiguresRepository(IConfiguration configuration)
         {
             connectionString = configuration.GetValue<string>("ConnectionStrings:imsma");
-            connectionString1 = configuration.GetValue<string>("ConnectionStrings:staging");
+            connectionStringStaging = configuration.GetValue<string>("ConnectionStrings:staging");
         }
 
         internal IDbConnection Connection
@@ -30,17 +30,17 @@ namespace DBCU_WebApp.Repository
             }
         }
 
-        internal IDbConnection Connection1
+        internal IDbConnection ConnectionStaging
         {
             get
             {
-                return new NpgsqlConnection(connectionString1);
+                return new NpgsqlConnection(connectionStringStaging);
             }
         }
 
         public async ValueTask<int> GetAreaCLC(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "select coalesce(CAST( Sum(areasize) as int),0)  from hazreduc a where hazreduc_localid like '%CLC%' AND ('0'= '" + distict + "' OR gazetteer_level3_name = '" + distict + "' )";
@@ -53,7 +53,7 @@ namespace DBCU_WebApp.Repository
 
         public async ValueTask<int> GetNoERW(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "SELECT  coalesce(SUM(qty),0) qty  FROM hazreduc_point, hazreduc, hazreducdeviceinfo";
@@ -71,7 +71,7 @@ namespace DBCU_WebApp.Repository
 
         public async ValueTask<int> GetNoMRE(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "SELECT CAST(coalesce(SUM(coalesce(a.qty,0)+ coalesce(b.totalaudience,0) + coalesce(b.malepercentage,0) + coalesce(b.femalepercentage,0)),0) AS INT) qty   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid WHERE ('0'= '" + distict + "' OR a.gazetteer_level3_name = '" + distict + "' )";
@@ -84,7 +84,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<UXOCategory>> UXOCategory(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "      select category, qty, color as backgroundColor from( ";
@@ -106,7 +106,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<UXOCategory>> UXOModel(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "      select category, qty, color as backgroundColor from( ";
@@ -128,7 +128,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<MREGender>> GetMREGender(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -154,7 +154,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<MREGender>> GetMREChildGender(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -181,7 +181,7 @@ namespace DBCU_WebApp.Repository
 
         public async ValueTask<int> GetMREGenderMale (string org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -204,7 +204,7 @@ namespace DBCU_WebApp.Repository
         }
         public async ValueTask<int> GetMREGenderFemale(string org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -228,7 +228,7 @@ namespace DBCU_WebApp.Repository
 
         public async ValueTask<int> GetMREChild(string org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -251,7 +251,7 @@ namespace DBCU_WebApp.Repository
 
         public async ValueTask<int> GetMRETotal(string org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -275,7 +275,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<MREGender>> GetMREByYear(string org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
  
@@ -293,7 +293,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<MREGender>> GetMREGenderVN(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -319,7 +319,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<MREGender>> GetMREChildGenderVN(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -346,7 +346,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<DataClearnceChart>> GetDataClearnceChart(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -367,7 +367,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<DataClearnceChart2>> GetDataClearnceChart2(string distict)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -388,7 +388,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<GetDataCHA>> GetDataCHA()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "SELECT CAST(sum(areasize) AS int) areasize, (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) from    dbcu_cha a   left join( ";
@@ -408,7 +408,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<LinechartCHAByYear>> GetDataCHAByYear()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "select year,areasize  from( ";
@@ -426,7 +426,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<LinechartCHAByDistrict>> GetDataCHAByDistrict()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -447,7 +447,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<LinechartCHAByDistrict>> GetDataCHAByDistrictEN()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -469,7 +469,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<LinechartCHAByStatus>> GetDataCHAByStatus()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -496,7 +496,7 @@ namespace DBCU_WebApp.Repository
        
         public async Task<List<UXOCategory>> UXOModelSurvey()
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "      select category, qty, color as backgroundColor from( ";
@@ -518,7 +518,7 @@ namespace DBCU_WebApp.Repository
 
         public async Task<List<UXOCategory>> UXOModelClearance(string Org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "      select category, qty, color as backgroundColor from( ";
@@ -542,7 +542,7 @@ namespace DBCU_WebApp.Repository
         //Get data Clearance
         public async Task<List<LinechartCHAByYear>> GetDataCLCByYear(string Org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
                 string strQuery = "select year,areasize  from( ";
@@ -562,7 +562,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<LinechartCHAByDistrict>> GetDataCLCByDistrict(string Org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 
@@ -585,7 +585,7 @@ namespace DBCU_WebApp.Repository
         }
         public async Task<List<LinechartCHAByDistrict>> GetDataCLCByDistrictEN(string Org)
         {
-            using (IDbConnection dbConnection = Connection1)
+            using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
 

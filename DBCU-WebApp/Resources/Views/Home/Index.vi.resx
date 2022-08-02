@@ -276,8 +276,32 @@
   <data name="String10" xml:space="preserve">
     <value>Số vật nỗ được hủy nổ an toàn</value>
   </data>
+  <data name="String17" xml:space="preserve">
+    <value>Là tổng diện tích các khoanh vùng khẳng định ô nhiễm bom chùm được xác định sau hoạt động khảo sát kỹ thuật</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Là tổng diện tích đất đai được giải phóng khỏi ô nhiễm bom mìn vật nổ sau hoạt động rà phá.</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value />
+  </data>
   <data name="String2" xml:space="preserve">
     <value>Trong khoảng 2016-2020:</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Là số bom mìn, vật nổ bao gồm bom chùm, mìn, và các vật nổ khác được phát hiện và hủy nổ an toàn</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>LƯỢT NGƯỜI ĐƯỢC HỖ TRỢ</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Là số lượt người nhận được hỗ trợ của các tổ chức, cá nhân để nâng cao chất lượng cuộc sống.</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>LƯỢT NGƯỜI ĐƯỢC NÂNG CAO NHẬN THỨC VỀ BOM MÌN</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>Là số lượt người nhận được giáo dục phòng tránh rủi ro bom mìn để chung sống an toàn trước khi đất đai được giải phóng hoàn toàn.</value>
   </data>
   <data name="String3" xml:space="preserve">
     <value>được rà phá, trong đó:</value>
@@ -292,13 +316,13 @@
     <value>Biểu đồ rà phá hiện trường của MAG</value>
   </data>
   <data name="String7" xml:space="preserve">
-    <value>Diện tích CHA đã khảo sát</value>
+    <value>DIỆN TÍCH CHA ĐÃ KHẢO SÁT</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>Tổng diện tích đất được giải phóng</value>
+    <value>TỔNG DIỆN TÍCH ĐẤT ĐƯỢC GIẢI PHÓNG</value>
   </data>
   <data name="String9" xml:space="preserve">
-    <value>Số nhiệm vụ EOD đã hoàn thành</value>
+    <value>SỐ NHIỆM VỤ EOD ĐÃ HOÀN THÀNH</value>
   </data>
   <data name="Survey" xml:space="preserve">
     <value>Khảo sát</value>
