@@ -522,17 +522,18 @@ sectiondbu {
 .sectiondbu-title {
   padding-bottom: 40px;
 }
-.sectiondbu-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
-}
+    .sectiondbu-title h2 {
+        font-size: 14px;
+        font-weight: 500;
+ 
+        line-height: 1px;
+        margin: 0 0 5px 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        font-family: "Poppins", sans-serif;
+        padding-bottom: 15px;
+    }
 .sectiondbu-title h2::after {
   content: "";
   width: 120px;
@@ -861,7 +862,22 @@ sectiondbu1 {
 .aboutdata .count-box {
     width: 100%;
 }
-
+    .aboutdata .count-box .icon {
+        position: absolute;
+ 
+        left: -10px;
+        transition: 0.2s;
+        border-radius: 60%;
+        border: 6px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 72px;
+        height: 72px;
+        background: #fff;
+        border: 2px solid #16c035;
+    }
     .aboutdata .count-box i {
         display: block;
         font-size: 48px;
@@ -1596,10 +1612,10 @@ sectiondbu1 {
   opacity: 0.5;
   transition: 0.3s;
 }
-.clients .owl-item img:hover {
- 
-     transform: scale(1.1);
-}
+    .clients .owl-item img:hover {
+        filter: none;
+        transform: scale(1.1);
+    }
  
 .clients .owl-nav, .clients .owl-dots {
   margin-top: 5px;
@@ -1615,6 +1631,46 @@ sectiondbu1 {
 }
 .clients .owl-dot.active {
   background-color: #0880e8 !important;
+}
+
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about-ustop .content h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-ustop .content h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+.about-ustop .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .about-ustop .content ul li {
+        padding: 10px 0 0 28px;
+        position: relative;
+    }
+
+    .about-ustop .content ul i {
+        left: 0;
+        top: 7px;
+        position: absolute;
+        font-size: 20px;
+        color: #1bbd36;
+    }
+
+.about-ustop .content p:last-child {
+    margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1649,9 +1705,11 @@ sectiondbu1 {
   margin-left: 60px;
 }
 .about-us .image {
-  background: url("../img/about.jpg") center center no-repeat;
-  background-size: cover;
-  min-height: 400px;
+    margin-top: 25px;
+    background: url("../images/About/Picture3.jpg") center center no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 500px;
 }
 @media (max-width: 991px) {
   .about-us .image {
@@ -1816,6 +1874,41 @@ sectiondbu1 {
     opacity: 1;
   }
 }
+
+/*--------------------------------------------------------------
+# FeaturesLink
+--------------------------------------------------------------*/
+.featureslink .icon-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 0.3s;
+}
+
+    .featureslink .icon-box i {
+        font-size: 32px;
+        padding-right: 10px;
+        line-height: 1;
+    }
+
+    .featureslink .icon-box h3 {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-size: 12px;
+    }
+
+        .featureslink .icon-box h3 a {
+            color: #111;
+            transition: ease-in-out 0.3s;
+        }
+
+            .featureslink .icon-box h3 a:hover {
+                color: #1bbd36;
+            }
 
 /*--------------------------------------------------------------
 # Pricing
@@ -2136,7 +2229,7 @@ sectiondbu1 {
   overflow: hidden;
 }
 .blog .entry .entry-title {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   padding: 0;
   margin: 0 0 20px 0;
