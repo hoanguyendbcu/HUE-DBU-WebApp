@@ -141,6 +141,7 @@ namespace DBCU_WebApp
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";   // Trang khi User bị cấm truy cập
             });
 
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             //services.AddDbContext<DBCU_WebContext>(options =>
             //        options.UseSqlServer(Configuration.GetConnectionString("DBCU_WebContext")));
 
