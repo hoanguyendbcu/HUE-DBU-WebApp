@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,19 +25,19 @@ namespace DBCU_WebApp.Models.DataFigures
     }
     public class LinechartCHAByStatus
     {
-        [JsonProperty("district")]
+        [JsonPropertyName("district")]
         public string District { get; set; }
 
-        [JsonProperty("closed")]
+        [JsonPropertyName("closed")]
         public int Closed { get; set; }
 
-        [JsonProperty("open")]
+        [JsonPropertyName("open")]
         public int Open { get; set; }
 
-        [JsonProperty("color")]
+        [JsonPropertyName("color")]
         public string Color { get; set; }
 
-        [JsonProperty("color2")]
+        [JsonPropertyName("color2")]
         public string Color2 { get; set; }
     }
 

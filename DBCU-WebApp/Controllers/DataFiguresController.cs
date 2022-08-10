@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using DBCU_WebApp.Repository;
 using Microsoft.Extensions.Configuration;
 using DBCU_WebApp.Models.GeoClearance;
-using Newtonsoft.Json;
+using System.Text.Json;
 using DBCU_WebApp.Models.GeoCHA;
 
 namespace DBCU_WebApp.Controllers
@@ -141,28 +141,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
 
             return View();
@@ -183,28 +183,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
 
             return View();
@@ -224,28 +224,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
 
             return View();
@@ -266,28 +266,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
             return View();
         }
         public async Task<IActionResult> TuyenHoaDistrict()
@@ -305,28 +305,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
             return View();
         }
@@ -345,28 +345,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
             return View();
         }
@@ -385,28 +385,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
             return View();
         }
         public async Task<IActionResult> QuangNinhDistrict()
@@ -424,28 +424,28 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
             return View();
         }
@@ -465,27 +465,27 @@ namespace DBCU_WebApp.Controllers
             var jsonModel = await dataFiguresRepository.UXOModel(distict);
 
 
-            ViewData["UXOCategory"] = JsonConvert.SerializeObject(jsonCategory);
-            ViewData["UXOModel"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
             if (lang == "en")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonConvert.SerializeObject(jsonMREGender);
-                ViewData["MREChildGender"] = JsonConvert.SerializeObject(jsonMREChildGender);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonConvert.SerializeObject(jsonDataClearnceChart);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
             return View();
         }
 
@@ -526,7 +526,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -536,7 +536,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHA.Features = featuresCHA;
-            ViewData["lstGeoCHA"] = JsonConvert.SerializeObject(lstGeoCHA);
+            ViewData["lstGeoCHA"] = JsonSerializer.Serialize(lstGeoCHA);
 
             // Geo CHA Open
             var dataChaOpen = await missonEODRepository.GetGeoCHAOpen();
@@ -575,7 +575,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -586,7 +586,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHAOpen.Features = featuresCHAOpen;
-            ViewData["lstGeoCHAOpen"] = JsonConvert.SerializeObject(lstGeoCHAOpen);
+            ViewData["lstGeoCHAOpen"] = JsonSerializer.Serialize(lstGeoCHAOpen);
 
             //GeoCHA Suspended
             var dataChaSuspended = await missonEODRepository.GetGeoCHASuspended();
@@ -625,7 +625,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -636,7 +636,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHASuspended.Features = featuresCHASuspended;
-            ViewData["lstGeoCHASuspended"] = JsonConvert.SerializeObject(lstGeoCHASuspended);
+            ViewData["lstGeoCHASuspended"] = JsonSerializer.Serialize(lstGeoCHASuspended);
 
             //GeoCHA Completed
             var dataChaCompleted = await missonEODRepository.GetGeoCHACompleted();
@@ -675,7 +675,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -686,7 +686,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHACompleted.Features = featuresCHACompleted;
-            ViewData["lstGeoCHACompleted"] = JsonConvert.SerializeObject(lstGeoCHACompleted);
+            ViewData["lstGeoCHACompleted"] = JsonSerializer.Serialize(lstGeoCHACompleted);
 
             //GeoCHA Completed
             var dataChaOngoing = await missonEODRepository.GetGeoCHAOngoing();
@@ -725,7 +725,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -735,7 +735,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHAOngoing.Features = featuresCHAOngoing;
-            ViewData["lstGeoCHAOngoing"] = JsonConvert.SerializeObject(lstGeoCHAOngoing);
+            ViewData["lstGeoCHAOngoing"] = JsonSerializer.Serialize(lstGeoCHAOngoing);
 
             ///
 
@@ -775,24 +775,24 @@ namespace DBCU_WebApp.Controllers
             ViewData["getDataCHAUnCompleted"] = getDataCHAUnCompleted;
 
             var jsonDataCHAByYear = await dataFiguresRepository.GetDataCHAByYear();
-            ViewData["DataCHAByYear"] = JsonConvert.SerializeObject(jsonDataCHAByYear);
+            ViewData["DataCHAByYear"] = JsonSerializer.Serialize(jsonDataCHAByYear);
 
             if (lang == "vi")
             {
                 var jsonDataCHAByDistrict = await dataFiguresRepository.GetDataCHAByDistrict();
-                ViewData["DataCHAByDistrict"] = JsonConvert.SerializeObject(jsonDataCHAByDistrict);
+                ViewData["DataCHAByDistrict"] = JsonSerializer.Serialize(jsonDataCHAByDistrict);
             }
             else
             {
                 var jsonDataCHAByDistrict = await dataFiguresRepository.GetDataCHAByDistrictEN();
-                ViewData["DataCHAByDistrict"] = JsonConvert.SerializeObject(jsonDataCHAByDistrict);
+                ViewData["DataCHAByDistrict"] = JsonSerializer.Serialize(jsonDataCHAByDistrict);
             }
 
             var jsonModel = await dataFiguresRepository.UXOModelSurvey();
-            ViewData["UXOModelSurvey"] = JsonConvert.SerializeObject(jsonModel);
+            ViewData["UXOModelSurvey"] = JsonSerializer.Serialize(jsonModel);
 
             var jsonDataCHAByStatus = await dataFiguresRepository.GetDataCHAByStatus();
-            ViewData["DataCHAByStatus"] = JsonConvert.SerializeObject(jsonDataCHAByStatus);
+            ViewData["DataCHAByStatus"] = JsonSerializer.Serialize(jsonDataCHAByStatus);
 
 
             return View();
@@ -836,7 +836,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoClearance.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoClearance.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -846,7 +846,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCLCCM.Features = featuresCLCCM;
-            ViewData["lstGeoCLCCM"] = JsonConvert.SerializeObject(lstGeoCLCCM);
+            ViewData["lstGeoCLCCM"] = JsonSerializer.Serialize(lstGeoCLCCM);
 
             // Geo CLC TM
             var dataCLCTM= await missonEODRepository.GetGeoCLCTM();
@@ -872,7 +872,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoClearance.Geometry>(results.Polygon);
+                geo = JsonSerializer.Deserialize<Models.GeoClearance.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -882,22 +882,22 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCLCTM.Features = featuresCLCTM;
-            ViewData["lstGeoCLCTM"] = JsonConvert.SerializeObject(lstGeoCLCTM);
+            ViewData["lstGeoCLCTM"] = JsonSerializer.Serialize(lstGeoCLCTM);
 
 
             if (lang == "vi")
             {
                 var jsonDataCHAByDistrict = await dataFiguresRepository.GetDataCLCByDistrict(Org);
-                ViewData["DataCLCByDistrict"] = JsonConvert.SerializeObject(jsonDataCHAByDistrict);
+                ViewData["DataCLCByDistrict"] = JsonSerializer.Serialize(jsonDataCHAByDistrict);
             }
             else
             {
                 var jsonDataCHAByDistrict = await dataFiguresRepository.GetDataCLCByDistrictEN(Org);
-                ViewData["DataCLCByDistrict"] = JsonConvert.SerializeObject(jsonDataCHAByDistrict);
+                ViewData["DataCLCByDistrict"] = JsonSerializer.Serialize(jsonDataCHAByDistrict);
             }
 
             var jsonDataCLCByYear = await dataFiguresRepository.GetDataCLCByYear(Org);
-            ViewData["DataCLCByYear"] = JsonConvert.SerializeObject(jsonDataCLCByYear);
+            ViewData["DataCLCByYear"] = JsonSerializer.Serialize(jsonDataCLCByYear);
 
             var DataUXOModel = await dataFiguresRepository.UXOModelClearance(Org);          
 
@@ -920,7 +920,7 @@ namespace DBCU_WebApp.Controllers
             if (org == null || org == "") org = "0";
 
             var jsonDataMREByYear = await dataFiguresRepository.GetMREByYear(org);
-            ViewData["DataMREByYear"] = JsonConvert.SerializeObject(jsonDataMREByYear);
+            ViewData["DataMREByYear"] = JsonSerializer.Serialize(jsonDataMREByYear);
 
             ViewData["MREGenderMale"] = await dataFiguresRepository.GetMREGenderMale(org);
             ViewData["MREGenderFemale"] = await dataFiguresRepository.GetMREGenderFemale(org);

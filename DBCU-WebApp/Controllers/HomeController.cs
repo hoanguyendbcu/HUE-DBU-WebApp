@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -70,8 +70,8 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoClearance.Geometry>(results.Polygon);
-
+                geo =  JsonSerializer.Deserialize<Models.GeoClearance.Geometry>(results.Polygon);
+           
                 feature.Type = "Feature";
                 feature.Properties = pro;
                 feature.Geometry = geo;
@@ -82,7 +82,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoClearance.Features = features;
-            ViewData["lstGeoClearance"] = JsonConvert.SerializeObject(lstGeoClearance);
+            ViewData["lstGeoClearance"] = JsonSerializer.Serialize(lstGeoClearance);
 
             // Geo CHA  
             var dataCha = await missonEODRepository.GetGeoCHA();
@@ -106,7 +106,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo =  JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
 
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -118,7 +118,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHA.Features = featuresCHA;
-            ViewData["lstGeoCHA"] = JsonConvert.SerializeObject(lstGeoCHA);
+            ViewData["lstGeoCHA"] = JsonSerializer.Serialize(lstGeoCHA);
 
             // Geo CHA Open
             var dataChaOpen = await missonEODRepository.GetGeoCHAOpen();
@@ -157,7 +157,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo =  JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
 
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -168,7 +168,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHAOpen.Features = featuresCHAOpen;
-            ViewData["lstGeoCHAOpen"] = JsonConvert.SerializeObject(lstGeoCHAOpen);
+            ViewData["lstGeoCHAOpen"] = JsonSerializer.Serialize(lstGeoCHAOpen);
 
             //GeoCHA Suspended
             var dataChaSuspended = await missonEODRepository.GetGeoCHASuspended();
@@ -207,7 +207,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo =  JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -218,7 +218,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHASuspended.Features = featuresCHASuspended;
-            ViewData["lstGeoCHASuspended"] = JsonConvert.SerializeObject(lstGeoCHASuspended);
+            ViewData["lstGeoCHASuspended"] = JsonSerializer.Serialize(lstGeoCHASuspended);
 
             //GeoCHA Completed
             var dataChaCompleted = await missonEODRepository.GetGeoCHACompleted();
@@ -257,7 +257,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo =  JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
 
                 feature.Id = i;
                 feature.Type = "Feature";
@@ -268,7 +268,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHACompleted.Features = featuresCHACompleted;
-            ViewData["lstGeoCHACompleted"] = JsonConvert.SerializeObject(lstGeoCHACompleted);
+            ViewData["lstGeoCHACompleted"] = JsonSerializer.Serialize(lstGeoCHACompleted);
 
             //GeoCHA Completed
             var dataChaOngoing = await missonEODRepository.GetGeoCHAOngoing();
@@ -307,7 +307,7 @@ namespace DBCU_WebApp.Controllers
                 pro.Commune_name = results.Commune_name;
                 pro.Village_name = results.Village_name;
 
-                geo = JsonConvert.DeserializeObject<Models.GeoCHA.Geometry>(results.Polygon);
+                geo =  JsonSerializer.Deserialize<Models.GeoCHA.Geometry>(results.Polygon);
                 feature.Id = i;
                 feature.Type = "Feature";
                 feature.Properties = pro;
@@ -317,7 +317,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoCHAOngoing.Features = featuresCHAOngoing;
-            ViewData["lstGeoCHAOngoing"] = JsonConvert.SerializeObject(lstGeoCHAOngoing);
+            ViewData["lstGeoCHAOngoing"] = JsonSerializer.Serialize(lstGeoCHAOngoing);
 
             return View(await posts.ToListAsync());
         }
@@ -427,7 +427,7 @@ namespace DBCU_WebApp.Controllers
             }
 
             lstGeoOperationPlan.Features = features;
-            ViewData["lstGeoOperationPlan"] = JsonConvert.SerializeObject(lstGeoOperationPlan);
+            ViewData["lstGeoOperationPlan"] = JsonSerializer.Serialize(lstGeoOperationPlan);
 
             if (HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
                 return PartialView("_OperationPlans", data);

@@ -1,65 +1,67 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Options;
+using System.Text.Json;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace DBCU_WebApp.Models.GeoModel
 {
     public class GeoOperationPlan
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("features")]
+        [JsonPropertyName("features")]
         public List<Feature> Features { get; set; }
     }
 
 
     public class Properties
     {
-        [JsonProperty("message")]
+        [JsonPropertyName("message")]
         public string Message { get; set; }
 
-        [JsonProperty("org")]
+        [JsonPropertyName("org")]
         public string Org { get; set; }
 
-        [JsonProperty("team")]
+        [JsonPropertyName("team")]
         public string Team { get; set; }
 
-        [JsonProperty("activity")]
+        [JsonPropertyName("activity")]
         public string Activity { get; set; }
 
-        [JsonProperty("location")]
+        [JsonPropertyName("location")]
         public string Location { get; set; }
 
-        [JsonProperty("taskID")]
+        [JsonPropertyName("taskID")]
         public string TaskID { get; set; }
 
 
-        [JsonProperty("startDate")]
+        [JsonPropertyName("startDate")]
         public string StartDate { get; set; }
 
-        [JsonProperty("endDate")]
+        [JsonPropertyName("endDate")]
         public string EndDate { get; set; }
 
     }
 
     public class Geometry
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("coordinates")]
+        [JsonPropertyName("coordinates")]
         public List<float?> Coordinates { get; set; }
     }
 
     public class Feature
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("properties")]
+        [JsonPropertyName("properties")]
         public Properties Properties { get; set; }
 
-        [JsonProperty("geometry")]
+        [JsonPropertyName("geometry")]
         public Geometry Geometry { get; set; }
     }
 

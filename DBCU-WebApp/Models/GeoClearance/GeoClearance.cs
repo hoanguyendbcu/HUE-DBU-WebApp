@@ -1,78 +1,78 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
 namespace DBCU_WebApp.Models.GeoClearance
 {
     public class GeoClearance
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("features")]
+        [JsonPropertyName("features")]
         public List<Feature> Features { get; set; }
     }
     public class Properties
     {
-        [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public string Description { get; set; }
 
-        [JsonProperty("lr_id")]
+        [JsonPropertyName("lr_id")]
         public string Lr_ID { get; set; }
 
-        [JsonProperty("lr_name")]
+        [JsonPropertyName("lr_name")]
         public string Lr_name { get; set; }
 
-        [JsonProperty("reporting_team")]
+        [JsonPropertyName("reporting_team")]
         public string Reporting_team { get; set; }
 
-        [JsonProperty("reporting_org_name")]
+        [JsonPropertyName("reporting_org_name")]
         public string reporting_org_name { get; set; }
 
-        [JsonProperty("status")]
+        [JsonPropertyName("status")]
         public string Status { get; set; }
 
-        [JsonProperty("startdate")]
+        [JsonPropertyName("startdate")]
         public string Startdate { get; set; }
 
-        [JsonProperty("enddate")]
+        [JsonPropertyName("enddate")]
         public string Enddate { get; set; }
 
-        [JsonProperty("areasize")]
+        [JsonPropertyName("areasize")]
         public string Areasize { get; set; }
 
-        [JsonProperty("village_name")]
+        [JsonPropertyName("village_name")]
         public string Village_name { get; set; }
 
-        [JsonProperty("commune_name")]
+        [JsonPropertyName("commune_name")]
         public string Commune_name { get; set; }
 
-        [JsonProperty("district_name")]
+        [JsonPropertyName("district_name")]
         public string District_name { get; set; }
  
     }
 
     public class Geometry
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("coordinates")]
+        [JsonPropertyName("coordinates")]
         public List<List<List<List<double>>>> Coordinates { get; set; }
 
     }
 
     public class Feature
     {
-        [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
-        [JsonProperty("properties")]
+        [JsonPropertyName("properties")]
         public Properties Properties { get; set; }
 
-        [JsonProperty("geometry")]
+        [JsonPropertyName("geometry")]
         public Geometry Geometry { get; set; }
 
-        [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public int Id { get; set; }
     }
 

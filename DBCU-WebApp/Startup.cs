@@ -14,11 +14,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System;
 using System.Globalization;
 using System.Reflection;
 using System.Text;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.Linq;
 
 namespace DBCU_WebApp
 {
@@ -159,6 +161,16 @@ namespace DBCU_WebApp
             services.AddAuthentication();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddResponseCompression();
+            services.AddResponseCompression(options =>
+            {
+                options.Providers.Add<BrotliCompressionProvider>();
+                options.Providers.Add<GzipCompressionProvider>();
+            
+                options.MimeTypes =
+                    ResponseCompressionDefaults.MimeTypes.Concat(
+                        new[] { "image/svg+xml" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -216,7 +228,7 @@ namespace DBCU_WebApp
                         url = context.Request.GetDisplayUrl(),
                         content = "Return from testapi"
                     };
-                    string jsonString = JsonConvert.SerializeObject(ob);
+                    string jsonString = JsonSerializer.Serialize(ob);
                     await context.Response.WriteAsync(jsonString, Encoding.UTF8);
                 });
             });
@@ -226,6 +238,8 @@ namespace DBCU_WebApp
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 await context.Response.WriteAsync("Page not found (DBCU Web)!");
             });
+
+            app.UseResponseCompression();
         }
     }
 }

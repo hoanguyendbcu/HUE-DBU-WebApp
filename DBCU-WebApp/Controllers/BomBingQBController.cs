@@ -2,7 +2,7 @@
 using DBCU_WebApp.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -45,7 +45,7 @@ namespace DBCU_WebApp.Controllers
             }
             qbBom.Features = features;
 
-            ViewData["GetDataBomBingQB"] = JsonConvert.SerializeObject(qbBom);
+            ViewData["GetDataBomBingQB"] = JsonSerializer.Serialize(qbBom);
 
             return View();
         }
