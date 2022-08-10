@@ -122,8 +122,8 @@ namespace DBCU_WebApp
                 // These are the cultures the app supports for UI strings, i.e. we have localized resources for.
                 options.SupportedUICultures = supportedCultures;
             });
-
-            services.AddDbContext<DBCU_WebContext>(options =>
+            
+            services.AddDbContextPool<DBCU_WebContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DBCUContextConnection")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
