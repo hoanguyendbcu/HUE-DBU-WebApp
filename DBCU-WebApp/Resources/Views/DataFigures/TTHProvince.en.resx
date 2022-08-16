@@ -205,9 +205,6 @@ Geographic position: The provincial mainland is located at the coordinates:</val
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Other administrative units</value>
   </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Quang Binh Province</value>
-  </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Statistic after survey , clearance and risk education activities</value>
   </data>
@@ -247,6 +244,9 @@ Geographic position: The provincial mainland is located at the coordinates:</val
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
     <value> MRE by gender</value>
+  </data>
+  <data name="lblTTHProvince" xml:space="preserve">
+    <value>Thua Thien Hue Province</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>

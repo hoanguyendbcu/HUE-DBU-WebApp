@@ -391,7 +391,7 @@ namespace DBCU_WebApp.Repository
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT CAST(sum(areasize) AS int) areasize, (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) from    dbcu_cha a   left join( ";
+                string strQuery = "SELECT CAST(sum(areasize) AS int) areasize, (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) from    tthdbu_cha a   left join( ";
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date) ";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task ";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid ";

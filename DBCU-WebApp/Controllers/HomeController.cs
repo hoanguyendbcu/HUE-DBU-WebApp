@@ -18,10 +18,10 @@ namespace DBCU_WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly MissonEODRepository missonEODRepository;
 
-        public HomeController(DBCU_WebContext context, IConfiguration configuration)
+        public HomeController(DBUWebContext context, IConfiguration configuration)
         {
             _context = context;
             missonEODRepository = new MissonEODRepository(configuration);

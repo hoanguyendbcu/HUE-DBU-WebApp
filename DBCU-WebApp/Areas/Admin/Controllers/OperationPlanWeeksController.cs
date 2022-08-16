@@ -11,9 +11,9 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
     [Authorize]
     public class OperationPlanWeeksController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
-        public OperationPlanWeeksController(DBCU_WebContext context)
+        public OperationPlanWeeksController(DBUWebContext context)
         {
             _context = context;
         }

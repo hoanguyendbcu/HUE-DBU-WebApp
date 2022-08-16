@@ -213,9 +213,6 @@
   <data name="Photos" xml:space="preserve">
     <value>Photos</value>
   </data>
-  <data name="QuangBinh" xml:space="preserve">
-    <value>Quang Binh Province</value>
-  </data>
   <data name="QuangBinhBomBing" xml:space="preserve">
     <value>Map of Quang Binh bombing</value>
   </data>
@@ -224,6 +221,9 @@
   </data>
   <data name="QuangTrach" xml:space="preserve">
     <value>Quang Trach District</value>
+  </data>
+  <data name="TTH" xml:space="preserve">
+    <value>Thua Thien Hue Province</value>
   </data>
   <data name="TuyenHoa" xml:space="preserve">
     <value>Tuyen Hoa District</value>

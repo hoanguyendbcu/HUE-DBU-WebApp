@@ -144,8 +144,8 @@ namespace DBCU_WebApp
             });
 
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-            //services.AddDbContext<DBCU_WebContext>(options =>
-            //        options.UseSqlServer(Configuration.GetConnectionString("DBCU_WebContext")));
+            //services.AddDbContext<DBUWebContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("DBUWebContext")));
 
 
             services.AddAuthorization(options =>
@@ -238,6 +238,7 @@ namespace DBCU_WebApp
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 await context.Response.WriteAsync("Page not found (DBCU Web)!");
             });
+
 
             app.UseResponseCompression();
         }

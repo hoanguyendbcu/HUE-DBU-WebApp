@@ -213,9 +213,6 @@
   <data name="Photos" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>
-  <data name="QuangBinh" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
-  </data>
   <data name="QuangBinhBomBing" xml:space="preserve">
     <value>Bản đồ ném bom Quảng Bình</value>
   </data>
@@ -224,6 +221,9 @@
   </data>
   <data name="QuangTrach" xml:space="preserve">
     <value>Huyện Quảng Trạch</value>
+  </data>
+  <data name="TTH" xml:space="preserve">
+    <value>Tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="TuyenHoa" xml:space="preserve">
     <value>Huyện Tuyên Hóa</value>

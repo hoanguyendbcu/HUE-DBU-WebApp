@@ -7,12 +7,12 @@ namespace DBCU_WebApp.Pages.Blog
 {
     public class CreateModel : PageModel
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly RoleManager<IdentityRole> _roleManager;
 
         public IdentityRole role { set; get; }
 
-        public CreateModel(DBCU_WebContext context, RoleManager<IdentityRole> roleManager)
+        public CreateModel(DBUWebContext context, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _roleManager = roleManager;

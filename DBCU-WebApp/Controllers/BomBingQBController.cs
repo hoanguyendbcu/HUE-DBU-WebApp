@@ -10,10 +10,10 @@ namespace DBCU_WebApp.Controllers
 {
     public class BomBingQBController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly MissonEODRepository missonEODRepository;
 
-        public BomBingQBController(DBCU_WebContext context, IConfiguration configuration)
+        public BomBingQBController(DBUWebContext context, IConfiguration configuration)
         {
             _context = context;
             missonEODRepository = new MissonEODRepository(configuration);

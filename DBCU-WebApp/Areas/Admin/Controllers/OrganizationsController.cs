@@ -12,9 +12,9 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
     [Authorize]
     public class OrganizationsController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
-        public OrganizationsController(DBCU_WebContext context)
+        public OrganizationsController(DBUWebContext context)
         {
             _context = context;
         }
@@ -22,8 +22,8 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
         // GET: Admin/Organizations
         public async Task<IActionResult> Index()
         {
-            var dBCU_WebContext = _context.Organization.Include(o => o.ParentOrganization);
-            return View(await dBCU_WebContext.ToListAsync());
+            var DBUWebContext = _context.Organization.Include(o => o.ParentOrganization);
+            return View(await DBUWebContext.ToListAsync());
         }
 
         // GET: Admin/Organizations/Details/5

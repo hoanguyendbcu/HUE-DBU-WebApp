@@ -8,7 +8,7 @@ namespace DBCU_WebApp.Pages.Blog
 {
     public class DeleteModel : PageModel
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly RoleManager<IdentityRole> _roleManager;
 
         public IdentityRole role { set; get; }
@@ -16,7 +16,7 @@ namespace DBCU_WebApp.Pages.Blog
         [BindProperty(SupportsGet = true)]
         public string roleid { set; get; }
 
-        public DeleteModel(DBCU_WebContext context, RoleManager<IdentityRole> roleManager)
+        public DeleteModel(DBUWebContext context, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _roleManager = roleManager;

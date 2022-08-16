@@ -15,7 +15,7 @@ namespace DBCU_WebApp.Controllers
     {
         private readonly ILogger<NewsController> _logger;
 
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
         private IMemoryCache _cache;
 
@@ -23,7 +23,7 @@ namespace DBCU_WebApp.Controllers
         public const int ITEMS_PER_PAGE = 4;
 
         public NewsController(ILogger<NewsController> logger,
-            DBCU_WebContext context,
+            DBUWebContext context,
             IMemoryCache cache)
         {
             _logger = logger;

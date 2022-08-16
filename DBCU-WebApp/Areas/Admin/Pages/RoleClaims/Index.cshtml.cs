@@ -13,9 +13,9 @@ namespace DBCU_WebApp.Areas.Admin.Pages.RoleClaims
     public class IndexModel : PageModel
     {
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly DBCU_WebContext _dbContext;
+        private readonly DBUWebContext _dbContext;
 
-        public IndexModel(RoleManager<IdentityRole> roleManager, DBCU_WebContext appDbContext)
+        public IndexModel(RoleManager<IdentityRole> roleManager, DBUWebContext appDbContext)
         {
             _dbContext = appDbContext;
             _roleManager = roleManager;

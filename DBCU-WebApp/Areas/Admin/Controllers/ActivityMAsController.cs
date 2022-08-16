@@ -11,9 +11,9 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
     [Authorize]
     public class ActivityMAsController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
-        public ActivityMAsController(DBCU_WebContext context)
+        public ActivityMAsController(DBUWebContext context)
         {
             _context = context;
         }

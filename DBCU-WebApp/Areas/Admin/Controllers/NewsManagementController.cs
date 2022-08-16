@@ -20,13 +20,13 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
     [Authorize]
     public class NewsManagementController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
         private readonly UserManager<IdentityUser> _usermanager;
 
         private readonly ILogger<NewsManagementController> _logger;
 
-        public NewsManagementController(DBCU_WebContext context,
+        public NewsManagementController(DBUWebContext context,
             UserManager<IdentityUser> usermanager,
             ILogger<NewsManagementController> logger)
         {

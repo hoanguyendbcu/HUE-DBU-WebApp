@@ -17,12 +17,12 @@ namespace DBCU_WebApp.Controllers
 {
     public class DataFiguresController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly Microsoft.AspNetCore.Identity.UserManager<IdentityUser> _userManager;
         private readonly MissonEODRepository missonEODRepository;
         private readonly DataFiguresRepository dataFiguresRepository;
 
-        public DataFiguresController(DBCU_WebContext context, IConfiguration configuration, Microsoft.AspNetCore.Identity.UserManager<IdentityUser> userManager)
+        public DataFiguresController(DBUWebContext context, IConfiguration configuration, Microsoft.AspNetCore.Identity.UserManager<IdentityUser> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -127,7 +127,7 @@ namespace DBCU_WebApp.Controllers
 
         }
 
-        public async Task<IActionResult> QuangBinhProvince()
+        public async Task<IActionResult> TTHProvince()
         {
             ViewBag.NavClassByProvince = "active";
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();

@@ -15,10 +15,10 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
     [Authorize]
     public class OperationPlansController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public OperationPlansController(DBCU_WebContext context, UserManager<IdentityUser> userManager)
+        public OperationPlansController(DBUWebContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _userManager = userManager;

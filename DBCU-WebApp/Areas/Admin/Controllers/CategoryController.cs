@@ -14,9 +14,9 @@ namespace DBCU_WebApp.Areas.Admin.Blog.Controllers
     [Authorize]
     public class CategoryController : Controller
     {
-        private readonly DBCU_WebContext _context;
+        private readonly DBUWebContext _context;
 
-        public CategoryController(DBCU_WebContext context)
+        public CategoryController(DBUWebContext context)
         {
             _context = context;
         }
