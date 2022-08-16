@@ -9,6 +9,8 @@ namespace DBCU_WebApp.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public int Id1 { get; set; }
         public int Week { get; set; }
         public int Org { get; set; }
         public int Team { get; set; }
