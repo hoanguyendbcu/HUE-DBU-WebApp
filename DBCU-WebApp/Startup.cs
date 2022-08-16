@@ -125,12 +125,12 @@ namespace DBCU_WebApp
                 options.SupportedUICultures = supportedCultures;
             });
             
-            services.AddDbContextPool<DBCU_WebContext>(options =>
-            options.UseNpgsql(Configuration.GetConnectionString("DBCUContextConnection")));
+            services.AddDbContextPool<DBUWebContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("DBUContextConnection")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                   .AddRoles<IdentityRole>()
-                  .AddEntityFrameworkStores<DBCU_WebContext>();
+                  .AddEntityFrameworkStores<DBUWebContext>();
 
             services.AddSingleton<IConfiguration>(Configuration);
             // Cấu hình Cookie

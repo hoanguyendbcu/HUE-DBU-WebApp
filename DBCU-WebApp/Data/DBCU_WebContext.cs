@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class DBCU_WebContext : IdentityDbContext<IdentityUser>
+public class DBUWebContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Gazetteer> Gazetteer { set; get; }
     public DbSet<ActivityMA> ActivityMA { set; get; }
@@ -16,7 +16,7 @@ public class DBCU_WebContext : IdentityDbContext<IdentityUser>
     public DbSet<NewsCategory> NewsCategorys { set; get; }
 
 
-    public DBCU_WebContext(DbContextOptions<DBCU_WebContext> options)
+    public DBUWebContext(DbContextOptions<DBUWebContext> options)
         : base(options)
     {
     }
