@@ -135,6 +135,9 @@
   <data name="Address5" xml:space="preserve">
     <value>Việt Nam</value>
   </data>
+  <data name="ALuoi" xml:space="preserve">
+    <value>Huyện A Lưới</value>
+  </data>
   <data name="BaDon" xml:space="preserve">
     <value>TX Ba Đồn</value>
   </data>
@@ -164,6 +167,15 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
+  </data>
+  <data name="Hue" xml:space="preserve">
+    <value>Thành phố Huế</value>
+  </data>
+  <data name="HuongThuy" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
+  </data>
+  <data name="HuongTra" xml:space="preserve">
+    <value>Thị xã Hương Trà</value>
   </data>
   <data name="lblInfor" xml:space="preserve">
     <value>Thông tin</value>
@@ -204,17 +216,29 @@
   <data name="MinhHoa" xml:space="preserve">
     <value>Huyện Minh Hóa</value>
   </data>
+  <data name="NamDong" xml:space="preserve">
+    <value>Huyện Nam Đông</value>
+  </data>
   <data name="News" xml:space="preserve">
     <value>Tin tức</value>
   </data>
   <data name="OperationPlan" xml:space="preserve">
     <value>Kế hoạch hoạt động</value>
   </data>
+  <data name="PhongDien" xml:space="preserve">
+    <value>Huyện Phong Điền</value>
+  </data>
   <data name="Photos" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>
-  <data name="QuangBinhBomBing" xml:space="preserve">
-    <value>Bản đồ ném bom Quảng Bình</value>
+  <data name="PhuLoc" xml:space="preserve">
+    <value>Huyện Phú Lộc</value>
+  </data>
+  <data name="PhuVang" xml:space="preserve">
+    <value>Huyện Phú Vang</value>
+  </data>
+  <data name="QuangDien" xml:space="preserve">
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="QuangNinh" xml:space="preserve">
     <value>Huyện Quảng Ninh</value>
@@ -224,6 +248,9 @@
   </data>
   <data name="TTH" xml:space="preserve">
     <value>Tỉnh Thừa Thiên Huế</value>
+  </data>
+  <data name="TTHBomBing" xml:space="preserve">
+    <value>Bản đồ ném bom Thừa Thiên Huế</value>
   </data>
   <data name="TuyenHoa" xml:space="preserve">
     <value>Huyện Tuyên Hóa</value>

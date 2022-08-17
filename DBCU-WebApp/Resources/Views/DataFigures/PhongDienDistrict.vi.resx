@@ -124,31 +124,34 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>TP Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>TX Ba Đồn</value>
+    <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hóa</value>
+    <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyên Hóa</value>
+    <value>Huyện Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quảng Trạch</value>
+    <value>Huyện Phú Lộc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bố Trạch</value>
+    <value>Huyện Phú Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quảng Ninh</value>
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Lệ Thủy</value>
+    <value>Thị xã Hương Trà</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Minh Hoá là huyện miền núi vùng cao nằm về phía Tây Bắc tỉnh Quảng Bình. Minh Hoá là huyện có nhiều tiềm năng và thế mạnh. Huyện có cửa khẩu quốc tế Chalo - Nà Phàu các đầu mối và tuyến giao thông quan trọng đi qua như đường Hồ Chí Minh chạy suốt chiều dài của huyện, đường 12C là tuyến đường ngắn nhất nối các tỉnh vùng Đông Bắc Thái Lan qua Lào, về QL1A, đến cảng biển Hòn La (Quảng Bình), cảng Vũng Áng (Hà Tĩnh). Bên cạnh đó, Minh Hoá còn có nhiều di tích lịch sử như đèo Đá Đẽo, Mụ Dạ, Ngầm Rinh, Khe Ve, Chalo, Cổng Trời…</value>
+    <value>Huyện có địa hình đa dạng, có cả núi đồi, đồng bằng, ven biển và đầm phá. Phong Điền là quê hương của các danh nhân Nguyễn Tri Phương, Nguyễn Đình Chiểu,…</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -157,16 +160,16 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>phía Bắc giáp huyện Tuyên Hoá</value>
+    <value>Phía đông giáp huyện Quảng Điền và thị xã Hương Trà</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>phía Nam và Đông Nam giáp huyện Bố Trạch</value>
+    <value>Phía nam giáp huyện A Lưới</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía Tây giáp nước Cộng hoà Dân chủ nhân dân Lào</value>
+    <value>Phía tây giáp huyện Đakrông, tỉnh Quảng Trị</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value> </value>
+    <value>Phía bắc giáp Biển Đông.</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value> </value>
@@ -190,10 +193,10 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>1 Thị trấn: TT Quy Đạt</value>
+    <value>1 Thị trấn: Thị trấn Phong Điền</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>14 xã: Dân Hóa, Hóa Hợp, Hóa Phúc, Hóa Sơn, Hóa Thanh, Hóa Tiến, Hồng Hóa, Minh Hóa, Quy Hóa, Tân Hóa, Thượng Hóa, Trung Hóa, Xuân Hóa, Yên Hóa</value>
+    <value>15 xã: Điền Hải, Điền Hòa, Điền Hương, Điền Lộc, Điền Môn, Phong An, Phong Bình, Phong Chương, Phong Hải, Phong Hiền, Phong Hòa, Phong Mỹ, Phong Sơn, Phong Thu, Phong Xuân.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
@@ -201,14 +204,11 @@
   <data name="lblImgCaption" xml:space="preserve">
     <value>Thị trấn Quy Đạt</value>
   </data>
-  <data name="lblMinhHoa" xml:space="preserve">
-    <value>Huyện Minh Hóa</value>
-  </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
   </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
+  <data name="lblPhongDien" xml:space="preserve">
+    <value>Huyện Phong Điền</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Thống kê theo hoạt động khảo sát, rà phá, giáo dục phòng tránh</value>
@@ -254,5 +254,8 @@
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
+  </data>
+  <data name="TTHProvince" xml:space="preserve">
+    <value>Tỉnh Thừa Thiên Huế</value>
   </data>
 </root>

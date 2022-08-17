@@ -135,6 +135,9 @@
   <data name="Address5" xml:space="preserve">
     <value>Viet Nam</value>
   </data>
+  <data name="ALuoi" xml:space="preserve">
+    <value>A Luoi District</value>
+  </data>
   <data name="BaDon" xml:space="preserve">
     <value>Ba Don Town</value>
   </data>
@@ -164,6 +167,15 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Hue" xml:space="preserve">
+    <value>Hue City</value>
+  </data>
+  <data name="HuongThuy" xml:space="preserve">
+    <value>Huong Thuy Town</value>
+  </data>
+  <data name="HuongTra" xml:space="preserve">
+    <value>Huong Tra Town</value>
   </data>
   <data name="lblInfor" xml:space="preserve">
     <value>Information</value>
@@ -204,17 +216,29 @@
   <data name="MinhHoa" xml:space="preserve">
     <value>Minh Hoa District</value>
   </data>
+  <data name="NamDong" xml:space="preserve">
+    <value>Nam Dong District</value>
+  </data>
   <data name="News" xml:space="preserve">
     <value>News</value>
   </data>
   <data name="OperationPlan" xml:space="preserve">
     <value>Operation Plan</value>
   </data>
+  <data name="PhongDien" xml:space="preserve">
+    <value>Phong Dien District</value>
+  </data>
   <data name="Photos" xml:space="preserve">
     <value>Photos</value>
   </data>
-  <data name="QuangBinhBomBing" xml:space="preserve">
-    <value>Map of Quang Binh bombing</value>
+  <data name="PhuLoc" xml:space="preserve">
+    <value>Phu Loc District</value>
+  </data>
+  <data name="PhuVang" xml:space="preserve">
+    <value>Phu Vang District</value>
+  </data>
+  <data name="QuangDien" xml:space="preserve">
+    <value>Quang Dien District</value>
   </data>
   <data name="QuangNinh" xml:space="preserve">
     <value>Quang Ninh District</value>
@@ -224,6 +248,9 @@
   </data>
   <data name="TTH" xml:space="preserve">
     <value>Thua Thien Hue Province</value>
+  </data>
+  <data name="TTHBomBing" xml:space="preserve">
+    <value>Map of Thua Thien Hue bombing</value>
   </data>
   <data name="TuyenHoa" xml:space="preserve">
     <value>Tuyen Hoa District</value>

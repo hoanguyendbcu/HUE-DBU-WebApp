@@ -3,7 +3,7 @@
 
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Quang Binh DBCU - " + ViewLocalizer["Home"].Value;
+    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["Home"].Value;
        string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 
@@ -87,8 +87,8 @@
         <div class="carousel-item" style="background-image: url(images/slide/slide-2.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-               <h2>VẤN ĐỀ ĐƯỢC GIẢI QUYẾT</h2>
-              <p>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự tỉnh và các tổ chức, đơn vị liên quan</p>
+              <h2>@ViewLocalizer["lblHeroTop3"]</h2>
+              <p>@ViewLocalizer["lblHeroTop4"]</p>
 			  
             </div>
           </div>
@@ -207,7 +207,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                <div class="icon"><i><img src="~/images/icon-web/lifevest.png" /></i></div>
-              <h4 class="title" data-toggle="counter-up"><a href=""> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoVictimACC"])</a></h4>
+              <h4 class="title" data-toggle="counter-up"><a href=""> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoVictimACC"] )</a></h4>
               <p class="titlesub">@ViewLocalizer["String21"]</p>
               <p class="description">@ViewLocalizer["String22"]</p>
           </div>
@@ -514,8 +514,8 @@
 
 		<div class="clients-slider swiper">
 			<div class="swiper-wrapper align-items-center">
-			<div class="swiper-slide"> <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.quangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo DOFA.png"></a></div>
-			<div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/Logo QSQB.png"></a></div>
+			<div class="swiper-slide"> <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.thuathienhue.gov.vn/" target="_blank"><img src="~/images/icon/logo_dofaHue.jpg"></a></div>
+			<div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/logo_PMCTTH.jpg"></a></div>
 			<div class="swiper-slide">  <a title="@ViewLocalizer["VNMAC"]" data-toggle="tooltip" href="http://vnmac.gov.vn" target="_blank"><img src="~/images/icon/Logo VNMAC.png"></a></div>
 			<div class="swiper-slide"> <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a></div>
 			<div class="swiper-slide">  <a title="@ViewLocalizer["MAG"]" data-toggle="tooltip" href="https://www.maginternational.org" target="_blank"><img src="~/images/icon/Logo MAG.png"></a></div>

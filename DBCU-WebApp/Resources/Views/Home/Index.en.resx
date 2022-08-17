@@ -237,6 +237,12 @@
   <data name="lblHeroTop2" xml:space="preserve">
     <value>Database Unit of Mine Action in Thua Thue Hue Province</value>
   </data>
+  <data name="lblHeroTop3" xml:space="preserve">
+    <value>AIM OF PROJECT</value>
+  </data>
+  <data name="lblHeroTop4" xml:space="preserve">
+    <value>Improve cooperation capacity in carrying out mine action activities with the coordination of the Department of Foreign Affairs, the Provincial Military Command and related organizations and units.</value>
+  </data>
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Post-War Clearance Efforts to Release Land</value>
   </data>

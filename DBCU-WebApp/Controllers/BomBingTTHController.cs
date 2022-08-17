@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DBCU_WebApp.Controllers
 {
-    public class BomBingQBController : Controller
+    public class BomBingTTHController : Controller
     {
         private readonly DBUWebContext _context;
         private readonly MissonEODRepository missonEODRepository;
 
-        public BomBingQBController(DBUWebContext context, IConfiguration configuration)
+        public BomBingTTHController(DBUWebContext context, IConfiguration configuration)
         {
             _context = context;
             missonEODRepository = new MissonEODRepository(configuration);

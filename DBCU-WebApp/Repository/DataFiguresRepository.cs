@@ -391,13 +391,13 @@ namespace DBCU_WebApp.Repository
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT CAST(sum(areasize) AS int) areasize, (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) from    tthdbu_cha a   left join( ";
+                string strQuery = "SELECT CAST(sum(areasize) AS int) areasize, (CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END) from    tthdbu_cha a   left join( ";
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date) ";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task ";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid ";
                 strQuery = strQuery + "    group by hazard_guid, status_enum   	   ";
                 strQuery = strQuery + "    ) task on task.hazard_guid = a.hazard_guid ";
-                strQuery = strQuery + "    GROUP BY(CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END)";
+                strQuery = strQuery + "    GROUP BY(CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END)";
               
                 List<GetDataCHA> returnValue = new List<GetDataCHA>(await dbConnection.QueryAsync<GetDataCHA>(strQuery));
                 dbConnection.Close();
@@ -432,12 +432,12 @@ namespace DBCU_WebApp.Repository
 
                 string strQuery = " 	select gazetteername district,areasize,CAST('#FC0602' AS varchar) AS color   from( ";
                 strQuery = strQuery + "     select coalesce(areasize,0) as areasize,gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
-                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
+                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Thua Thien Hue'";
                 strQuery = strQuery + "     ) a left join(";
-                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 5) localid";
+                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 4) localid";
                 strQuery = strQuery + "     from hazard b";
-                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 5)";
-                strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a WHERE gazetteer_localid  NOT IN ('40701') ";
+                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 4)";
+                strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a  WHERE areasize >0";
 
                 List<LinechartCHAByDistrict> returnValue = new List<LinechartCHAByDistrict>(await dbConnection.QueryAsync<LinechartCHAByDistrict>(strQuery));
                 dbConnection.Close();
@@ -453,12 +453,12 @@ namespace DBCU_WebApp.Repository
 
                 string strQuery = " 	select gazetteer_level3_name district,areasize,CAST('#FC0602' AS varchar) AS color   from( ";
                 strQuery = strQuery + "     select coalesce(areasize,0) as areasize,gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
-                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
+                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Thua Thien Hue'";
                 strQuery = strQuery + "     ) a left join(";
-                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 5) localid";
+                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 4) localid";
                 strQuery = strQuery + "     from hazard b";
-                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 5)";
-                strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a WHERE gazetteer_localid  NOT IN ('40701') ";
+                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 4)";
+                strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a   WHERE areasize >0";
 
                 List<LinechartCHAByDistrict> returnValue = new List<LinechartCHAByDistrict>(await dbConnection.QueryAsync<LinechartCHAByDistrict>(strQuery));
                 dbConnection.Close();
@@ -476,15 +476,15 @@ namespace DBCU_WebApp.Repository
                 string strQuery = "     select gazetteer_level3_name district, SUM(closed) closed, SUM(open) open, CAST('#00FF00' AS varchar) AS color,CAST('#FF0000' as varchar) AS color2 from(";
                 strQuery = strQuery + "       select coalesce(open,0) as open, coalesce(closed, 0) as closed, gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
                 strQuery = strQuery + "        select gazetteer_localid, gazetteername, gazetteer_level3_name";
-                strQuery = strQuery + "            from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
+                strQuery = strQuery + "            from gazetteer where seqno = 3 and gazetteer_level2_name = 'Thua Thien Hue'";
                 strQuery = strQuery + "        ) a left join(";
                 strQuery = strQuery + "        select";
                 strQuery = strQuery + "                (CASE WHEN Status_enum <> 'Closed' THEN CAST(Sum(coalesce(b.areasize, 0)) as int) END) as open,";
                 strQuery = strQuery + "                (CASE WHEN Status_enum = 'Closed' THEN CAST(Sum(coalesce(b.areasize, 0)) as int) END) as closed, ";
-                strQuery = strQuery + "           left(gazetteer_level4_localid, 5) localid";
+                strQuery = strQuery + "           left(gazetteer_level4_localid, 4) localid";
                 strQuery = strQuery + "       from hazard b where isactive = true AND Status_enum IN('Closed', 'Open')";              
-                strQuery = strQuery + "       GROUP BY left(gazetteer_level4_localid, 5),Status_enum";
-                strQuery = strQuery + "       )b on a.gazetteer_localid::text = b.localid )a  WHERE gazetteer_localid  NOT IN ('40701','40715') GROUP BY gazetteer_level3_name";
+                strQuery = strQuery + "       GROUP BY left(gazetteer_level4_localid, 4),Status_enum";
+                strQuery = strQuery + "       )b on a.gazetteer_localid::text = b.localid )a  WHERE open + closed > 0 GROUP BY gazetteer_level3_name";
 
                 List<LinechartCHAByStatus> returnValue = new List<LinechartCHAByStatus>(await dbConnection.QueryAsync<LinechartCHAByStatus>(strQuery));
                 dbConnection.Close();
@@ -568,13 +568,13 @@ namespace DBCU_WebApp.Repository
 
                 string strQuery = " 	select gazetteername district,areasize,CAST('#20AB02' as varchar)  color   from( ";
                 strQuery = strQuery + "     select coalesce(areasize,0) as areasize,gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
-                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
+                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Thua Thien Hue'";
                 strQuery = strQuery + "     ) a left join(";
-                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 5) localid";
+                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 4) localid";
                 strQuery = strQuery + "     from hazreduc b";
                 strQuery = strQuery + "     where hazreduc_localid like '%CLC%' ";
                 strQuery = strQuery + " AND  ( '0'= '" + Org + "' OR org_localid = '" + Org + "') ";
-                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 5)";
+                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 4)";
                 strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a  ";
 
                 List<LinechartCHAByDistrict> returnValue = new List<LinechartCHAByDistrict>(await dbConnection.QueryAsync<LinechartCHAByDistrict>(strQuery));
@@ -591,13 +591,13 @@ namespace DBCU_WebApp.Repository
 
                 string strQuery = " 	select gazetteer_level3_name district,areasize,CAST('#20AB02' as varchar) AS color   from( ";
                 strQuery = strQuery + "     select coalesce(areasize,0) as areasize,gazetteername,gazetteer_level3_name,a.gazetteer_localid from(";
-                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Quang Binh'";
+                strQuery = strQuery + "     select gazetteer_localid, gazetteername, gazetteer_level3_name from gazetteer where seqno = 3 and gazetteer_level2_name = 'Thua Thien Hue'";
                 strQuery = strQuery + "     ) a left join(";
-                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 5) localid";
+                strQuery = strQuery + "     select CAST(Sum(coalesce(b.areasize, 0)) as int) as areasize, left(gazetteer_level4_localid, 4) localid";
                 strQuery = strQuery + "     from hazreduc b";
                 strQuery = strQuery + "     where hazreduc_localid like '%CLC%' ";
                 strQuery = strQuery + " AND  ( '0'= '" + Org + "' OR org_localid = '" + Org + "') ";
-                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 5)";
+                strQuery = strQuery + "     GROUP BY left(gazetteer_level4_localid, 4)";
                 strQuery = strQuery + "     )b on a.gazetteer_localid::text = b.localid )a  ";
 
                 List<LinechartCHAByDistrict> returnValue = new List<LinechartCHAByDistrict>(await dbConnection.QueryAsync<LinechartCHAByDistrict>(strQuery));

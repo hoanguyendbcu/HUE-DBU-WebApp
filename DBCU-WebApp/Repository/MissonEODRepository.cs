@@ -17,11 +17,13 @@ namespace DBCU_WebApp.Repository
     {
         private string connectionString;
         private string connectionStringStaging;
+        private string connectionStringDBU;
 
         public MissonEODRepository(IConfiguration configuration)
         {
             connectionString = configuration.GetValue<string>("ConnectionStrings:imsma");
             connectionStringStaging = configuration.GetValue<string>("ConnectionStrings:staging");
+            connectionStringDBU = configuration.GetValue<string>("ConnectionStrings:DBUContextConnection");
 
         }
 
@@ -40,7 +42,15 @@ namespace DBCU_WebApp.Repository
                 return new NpgsqlConnection(connectionStringStaging);
             }
 
-        } 
+        }
+        internal IDbConnection ConnectionStringDBU
+        {
+            get
+            {
+                return new NpgsqlConnection(connectionStringDBU);
+            }
+
+        }
         public async ValueTask<int> GetMissonEOD()
         {
             using (IDbConnection dbConnection = ConnectionStaging)
@@ -142,12 +152,26 @@ namespace DBCU_WebApp.Repository
             }
         }
 
+        public async ValueTask<int> NoVictimACC()
+        {
+            using (IDbConnection dbConnection = ConnectionStaging)
+            {
+                dbConnection.Open();
+                string strQuery = "SELECT count(*) num FROM public.victim_assistance ";
+ 
+                var returnValue = await dbConnection.QueryFirstOrDefaultAsync<int>(strQuery);
+                dbConnection.Close();
+
+                return returnValue;
+            }
+        }
+
         public async ValueTask<int> GetNoMRE()
         {
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT CAST(SUM(coalesce(a.qty,0)+ coalesce(b.totalaudience,0) + coalesce(b.malepercentage,0) + coalesce(b.femalepercentage,0)) AS INT) qty   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid ";
+                string strQuery = "SELECT CAST(coalesce(SUM(coalesce(a.qty,0)+ coalesce(b.totalaudience,0) + coalesce(b.malepercentage,0) + coalesce(b.femalepercentage,0)),0) AS INT) qty   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid ";
                 var returnValue = await dbConnection.QueryFirstOrDefaultAsync<int>(strQuery);
                 dbConnection.Close();
 
@@ -162,7 +186,7 @@ namespace DBCU_WebApp.Repository
                 dbConnection.Open();
                 string strQuery = " select lr_id,lr_id lr_name, status,reporting_team,reporting_org_name,to_char(a.startdate,'dd/MM/yyyy') startdate ";
                 strQuery = strQuery + "  , to_char(a.enddate, 'dd/MM/yyyy') enddate,cast(round(a.areasize) as varchar) as areasize,village_name,commune_name,a.district_name,st_asgeojson(shape) polygon";
-                strQuery = strQuery + "  from    tthdbu_lr a ";
+                strQuery = strQuery + "  from    tthdbu_lr a where lr_id like '%CLC%'";
 
                // List<GeoClearanceData> returnValue = (await dbConnection.QueryAsync(strQuery)).ToList();
                 List<GeoClearanceData> returnValue = new List<GeoClearanceData>(await dbConnection.QueryAsync<GeoClearanceData>(strQuery));
@@ -196,7 +220,7 @@ namespace DBCU_WebApp.Repository
             {
                 dbConnection.Open();
                 string strQuery = " select cha_id lr_id, org_internal_id lr_name,";
-                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
+                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing','Worked on', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
                 strQuery = strQuery + "   COALESCE(Reporting_Org_localid, '') Reporting_Org_localid,COALESCE(Survey_method, '') Survey_method,COALESCE(Land_Use, '') Land_Use, COALESCE(Comment_Land_Use, '') Comment_Land_Use,COALESCE(Beneficiaries, '') Beneficiaries, COALESCE(Clearance_Priority, '') Clearance_Priority,COALESCE(Type_of_Area, '') Type_of_Area,";
                 strQuery = strQuery + "   COALESCE(Vehicle_Type, '') Vehicle_Type,COALESCE(Vegetation_removed_by, '') Vegetation_removed,COALESCE(Soil_type, '') Soiltype,  COALESCE(Vegetation_Type, '') Vegetation_Type,COALESCE(Vegetation_density, '') Vegetation_density,COALESCE(slopee, '') slopee,COALESCE(Soil_Condition, '') Soil_Condition, COALESCE(Additional_Information, '') Additional_Information,";
                 strQuery = strQuery + "    cast(round(a.areasize) as varchar) as areasize, ";
@@ -205,7 +229,7 @@ namespace DBCU_WebApp.Repository
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date)";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid";
-                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) ='Open'";
+                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END) ='Open'";
 
                 List<GeoCHAData> returnValue = new List<GeoCHAData>(await dbConnection.QueryAsync<GeoCHAData>(strQuery));
                 dbConnection.Close();
@@ -220,7 +244,7 @@ namespace DBCU_WebApp.Repository
             {
                 dbConnection.Open();
                 string strQuery = " select cha_id lr_id, org_internal_id lr_name,";
-                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
+                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing','Worked on', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
                 strQuery = strQuery + "   COALESCE(Reporting_Org_localid, '') Reporting_Org_localid,COALESCE(Survey_method, '') Survey_method,COALESCE(Land_Use, '') Land_Use, COALESCE(Comment_Land_Use, '') Comment_Land_Use,COALESCE(Beneficiaries, '') Beneficiaries, COALESCE(Clearance_Priority, '') Clearance_Priority,COALESCE(Type_of_Area, '') Type_of_Area,";
                 strQuery = strQuery + "   COALESCE(Vehicle_Type, '') Vehicle_Type,COALESCE(Vegetation_removed_by, '') Vegetation_removed,COALESCE(Soil_type, '') Soiltype,  COALESCE(Vegetation_Type, '') Vegetation_Type,COALESCE(Vegetation_density, '') Vegetation_density,COALESCE(slopee, '') slopee,COALESCE(Soil_Condition, '') Soil_Condition, COALESCE(Additional_Information, '') Additional_Information,";
                 strQuery = strQuery + "    cast(round(a.areasize) as varchar) as areasize, ";
@@ -229,7 +253,7 @@ namespace DBCU_WebApp.Repository
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date)";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid";
-                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) ='Suspended'";
+                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END) ='Suspended'";
 
                 List<GeoCHAData> returnValue = new List<GeoCHAData>(await dbConnection.QueryAsync<GeoCHAData>(strQuery));
                 dbConnection.Close();
@@ -243,7 +267,7 @@ namespace DBCU_WebApp.Repository
             {
                 dbConnection.Open();
                 string strQuery = " select cha_id lr_id, org_internal_id lr_name,";
-                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
+                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing','Worked on', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
                 strQuery = strQuery + "   COALESCE(Reporting_Org_localid, '') Reporting_Org_localid,COALESCE(Survey_method, '') Survey_method,COALESCE(Land_Use, '') Land_Use, COALESCE(Comment_Land_Use, '') Comment_Land_Use,COALESCE(Beneficiaries, '') Beneficiaries, COALESCE(Clearance_Priority, '') Clearance_Priority,COALESCE(Type_of_Area, '') Type_of_Area,";
                 strQuery = strQuery + "   COALESCE(Vehicle_Type, '') Vehicle_Type,COALESCE(Vegetation_removed_by, '') Vegetation_removed,COALESCE(Soil_type, '') Soiltype,  COALESCE(Vegetation_Type, '') Vegetation_Type,COALESCE(Vegetation_density, '') Vegetation_density,COALESCE(slopee, '') slopee,COALESCE(Soil_Condition, '') Soil_Condition, COALESCE(Additional_Information, '') Additional_Information,";
                 strQuery = strQuery + "    cast(round(a.areasize) as varchar) as areasize, ";
@@ -252,7 +276,7 @@ namespace DBCU_WebApp.Repository
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date)";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid";
-                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END)  IN ('Completed','Closed')";
+                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END)  IN ('Completed','Closed')";
 
                 List<GeoCHAData> returnValue = new List<GeoCHAData>(await dbConnection.QueryAsync<GeoCHAData>(strQuery));
                 dbConnection.Close();
@@ -266,7 +290,7 @@ namespace DBCU_WebApp.Repository
             {
                 dbConnection.Open();
                 string strQuery = " select cha_id lr_id, org_internal_id lr_name,";
-                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
+                strQuery = strQuery + "    (CASE WHEN task.status_enum in ('Suspended', 'Ongoing','Worked on', 'Completed') THEN task.status_enum ELSE status END) status, NULLIF(reporting_org_name, '')reporting_org_name,to_char(a.cha_identification_date, 'dd/MM/yyyy') startdate,";
                 strQuery = strQuery + "   COALESCE(Reporting_Org_localid, '') Reporting_Org_localid,COALESCE(Survey_method, '') Survey_method,COALESCE(Land_Use, '') Land_Use, COALESCE(Comment_Land_Use, '') Comment_Land_Use,COALESCE(Beneficiaries, '') Beneficiaries, COALESCE(Clearance_Priority, '') Clearance_Priority,COALESCE(Type_of_Area, '') Type_of_Area,";
                 strQuery = strQuery + "   COALESCE(Vehicle_Type, '') Vehicle_Type,COALESCE(Vegetation_removed_by, '') Vegetation_removed,COALESCE(Soil_type, '') Soiltype,  COALESCE(Vegetation_Type, '') Vegetation_Type,COALESCE(Vegetation_density, '') Vegetation_density,COALESCE(slopee, '') slopee,COALESCE(Soil_Condition, '') Soil_Condition, COALESCE(Additional_Information, '') Additional_Information,";
                 strQuery = strQuery + "    cast(round(a.areasize) as varchar) as areasize, ";
@@ -275,7 +299,7 @@ namespace DBCU_WebApp.Repository
                 strQuery = strQuery + "    select hazard_guid, status_enum, max(data_entry_date)";
                 strQuery = strQuery + "    from  public.task_has_objective, public.task";
                 strQuery = strQuery + "    where public.task.guid = public.task_has_objective.task_guid";
-                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Completed') THEN task.status_enum ELSE status END) ='Ongoing'";
+                strQuery = strQuery + "    group by hazard_guid, status_enum   ) task on task.hazard_guid = a.hazard_guid WHERE (CASE WHEN task.status_enum in ('Suspended','Ongoing','Worked on','Completed') THEN task.status_enum ELSE status END) in ('Ongoing','Worked on')";
 
                 List<GeoCHAData> returnValue = new List<GeoCHAData>(await dbConnection.QueryAsync<GeoCHAData>(strQuery));
                 dbConnection.Close();
@@ -297,7 +321,7 @@ namespace DBCU_WebApp.Repository
                 dbConnection.Open();
                 string strQuery = " select lr_id,lr_id lr_name, status,reporting_team,reporting_org_name,to_char(a.startdate,'dd/MM/yyyy') startdate ";
                 strQuery = strQuery + "  , to_char(a.enddate, 'dd/MM/yyyy') enddate,cast(round(a.areasize) as varchar) as areasize,village_name,commune_name,a.district_name,st_asgeojson(shape) polygon";
-                strQuery = strQuery + "  from    tthdbu_lr a WHERE reporting_org_localid <> 'PMCQB'";
+                strQuery = strQuery + "  from    tthdbu_lr a WHERE reporting_org_localid <> 'PMCQB' AND lr_id like '%CLC%'";
 
                 // List<GeoClearanceData> returnValue = (await dbConnection.QueryAsync(strQuery)).ToList();
                 List<GeoClearanceData> returnValue = new List<GeoClearanceData>(await dbConnection.QueryAsync<GeoClearanceData>(strQuery));
@@ -326,10 +350,10 @@ namespace DBCU_WebApp.Repository
 
         public async Task<IEnumerable<QBBomBing3KMPoint>> GetDataBomBingQB()
         {
-            using (IDbConnection dbConnection = ConnectionStaging)
+            using (IDbConnection dbConnection = ConnectionStringDBU)
             {
                 dbConnection.Open();
-                var strQuery = @"select long,lat from public.BomBingQB ";
+                var strQuery = @"select latitude, longitude from public.BomBingQB ";
                 var returnValue = await dbConnection.QueryAsync<QBBomBing3KMPoint>(strQuery);
                 dbConnection.Close();
 

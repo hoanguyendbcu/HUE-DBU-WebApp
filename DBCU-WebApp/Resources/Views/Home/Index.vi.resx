@@ -237,6 +237,12 @@
   <data name="lblHeroTop2" xml:space="preserve">
     <value>Đơn vị Cơ sở dữ liệu khắc phục hậu quả bom mìn tỉnh Thừa Thuê Huế</value>
   </data>
+  <data name="lblHeroTop3" xml:space="preserve">
+    <value>VẤN ĐỀ ĐƯỢC GIẢI QUYẾT</value>
+  </data>
+  <data name="lblHeroTop4" xml:space="preserve">
+    <value>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự tỉnh và các tổ chức, đơn vị liên quan</value>
+  </data>
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Nỗ lực rà phá bom mìn, giải phóng đất đai</value>
   </data>

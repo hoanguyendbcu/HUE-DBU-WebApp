@@ -4,7 +4,7 @@ var geojson =  @Html.Raw(ViewData["lstGeoClearance"]);
 var map = new mapboxgl.Map({
     container: 'map', 
 style: 'mapbox://styles/mapbox/satellite-streets-v11',
-    center: [106.625344, 17.467754],
+    center: [107.445727, 16.416443],
     zoom: 8.2
 });
 

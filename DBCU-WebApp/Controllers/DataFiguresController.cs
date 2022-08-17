@@ -168,12 +168,12 @@ namespace DBCU_WebApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> DongHoiCity()
+        public async Task<IActionResult> ALuoiDistrict()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Dong Hoi City ";
+            string distict = "A Luoi District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -210,11 +210,11 @@ namespace DBCU_WebApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> BaDonTown()
+        public async Task<IActionResult> NamDongDistrict()
         {
             ViewBag.NavClassByProvince = "active";
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Ba Don Town";
+            string distict = "Nam Dong District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -251,12 +251,12 @@ namespace DBCU_WebApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> MinhHoaDistrict()
+        public async Task<IActionResult> PhongDienDistrict()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Minh Hoa";
+            string distict = "Phong Dien District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -750,6 +750,10 @@ namespace DBCU_WebApp.Controllers
             if (dataChaAreaSize.Where(f => f.Status == "Ongoing").Any())
             {
                 getDataCHAOngoing = (int)dataChaAreaSize.Where(f => f.Status == "Ongoing").FirstOrDefault().AreaSize;
+            }
+            if (dataChaAreaSize.Where(f => f.Status == "Worked on").Any())
+            {
+                getDataCHAOngoing = getDataCHAOngoing +(int)dataChaAreaSize.Where(f => f.Status == "Worked on").FirstOrDefault().AreaSize;
             }
             if (dataChaAreaSize.Where(f => f.Status == "Completed").Any())
             {

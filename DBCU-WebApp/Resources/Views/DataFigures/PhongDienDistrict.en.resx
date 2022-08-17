@@ -117,37 +117,143 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>Giới thiệu</value>
-  </data>
-  <data name="BomBingQB" xml:space="preserve">
-    <value>Bản đồ ném bom Quảng Bình</value>
-  </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Liên hệ</value>
-  </data>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu và Số liệu</value>
+    <value>Data And Figures</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Trang chủ</value>
+    <value>Home</value>
   </data>
-  <data name="lblBomBingQB" xml:space="preserve">
-    <value>Bản đồ dữ liệu ném bom Quảng Bình của Không quân Mỹ</value>
+  <data name="lblButtonLeft1" xml:space="preserve">
+    <value>Hue City</value>
   </data>
-  <data name="lblBomBingQB1" xml:space="preserve">
-    <value>Theo Khảo sát BOMICEN 2009: Diện tích toàn tỉnh: 806.52 ha trong đó 225.000 ha ô nhiễm, 100% xã phường ô nhiễm. Trung bình 1m² chứa 30 kg vật nổ sót lại sau chiến tranh</value>
+  <data name="lblButtonLeft2" xml:space="preserve">
+    <value>A Luoi</value>
   </data>
-  <data name="News" xml:space="preserve">
-    <value>Tin tức</value>
+  <data name="lblButtonLeft3" xml:space="preserve">
+    <value>Nam Dong</value>
   </data>
-  <data name="OperationPlan" xml:space="preserve">
-    <value>Kế hoạch hoạt động</value>
+  <data name="lblButtonLeft4" xml:space="preserve">
+    <value>Phong Dien</value>
   </data>
-  <data name="Recent posts" xml:space="preserve">
-    <value>Đăng gần nhất</value>
+  <data name="lblButtonLeft5" xml:space="preserve">
+    <value>Phu Loc</value>
   </data>
-  <data name="Search" xml:space="preserve">
-    <value>Tìm kiếm</value>
+  <data name="lblButtonLeft6" xml:space="preserve">
+    <value>Phu Vang</value>
+  </data>
+  <data name="lblButtonLeft7" xml:space="preserve">
+    <value>Quang Dien</value>
+  </data>
+  <data name="lblButtonLeft8" xml:space="preserve">
+    <value>Huong Tra Town</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Huong Thuy Town</value>
+  </data>
+  <data name="lblContent1" xml:space="preserve">
+    <value>The district has diverse topography, including mountains, plains, coastal areas and lagoons. Phong Dien is the hometown of famous celebrities Nguyen Tri Phuong, Nguyen Dinh Chieu, …</value>
+  </data>
+  <data name="lblContent2" xml:space="preserve">
+    <value>Administrative border</value>
+  </data>
+  <data name="lblContent3" xml:space="preserve">
+    <value>The geographical coordinates of the mainland are:</value>
+  </data>
+  <data name="lblContent4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblContent41" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblContent42" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblContent43" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="lblContent5" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="lblContentLeft1" xml:space="preserve">
+    <value>Area: </value>
+  </data>
+  <data name="lblContentLeft2" xml:space="preserve">
+    <value>Population:</value>
+  </data>
+  <data name="lblContentLeft21" xml:space="preserve">
+    <value>people</value>
+  </data>
+  <data name="lblContentLeft3" xml:space="preserve">
+    <value>Capital: Dong Hoi</value>
+  </data>
+  <data name="lblContentLeft4" xml:space="preserve">
+    <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
+  </data>
+  <data name="lblContentLeft5" xml:space="preserve">
+    <value>Administrative Division:</value>
+  </data>
+  <data name="lblContentLeft6" xml:space="preserve">
+    <value>1 Township: Phong Dien Township</value>
+  </data>
+  <data name="lblContentLeft7" xml:space="preserve">
+    <value>15 Communes: Dien Hai, Dien Hoa, Dien Huong, Dien Loc, Dien Mon, Phong An, Phong Binh, Phong Chuong, Phong Hai, Phong Hien, Phong Hoa, Phong My, Phong Son, Phong Thu, Phong Xuan.</value>
+  </data>
+  <data name="lblGenaeral" xml:space="preserve">
+    <value>General information</value>
+  </data>
+  <data name="lblOtherAdministrative" xml:space="preserve">
+    <value>Other administrative units</value>
+  </data>
+  <data name="lblPhongDien" xml:space="preserve">
+    <value>Phong Dien District</value>
+  </data>
+  <data name="lblStatitictis" xml:space="preserve">
+    <value>Statistic after survey , clearance and risk education activities</value>
+  </data>
+  <data name="lblStatitictis1" xml:space="preserve">
+    <value>Area of released land</value>
+  </data>
+  <data name="lblStatitictis10" xml:space="preserve">
+    <value> MRE by child gender </value>
+  </data>
+  <data name="lblStatitictis11" xml:space="preserve">
+    <value> Gender</value>
+    <comment>s</comment>
+  </data>
+  <data name="lblStatitictis12" xml:space="preserve">
+    <value> Child gender </value>
+  </data>
+  <data name="lblStatitictis2" xml:space="preserve">
+    <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
+  </data>
+  <data name="lblStatitictis3" xml:space="preserve">
+    <value>Number of people that received Mine risk education</value>
+  </data>
+  <data name="lblStatitictis4" xml:space="preserve">
+    <value>Land released information since 2010</value>
+  </data>
+  <data name="lblStatitictis5" xml:space="preserve">
+    <value> Most 5 UXO Category</value>
+  </data>
+  <data name="lblStatitictis6" xml:space="preserve">
+    <value> Most 5 UXO Model</value>
+  </data>
+  <data name="lblStatitictis7" xml:space="preserve">
+    <value> UXO Category</value>
+  </data>
+  <data name="lblStatitictis8" xml:space="preserve">
+    <value> UXO Model</value>
+  </data>
+  <data name="lblStatitictis9" xml:space="preserve">
+    <value> MRE by gender</value>
+  </data>
+  <data name="lblUnit" xml:space="preserve">
+    <value>Unit (m2)</value>
+  </data>
+  <data name="QuangBinhProvince" xml:space="preserve">
+    <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>
+  </data>
+  <data name="TTHProvince" xml:space="preserve">
+    <value>Thua Thien Hue Province</value>
   </data>
 </root>

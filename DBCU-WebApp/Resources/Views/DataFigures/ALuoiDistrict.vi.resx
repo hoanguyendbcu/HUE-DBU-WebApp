@@ -118,142 +118,141 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Data And Figures</value>
+    <value>Dữ liệu &amp; số liệu</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Trang chủ</value>
+  </data>
+  <data name="lblAluoiDistrict" xml:space="preserve">
+    <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>TP Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>Ba Don Town</value>
+    <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hoa</value>
+    <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyen Hoa</value>
+    <value>Huyện Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quang Trach</value>
+    <value>Huyện Phú Lộc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bo Trach</value>
+    <value>Huyện Phú Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quang Ninh</value>
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Le Thuy</value>
+    <value>Thị xã Hương Trà</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Minh Hoa is a mountainous district located in the Northwest of Quang Binh province. It is the district with many potentials and strengths. The district has International Border gate Chalo – Na Phau, important traffic roads passing through, for example, Ho Chi Minh Road running through the whole length of the district and National Highway 12C being the shortest route connecting Northeast Thailand provinces through Lao PDR to National Highway 1A and Hon La seaport (Quang Binh province) and Vung Ang seaport (Ha Tinh province). Besides, Minh Hoa district also has various historical sites including Da Deo pass, Mu Da pass, Ngam Rinh, Khe Ve, Chalo, Sky gate, etc.</value>
+    <value>Địa giới huyện A Lưới được giới hạn trong tọa độ địa lý từ 160 00'57'' đến 16027’ 30'' vĩ độ Bắc và từ 1070 0' 3’ đến 1070 30' 30'' kinh độ Đông, có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
-    <value>Administrative border</value>
+    <value>Phạm vi hành chính:</value>
   </data>
   <data name="lblContent3" xml:space="preserve">
-    <value>The geographical coordinates of the mainland are:</value>
+    <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Adjacent to Tuyen Hoa district to the North</value>
+    <value>Phía bắc giáp huyện Đakrông, tỉnh Quảng Trị và huyện Phong Điền</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Adjacent to Bo Trach district to the South and Southwest</value>
+    <value>Phía nam giáp huyện Tây Giang, tỉnh Quảng Nam</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to Lao PDR to the West</value>
+    <value>Phía đông giáp huyện Nam Đông và các thị xã Hương Trà, Hương Thủy</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value> </value>
+    <value>Phía tây giáp nước CHDCND Lào.</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value> </value>
+    <value>Huyện A Lưới nằm trên trục đường Hồ Chí Minh chạy qua địa phận 14 xã, thị trấn trong huyện đã phá thế ngõ cụt, nối liền A Lưới thông suốt với hai miền Bắc-Nam đất nước; cách không xa quốc lộ 9- trục đường xuyên Á, có thể thông thương thuận lợi với các nước trong khu vực qua cửa khẩu Lao Bảo-Quảng Trị; đồng thời, Quốc lộ 49 nối đường Hồ Chí Minh với Quốc lộ 1, đây là trục giao thông Đông-Tây quan trọng kết nối A Lưới với Quốc lộ 1, thành phố Huế và các huyện đồng bằng. Có 85 km đường biên giới giáp với nước CHDCND Lào và là huyện duy nhất trong tỉnh có 2 khẩu quốc tế A Đớt-Tà Vàng (tỉnh Sê Kông) và cửa khẩu Hồng Vân-Kutai (tỉnh SaLavan) liên thông với CHDCND Lào, đây là các cửa ngõ phía Tây quan trọng, là lợi thế để huyện mở rộng hợp tác kinh tế, văn hóa với nước bạn Lào và các nước trong Khu vực.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
-    <value>Area: </value>
+    <value>Diện tích: </value>
   </data>
   <data name="lblContentLeft2" xml:space="preserve">
-    <value>Population:</value>
+    <value>Dân số:</value>
   </data>
   <data name="lblContentLeft21" xml:space="preserve">
-    <value>people</value>
+    <value>người</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Capital: Dong Hoi</value>
+    <value>Thành phố: Đồng Hới</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
-    <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
+    <value>Dân tộc: Kinh, Khùa, Mã Liềng, Rục, Sách, Vân Kiều, Mày, Arem, Chứt...</value>
   </data>
   <data name="lblContentLeft5" xml:space="preserve">
-    <value>Administrative Division:</value>
+    <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>1 Township: Quy Dat Township</value>
+    <value>Thị trấn A Lưới</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>14 communes: Dan Hoa, Hoa Hop, Hoa Phuc, Hoa Son, Hoa Thanh, Hoa Tien, Hong Hoa, Minh Hoa, Quy Hoa, Tan Hoa, Thuong Hoa, Trung Hoa, Xuan Hoa, Yen Hoa</value>
+    <value>17 xã: A Ngo, A Roàng, Đông Sơn, Hồng Bắc, Hồng Hạ, Hồng Kim, Hồng Thái, Hồng Thượng, Hồng Thủy, Hồng Vân, Hương Nguyên, Hương Phong, Lâm Đớt, Phú Vinh, Quảng Nhâm, Sơn Thủy, Trung Sơn.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
-  </data>
-  <data name="lblImgCaption" xml:space="preserve">
-    <value>Quy Dat Township</value>
-  </data>
-  <data name="lblMinhHoa" xml:space="preserve">
-    <value>Minh Hoa District</value>
+    <value>Tổng quan</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>Các đơn vị hành chính khác</value>
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Quang Binh Province</value>
+    <value>Tỉnh Quảng Bình</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Thống kê theo hoạt động khảo sát, rà phá, giáo dục phòng tránh</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
-    <value>Area of released land</value>
+    <value>Là diện tích đất đai được giải phóng an toàn</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> MRE by child gender </value>
+    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính trẻ em</value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
-    <value> Gender</value>
-    <comment>s</comment>
+    <value> Giới tính</value>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
-    <value> Child gender </value>
+    <value> Giới tính trẻ em</value>
   </data>
   <data name="lblStatitictis2" xml:space="preserve">
-    <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
+    <value>Là số vật nổ bao gồm bom chùm, mìn, và các vật nổ khác được hủy nổ an toàn</value>
   </data>
   <data name="lblStatitictis3" xml:space="preserve">
-    <value>Number of people that received Mine risk education</value>
+    <value>Là số lượt người nhận được giáo dục phòng tránh rủi ro bom mìn</value>
   </data>
   <data name="lblStatitictis4" xml:space="preserve">
-    <value>Land released information since 2010</value>
+    <value>Thông tin rà phá bom mìn từ năm 2010</value>
   </data>
   <data name="lblStatitictis5" xml:space="preserve">
-    <value> Most 5 UXO Category</value>
+    <value>5 chủng loại vật nổ tìm thấy nhiều nhất </value>
   </data>
   <data name="lblStatitictis6" xml:space="preserve">
-    <value> Most 5 UXO Model</value>
+    <value>5 vật nổ tìm thấy nhiều nhất</value>
   </data>
   <data name="lblStatitictis7" xml:space="preserve">
-    <value> UXO Category</value>
+    <value> Chủng loại vật nổ</value>
   </data>
   <data name="lblStatitictis8" xml:space="preserve">
-    <value> UXO Model</value>
+    <value> Tên vật nổ</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> MRE by gender</value>
+    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Đơn vị (m2)</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
-    <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>
+    <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
   </data>
 </root>

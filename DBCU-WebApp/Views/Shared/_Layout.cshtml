@@ -88,12 +88,12 @@
   </section>
 
       <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container d-flex justify-content-between">
 
       <div class="logo">
   
-     <a style="text-align:center" asp-area="" asp-controller="Home" asp-action="Index">&nbsp;<img src="~/images/icon/logoDBCU_FINAL_75x75.png" alt="logo"></a>
+     <a style="text-align:center" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icon/logoTTHDBU.jpg" alt="logo"></a>
      
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -115,14 +115,15 @@
                                         <ul>
                                             @*<li><a href="#">@ViewLocalizer["QuangBinh"]</a></li>*@
                                             <li><a class="@Html.IsActive("DataFigures", "TTHProvince")" asp-area="" asp-controller="DataFigures" asp-action="TTHProvince">@ViewLocalizer["TTH"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "MinhHoaDistrict")" asp-area="" asp-controller="DataFigures" asp-action="MinhHoaDistrict"> @ViewLocalizer["MinhHoa"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "TuyenHoaDistrict")" asp-area="" asp-controller="DataFigures" asp-action="TuyenHoaDistrict">@ViewLocalizer["TuyenHoa"]</a></li>
-                                            <li><a  class="@Html.IsActive("DataFigures", "QuangTrachDistrict")" asp-area="" asp-controller="DataFigures" asp-action="QuangTrachDistrict">@ViewLocalizer["QuangTrach"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "BaDonTown")" asp-area="" asp-controller="DataFigures" asp-action="BaDonTown">@ViewLocalizer["BaDon"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "BoTrachDistrict")" asp-area="" asp-controller="DataFigures" asp-action="BoTrachDistrict">@ViewLocalizer["BoTrach"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "DongHoiCity")" asp-area="" asp-controller="DataFigures" asp-action="DongHoiCity">@ViewLocalizer["DongHoi"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "QuangNinhDistrict")"asp-area="" asp-controller="DataFigures" asp-action="QuangNinhDistrict">@ViewLocalizer["QuangNinh"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "LeThuyDistrict")"asp-area="" asp-controller="DataFigures" asp-action="LeThuyDistrict">@ViewLocalizer["LeThuy"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "ALuoiDistrict")" asp-area="" asp-controller="DataFigures" asp-action="AluoiDistrict"> @ViewLocalizer["ALuoi"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "NamDongDistrict")" asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["NamDong"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "PhongDienhDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["PhongDien"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "PhuLocTown")" asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["PhuLoc"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "PhuVangDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["PhuVang"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "QuangDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["QuangDien"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "HueCity")"asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["Hue"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "HuongTraTown")"asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["HuongTra"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "HuongThuyTown")"asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["HuongThuy"]</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown @ViewBag.NavClassByMineAction">
@@ -138,7 +139,7 @@
 
                                         </ul>
                                     </li>
-                                    <li class="@Html.IsActive("BomBingQB", "Index")"><a asp-area="" asp-controller="BomBingQB" asp-action="Index">@ViewLocalizer["QuangBinhBomBing"]</a></li>
+                                    <li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
@@ -175,7 +176,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>Quang Binh DBCU</h3>
+              <h3>Thua Thien Hue DBU</h3>
             
                         <p>
                             @ViewLocalizer["Address1"]<br>
@@ -223,7 +224,7 @@
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Quang Binh DBCU</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Thua Thien Hue DBU</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
        
