@@ -179,6 +179,58 @@ namespace DBCU_WebApp.Repository
             }
         }
 
+        public async Task<List<MREGender>> GetNTSGender(string distict)
+        {
+            using (IDbConnection dbConnection = ConnectionStaging)
+            {
+                dbConnection.Open();
+
+                string strQuery = "      select category, qty, color as backgroundColor from(";
+                strQuery = strQuery + " SELECT row_number() over() as id, category, qty FROM(";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_male_interview, 0)),0) qty, 'Male       ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " Union all";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_female_interview,0)),0) qty,'Female     ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " )a)a,";
+                strQuery = strQuery + " (SELECT row_number() over() as id , color FROM(";
+                strQuery = strQuery + " SELECT unnest('{#FC0703,#2EFC03} ' :: TEXT[]) color)b)b";
+                strQuery = strQuery + " WHERE a.id = b.id ";
+
+
+                List<MREGender> returnValue = new List<MREGender>(await dbConnection.QueryAsync<MREGender>(strQuery));
+                dbConnection.Close();
+
+                return returnValue;
+            }
+        }
+        public async Task<List<MREGender>> GetNTSChildGender(string distict)
+        {
+            using (IDbConnection dbConnection = ConnectionStaging)
+            {
+                dbConnection.Open();
+
+                string strQuery = "      select category, qty, color as backgroundColor from(";
+                strQuery = strQuery + " SELECT row_number() over() as id, category, qty FROM(";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_boy_interview, 0)),0) qty, 'Boy       ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " Union all";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_girl_interview,0)),0) qty,'Girl     ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " )a)a,";
+                strQuery = strQuery + " (SELECT row_number() over() as id , color FROM(";
+                strQuery = strQuery + " SELECT unnest('{#030DFC,#E203FC} ' :: TEXT[]) color)b)b";
+                strQuery = strQuery + " WHERE a.id = b.id ";
+
+
+
+                List<MREGender> returnValue = new List<MREGender>(await dbConnection.QueryAsync<MREGender>(strQuery));
+                dbConnection.Close();
+
+                return returnValue;
+            }
+        }
+
         public async ValueTask<int> GetMREGenderMale (string org)
         {
             using (IDbConnection dbConnection = ConnectionStaging)
@@ -325,7 +377,7 @@ namespace DBCU_WebApp.Repository
 
                 string strQuery = "      select category, qty, color as backgroundColor from(";
                 strQuery = strQuery + "  SELECT  row_number() over() as id, category, qty FROM(";
-                strQuery = strQuery + "      SELECT coalesce(SUM(coalesce(b.malepercentage, 0)),0) qty, 'Trẻ em trai' category   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid";
+                strQuery = strQuery + "  SELECT coalesce(SUM(coalesce(b.malepercentage, 0)),0) qty, 'Trẻ em trai' category   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid";
                 strQuery = strQuery + "  where ( '0'= '" + distict + "' OR a.gazetteer_level3_name = '" + distict + "') ";
                 strQuery = strQuery + "  Union all";
                 strQuery = strQuery + "  SELECT coalesce(SUM(coalesce(b.femalepercentage,0)),0) qty,'Trẻ em gái' category FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid";
@@ -335,6 +387,58 @@ namespace DBCU_WebApp.Repository
                 strQuery = strQuery + "  (SELECT row_number() over() as id , color FROM(";
                 strQuery = strQuery + "  SELECT unnest('{#030DFC,#E203FC} ' :: TEXT[]) color)b)b";
                 strQuery = strQuery + "  WHERE a.id=b.id ";
+
+
+                List<MREGender> returnValue = new List<MREGender>(await dbConnection.QueryAsync<MREGender>(strQuery));
+                dbConnection.Close();
+
+                return returnValue;
+            }
+        }
+
+        public async Task<List<MREGender>> GetNTSGenderVN(string distict)
+        {
+            using (IDbConnection dbConnection = ConnectionStaging)
+            {
+                dbConnection.Open();
+
+                string strQuery = "      select category, qty, color as backgroundColor from(";
+                strQuery = strQuery + " SELECT row_number() over() as id, category, qty FROM(";
+                strQuery = strQuery + "     SELECT coalesce(SUM(coalesce(a.sum_male_interview, 0)),0) qty, 'Nam       ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " Union all";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_female_interview,0)),0) qty,'Nữ     ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " )a)a,";
+                strQuery = strQuery + " (SELECT row_number() over() as id , color FROM(";
+                strQuery = strQuery + " SELECT unnest('{#FC0703,#2EFC03} ' :: TEXT[]) color)b)b";
+                strQuery = strQuery + " WHERE a.id = b.id ";
+
+
+                List<MREGender> returnValue = new List<MREGender>(await dbConnection.QueryAsync<MREGender>(strQuery));
+                dbConnection.Close();
+
+                return returnValue;
+            }
+        }
+        public async Task<List<MREGender>> GetNTSChildGenderVN(string distict)
+        {
+            using (IDbConnection dbConnection = ConnectionStaging)
+            {
+                dbConnection.Open();
+
+                string strQuery = "      select category, qty, color as backgroundColor from(";
+                strQuery = strQuery + " SELECT row_number() over() as id, category, qty FROM(";
+                strQuery = strQuery + "     SELECT coalesce(SUM(coalesce(a.sum_boy_interview, 0)),0) qty, 'Trẻ em trai       ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " Union all";
+                strQuery = strQuery + " SELECT coalesce(SUM(coalesce(a.sum_girl_interview,0)),0) qty,'Trẻ em gái     ' category FROM tthdbu_nts a";
+                strQuery = strQuery + " where ('0' = '" + distict + "' OR a.district_name = '" + distict + "')";
+                strQuery = strQuery + " )a)a,";
+                strQuery = strQuery + " (SELECT row_number() over() as id , color FROM(";
+                strQuery = strQuery + " SELECT unnest('{#030DFC,#E203FC} ' :: TEXT[]) color)b)b";
+                strQuery = strQuery + " WHERE a.id = b.id ";
+
 
 
                 List<MREGender> returnValue = new List<MREGender>(await dbConnection.QueryAsync<MREGender>(strQuery));

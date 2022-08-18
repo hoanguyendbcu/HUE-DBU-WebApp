@@ -124,28 +124,31 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>TP Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>TX Ba Đồn</value>
+    <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hóa</value>
+    <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyên Hóa</value>
+    <value>Huyện Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quảng Trạch</value>
+    <value>Huyện Phú Lộc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bố Trạch</value>
+    <value>Huyện Phú Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quảng Ninh</value>
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Lệ Thủy</value>
+    <value>Thị xã Hương Trà</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
     <value>Tỉnh Quảng Bình nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 8.065,3 km2, dân số năm 2019 có 896.601 người.</value>
@@ -211,7 +214,7 @@
     <value>Là diện tích đất đai được giải phóng an toàn</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính trẻ em</value>
+    <value> Tổng hợp số lượt phỏng vấn khảo sát phi kỹ thuật theo giới tính trẻ em</value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
     <value> Giới tính</value>
@@ -241,7 +244,7 @@
     <value> Tên vật nổ</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính</value>
+    <value> Tổng hợp số lượt phỏng vấn khảo sát phi kỹ thuật theo giới tính</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
     <value>Tỉnh Thừa Thiên Huế</value>

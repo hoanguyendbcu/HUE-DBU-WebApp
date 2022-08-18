@@ -2,16 +2,15 @@
 @inject IViewLocalizer ViewLocalizer
 @{ ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["Video"].Value; }
 
-<!-- ======= Breadcrumbs ======= -->
-<section class="breadcrumbs">
-    <div class="container">
-
+ <!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs" style="background-image: url('../images/bg/banner-ngomon.png');height:45vh;background-size: 100% 100%;"> 
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2>@ViewLocalizer["Video"]</h2>
         <ol>
-            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+           <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
             <li>@ViewLocalizer["Library"]</li>
             <li>@ViewLocalizer["Video"]</li>
         </ol>
-
     </div>
 </section><!-- End Breadcrumbs -->
 

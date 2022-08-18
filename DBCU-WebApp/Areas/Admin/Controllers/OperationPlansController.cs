@@ -116,7 +116,7 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
             ViewData["listprovince"] = new MultiSelectList(listprovince, "Gazetteer_guid", "Gazetteername");
 
             var listdistrict = await _context.Gazetteer
-                .Where(p => p.Parentgazetteer_guid == "0a0a-017b-12e6ca6fce1-6dcce7a2-7-2aef")
+                .Where(p => p.Parentgazetteer_guid == "c0a8-003e-17e712d40f3-c946ffe9-3-81bf")
                 .ToListAsync();
             listdistrict.Insert(0, new Gazetteer { Gazetteer_guid = "0", Gazetteername = "Select" });
             ViewData["listdistrict"] = new MultiSelectList(listdistrict, "Gazetteer_guid", "Gazetteername");
@@ -198,7 +198,7 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
             ViewData["listprovince"] = new MultiSelectList(listprovince, "Gazetteer_guid", "Gazetteername");
 
             var listdistrict = await _context.Gazetteer
-                .Where(p => p.Parentgazetteer_guid == "0a0a-017b-12e6ca6fce1-6dcce7a2-7-2aef")
+                .Where(p => p.Parentgazetteer_guid == "c0a8-003e-17e712d40f3-c946ffe9-3-81bf")
                 .ToListAsync();
             listdistrict.Insert(0, new Gazetteer { Gazetteer_guid = "0", Gazetteername = "Select" });
             ViewData["listdistrict"] = new MultiSelectList(listdistrict, "Gazetteer_guid", "Gazetteername");
@@ -242,7 +242,7 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
             ViewData["listprovince"] = new MultiSelectList(listprovince, "Gazetteer_guid", "Gazetteername");
 
             var listdistrict = await _context.Gazetteer
-                .Where(p => p.Parentgazetteer_guid == "0a0a-017b-12e6ca6fce1-6dcce7a2-7-2aef")
+                .Where(p => p.Parentgazetteer_guid == "c0a8-003e-17e712d40f3-c946ffe9-3-81bf")
                 .ToListAsync();
             listdistrict.Insert(0, new Gazetteer { Gazetteer_guid = "0", Gazetteername = "Select" });
             ViewData["listdistrict"] = new MultiSelectList(listdistrict, "Gazetteer_guid", "Gazetteername");
@@ -333,7 +333,7 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
             ViewData["listprovince"] = new MultiSelectList(listprovince, "Gazetteer_guid", "Gazetteername");
 
             var listdistrict = await _context.Gazetteer
-                .Where(p => p.Parentgazetteer_guid == "0a0a-017b-12e6ca6fce1-6dcce7a2-7-2aef")
+                .Where(p => p.Parentgazetteer_guid == "c0a8-003e-17e712d40f3-c946ffe9-3-81bf")
                 .ToListAsync();
             listdistrict.Insert(0, new Gazetteer { Gazetteer_guid = "0", Gazetteername = "Select" });
             ViewData["listdistrict"] = new MultiSelectList(listdistrict, "Gazetteer_guid", "Gazetteername");

@@ -352,7 +352,9 @@ namespace DBCU_WebApp.Areas.Admin.Controllers
                 postUpdate.ContentEn = post.ContentEn;
                 postUpdate.Slug = post.Slug;
                 postUpdate.SlugEn = post.SlugEn;
-
+                postUpdate.StrUrlImage = post.StrUrlImage;
+                postUpdate.Author = post.Author;
+      
                 postUpdate.DateUpdated = DateTime.Now;
 
                 if (StrUrlImage != null && StrUrlImage.Length > 0)

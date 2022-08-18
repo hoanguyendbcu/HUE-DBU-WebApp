@@ -242,7 +242,7 @@
         }
 
         if ($('#ampiechart22').length) {
-            var  json =  @Html.Raw(ViewData["MREGender"]);
+            var  json =  @Html.Raw(ViewData["NTSGender"]);
             var chart = AmCharts.makeChart("ampiechart22", {
                 "type": "pie",
                 "labelRadius": -35,
@@ -261,7 +261,7 @@
         }
 
         if ($('#ampiechart222').length) {
-            var  json =  @Html.Raw(ViewData["MREChildGender"]);
+            var  json =  @Html.Raw(ViewData["NTSChildGender"]);
 
             var chart = AmCharts.makeChart("ampiechart222", {
                 "type": "pie",

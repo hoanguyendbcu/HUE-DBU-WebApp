@@ -124,28 +124,31 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>Hue City</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>Ba Don Town</value>
+    <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hoa</value>
+    <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyen Hoa</value>
+    <value>Phong Dien</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quang Trach</value>
+    <value>Phu Loc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bo Trach</value>
+    <value>Phu Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quang Ninh</value>
+    <value>Quang Dien</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Le Thuy</value>
+    <value>Huong Tra Town</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
     <value>Quang Binh province is situated in the North Central region of Vietnam and has the total natural area of 8,065.3 km2 and population of 896,601 (recorded in 2019)
@@ -212,7 +215,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Area of released land</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> MRE by child gender </value>
+    <value>NTS by child gender </value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
     <value> Gender</value>
@@ -243,7 +246,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value> UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> MRE by gender</value>
+    <value>NTS by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
     <value>Thua Thien Hue Province</value>
