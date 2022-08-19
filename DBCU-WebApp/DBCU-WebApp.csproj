@@ -3,7 +3,9 @@
   <PropertyGroup>
 	  <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>DBCU_WebApp</AssemblyName>
-    <RootNamespace>DBCU_WebApp</RootNamespace>    
+    <RootNamespace>DBCU_WebApp</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <StartupObject>DBCU_WebApp.Program</StartupObject>    
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

@@ -163,18 +163,18 @@ namespace DBCU_WebApp.Controllers
 
             if (lang == "en")
             {
-                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
-                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
-                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                var jsonNTSGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonTNSChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonNTSGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonTNSChildGender);
 
             }
             else if (lang == "vi")
             {
-                var jsonMREGender = await dataFiguresRepository.GetNTSGenderVN(distict);
-                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGenderVN(distict);
-                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                var jsonNTSGender = await dataFiguresRepository.GetNTSGenderVN(distict);
+                var jsonTNSChildGender = await dataFiguresRepository.GetNTSChildGenderVN(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonNTSGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonTNSChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
