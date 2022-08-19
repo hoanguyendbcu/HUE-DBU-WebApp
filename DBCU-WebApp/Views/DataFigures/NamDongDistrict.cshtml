@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value + " - " + ViewLocalizer["lblBoTrach"].Value;
+    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["TTHProvince"].Value + " - " + ViewLocalizer["lblNamDong"].Value;
 }
 <style>
     figure {
@@ -47,21 +47,24 @@
 
 
 <!-- ======= Hero Section ======= -->
-<section id="HeroDataBoTrach">
-    <div class="HeroDataBoTrach-container" data-aos="fade-up">
-        <h1>  @ViewLocalizer["lblBoTrach"] </h1>
+
+
+<section id="HeroData" class="HeroData" style="background-image: url('../images/bg/NAMDONG.jpg'); background-size: 100%  100%;" >
+    <div class="HeroData-container"  data-aos="fade-up">
+       <h1>  @ViewLocalizer["lblNamDongDistrict"] </h1>
         <h6>
-            @ViewLocalizer["lblContentLeft1"]  <b>155,54</b>km2<br />
-            @ViewLocalizer["lblContentLeft2"]  <b>103.988</b>   @ViewLocalizer["lblContentLeft21"] (2019)<br />
+            @ViewLocalizer["lblContentLeft1"]  <b>650,51</b>km2<br />
+            @ViewLocalizer["lblContentLeft2"]  <b>32.050</b>   @ViewLocalizer["lblContentLeft21"] (2018)<br />
 
             <b>@ViewLocalizer["lblContentLeft5"]</b> <br />
-            @ViewLocalizer["lblContentLeft6"]<br />
-            @ViewLocalizer["lblContentLeft7"]<br />
+            • @ViewLocalizer["lblContentLeft6"]<br />
+            • @ViewLocalizer["lblContentLeft7"]<br />
         </h6>
-
     </div>
 
 </section>
+
+
 <!-- End Hero -->
 <main id="main">
     <!-- ======= About Section ======= -->
@@ -123,8 +126,8 @@
 
                 <div class="col-lg-6 pt-3 pt-lg-0 content">
                     <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243548.04470585386!2d106.14449835854352!3d17.486583420506815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3138b1a07d162af9%3A0xcb5fb15e1a4f9298!2sB%E1%BB%91%20Tr%E1%BA%A1ch%20District%2C%20Quang%20Binh%20Province%2C%20Vietnam!5e0!3m2!1sen!2s!4v1647918261824!5m2!1sen!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173443.63525261416!2d107.60216016071836!3d16.13802738136293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141ea8d2eb81b5d%3A0x96eb6d00b3cbade!2zTmFtIMSQw7RuZywgVGjhu6thIFRoacOqbiBIdeG6vywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1660882476045!5m2!1svi!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
                 </div>
 
             </div>
@@ -178,14 +181,16 @@
                         <br />
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="DongHoiCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="BaDonTown">@ViewLocalizer["lblButtonLeft2"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="MinhHoaDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="TuyenHoaDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangTrachDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="BoTrachDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangNinhDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="LeThuyDistrict">@ViewLocalizer["lblButtonLeft8"]</a></li>
+                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
+                            @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>*@
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["lblButtonLeft9"]</a></li>
+
 
                         </ul>
                     </div><!-- End sidebar tags-->
@@ -240,7 +245,7 @@
         }
 
            if ($('#ampiechart22').length) {
-            var  json =  @Html.Raw(ViewData["MREGender"]);
+            var  json =  @Html.Raw(ViewData["NTSGender"]);
             var chart = AmCharts.makeChart("ampiechart22", {
                 "type": "pie",
                 "labelRadius": -35,
@@ -259,7 +264,7 @@
         }
 
         if ($('#ampiechart222').length) {
-            var  json =  @Html.Raw(ViewData["MREChildGender"]);
+            var  json =  @Html.Raw(ViewData["NTSChildGender"]);
 
             var chart = AmCharts.makeChart("ampiechart222", {
                 "type": "pie",

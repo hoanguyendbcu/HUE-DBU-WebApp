@@ -118,141 +118,145 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu &amp; số liệu</value>
+    <value>Data And Figures</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Trang chủ</value>
-  </data>
-  <data name="lblBoTrach" xml:space="preserve">
-    <value>Huyện Bố Trạch</value>
+    <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>Hue City</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>TX Ba Đồn</value>
+    <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hóa</value>
+    <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyên Hóa</value>
+    <value>Phong Dien</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quảng Trạch</value>
+    <value>Phu Loc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bố Trạch</value>
+    <value>Phu Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quảng Ninh</value>
+    <value>Quang Dien</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Lệ Thủy</value>
+    <value>Huong Tra Town</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Huyện Bố Trạch là một huyện nằm ở giữa tỉnh Quảng Bình có các tuyến đường giao thông huyết mạch chạy qua là đường Hồ Chí Minh, quốc lộ 1A, đường sắt Bắc - Nam và các tỉnh lộ tạo thành mạng lưới giao thông ngang - dọc tương đối hoàn chỉnh. Hơn nữa, Bố Trạch còn có cửa khẩu Cà Roòng - Noọng Ma (Việt Nam - Lào), có cảng Gianh, danh thắng nổi tiếng Vườn Quốc gia Phong Nha - Kẻ Bàng được UNESCO công nhận di sản thiên nhiên thế giới lần 2. Có đường bờ biển dài 24 km, hình thành các khu du lịch, điểm dịch vụ, có bãi tắm Đá Nhảy...</value>
+    <value>Nam Dong is a mountainous district 50 km southwest of Hue city.The total natural area of Nam Dong district is 65,051.8 hectares, of which agricultural land has 4,019.38 hectares, forestry land accounts for 41,799.31 hectares, the rest is other and unused land. The population of 2.3 thousand includes 2 ethnic groups Kinh and Cotu, of which ethnic minorities (9,320 people) account for 41%. There are 10 communes in the whole district, of which 7 are extremely difficult, 6 of which are ethnic minorities, accounting for over 70%. The district has only one trade route out.</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
-    <value>Phạm vi hành chính:</value>
+    <value>Administrative borders:</value>
   </data>
   <data name="lblContent3" xml:space="preserve">
-    <value>Toạ độ địa lý ở phần đất liền là:</value>
+    <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Phía bắc giáp huyện Tuyên Hóa và thị xã Ba Đồn.</value>
+    <value>Adjacent to Huong Thuy town to the North</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Phía nam giáp huyện Quảng Ninh và thành phố Đồng Hới</value>
+    <value>Adjacent to Tay Giang, Dong Giang district of Quang Nam to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía tây giáp CHDCND Lào và huyện Minh Hóa</value>
+    <value>Adjacent to A Luoi district to the West</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía Đông giáp Biển Đông</value>
+    <value>Adjacent to Phu Loc district and Hoa Vang district of Da Nang City  to the East</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value> </value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
-    <value>Diện tích: </value>
+    <value>Area: </value>
   </data>
   <data name="lblContentLeft2" xml:space="preserve">
-    <value>Dân số:</value>
+    <value>Population:</value>
   </data>
   <data name="lblContentLeft21" xml:space="preserve">
-    <value>người</value>
+    <value>people</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Thành phố: Đồng Hới</value>
+    <value>Capital: Dong Hoi</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
-    <value>Dân tộc: Kinh, Khùa, Mã Liềng, Rục, Sách, Vân Kiều, Mày, Arem, Chứt...</value>
+    <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
   </data>
   <data name="lblContentLeft5" xml:space="preserve">
-    <value>Phân chia hành chính:</value>
+    <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>3 thị trấn: Hoàn Lão (huyện lỵ), Phong Nha, Nông trường Việt Trung</value>
+    <value>1 Towns: Khe Tre</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>25 xã: Bắc Trạch, Cự Nẫm, Đại Trạch, Đồng Trạch, Đức Trạch, Hạ Trạch, Hải Phú, Hòa Trạch, Hưng Trạch, Lâm Trạch, Liên Trạch, Lý Trạch, Mỹ Trạch, Nam Trạch, Nhân Trạch, Phú Định, Phúc Trạch, Sơn Trạch, Tân Trạch, Tây Trạch, Thanh Trạch, Thượng Trạch, Trung Trạch, Vạn Trạch, Xuân Trạch.</value>
+    <value>9 communes: Huong Huu, Huong Loc, Huong Phu, Huong Son, Huong Xuan, Thuong Lo, Thuong Long, Thuong Nhat, Thuong Quang</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>Tổng quan</value>
+    <value>General information</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
-    <value>Động Phong Nha</value>
+    <value>Phong nha Cave</value>
+  </data>
+  <data name="lblNamDongDistrict" xml:space="preserve">
+    <value>Nam Dong District</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Các đơn vị hành chính khác</value>
+    <value>Other administrative units</value>
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
+    <value>Quang Binh Province</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Thống kê theo hoạt động khảo sát, rà phá, giáo dục phòng tránh</value>
+    <value>Statistic after survey , clearance and risk education activities</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
-    <value>Là diện tích đất đai được giải phóng an toàn</value>
+    <value>Area of released land</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính trẻ em</value>
+    <value> MRE by child gender </value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
-    <value> Giới tính</value>
+    <value> Gender</value>
+    <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
-    <value> Giới tính trẻ em</value>
+    <value> Child gender </value>
   </data>
   <data name="lblStatitictis2" xml:space="preserve">
-    <value>Là số vật nổ bao gồm bom chùm, mìn, và các vật nổ khác được hủy nổ an toàn</value>
+    <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
   </data>
   <data name="lblStatitictis3" xml:space="preserve">
-    <value>Là số lượt người nhận được giáo dục phòng tránh rủi ro bom mìn</value>
+    <value>Number of people that received Mine risk education</value>
   </data>
   <data name="lblStatitictis4" xml:space="preserve">
-    <value>Thông tin rà phá bom mìn từ năm 2010</value>
+    <value>Land released information since 2010</value>
   </data>
   <data name="lblStatitictis5" xml:space="preserve">
-    <value>5 chủng loại vật nổ tìm thấy nhiều nhất </value>
+    <value>Most 5 UXO Category</value>
   </data>
   <data name="lblStatitictis6" xml:space="preserve">
-    <value>5 vật nổ tìm thấy nhiều nhất</value>
+    <value>Most 5 UXO Model</value>
   </data>
   <data name="lblStatitictis7" xml:space="preserve">
-    <value> Chủng loại vật nổ</value>
+    <value> UXO Category</value>
   </data>
   <data name="lblStatitictis8" xml:space="preserve">
-    <value> Tên vật nổ</value>
+    <value> UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> Tổng hợp giáo dục phòng tránh bom mìn theo giới tính</value>
+    <value> MRE by gender</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Đơn vị (m2)</value>
+    <value>Unit (m2)</value>
   </data>
-  <data name="QuangBinhProvince" xml:space="preserve">
-    <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
+  <data name="TTHProvince" xml:space="preserve">
+    <value>Data And Figures - Thua Thien Hue Province</value>
   </data>
 </root>
