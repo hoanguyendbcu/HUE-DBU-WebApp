@@ -276,6 +276,25 @@ namespace DBCU_WebApp.Controllers
                 ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
+            if (lang == "en")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+
+            }
+            else if (lang == "vi")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+            }
+
+
+
+
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
             ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
 
