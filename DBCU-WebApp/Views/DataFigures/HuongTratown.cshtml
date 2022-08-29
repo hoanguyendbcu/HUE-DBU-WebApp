@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value + " - " + ViewLocalizer["lblQuangTrach"].Value;
+    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value + " - " + ViewLocalizer["lblHuongTra"].Value;
 }
 <style>
     figure {
@@ -47,12 +47,14 @@
 
 
 <!-- ======= Hero Section ======= -->
-<section id="HeroDataQuangTrach">
-    <div class="HeroDataQuangTrach-container" data-aos="fade-up">
-        <h1>  @ViewLocalizer["lblQuangTrach"] </h1>
+<section id="HeroData" class="HeroData" style="background-image: url('../images/bg/huongtra.jpg'); background-size: 100%  100%;">
+    <div class="HeroData-container" data-aos="fade-up">
+
+
+        <h1>  @ViewLocalizer["lblHuongTra"] </h1>
         <h6>
-            @ViewLocalizer["lblContentLeft1"]  <b>155,54</b>km2<br />
-            @ViewLocalizer["lblContentLeft2"]  <b>103.988</b>   @ViewLocalizer["lblContentLeft21"] (2019)<br />
+            @ViewLocalizer["lblContentLeft1"]  <b>392,32</b>km2<br />
+            @ViewLocalizer["lblContentLeft2"]  <b>72.677</b>   @ViewLocalizer["lblContentLeft21"] (2020)<br />
 
             <b>@ViewLocalizer["lblContentLeft5"]</b> <br />
             @ViewLocalizer["lblContentLeft6"]<br />
@@ -123,7 +125,8 @@
 
                 <div class="col-lg-6 pt-3 pt-lg-0 content">
                     <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204418.79683782402!2d106.1924638113058!3d17.820836380861547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31389a305b9eefe9%3A0x7c625d8ea7d958cb!2sQu%E1%BA%A3ng%20Tr%E1%BA%A1ch%20District%2C%20Quang%20Binh%20Province!5e0!3m2!1sen!2s!4v1647916957423!5m2!1sen!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173154.9680657054!2d107.45910545080113!3d16.464375043146507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141af5f4fee45ab%3A0x74fb0706403e84b5!2zSMawxqFuZyBUcsOgLCBUaOG7q2EgVGhpw6puIEh14bq_LCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1661760775811!5m2!1svi!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
                     </div>
                 </div>
 
@@ -178,14 +181,15 @@
                         <br />
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="DongHoiCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="BaDonTown">@ViewLocalizer["lblButtonLeft2"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="MinhHoaDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="TuyenHoaDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangTrachDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="BoTrachDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangNinhDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="LeThuyDistrict">@ViewLocalizer["lblButtonLeft8"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                            @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>*@
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["lblButtonLeft9"]</a></li>
 
                         </ul>
                     </div><!-- End sidebar tags-->

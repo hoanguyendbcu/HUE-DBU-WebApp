@@ -196,13 +196,13 @@
     <value>Theo hoạt động</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Quảng Bình</value>
+    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>Huyện</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Các biểu đồ trình bày số liệu về Diện tích và Vật nổ của các hoạt động khảo sát bom chùm tại tỉnh Quảng Bình</value>
+    <value>Các biểu đồ trình bày số liệu về Diện tích và Vật nổ của các hoạt động khảo sát bom chùm tại tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="lblMineActionSurvey" xml:space="preserve">
     <value>Khảo sát</value>

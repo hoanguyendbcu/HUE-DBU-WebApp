@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Quang Binh province is situated in the North Central region of Vietnam and has the total natural area of 8,065.3 km2 and population of 896,601 (recorded in 2019)
+    <value>Thua Thien Hue  province is situated in the North Central region of Vietnam and has the total natural area of 8,065.3 km2 and population of 896,601 (recorded in 2019)
 Geographic position: The provincial mainland is located at the coordinates:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
@@ -185,7 +185,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>people</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Capital: Dong Hoi</value>
+    <value>Capital: Hue</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
     <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
@@ -203,7 +203,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>General information</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>Hue City</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Other administrative units</value>

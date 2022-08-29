@@ -121,7 +121,11 @@
     <value />
   </data>
   <data name="DatabaseUnit" xml:space="preserve">
-    <value />
+    <value>Develop, update, implement plans, manage processes
+Information reason according to the national standard of Direct Information Management System
+Vietnam National Mine Action Center (VNMAC).
+Synchronization of all mine action data in the province
+to the National National database system of VNMAC</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
@@ -139,10 +143,15 @@
     <value>Database unit</value>
   </data>
   <data name="lblIntro" xml:space="preserve">
-    <value />
+    <value>Database Unit Setup and Support Project
+Landmines and Mines in Thua Thien Hue Province (DBU) by the People's Committee of Thua Thien Hue Province and
+Norwegian People's Aid for cooperation in the implementation of etching projects
+Recovering consequences of landmines in Thua Thien Hue province, period 2020-2025</value>
   </data>
   <data name="lblIntro1" xml:space="preserve">
-    <value />
+    <value>Project objective to help Thua Thien Hue province establish, develop and implement a management system
+Provincial database information, which helps to strengthen the collection, processing, secure storage and analysis of data for decision-making processes related to mine operations.
+provincial and national government.</value>
   </data>
   <data name="lblOrganizationalStructure" xml:space="preserve">
     <value>Organizational structure</value>
@@ -154,9 +163,9 @@
     <value>DBCU structure En.jpg</value>
   </data>
   <data name="PolicyAndTerms" xml:space="preserve">
-    <value />
+    <value>The information in the Website will be kept confidential according to the privacy policy in accordance with the relevant laws on information and electronic data.</value>
   </data>
   <data name="PolicyAndTerms1" xml:space="preserve">
-    <value />
+    <value>Thua Thien Hue DBU retains all rights and rights to protect and use the information (in any form) published and introduced by us on the Website (unless otherwise noted or the information is provided by us). referrals, construed as the property of another party) at all times. We do not intend to allow it to be reproduced, published, duplicated, rented, sold, distributed for commercial or personal use without Our prior written consent.</value>
   </data>
 </root>

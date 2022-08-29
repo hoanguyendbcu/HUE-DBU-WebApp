@@ -118,10 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CoordinationFunction" xml:space="preserve">
-    <value>Hoạt động điều phối tỉnh các tổ chức hoạt động bom mìn tại tỉnh Quảng Bình.
-Hỗ trợ chính quyền tỉnh Quảng Bình triển khai sử dụng các thông tin/dữ liệu 
-hành động bom mìn trong tỉnh nhằm nâng cao khả năng điều phối và hiệu quả 
-về chi phí cho toàn bộ các hoạt động bom mìn trong tỉnh.</value>
+    <value />
   </data>
   <data name="DatabaseUnit" xml:space="preserve">
     <value>Phát triển, cập nhật, triển khai các kế hoạch, quy trình quản 
@@ -134,7 +131,7 @@ vào hệ thống cơ sở dữ liệu cấp quốc gia của VNMAC.</value>
     <value>Trang chủ</value>
   </data>
   <data name="Intro" xml:space="preserve">
-    <value>Giới thiệu Quảng Bình DBCU</value>
+    <value>Giới thiệu Thừa Thiên Huế DBCU</value>
   </data>
   <data name="Introduction" xml:space="preserve">
     <value>Giới thiệu</value>
@@ -146,17 +143,14 @@ vào hệ thống cơ sở dữ liệu cấp quốc gia của VNMAC.</value>
     <value>Đơn vị cơ sở dữ liệu</value>
   </data>
   <data name="lblIntro" xml:space="preserve">
-    <value>Dự án Thiết lập và hỗ trợ Đơn vị Cơ sở dữ liệu và
-Điều phối hoạt động khắc phục hậu quả
-bom mìn tỉnh Quảng Bình (DBCU) do UBND tỉnh Quảng Bình và 
+    <value>Dự án Thiết lập và hỗ trợ Đơn vị Cơ sở dữ liệu
+bom mìn tỉnh Thừa Thiên Huế  (DBU) do UBND tỉnh Thừa Thiên Huế và 
 Tổ chức Viện trợ Nhân dân Na Uy về việc hợp tác thực hiện các dự án khắc 
-phục hậu quả bom mìn tại tỉnh Quảng Bình, giai đoạn 2020-2025</value>
+phục hậu quả bom mìn tại tỉnh Thừa Thiên Huế, giai đoạn 2020-2025</value>
   </data>
   <data name="lblIntro1" xml:space="preserve">
-    <value>Mục tiêu dự án giúp tỉnh Quảng Bình thiết lập, phát triển và triển khai hệ thống quản lý 
-thông tin cơ sở dữ liệu và hệ thống điều phối cho hoạt động bom mìn cấp tỉnh, 
-giúp củng cố hoạt động thu thập, xử lý, lưu trữ an toàn và phân tích các dữ liệu 
-phục vụ các quy trình ra quyết định liên quan đến các hoạt động bom mìn của 
+    <value>Mục tiêu dự án giúp tỉnh Thừa Thiên Huế thiết lập, phát triển và triển khai hệ thống quản lý 
+thông tin cơ sở dữ liệu  cấp tỉnh,  giúp củng cố hoạt động thu thập, xử lý, lưu trữ an toàn và phân tích các dữ liệu  phục vụ các quy trình ra quyết định liên quan đến các hoạt động bom mìn của 
 chính quyền cấp tỉnh và cấp quốc gia.</value>
   </data>
   <data name="lblOrganizationalStructure" xml:space="preserve">
@@ -172,6 +166,6 @@ chính quyền cấp tỉnh và cấp quốc gia.</value>
     <value>Các thông trong Website sẽ được bảo mật theo chính sách bảo mật phù hợp với quy định của pháp luật về thông tin, dữ liệu điện tử có liên quan.</value>
   </data>
   <data name="PolicyAndTerms1" xml:space="preserve">
-    <value>Quảng Bình DBCU giữ tất cả các quyền lợi, quyền để bảo vệ và sử dụng các thông tin (bất kỳ hình thức) được Chúng tôi công bố, giới thiệu trên Website (trừ trường hợp được chú thích khác đi hoặc thông tin được giới thiệu, được hiểu là tài sản của một bên khác) vào mọi thời điểm. Chúng tôi không mục đích cho phép để sao chép, xuất bản, nhân bản, cho thuê, bán, phân phối thương mại hoặc mục đích cá nhân khi chưa có sự đồng ý bằng văn bản của Chúng tôi.</value>
+    <value>Thừa Thiên Huế DBU giữ tất cả các quyền lợi, quyền để bảo vệ và sử dụng các thông tin (bất kỳ hình thức) được Chúng tôi công bố, giới thiệu trên Website (trừ trường hợp được chú thích khác đi hoặc thông tin được giới thiệu, được hiểu là tài sản của một bên khác) vào mọi thời điểm. Chúng tôi không mục đích cho phép để sao chép, xuất bản, nhân bản, cho thuê, bán, phân phối thương mại hoặc mục đích cá nhân khi chưa có sự đồng ý bằng văn bản của Chúng tôi.</value>
   </data>
 </root>

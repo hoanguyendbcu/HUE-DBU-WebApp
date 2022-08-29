@@ -196,13 +196,13 @@
     <value>By Mine action component</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Quang Binh information and Cluster Munitions contamination map</value>
+    <value>Thua Thien Hue information and Cluster Munitions contamination map</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>District</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Charts showing total area and total number of found item during CMRS activities in Quang Binh</value>
+    <value>Charts showing total area and total number of found item during CMRS activities in Thua Thien Hue</value>
   </data>
   <data name="lblMineActionSurvey" xml:space="preserve">
     <value>Survey</value>

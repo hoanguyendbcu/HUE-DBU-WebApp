@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Tỉnh Quảng Bình nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 8.065,3 km2, dân số năm 2019 có 896.601 người.</value>
+    <value>Tỉnh Thừa Thiên Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 8.065,3 km2, dân số năm 2019 có 896.601 người.</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Vị trí địa lý:</value>
@@ -253,6 +253,6 @@
     <value>Đơn vị (m2)</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
-    <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
+    <value>Dữ liệu và số liệu - Tỉnh Thừa Thiên Huế</value>
   </data>
 </root>

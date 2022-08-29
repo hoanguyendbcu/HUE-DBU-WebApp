@@ -124,49 +124,52 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>Hue City</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>Ba Don Town</value>
+    <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hoa</value>
+    <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyen Hoa</value>
+    <value>Phong Dien</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quang Trach</value>
+    <value>Phu Loc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bo Trach</value>
+    <value>Phu Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quang Ninh</value>
+    <value>Quang Dien</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Le Thuy</value>
+    <value>Huong Tra Town</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>The geographical and natural conditions of Quang Ninh district are quite varied with 25-km coastline, 25-km borderline with Lao PRD, large forest area with total natural area of the whole district of 119,089 ha and population of 90,000 people and home to Kinh and Van Kieu ethnic groups. Quang Ninh is just 7km from Dong Hoi to the North</value>
+    <value>Phu Vang is a coastal plain and lagoon district of Thua Thien Hue province</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
-    <value>Administrative borders:</value>
+    <value>Administrative border:</value>
   </data>
   <data name="lblContent3" xml:space="preserve">
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Adjacent to Dong Hoi city to the North</value>
+    <value>Adjacent to East Sea to the North</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Adjacent to Le Thuy district to the South</value>
+    <value>Adjacent to Ba Don township to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to Lao DPR to the West</value>
+    <value>Adjacent to Huong Thuy and Phu Loc district  to the West</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Adjacent to the East Sea to the East</value>
+    <value>Adjacent to Phuc Loc and East Sea to the East</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value> </value>
@@ -190,25 +193,25 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>1 Township: Quan Hau</value>
+    <value>1 TownShip: Phu Da</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>14 communes: An Ninh, Duy Ninh, Gia Ninh, Hai Ninh, Ham Ninh, Hien Ninh, Luong Ninh, Tan Ninh, Truong Son, Truong Xuan, Van Ninh, Vinh Ninh, Vo Ninh, Xuan Ninh</value>
+    <value>13 communes: Phú An, Phú Diên, Phú Gia, Phú Hải, Phú Hồ, Phú Lương, Phú Mỹ, Phú Thuận, Phú Xuân, Vinh An, Vinh Hà, Vinh Thanh, Vinh Xuân.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>General information</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
-    <value>Quan Hau Township</value>
+    <value>Vung Chua - Yen Island</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Other administrative units</value>
   </data>
+  <data name="lblPhuVang" xml:space="preserve">
+    <value>PhuVang District</value>
+  </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
     <value>Quang Binh Province</value>
-  </data>
-  <data name="lblQuangNinh" xml:space="preserve">
-    <value>Quang Ninh District</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Statistic after survey , clearance and risk education activities</value>
@@ -236,7 +239,7 @@
     <value>Land released information since 2010</value>
   </data>
   <data name="lblStatitictis5" xml:space="preserve">
-    <value>Most 5 UXO Category</value>
+    <value> Most 5 UXO Category</value>
   </data>
   <data name="lblStatitictis6" xml:space="preserve">
     <value>Most 5 UXO Model</value>

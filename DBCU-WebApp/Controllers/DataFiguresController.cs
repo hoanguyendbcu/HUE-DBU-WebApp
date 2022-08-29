@@ -356,12 +356,12 @@ namespace DBCU_WebApp.Controllers
             ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
             return View();
         }
-        public async Task<IActionResult> TuyenHoaDistrict()
+        public async Task<IActionResult> PhuLocDistrict()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Tuyen Hoa";
+            string distict = "Phu Loc District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -389,6 +389,82 @@ namespace DBCU_WebApp.Controllers
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
                 ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
                 ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+            }
+
+            if (lang == "en")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+
+            }
+            else if (lang == "vi")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+            }
+
+
+
+
+            var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
+            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
+
+            return View();
+        }
+        public async Task<IActionResult> PhuVangDistrict()
+        {
+            ViewBag.NavClassByProvince = "active";
+
+            string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+            string distict = "Phu Vang District";
+
+            ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
+            ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
+            ViewData["NoMRE"] = await dataFiguresRepository.GetNoMRE(distict);
+
+            var jsonCategory = await dataFiguresRepository.UXOCategory(distict);
+            var jsonModel = await dataFiguresRepository.UXOModel(distict);
+
+
+            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
+            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
+
+
+            if (lang == "en")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+
+            }
+            else if (lang == "vi")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
+                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+            }
+
+
+            if (lang == "en")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+
+            }
+            else if (lang == "vi")
+            {
+                var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
@@ -396,12 +472,12 @@ namespace DBCU_WebApp.Controllers
 
             return View();
         }
-        public async Task<IActionResult> QuangTrachDistrict()
+        public async Task<IActionResult> HuongTratown()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Quang Trach";
+            string distict = "Huong Tra Town";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -431,44 +507,20 @@ namespace DBCU_WebApp.Controllers
                 ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
-            var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
-            ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
-
-            return View();
-        }
-        public async Task<IActionResult> BoTrachDistrict()
-        {
-            ViewBag.NavClassByProvince = "active";
-
-            string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Bo Trach";
-
-            ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
-            ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
-            ViewData["NoMRE"] = await dataFiguresRepository.GetNoMRE(distict);
-
-            var jsonCategory = await dataFiguresRepository.UXOCategory(distict);
-            var jsonModel = await dataFiguresRepository.UXOModel(distict);
-
-
-            ViewData["UXOCategory"] = JsonSerializer.Serialize(jsonCategory);
-            ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
-
-
             if (lang == "en")
             {
-                var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
-                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);
-                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
 
             }
             else if (lang == "vi")
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["MREGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["MREChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
             }
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
