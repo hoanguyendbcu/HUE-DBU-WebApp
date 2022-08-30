@@ -264,6 +264,12 @@
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Nỗ lực rà phá bom mìn, giải phóng đất đai</value>
   </data>
+  <data name="lblNews" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="lblNewsEvent" xml:space="preserve">
+    <value>Tin tức &amp; Sự kiện</value>
+  </data>
   <data name="lblPictures" xml:space="preserve">
     <value>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
   </data>

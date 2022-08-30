@@ -126,8 +126,8 @@
       <div class="container" data-aos="fade-up">
 
 		<div class="sectiondbu-title">
-          <h2>News</h2>
-          <p>News & Event</p>
+          <h2>@ViewLocalizer["News"]</h2>
+          <p>@ViewLocalizer["lblNewsEvent"]</p>
         </div>
 		 <div class="newsposts-slider swiper">
 		 
@@ -390,8 +390,8 @@
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter=".filter-act" class="filter-active"@ViewLocalizer["lblActivities"]></li> 
-              <li data-filter=".filter-edu"@ViewLocalizer["lblEducation"]></li>
+              <li data-filter=".*" class="filter-active" @ViewLocalizer["lblActivities"]></li> 
+              <li data-filter=".filter-edu" @ViewLocalizer["lblEducation"]></li>
               <li data-filter=".filter-event">@ViewLocalizer["lblEvents"]</li>
             </ul>
           </div>
@@ -432,7 +432,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-act"> 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-edu"> 
             <img src="~/images/portfolio/qt5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
                   <h4>Hiện trường - DBU & QTMAC khảo sát hiện trường</h4>

@@ -264,6 +264,12 @@
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Post-War Clearance Efforts to Release Land</value>
   </data>
+  <data name="lblNews" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="lblNewsEvent" xml:space="preserve">
+    <value>Tin tức &amp; Sự kiện</value>
+  </data>
   <data name="lblPictures" xml:space="preserve">
     <value>ACTIVITY PICTURES OF NEUTRALIZING THE EFFECT OF ERW</value>
   </data>
