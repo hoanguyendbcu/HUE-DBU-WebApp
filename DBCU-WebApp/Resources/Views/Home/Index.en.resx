@@ -228,8 +228,17 @@
   <data name="LabelTS" xml:space="preserve">
     <value>Mission TS</value>
   </data>
+  <data name="lblActivities" xml:space="preserve">
+    <value>ACTIVITIES</value>
+  </data>
   <data name="lblClearanceQB" xml:space="preserve">
     <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+  </data>
+  <data name="lblEducation" xml:space="preserve">
+    <value>EDUCATION</value>
+  </data>
+  <data name="lblEvents" xml:space="preserve">
+    <value>EVENT</value>
   </data>
   <data name="lblHeroTop1" xml:space="preserve">
     <value>If you find a Bomb suspicious object, Call the hotline number at 0988796120</value>
@@ -243,8 +252,26 @@
   <data name="lblHeroTop4" xml:space="preserve">
     <value>Improve cooperation capacity in carrying out mine action activities with the coordination of the Department of Foreign Affairs, the Provincial Military Command and related organizations and units.</value>
   </data>
+  <data name="lblHeroTop5" xml:space="preserve">
+    <value>OBJECTIVES</value>
+  </data>
+  <data name="lblHeroTop6" xml:space="preserve">
+    <value>Minimizing mine accidents and the impact of mines and explosives on the community, towards a "safe" province.</value>
+  </data>
+  <data name="lblMAActivities" xml:space="preserve">
+    <value>Mine Action Activities</value>
+  </data>
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Post-War Clearance Efforts to Release Land</value>
+  </data>
+  <data name="lblPictures" xml:space="preserve">
+    <value>ACTIVITY PICTURES OF NEUTRALIZING THE EFFECT OF ERW</value>
+  </data>
+  <data name="lblPostWar" xml:space="preserve">
+    <value>POST-WAR CLEARANCE EFFORTS TO RELEASE LAND</value>
+  </data>
+  <data name="lblReadMore" xml:space="preserve">
+    <value>Read More</value>
   </data>
   <data name="MAG" xml:space="preserve">
     <value>MAG</value>

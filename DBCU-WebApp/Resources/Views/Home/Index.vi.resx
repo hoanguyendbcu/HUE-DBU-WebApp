@@ -228,8 +228,17 @@
   <data name="LabelTS" xml:space="preserve">
     <value>Nhiệm vụ TS</value>
   </data>
+  <data name="lblActivities" xml:space="preserve">
+    <value>HOẠT ĐỘNG</value>
+  </data>
   <data name="lblClearanceQB" xml:space="preserve">
     <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+  </data>
+  <data name="lblEducation" xml:space="preserve">
+    <value>ĐÀO TẠO</value>
+  </data>
+  <data name="lblEvents" xml:space="preserve">
+    <value>SỰ KIỆN</value>
   </data>
   <data name="lblHeroTop1" xml:space="preserve">
     <value>Khi phát hiện bom mìn, hãy gọi 0988796120</value>
@@ -243,8 +252,26 @@
   <data name="lblHeroTop4" xml:space="preserve">
     <value>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự tỉnh và các tổ chức, đơn vị liên quan</value>
   </data>
+  <data name="lblHeroTop5" xml:space="preserve">
+    <value>MỤC TIÊU</value>
+  </data>
+  <data name="lblHeroTop6" xml:space="preserve">
+    <value>Giảm thiểu đến mức thấp nhất tai nạn bom mìn và ảnh hưởng của bom mìn, vật nổ đối với cộng đồng, hướng tới tỉnh “an toàn”.</value>
+  </data>
+  <data name="lblMAActivities" xml:space="preserve">
+    <value>Các hợp phần hoạt động bom mìn</value>
+  </data>
   <data name="lblMineActionQB" xml:space="preserve">
     <value>Nỗ lực rà phá bom mìn, giải phóng đất đai</value>
+  </data>
+  <data name="lblPictures" xml:space="preserve">
+    <value>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
+  </data>
+  <data name="lblPostWar" xml:space="preserve">
+    <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
+  </data>
+  <data name="lblReadMore" xml:space="preserve">
+    <value>Xem tiếp</value>
   </data>
   <data name="MAG" xml:space="preserve">
     <value>MAG</value>

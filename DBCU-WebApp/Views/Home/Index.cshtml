@@ -98,8 +98,8 @@
         <div class="carousel-item" style="background-image: url(images/slide/slide-3.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-               <h2>MỤC TIÊU</h2>
-              <p>Giảm thiểu đến mức thấp nhất tai nạn bom mìn và ảnh hưởng của bom mìn, vật nổ đối với cộng đồng, hướng tới tỉnh “an toàn”.</p> 
+               <h2>@ViewLocalizer["lblHeroTop5"]</h2>
+              <p>@ViewLocalizer["lblHeroTop6"]</p> 
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@
                              
                                 </h5>
 				            <hr>
-					        <a  asp-controller="News" asp-action="DisplayNews" asp-route-slug="@item.Slug" class="readmore stretched-link"><span>Read More</span></a>
+					        <a  asp-controller="News" asp-action="DisplayNews" asp-route-slug="@item.Slug" class="readmore stretched-link"><span>@ViewLocalizer["lblReadMore"]</span></a>
 				        </div>				 
 			        </div>
 			  } 
@@ -167,7 +167,7 @@
     <section id="services" class="services">
       <div class="container">
         <div class="sectiondbu1-header">
-          <h2>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN</h2>          
+          <h2>@ViewLocalizer["lblPostWar"] </h2>          
         </div> 
 
         <div class="row">
@@ -244,7 +244,7 @@
       <div class="container">
 
           <div class="sectiondbu1-header">
-          <h2>Các hợp phần hoạt động bom mìn</h2>          
+          <h2>@ViewLocalizer["lblMAActivities"]</h2>          
         </div> 
 
         <div class="row">
@@ -384,15 +384,15 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
          <div class="sectiondbu1-header">
-          <h2>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</h2>          
+          <h2> @ViewLocalizer["lblPictures"]</h2>          
         </div> 
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter=".filter-act" class="filter-active">Hiện trường</li> 
-              <li data-filter=".filter-edu">Đào tạo</li>
-              <li data-filter=".filter-event">Sự kiện</li>
+              <li data-filter=".filter-act" class="filter-active"@ViewLocalizer["lblActivities"]></li> 
+              <li data-filter=".filter-edu"@ViewLocalizer["lblEducation"]></li>
+              <li data-filter=".filter-event">@ViewLocalizer["lblEvents"]</li>
             </ul>
           </div>
         </div>
@@ -440,13 +440,7 @@
             <a href="~/images/portfolio/qt5.jpg" data-gall="portfolioGallery"  class="portfolio-lightbox preview-link" title="Hiện trường"><i class="bx bx-plus"></i></a>
      
             </div>
-          </div>
-
-            
-               
-          
-           
-          
+          </div>         
           <div class="col-lg-4 col-md-6 portfolio-item filter-edu">
             <img src="~/images/portfolio/imsma.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -465,9 +459,6 @@
             </div>
           </div>
 
-
-
-
         </div>
 
       </div>
@@ -480,13 +471,13 @@
        <div class="sectiondbu1-header">
 
           <h2>@ViewLocalizer["Donors"]</h2>        
-          <p> Trân trọng cảm ơn các nhà tài trợ và đối tác đã hỗ trợ cho hoạt động khắc phục hậu quả bom mìn vật nổ sau chiến tranh tại Quảng Bình.</p>
+         @* <p> Trân trọng cảm ơn các nhà tài trợ và đối tác đã hỗ trợ cho hoạt động khắc phục hậu quả bom mìn vật nổ sau chiến tranh tại Quảng Bình.</p>*@
         </div> 
 
     <div class="section-title">
          
         @*<a title="@ViewLocalizer["Department of State"]" data-toggle="tooltip" href="https://www.state.gov" target="_blank"><img src="~/images/icon/Logo_US_DoS.png"></a>*@
-            <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a>
+            <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.regjeringen.no/en/id4/" target="_blank"><img src="~/images/icon/Flag_of_Norway.png"></a>
         </div>
 		 
 	<!-- ======= Clients Section ======= -->
@@ -498,12 +489,12 @@
 			<div class="swiper-slide"> <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.thuathienhue.gov.vn/" target="_blank"><img src="~/images/icon/logo_dofaHue.jpg"></a></div>
 			<div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/logo_PMCTTH.jpg"></a></div>
 			<div class="swiper-slide">  <a title="@ViewLocalizer["VNMAC"]" data-toggle="tooltip" href="http://vnmac.gov.vn" target="_blank"><img src="~/images/icon/Logo VNMAC.png"></a></div>
-			@*<div class="swiper-slide"> <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a></div>*@
+			<div class="swiper-slide"> <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a></div>
 			@*<div class="swiper-slide">  <a title="@ViewLocalizer["MAG"]" data-toggle="tooltip" href="https://www.maginternational.org" target="_blank"><img src="~/images/icon/Logo MAG.png"></a></div>*@
 			@*<div class="swiper-slide">  <a title="@ViewLocalizer["PTVN"]" data-toggle="tooltip" href="https://www.peacetreesvietnam.org" target="_blank"><img src="~/images/icon/Logo PTVN.png"></a></div>*@
 			@*<div class="swiper-slide">  <a title="@ViewLocalizer["UNDP"]" data-toggle="tooltip" href="https://www.vn.undp.org/content/vietnam/vi/home.html" target="_blank"><img src="~/images/icon/Logo UNDP.png"></a></div>*@
 			@*<div class="swiper-slide"> <a title="@ViewLocalizer["KOICA"]" data-toggle="tooltip" href="http://www.koica.go.kr/sites/koica_en/index.do" target="_blank"><img src="~/images/icon/Logo KOICA.png"></a></div>*@
-			@*<div class="swiper-slide"> <a title="@ViewLocalizer["CRD VietNam"]" data-toggle="tooltip" href="https://www.crs.org/our-work-overseas/where-we-work/vietnam" target="_blank"><img src="~/images/icon/CRS-logo.jpg"></a></div>*@
+			<div class="swiper-slide"> <a title="@ViewLocalizer["CRD VietNam"]" data-toggle="tooltip" href="https://www.crs.org/our-work-overseas/where-we-work/vietnam" target="_blank"><img src="~/images/icon/CRS-logo.jpg"></a></div>
 			@*<div class="swiper-slide">    <a title="@ViewLocalizer["CTD"]" data-toggle="tooltip" href="http://hoichuthapdoquangbinh.gov.vn" target="_blank"><img src="~/images/icon/Logo CTD.png"></a></div>*@
 
 			</div>
