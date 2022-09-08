@@ -123,32 +123,38 @@
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
   </data>
+  <data name="lblAluoiDistrict" xml:space="preserve">
+    <value>Huyện Quảng Điền</value>
+  </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>TP Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>TX Ba Đồn</value>
+    <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hóa</value>
+    <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyên Hóa</value>
+    <value>Huyện Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quảng Trạch</value>
+    <value>Huyện Phú Lộc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bố Trạch</value>
+    <value>Huyện Phú Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quảng Ninh</value>
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Lệ Thủy</value>
+    <value>Thị xã Hương Trà</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Lệ Thủy là một huyện đồng bằng thuộc tỉnh Quảng Bình Phía tây là dãy Trường Sơn, địa hình dốc theo hướng đông với vùng núi, đồi, có suối nước khoáng Bang với nguồn nước khoáng đang được khai thác làm nơi nghỉ dưỡng và làm nước uống đóng chai. Ở giữa là một dải đồng bằng hẹp hai bên bờ sông Kiến Giang. Ven biển là một dải cồn cát trắng. Vùng biển của huyện Lệ Thủy là những bãi cát trắng, nước biển sạch. Hiện đã có bãi tắm tại Ngư Thủy được đưa vào khai thác.</value>
+    <value>Quảng Điền là huyện đồng bằng ven biển và đầm phá nằm ở phía bắc tỉnh Thừa Thiên Huế có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -157,19 +163,19 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Phía bắc giáp huyện Quảng Ninh</value>
+    <value>Phía bắc giáp Phong Điền và Biển Đông</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Phía nam giáp tỉnh Quảng Trị</value>
+    <value>Phía nam giáp huyện Tây Giang, tỉnh Quảng Nam</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía tây giáp nước Lào</value>
+    <value>Phía đông giáp Thị xã Hương Trà</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía Đông giáp Biển Đông</value>
+    <value>Phía tây giáp huyện Phong Điền</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value> </value>
+    <value>Sông Bồ là ranh giới tự nhiên phía nam giữa huyện Quảng Điền với thị xã Hương Trà. Ngoài ra, huyện còn có phần lớn diện tích của phá Tam Giang nằm trên địa bàn. Hầu hết các xã, thị trấn của huyện đều nằm ven phá Tam Giang, trong đó hai xã Quảng Công và Quảng Ngạn nằm ven biển ở phía bắc của phá.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -190,19 +196,13 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>2 thị trấn: Kiến Giang (huyện lỵ), Nông trường Lệ Ninh</value>
+    <value>Thị trấn Sịa</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>24 xã: An Thuỷ, Cam Thủy, Dương Thủy, Hoa Thủy, Hồng Thủy, Hưng Thủy, Kim Thủy, Lâm Thủy, Liên Thủy, Lộc Thủy, Mai Thủy, Mỹ Thủy, Ngân Thủy, Ngư Thủy, Ngư Thủy Bắc, Phong Thủy, Phú Thủy, Sen Thủy, Sơn Thủy, Tân Thủy, Thái Thủy, Thanh Thủy, Trường Thủy, Xuân Thủy.</value>
+    <value>10 xã: Quảng An, Quảng Công, Quảng Lợi, Quảng Ngạn, Quảng Phú, Quảng Phước, Quảng Thái, Quảng Thành, Quảng Thọ, Quảng Vinh.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
-  </data>
-  <data name="lblImgCaption" xml:space="preserve">
-    <value>Thị trấn Kiến Giang</value>
-  </data>
-  <data name="lblLeThuy" xml:space="preserve">
-    <value>Huyện Lệ Thủy</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>

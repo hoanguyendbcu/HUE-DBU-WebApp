@@ -118,37 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Data And Figures</value>
+    <value>Datas And Figures</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>Hue City</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
-    <value>Ba Don Town</value>
+    <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Minh Hoa</value>
+    <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Tuyen Hoa</value>
+    <value>Phong Dien</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
-    <value>Quang Trach</value>
+    <value>Phu Loc</value>
   </data>
   <data name="lblButtonLeft6" xml:space="preserve">
-    <value>Bo Trach</value>
+    <value>Phu Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Quang Ninh</value>
+    <value>Quang Dien</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
-    <value>Le Thuy</value>
+    <value>Huong Tra Town</value>
+  </data>
+  <data name="lblButtonLeft9" xml:space="preserve">
+    <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Le Thuy is a lowland district in Quang Binh province with Truong Son range to the west. The topography is characterized by general slope which is lower towards the East to the narrow plain of Kien Giang river. The East portion is the coastline with a range of white sand dunes and clean seawater. The district accommodates Bang mineral spring which is currently exploited as resort and as bottled water source. Besides, Ngu Thuy beach is also being exploited as a tourist destination.</value>
+    <value>Quang Dien is a coastal plain and lagoon district located in the north of Thua Thien Hue province, located at geography:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative borders:</value>
@@ -157,19 +160,19 @@
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Adjacent to Quang Ninh district to the North</value>
+    <value>Adjacent to Phong Dien district , East Sea to the North</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Adjacent to Quang Tri province to the South</value>
+    <value>Adjacent to Huong Tra township to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to Lao PDR to the West</value>
+    <value>Adjacent to the Hue City  to the East</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Adjacent to the East Sea to the East</value>
+    <value>Adjacent to Phong Dien districts to the West</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value> </value>
+    <value>Bo River is the southern natural boundary between Quang Dien district and Huong Tra town. In addition, the district also has a large area of Tam Giang lagoon located in the area. Most of the communes and towns of the district are located along the Tam Giang lagoon, in which two communes Quang Cong and Quang Ngan are located along the coast in the north of the lagoon.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Area: </value>
@@ -190,25 +193,19 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>2 towns: Kien Giang (district capital), Le Ninh</value>
+    <value>10 communes: Quang An, Quang Cong, Quang Loi, Quang Ngan, Quang Phu, Quang Phuoc, Quang Thai, Quang Thanh, Quang Tho, Quang Vinh.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>24 communes: An Thuy, Cam Thuy, Duong Thuy, Hoa Thuy, Hong Thuy, Hung Thuy, Kim Thuy, Lam Thuy, Lien Thuy, Loc Thuy, Mai Thuy, My Thuy, Ngan Thuy, Ngu Thuy, Ngu Thuy Bac, Phong Thuy, Phu Thuy, Sen Thuy, Son Thuy, Tan Thuy, Thai Thuy, Thanh Thuy, Truong Thuy, Xuan Thuy.</value>
+    <value>01 Town : Sia</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>General information</value>
   </data>
-  <data name="lblImgCaption" xml:space="preserve">
-    <value>Kien Giang Township</value>
-  </data>
-  <data name="lblLeThuy" xml:space="preserve">
-    <value>Le Thuy District</value>
-  </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Other administrative units</value>
   </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Quang Binh Province</value>
+  <data name="lblQuangDienDistrict" xml:space="preserve">
+    <value>Quang Dien District</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Statistic after survey , clearance and risk education activities</value>
@@ -221,7 +218,6 @@
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
     <value> Gender</value>
-    <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
     <value> Child gender </value>
@@ -249,6 +245,9 @@
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
     <value> MRE by gender</value>
+  </data>
+  <data name="lblTTHProvince" xml:space="preserve">
+    <value>Thua Thien Hue Province</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
