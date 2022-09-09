@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thua Thien Hue  province is situated in the North Central region of Vietnam and has the total natural area of 8,065.3 km2 and population of 896,601 (recorded in 2019)
+    <value>Thua Thien Hue  province is situated in the North Central region of Vietnam and has the total natural area of 5.025,29 km2 and population of 1.153.795  (recorded in 2021)
 Geographic position: The provincial mainland is located at the coordinates:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
@@ -161,19 +161,19 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Northernmost point: 18.08667 N</value>
+    <value>Northernmost point:  Giap Tay  village, Dien Huong commune, Phong Dien district</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Southernmost point: 17.08389 N</value>
+    <value>Southernmost point:  Thuong Nhat commune, Nam Dong district</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Easternmost point: 106.9936 E</value>
+    <value>Easternmost point:   The east coast of Son Cha island, Lang Co Town, Phu Loc district</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Westernmost point: 105.6153 E</value>
+    <value>Westernmost point: Paré village, Hong Thuy commune, A Luoi district</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>The coastline is 116.04 km to the East and borderline with Lao PRD to the West is 201.87km. The province shares borders with Ha Tinh province to the North and Quang Tri province to the South. Quang Binh has Hon La seaport, Dong Hoi airport, North-South railway line, National Highway 1A, Ho Chi Minh road, National Highway 12, Provincial Roads 20 and 16 from East to West to Cha Lo International Border gate and other small borders with Lao PRD.</value>
+    <value>Thua Thien Hue is 675 km south of Hanoi capital, 94 km north of Da Nang city with the natural boundary of Bach Ma mountain range. It borders Quang Tri province and the East Sea to the north, the East Sea to the east, Quang Tri province and Saravane province of Lao PDR to the west, Quang Nam province, Da Nang city to the south, and Sekong province of Lao PDR.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Area: </value>
@@ -188,16 +188,16 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Capital: Hue</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
-    <value>Demographics: Kinh, Khua, Ma Lieng, Ruc, Sach, Van Kieu, May, Arem, Chut...</value>
+    <value>Demographics: Kinh, Cơtu, Tà Ôi, Bru-Vân Kiều</value>
   </data>
   <data name="lblContentLeft5" xml:space="preserve">
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Town: Ba Don</value>
+    <value>Township: Huong Tra, Huong Thuy</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>Districts: Minh Hoa, Tuyen Hoa, Quang Trach, Bo Trạch, Quang Ninh, Le Thuy.</value>
+    <value>Districts: A Luoi, Nam Dong, Phong Dien, Phu Loc, Phu Vang, Quang Dien</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>General information</value>

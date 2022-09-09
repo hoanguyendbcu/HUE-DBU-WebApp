@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 8.065,3 km2, dân số năm 2019 có 896.601 người.</value>
+    <value>Tỉnh Thừa Thiên Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 5.025,29  km2, dân số năm 2021 có 1.153.795  (recorded in 2021) người.</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Vị trí địa lý:</value>
@@ -160,19 +160,19 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Điểm cực Bắc: 18.08667 vĩ độ Bắc</value>
+    <value>Điểm cực Bắc: thôn Giáp Tây, xã Điền Hương, huyện Phong Điền.</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Điểm cực Nam: 17.08389 vĩ độ Bắc</value>
+    <value>Điểm cực Nam: xã Thượng Nhật, huyện Nam Đông.</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Điểm cực Đông: 106.9936 kinh độ Đông</value>
+    <value>Điểm cực Đông: bờ phía Đông đảo Sơn Chà, thị trấn Lăng Cô, huyện Phú Lộc.</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Điểm cực Tây: 105.6153 kinh độ Đông</value>
+    <value>Điểm cực Tây: bản Paré, xã Hồng Thủy, huyện A Lưới. </value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Tỉnh có bờ biển dài 116,04 km ở phía Đông và có chung biên giới với Lào 201,87 km ở phía Tây, phía bắc giáp tỉnh Hà Tĩnh, phía nam giáp tỉnh Quảng Trị. có cảng Hòn La, cảng Hàng không Đồng Hơi, Quốc lộ 1A và đường Hồ Chí Minh, đường sắt Bắc Nam, quốc lộ 12 và tỉnh lộ 20, 16 chạy từ Đông sang Tây qua cửa khẩu Quốc tế Cha Lo và một số cửa khẩu phụ khác nối liền với Nước CHDCND Lào.</value>
+    <value>Tỉnh Thừa Thiên Huế cách thủ đô Hà Nội 675 km về phía nam, cách thành phố Đà Nẵng 94 km về phía bắc với ranh giới tự nhiên là dãy núi Bạch Mã. Phía bắc giáp tỉnh Quảng Trị và Biển Đông, phía đông giáp biển Đông, phía tây giáp tỉnh Quảng Trị và tỉnh Saravane của CHDCND Lào, phía nam giáp tỉnh Quảng Nam, thành phố Đà Nẵng và giáp tỉnh Sekong của CHDCND Lào.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -184,25 +184,25 @@
     <value>người</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Thành phố: Đồng Hới</value>
+    <value>Thành phố: Huế</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
-    <value>Dân tộc: Kinh, Khùa, Mã Liềng, Rục, Sách, Vân Kiều, Mày, Arem, Chứt...</value>
+    <value>Dân tộc: Kinh, Cơtu, Tà Ôi, Bru-Vân Kiều</value>
   </data>
   <data name="lblContentLeft5" xml:space="preserve">
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Thị xã: Ba Đồn</value>
+    <value>Thị xã: Hương Trà, Hương Thủy</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>Huyện: Minh Hóa, Tuyên Hóa, Quảng Trạch, Bố Trạch, Quảng Ninh, Lệ Thủy.</value>
+    <value>Huyện: A Lưới, Nam Đông, Phong Điền, Phú Lộc, Phú Vang, Quảng Điền</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>TP Huế</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>

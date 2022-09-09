@@ -418,6 +418,9 @@ namespace DBCU_WebApp.Controllers
 
                     var geo = new Models.GeoModel.Geometry();
                     geo.Type = "Point";
+ 
+                     results.Village.Long = (float)(results.Village.Long + 0.005);
+               
                     geo.Coordinates = new List<float?> { results.Village.Long, results.Village.Lat };
 
                     feature.Type = "Feature";

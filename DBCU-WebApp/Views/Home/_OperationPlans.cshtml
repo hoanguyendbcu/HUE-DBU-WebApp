@@ -142,8 +142,8 @@ function loadDataMap() {
                 if (marker.properties.org == 'NPA') {
                     el.style.backgroundImage =
                         'url(../images/icon/NPA.png)';
-                    el.style.width = '45px';
-                    el.style.height = '45px';
+                    el.style.width = '60px';
+                    el.style.height = '60px';
                 }
                 else if (marker.properties.org == 'PTVN') {
                     el.style.backgroundImage =
@@ -157,6 +157,14 @@ function loadDataMap() {
                     el.style.width = '60px';
                     el.style.height = '40px';
                 }
+                else if (marker.properties.org == 'PMCTTH') {
+                    el.style.backgroundImage =
+                        'url(../images/icon/logo-vn.png)';
+                    el.style.width = '60px';
+                    el.style.height = '40px';      
+
+                    }
+
 
                 el.style.backgroundSize = '100%';
 
