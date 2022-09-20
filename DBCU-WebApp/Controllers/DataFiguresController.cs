@@ -189,7 +189,7 @@ namespace DBCU_WebApp.Controllers
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "A Luoi District";
+            string distict = "A Luoi District"; 
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -221,19 +221,20 @@ namespace DBCU_WebApp.Controllers
 
             if (lang == "en")
             {
-                var jsonMREGender = await dataFiguresRepository.GetNTSGender(distict);
-                var jsonMREChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
-                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                var jsonNTSGender = await dataFiguresRepository.GetNTSGender(distict);
+                var jsonTNSChildGender = await dataFiguresRepository.GetNTSChildGender(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonNTSGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonTNSChildGender);
 
             }
             else if (lang == "vi")
             {
-                var jsonMREGender = await dataFiguresRepository.GetMREGenderVN(distict);
-                var jsonMREChildGender = await dataFiguresRepository.GetMREChildGenderVN(distict);
-                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonMREGender);
-                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonMREChildGender);
+                var jsonNTSGender = await dataFiguresRepository.GetNTSGenderVN(distict);
+                var jsonTNSChildGender = await dataFiguresRepository.GetNTSChildGenderVN(distict);
+                ViewData["NTSGender"] = JsonSerializer.Serialize(jsonNTSGender);
+                ViewData["NTSChildGender"] = JsonSerializer.Serialize(jsonTNSChildGender);
             }
+
 
             var jsonDataClearnceChart = await dataFiguresRepository.GetDataClearnceChart2(distict);
             ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);

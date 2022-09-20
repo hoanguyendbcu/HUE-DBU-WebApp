@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thành phố Huế nằm ở trung tâm tỉnh Thừa Thiên Huế, địa bàn nằm trải dài theo dòng sông Hương và có vị trí địa lý:</value>
+    <value>Huong Thuy town is located in the central area of ​​Thua Thien Hue province, southeast of Hue city and has a geographical location:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative borders:</value>
@@ -160,19 +160,19 @@
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Adjacent to Quang Dien district, East Sea to the North</value>
+    <value>Adjacent to Phu Vang district to the North</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Adjacent to Huong Thuy Township to the South</value>
+    <value>Adjacent to Nam Dong district to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to the Huong Thuy Township, Phu Vang district to the East</value>
+    <value>Adjacent to the Phu Loc district to the East</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Adjacent to Huong Tra Townshio to the West</value>
+    <value>Adjacent to Hue City, Huong Tra Township, A Luoi district  to the West</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Hue is the provincial capital city of Thua Thien Hue province, Vietnam. Hue used to be the capital (Hue Ancient Capital) of Vietnam during the Tay Son Dynasty (1788–1801) and the Nguyen Dynasty (1802–1945). Show this, city is an in the center about text - tourism, specialized health care, education and training, science and technology of the Central - Central Highlands and the whole country.</value>
+    <value>Huong Thuy is located close to the south of Hue City, extending to the southeast to Phu Loc and southwest to Nam Dong, and at the same time, spreading to the east and west to the boundary of Phu Vang, Huong Tra, A Luoi; Most of the territory west of National Highway 1A is mountainous. Hills and mountains are prominent scenery in Huong Thuy's terrain and nature, occupying 76.33% of the area. The plain is narrow, running into a strip to the east and northeast along Loi Nong and Dai Giang.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Area: </value>
@@ -193,16 +193,16 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>29 wards: An Cuu, An Dong, An Hoa, An Tay, Dong Ba, Gia Hoi, Huong An, Huong Ho, Huong Long, Huong So, Huong Vinh, Kim Long, Phu Hau, Phu Hoi, Phu Nhuan, Phu Thuong , Phuoc Vinh, Ward Duc, Tay Loc, Thuan An, Thuan Hoa, Thuan Loc, Thuy Bieu, Thuy Van, Thuy Xuan, Truong An, Vinh Ninh, Vy Da, Xuan Phu</value>
+    <value>5 wards: Phu Bai, Thuy Chau, Thuy Duong, Thuy Luong, Thuy Phuong</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>7 communes: Hai Duong, Huong Phong, Huong Tho, Phu Duong, Phu Mau, Phu Thanh, Thuy Bang.</value>
+    <value>5 communes:Duong Hoa, Phu Son, Thuy Phu, Thuy Tan, Thuy Thanh</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>General information</value>
   </data>
-  <data name="lblHueCity" xml:space="preserve">
-    <value>Hue City</value>
+  <data name="lblHuongThuyTown" xml:space="preserve">
+    <value>Huong Thuy Township</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Other administrative units</value>
@@ -218,7 +218,6 @@
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
     <value> Gender</value>
-    <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
     <value> Child gender </value>

@@ -214,11 +214,10 @@
     <value>Area of released land</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> MRE by child gender </value>
+    <value>NTS by child gender</value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
     <value> Gender</value>
-    <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
     <value> Child gender </value>
@@ -245,7 +244,7 @@
     <value> UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> MRE by gender</value>
+    <value>NTS by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
     <value>Thua Thien Hue Province</value>

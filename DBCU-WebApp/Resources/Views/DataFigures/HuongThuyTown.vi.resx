@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thành phố Huế nằm ở trung tâm tỉnh Thừa Thiên Huế, địa bàn nằm trải dài theo dòng sông Hương và có vị trí địa lý:</value>
+    <value>Thị xã Hương Thủy nằm ở khu vực trung tâm tỉnh Thừa Thiên Huế, phía đông nam thành phố Huế và có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -160,19 +160,19 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Phía bắc giáp huyện Quảng Điền và Biển Đông</value>
+    <value>Phía bắc giáp huyện Phú Vang </value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Phía nam giáp Thị xã Hương Thủy</value>
+    <value>Phía nam giáp huyện Nam Đông</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía đông giáp Thị xã Hương Thủy  và huyện Phú Vang</value>
+    <value>Phía đông giáp huyện Phú Lộc</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía tây giáp Thị xã Hương Trà</value>
+    <value>Phía tây giáp thành phố Huế, thị xã Hương Trà và huyện A Lưới</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Huế là thành phố tỉnh lỵ của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô (cố đô Huế) của Việt Nam dưới triều Tây Sơn (1788–1801) và triều Nguyễn (1802–1945). Hiện nay, thành phố là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</value>
+    <value>Hương Thủy nằm tiếp cận phía nam Thành phố Huế, kéo dài về phía đông nam đến Phú Lộc và tây nam đến Nam Đông, đồng thời, trải rộng ra hai phía đông tây đến tận địa giới Phú Vang, Hương Trà, A Lưới; hầu hết phần lãnh thổ phía tây đường quốc lộ 1A là đồi núi. Đồi núi là quang cảnh nổi bật trong địa hình và thiên nhiên Hương Thủy, chiếm đến 76,33% diện tích. Đồng bằng hẹp, chạy thành một dải phía đông và đông bắc dọc Lợi Nông và Đại Giang.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -193,16 +193,16 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>29 phường:  An Cựu, An Đông, An Hòa, An Tây, Đông Ba, Gia Hội, Hương An, Hương Hồ, Hương Long, Hương Sơ, Hương Vinh, Kim Long, Phú Hậu, Phú Hội, Phú Nhuận, Phú Thượng, Phước Vĩnh, Phường Đúc, Tây Lộc, Thuận An, Thuận Hòa, Thuận Lộc, Thủy Biều, Thủy Vân, Thủy Xuân, Trường An, Vĩnh Ninh, Vỹ Dạ, Xuân Phú</value>
+    <value>5 phường:   Phú Bài, Thủy Châu, Thủy Dương, Thủy Lương, Thủy Phương</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>7 xã: Hải Dương, Hương Phong, Hương Thọ, Phú Dương, Phú Mậu, Phú Thanh, Thủy Bằng.</value>
+    <value>5 xã: Dương Hoà, Phú Sơn, Thủy Phù, Thủy Tân, Thủy Thanh</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
   </data>
-  <data name="lblHueCity" xml:space="preserve">
-    <value>TP Huế</value>
+  <data name="lblHuongThuyTown" xml:space="preserve">
+    <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
