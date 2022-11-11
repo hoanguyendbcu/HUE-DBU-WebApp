@@ -123,9 +123,6 @@
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
   </data>
-  <data name="lblAluoiDistrict" xml:space="preserve">
-    <value>Huyện Quảng Điền</value>
-  </data>
   <data name="lblButtonLeft1" xml:space="preserve">
     <value>TP Huế</value>
   </data>
@@ -209,6 +206,9 @@
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
     <value>Tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblQuangDienDistrict" xml:space="preserve">
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Thống kê theo hoạt động khảo sát, rà phá, giáo dục phòng tránh</value>

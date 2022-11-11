@@ -203,7 +203,7 @@ namespace DBCU_WebApp.Controllers
             ViewData["UXOModel"] = JsonSerializer.Serialize(jsonModel);
 
 
-            if (lang == "en")
+            if (lang == "en") 
             {
                 var jsonMREGender = await dataFiguresRepository.GetMREGender(distict);
                 var jsonMREChildGender = await dataFiguresRepository.GetMREChildGender(distict);

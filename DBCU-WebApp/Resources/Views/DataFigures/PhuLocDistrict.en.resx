@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Huyện Phú Lộc nằm ở phía đông nam tỉnh Thừa Thiên Huế</value>
+    <value>Phu Loc district is located in the southeast of Thua Thien Hue province</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative border:</value>
@@ -193,10 +193,10 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>2 Township: Phú Lộc, Lăng Cô</value>
+    <value>2 Township: Phu Loc, Lang Co</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>15 communes: Giang Hải, Lộc An, Lộc Bình, Lộc Bổn, Lộc Điền, Lộc Hòa, Lộc Sơn, Lộc Thủy, Lộc Tiến, Lộc Trì, Lộc Vĩnh, Vinh Hiền, Vinh Hưng, Vinh Mỹ, Xuân Lộc.</value>
+    <value>15 communes: Giang Hai, Loc An, Loc Binh, Loc Bon, Loc Dien, Loc Hoa, Loc Son, Loc Thuy, Loc Tien, Loc Tri, Loc Vinh, Vinh Hien, Vinh Hung, Vinh My, Xuan Loc.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>General information</value>
