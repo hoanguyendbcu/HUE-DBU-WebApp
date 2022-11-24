@@ -3,6 +3,8 @@
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
     ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["DataAndFigures"].Value + " - " + ViewLocalizer["lblMineActionClearance"].Value;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
 }
  
 <style>
@@ -72,9 +74,58 @@
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
-        <partial name="_MineActionClearance" model="@Model" />
+       @* <partial name="_MineActionClearance" model="@Model" />*@
+
+
+        <!-- Insert BI-->
+        @if (lang == "vi")
+        {
+            <iframe title="CLC_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMzQ3NWE5ZGItODA5MC00MjAxLWJkYTktN2NiYmQ2MDhhNDZkIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+
+        }
+        else if (lang == "en")
+        {
+            <iframe title="CLC_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMzQ3NWE5ZGItODA5MC00MjAxLWJkYTktN2NiYmQ2MDhhNDZkIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection954e4e37b10759083748" frameborder="0" allowFullScreen="true"></iframe>
+        }
+
+        <!-- Insert DashBoard-->
+        @if (lang == "vi")
+        {
+            <iframe title="CLC_DashBoard_REPORT_VN" width="1280" height="750"
+                src="https://www.arcgis.com/apps/dashboards/41888ac7a3ce4fa5afed0930d4043bcc" frameborder="0" allowFullScreen="true"></iframe>
+
+        }
+        else if (lang == "en")
+        {
+            <iframe title="CLC_DashBoard_REPORT_EL" width="1280" height="750"
+                src="https://www.arcgis.com/apps/dashboards/f1e08452182f4b70aa7b79075f30300a" frameborder="0" allowFullScreen="true"></iframe>
+        }
+
+        <br />
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </div>
+
+
+
+
+
 </section>
+
+
+
+
+
+
+
 
 @section Scripts {
     <script>      

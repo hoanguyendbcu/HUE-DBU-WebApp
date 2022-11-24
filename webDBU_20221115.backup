@@ -1,0 +1,2736 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.1.4
+-- Dumped by pg_dump version 9.1.4
+-- Started on 2022-11-15 17:16:32
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 187 (class 3079 OID 11639)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2047 (class 0 OID 0)
+-- Dependencies: 187
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 161 (class 1259 OID 46255)
+-- Dependencies: 6
+-- Name: ActivityMA; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "ActivityMA" (
+    "Id" integer NOT NULL,
+    "ActivityCode" character varying(50),
+    "ActivityName" character varying(250) NOT NULL,
+    "ActivityNameEN" character varying(250) NOT NULL
+);
+
+
+ALTER TABLE public."ActivityMA" OWNER TO imsma;
+
+--
+-- TOC entry 162 (class 1259 OID 46261)
+-- Dependencies: 6 161
+-- Name: ActivityMA_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "ActivityMA_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."ActivityMA_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2048 (class 0 OID 0)
+-- Dependencies: 162
+-- Name: ActivityMA_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "ActivityMA_Id_seq" OWNED BY "ActivityMA"."Id";
+
+
+--
+-- TOC entry 2049 (class 0 OID 0)
+-- Dependencies: 162
+-- Name: ActivityMA_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"ActivityMA_Id_seq"', 5, true);
+
+
+--
+-- TOC entry 163 (class 1259 OID 46263)
+-- Dependencies: 6
+-- Name: AspNetRoleClaims; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer NOT NULL,
+    "RoleId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text
+);
+
+
+ALTER TABLE public."AspNetRoleClaims" OWNER TO imsma;
+
+--
+-- TOC entry 164 (class 1259 OID 46269)
+-- Dependencies: 6 163
+-- Name: AspNetRoleClaims_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "AspNetRoleClaims_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."AspNetRoleClaims_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2050 (class 0 OID 0)
+-- Dependencies: 164
+-- Name: AspNetRoleClaims_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "AspNetRoleClaims_Id_seq" OWNED BY "AspNetRoleClaims"."Id";
+
+
+--
+-- TOC entry 2051 (class 0 OID 0)
+-- Dependencies: 164
+-- Name: AspNetRoleClaims_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"AspNetRoleClaims_Id_seq"', 1, false);
+
+
+--
+-- TOC entry 165 (class 1259 OID 46271)
+-- Dependencies: 6
+-- Name: AspNetRoles; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" character varying(256),
+    "NormalizedName" character varying(256),
+    "ConcurrencyStamp" text
+);
+
+
+ALTER TABLE public."AspNetRoles" OWNER TO imsma;
+
+--
+-- TOC entry 166 (class 1259 OID 46277)
+-- Dependencies: 6
+-- Name: AspNetUserClaims; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer NOT NULL,
+    "UserId" text NOT NULL,
+    "ClaimType" text,
+    "ClaimValue" text
+);
+
+
+ALTER TABLE public."AspNetUserClaims" OWNER TO imsma;
+
+--
+-- TOC entry 167 (class 1259 OID 46283)
+-- Dependencies: 6 166
+-- Name: AspNetUserClaims_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "AspNetUserClaims_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."AspNetUserClaims_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2052 (class 0 OID 0)
+-- Dependencies: 167
+-- Name: AspNetUserClaims_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "AspNetUserClaims_Id_seq" OWNED BY "AspNetUserClaims"."Id";
+
+
+--
+-- TOC entry 2053 (class 0 OID 0)
+-- Dependencies: 167
+-- Name: AspNetUserClaims_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"AspNetUserClaims_Id_seq"', 1, false);
+
+
+--
+-- TOC entry 168 (class 1259 OID 46285)
+-- Dependencies: 6
+-- Name: AspNetUserLogins; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" character varying(128) NOT NULL,
+    "ProviderKey" character varying(128) NOT NULL,
+    "ProviderDisplayName" text,
+    "UserId" text NOT NULL
+);
+
+
+ALTER TABLE public."AspNetUserLogins" OWNER TO imsma;
+
+--
+-- TOC entry 169 (class 1259 OID 46291)
+-- Dependencies: 6
+-- Name: AspNetUserRoles; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" text NOT NULL,
+    "RoleId" text NOT NULL
+);
+
+
+ALTER TABLE public."AspNetUserRoles" OWNER TO imsma;
+
+--
+-- TOC entry 170 (class 1259 OID 46297)
+-- Dependencies: 6
+-- Name: AspNetUserTokens; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" text NOT NULL,
+    "LoginProvider" character varying(128) NOT NULL,
+    "Name" character varying(128) NOT NULL,
+    "Value" text
+);
+
+
+ALTER TABLE public."AspNetUserTokens" OWNER TO imsma;
+
+--
+-- TOC entry 171 (class 1259 OID 46303)
+-- Dependencies: 6
+-- Name: AspNetUsers; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "AspNetUsers" (
+    "Id" text NOT NULL,
+    "UserName" character varying(256),
+    "NormalizedUserName" character varying(256),
+    "Email" character varying(256),
+    "NormalizedEmail" character varying(256),
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text,
+    "SecurityStamp" text,
+    "ConcurrencyStamp" text,
+    "PhoneNumber" text,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL
+);
+
+
+ALTER TABLE public."AspNetUsers" OWNER TO imsma;
+
+--
+-- TOC entry 172 (class 1259 OID 46309)
+-- Dependencies: 6
+-- Name: Category; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "Category" (
+    "Id" integer NOT NULL,
+    "ParentId" integer,
+    "Title" character varying(100) NOT NULL,
+    "Content" text,
+    "Slug" character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public."Category" OWNER TO imsma;
+
+--
+-- TOC entry 173 (class 1259 OID 46315)
+-- Dependencies: 6 172
+-- Name: Category_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "Category_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Category_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2054 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: Category_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "Category_Id_seq" OWNED BY "Category"."Id";
+
+
+--
+-- TOC entry 2055 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: Category_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"Category_Id_seq"', 1, true);
+
+
+--
+-- TOC entry 174 (class 1259 OID 46317)
+-- Dependencies: 6
+-- Name: Gazetteer; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "Gazetteer" (
+    "Gazetteer_guid" character varying(50) NOT NULL,
+    "Gazetteer_localid" character varying(50),
+    "Parentgazetteer_guid" character varying(50),
+    "Gazetteername" character varying(50),
+    "Gazetteername_eng" character varying(50),
+    "Long" numeric,
+    "Lat" numeric
+);
+
+
+ALTER TABLE public."Gazetteer" OWNER TO imsma;
+
+--
+-- TOC entry 175 (class 1259 OID 46323)
+-- Dependencies: 6
+-- Name: Gazetteer_TT; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "Gazetteer_TT" (
+    "Gazetteer_localid" character varying(50),
+    "Long" character varying(50),
+    "Lat" character varying(50)
+);
+
+
+ALTER TABLE public."Gazetteer_TT" OWNER TO imsma;
+
+--
+-- TOC entry 176 (class 1259 OID 46326)
+-- Dependencies: 1947 1948 6
+-- Name: News; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "News" (
+    "NewsId" integer NOT NULL,
+    "Title" character varying(500) NOT NULL,
+    "Description" text,
+    "Slug" character varying(160) NOT NULL,
+    "Content" text,
+    "Author" character varying(160),
+    "Published" boolean NOT NULL,
+    "AuthorId" text NOT NULL,
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone NOT NULL,
+    "ContentEn" text,
+    "DescriptionEn" text,
+    "TitleEn" character varying(500) DEFAULT ''::character varying NOT NULL,
+    "SlugEn" character varying(160) DEFAULT ''::character varying NOT NULL,
+    "StrUrlImage" text
+);
+
+
+ALTER TABLE public."News" OWNER TO imsma;
+
+--
+-- TOC entry 177 (class 1259 OID 46334)
+-- Dependencies: 6
+-- Name: NewsCategorys; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "NewsCategorys" (
+    "NewsID" integer NOT NULL,
+    "CategoryID" integer NOT NULL,
+    "PostID" integer
+);
+
+
+ALTER TABLE public."NewsCategorys" OWNER TO imsma;
+
+--
+-- TOC entry 178 (class 1259 OID 46337)
+-- Dependencies: 6 176
+-- Name: News_NewsId_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "News_NewsId_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."News_NewsId_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2056 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: News_NewsId_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "News_NewsId_seq" OWNED BY "News"."NewsId";
+
+
+--
+-- TOC entry 2057 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: News_NewsId_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"News_NewsId_seq"', 32, true);
+
+
+--
+-- TOC entry 179 (class 1259 OID 46339)
+-- Dependencies: 6
+-- Name: OperationPlanWeek; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "OperationPlanWeek" (
+    "OperationPlanWeekID" integer NOT NULL,
+    "Week" integer NOT NULL,
+    "Year" integer NOT NULL,
+    "FromDate" timestamp without time zone NOT NULL,
+    "ToDate" timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public."OperationPlanWeek" OWNER TO imsma;
+
+--
+-- TOC entry 180 (class 1259 OID 46342)
+-- Dependencies: 179 6
+-- Name: OperationPlanWeek_OperationPlanWeekID_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "OperationPlanWeek_OperationPlanWeekID_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."OperationPlanWeek_OperationPlanWeekID_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2058 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: OperationPlanWeek_OperationPlanWeekID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "OperationPlanWeek_OperationPlanWeekID_seq" OWNED BY "OperationPlanWeek"."OperationPlanWeekID";
+
+
+--
+-- TOC entry 2059 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: OperationPlanWeek_OperationPlanWeekID_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"OperationPlanWeek_OperationPlanWeekID_seq"', 65, true);
+
+
+--
+-- TOC entry 181 (class 1259 OID 46344)
+-- Dependencies: 6
+-- Name: OperationPlans; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "OperationPlans" (
+    "Id" integer NOT NULL,
+    "Week" integer NOT NULL,
+    "Org" integer NOT NULL,
+    "Team" integer NOT NULL,
+    "Activity" integer NOT NULL,
+    "ProvinceID" character varying(50),
+    "DistictID" character varying(50),
+    "CommuneID" character varying(50),
+    "VillageID" character varying(50),
+    "TaskID" character varying(250),
+    "Areas" integer,
+    "StartDate" timestamp without time zone,
+    "EndDate" timestamp without time zone,
+    "Comment" text,
+    "UserCreated" character varying(250),
+    "DateCreated" timestamp without time zone NOT NULL,
+    "DateUpdated" timestamp without time zone
+);
+
+
+ALTER TABLE public."OperationPlans" OWNER TO imsma;
+
+--
+-- TOC entry 182 (class 1259 OID 46350)
+-- Dependencies: 6 181
+-- Name: OperationPlans_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "OperationPlans_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."OperationPlans_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2060 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: OperationPlans_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "OperationPlans_Id_seq" OWNED BY "OperationPlans"."Id";
+
+
+--
+-- TOC entry 2061 (class 0 OID 0)
+-- Dependencies: 182
+-- Name: OperationPlans_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"OperationPlans_Id_seq"', 2013, true);
+
+
+--
+-- TOC entry 183 (class 1259 OID 46352)
+-- Dependencies: 6
+-- Name: Organization; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "Organization" (
+    "Id" integer NOT NULL,
+    "OrganizationCode" text,
+    "ParentId" integer,
+    "OrganizationName" character varying(250) NOT NULL,
+    "OganizationNameEN" character varying(250) NOT NULL
+);
+
+
+ALTER TABLE public."Organization" OWNER TO imsma;
+
+--
+-- TOC entry 184 (class 1259 OID 46358)
+-- Dependencies: 183 6
+-- Name: Organization_Id_seq; Type: SEQUENCE; Schema: public; Owner: imsma
+--
+
+CREATE SEQUENCE "Organization_Id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."Organization_Id_seq" OWNER TO imsma;
+
+--
+-- TOC entry 2062 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: Organization_Id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: imsma
+--
+
+ALTER SEQUENCE "Organization_Id_seq" OWNED BY "Organization"."Id";
+
+
+--
+-- TOC entry 2063 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: Organization_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: imsma
+--
+
+SELECT pg_catalog.setval('"Organization_Id_seq"', 39, true);
+
+
+--
+-- TOC entry 185 (class 1259 OID 46360)
+-- Dependencies: 6
+-- Name: __EFMigrationsHistory; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL
+);
+
+
+ALTER TABLE public."__EFMigrationsHistory" OWNER TO imsma;
+
+--
+-- TOC entry 186 (class 1259 OID 46363)
+-- Dependencies: 6
+-- Name: bombingqb; Type: TABLE; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE TABLE bombingqb (
+    "FID" integer NOT NULL,
+    latitude numeric(18,16),
+    longitude numeric(19,16),
+    date_bom date,
+    "NUM_ACRFT" integer,
+    "AIRCRAFT" character varying(150),
+    "LOAD_QTY" integer,
+    "LOAD_LBS" integer,
+    "ORDNANCE" character varying(50),
+    "ORD_CLASS" character varying(50),
+    "CATEGORY" character varying(50),
+    "TARGET" character varying(50),
+    "BDA" character varying(50)
+);
+
+
+ALTER TABLE public.bombingqb OWNER TO imsma;
+
+--
+-- TOC entry 1943 (class 2604 OID 46366)
+-- Dependencies: 162 161
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "ActivityMA" ALTER COLUMN "Id" SET DEFAULT nextval('"ActivityMA_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 1944 (class 2604 OID 46367)
+-- Dependencies: 164 163
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetRoleClaims" ALTER COLUMN "Id" SET DEFAULT nextval('"AspNetRoleClaims_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 1945 (class 2604 OID 46368)
+-- Dependencies: 167 166
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserClaims" ALTER COLUMN "Id" SET DEFAULT nextval('"AspNetUserClaims_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 1946 (class 2604 OID 46369)
+-- Dependencies: 173 172
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "Category" ALTER COLUMN "Id" SET DEFAULT nextval('"Category_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 1949 (class 2604 OID 46370)
+-- Dependencies: 178 176
+-- Name: NewsId; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "News" ALTER COLUMN "NewsId" SET DEFAULT nextval('"News_NewsId_seq"'::regclass);
+
+
+--
+-- TOC entry 1950 (class 2604 OID 46371)
+-- Dependencies: 180 179
+-- Name: OperationPlanWeekID; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlanWeek" ALTER COLUMN "OperationPlanWeekID" SET DEFAULT nextval('"OperationPlanWeek_OperationPlanWeekID_seq"'::regclass);
+
+
+--
+-- TOC entry 1951 (class 2604 OID 46372)
+-- Dependencies: 182 181
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans" ALTER COLUMN "Id" SET DEFAULT nextval('"OperationPlans_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 1952 (class 2604 OID 46373)
+-- Dependencies: 184 183
+-- Name: Id; Type: DEFAULT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "Organization" ALTER COLUMN "Id" SET DEFAULT nextval('"Organization_Id_seq"'::regclass);
+
+
+--
+-- TOC entry 2024 (class 0 OID 46255)
+-- Dependencies: 161
+-- Data for Name: ActivityMA; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "ActivityMA" ("Id", "ActivityCode", "ActivityName", "ActivityNameEN") FROM stdin;
+1	NTS	Khảo sát phi kỹ thuật	Non Technical Survey
+2	TS	Khảo sát kỹ thuật	Technical Survey
+3	EOD	Xử lý khẩn	EOD
+4	CLC	Rà phá	Clearance
+5	GP	Chuẩn bị hiện trường	Ground preparation
+\.
+
+
+--
+-- TOC entry 2025 (class 0 OID 46263)
+-- Dependencies: 163
+-- Data for Name: AspNetRoleClaims; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetRoleClaims" ("Id", "RoleId", "ClaimType", "ClaimValue") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2026 (class 0 OID 46271)
+-- Dependencies: 165
+-- Data for Name: AspNetRoles; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetRoles" ("Id", "Name", "NormalizedName", "ConcurrencyStamp") FROM stdin;
+06bb315a-7297-42d2-b214-c2d2861d6b67	Admin	ADMIN	c405e28b-d569-4bc8-9881-4ea39b158c15
+\.
+
+
+--
+-- TOC entry 2027 (class 0 OID 46277)
+-- Dependencies: 166
+-- Data for Name: AspNetUserClaims; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetUserClaims" ("Id", "UserId", "ClaimType", "ClaimValue") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2028 (class 0 OID 46285)
+-- Dependencies: 168
+-- Data for Name: AspNetUserLogins; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetUserLogins" ("LoginProvider", "ProviderKey", "ProviderDisplayName", "UserId") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2029 (class 0 OID 46291)
+-- Dependencies: 169
+-- Data for Name: AspNetUserRoles; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetUserRoles" ("UserId", "RoleId") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2030 (class 0 OID 46297)
+-- Dependencies: 170
+-- Data for Name: AspNetUserTokens; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetUserTokens" ("UserId", "LoginProvider", "Name", "Value") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2031 (class 0 OID 46303)
+-- Dependencies: 171
+-- Data for Name: AspNetUsers; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "AspNetUsers" ("Id", "UserName", "NormalizedUserName", "Email", "NormalizedEmail", "EmailConfirmed", "PasswordHash", "SecurityStamp", "ConcurrencyStamp", "PhoneNumber", "PhoneNumberConfirmed", "TwoFactorEnabled", "LockoutEnd", "LockoutEnabled", "AccessFailedCount") FROM stdin;
+6d7a6b6d-06e9-44c8-8e58-359affe82c88	hoanguyendbcu@gmail.com	HOANGUYENDBCU@GMAIL.COM	hoanguyendbcu@gmail.com	HOANGUYENDBCU@GMAIL.COM	f	AQAAAAEAACcQAAAAEGydG2N8vzlRoK2eUROr6F/0qYeHyyIMJAcA98y4jeFTd5JIpYOtr+YgaWwoHTF3wg==	N2LEHZ552YSOUELT47QAKZUWARHYKKU2	04e95ecf-e8d1-4460-8bd4-a8e1dbef220a	\N	f	f	\N	t	0
+e4a9687e-4ea1-447d-97e4-ffa793492791	hoanc1981@gmail.com	HOANC1981@GMAIL.COM	hoanc1981@gmail.com	HOANC1981@GMAIL.COM	f	AQAAAAEAACcQAAAAEEMekHmxHyQkXsCx3TCHuPUlYgIl9vtpBP4TKFPqBWu8oFRohoPGBcmP3P0W/LPdow==	PSOETUB3GTFEQT67F7NTFO5MYHNT7YBB	b5d79f67-60be-4f0d-a639-d245d5936c9f	\N	f	f	\N	t	3
+eea3a374-e6f5-481e-8bf6-06cc143d9069	thienphong62@gmail.com	THIENPHONG62@GMAIL.COM	thienphong62@gmail.com	THIENPHONG62@GMAIL.COM	f	AQAAAAEAACcQAAAAEHp4YXnHDKPko030xZ/YhTBdegzZsxONf1qTnhLgIHKLNbd7h+FNOq3Fz4NAPmOqSA==	WYRWGAFPKNVVOBDOH6RS6BDLXZYG5P63	2c004a7f-bfeb-4bc8-894e-def1d3f6572d	0934961185	f	f	\N	t	0
+\.
+
+
+--
+-- TOC entry 2032 (class 0 OID 46309)
+-- Dependencies: 172
+-- Data for Name: Category; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "Category" ("Id", "ParentId", "Title", "Content", "Slug") FROM stdin;
+1	\N	DBU	\N	dbunews
+\.
+
+
+--
+-- TOC entry 2033 (class 0 OID 46317)
+-- Dependencies: 174
+-- Data for Name: Gazetteer; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "Gazetteer" ("Gazetteer_guid", "Gazetteer_localid", "Parentgazetteer_guid", "Gazetteername", "Gazetteername_eng", "Long", "Lat") FROM stdin;
+c0a8-010b-17a0109470a-784410cf-13881-	481	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện A Lưới	A Luoi District	\N	\N
+c0a8-010b-17a0109473c-4e6bfd67-13882-	483	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện Nam Đông	Nam Dong District	\N	\N
+c0a8-010b-17a01094749-af53da9d-13883-	476	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện Phong Điền	Phong Dien District	\N	\N
+c0a8-010b-17a01094753-37af4471-13884-	482	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện Phú Lộc	Phu Loc District	\N	\N
+c0a8-010b-17a0109475f-f12d3c6c-13885-	478	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện Phú Vang	Phu Vang District	\N	\N
+c0a8-010b-17a01094769-7b10136d-13886-	477	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Huyện Quảng Điền	Quang Dien District	\N	\N
+c0a8-010b-17a01094773-8292d734-13887-	474	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Thành phố Huế	Hue City	\N	\N
+c0a8-010b-17a0109477e-84865d7d-13888-	479	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Thị xã Hương Thủy	Huong Thuy Town	\N	\N
+c0a8-010b-17a01094789-d26ec38c-13889-	480	c0a8-003e-17e712d40f3-c946ffe9-3-81bf	Thị xã Hương Trà	Huong Tra Town	\N	\N
+c0a8-010b-17a01094851-f0359f26-1389c-	20044	c0a8-010b-17a0109470a-784410cf-13881-	Thị trấn A Lưới	A Luoi Township	\N	\N
+c0a8-010b-17a0109485b-b5d9c967-1389d-	20068	c0a8-010b-17a0109470a-784410cf-13881-	Xã A Ngo	A Ngo Commune	\N	\N
+c0a8-010b-17a01094866-e1ed6fba-1389e-	20095	c0a8-010b-17a0109470a-784410cf-13881-	Xã A Roàng	A Roang Commune	\N	\N
+c0a8-010b-17a01094872-81ae64e1-1389f-	20098	c0a8-010b-17a0109470a-784410cf-13881-	Xã Đông Sơn	Dong Son Commune	\N	\N
+c0a8-010b-17a0109487b-3b1fe32d-138a0-	20065	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Bắc	Hong Bac Commune	\N	\N
+c0a8-010b-17a01094887-c1c9ed47-138a1-	20050	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Hạ	Hong Ha Commune	\N	\N
+c0a8-010b-17a01094893-b7166349-138a2-	20053	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Kim	Hong Kim Commune	\N	\N
+c0a8-010b-17a0109489f-6b2977c7-138a3-	20089	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Thái	Hong Thai Commune	\N	\N
+c0a8-010b-17a010948aa-917c0ef6-138a4-	20086	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Thượng	Hong Thuong Commune	\N	\N
+c0a8-010b-17a010948b3-9e123b2f-138a5-	20104	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Thủy	Hong Thuy Commune	\N	\N
+c0a8-010b-17a010948be-222cf546-138a6-	20047	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hồng Vân	Hong Van Commune	\N	\N
+c0a8-010b-17a010948c8-3d31fc7b-138a7-	20059	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hương Nguyên	Huong Nguyen Commune	\N	\N
+c0a8-010b-17a010948d2-c7076dcd-138a8-	20080	c0a8-010b-17a0109470a-784410cf-13881-	Xã Hương Phong	Huong Phong Commune	\N	\N
+c0a8-010b-17a010948db-590a6aaf-138a9-	20101	c0a8-010b-17a0109470a-784410cf-13881-	Xã Lâm Đớt	Lam Dot Commune	\N	\N
+c0a8-010b-17a010948e6-6a0f915c-138aa-	20074	c0a8-010b-17a0109470a-784410cf-13881-	Xã Phú Vinh	Phu Vinh Commune	\N	\N
+c0a8-010b-17a010948f0-abd50dbd-138ab-	20083	c0a8-010b-17a0109470a-784410cf-13881-	Xã Quảng Nhâm	Quang Nham Commune	\N	\N
+c0a8-010b-17a010948fa-1fbee5a4-138ac-	20071	c0a8-010b-17a0109470a-784410cf-13881-	Xã Sơn Thủy	Son Thuy Commune	\N	\N
+c0a8-010b-17a01094906-cd34a1-138ad-5b	20056	c0a8-010b-17a0109470a-784410cf-13881-	Xã Trung Sơn	Trung Son Commune	\N	\N
+c0a8-010b-17a0109490f-4c28862b-138ae-	20161	c0a8-010b-17a0109473c-4e6bfd67-13882-	Thị trấn Khe Tre	Khe Tre Township	\N	\N
+c0a8-010b-17a0109491a-2c3e0420-138af-	20164	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Hương Hữu	Huong Huu Commune	\N	\N
+c0a8-010b-17a01094924-5301535b-138b0-	20167	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Hương Lộc	Huong Loc Commune	\N	\N
+c0a8-010b-17a0109492e-49a919f3-138b1-	20170	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Hương Phú	Huong Phu Commune	\N	\N
+c0a8-010b-17a01094938-76f521fd-138b2-	20173	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Hương Sơn	Huong Son Commune	\N	\N
+c0a8-010b-17a01094942-4e7152f5-138b3-	20179	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Hương Xuân	Huong Xuan Commune	\N	\N
+c0a8-010b-17a0109494d-b66c48fc-138b4-	20182	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Thượng Lộ	Thuong Lo Commune	\N	\N
+c0a8-010b-17a01094957-96d47dec-138b5-	20185	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Thượng Long	Thuong Long Commune	\N	\N
+c0a8-010b-17a01094962-c640c33-138b6-3	20188	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Thượng Nhật	Thuong Nhat Commune	\N	\N
+c0a8-010b-17a0109496c-700321e9-138b7-	20191	c0a8-010b-17a0109473c-4e6bfd67-13882-	Xã Thượng Quảng	Thuong Quang Commune	\N	\N
+c0a8-010b-17a01094975-2986af5e-138b8-	19819	c0a8-010b-17a01094749-af53da9d-13883-	Thị trấn Phong Điền	Phong Dien Township	\N	\N
+c0a8-010b-17a0109497f-cc45c889-138b9-	19843	c0a8-010b-17a01094749-af53da9d-13883-	Xã Điền Hải	Dien Hai Commune	\N	\N
+c0a8-010b-17a01094989-30c4126f-138ba-	19834	c0a8-010b-17a01094749-af53da9d-13883-	Xã Điền Hòa	Dien Hoa Commune	\N	\N
+c0a8-010b-17a01094995-b2c58304-138bb-	19822	c0a8-010b-17a01094749-af53da9d-13883-	Xã Điền Hương	Dien Huong Commune	\N	\N
+c0a8-010b-17a010949a0-43472bde-138bc-	19828	c0a8-010b-17a01094749-af53da9d-13883-	Xã Điền Lộc	Dien Loc Commune	\N	\N
+c0a8-010b-17a010949ab-126ef15b-138bd-	19825	c0a8-010b-17a01094749-af53da9d-13883-	Xã Điền Môn	Dien Mon Commune	\N	\N
+c0a8-010b-17a010949b4-841b684a-138be-	19858	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong An	Phong An Commune	\N	\N
+c0a8-010b-17a010949bf-ec5e89ad-138bf-	19831	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Bình	Phong Binh Commune	\N	\N
+c0a8-010b-17a010949ca-c3f46ba4-138c0-	19837	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Chương	Phong Chuong Commune	\N	\N
+c0a8-010b-17a010949d4-b3a7e50e-138c1-	19840	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Hải	Phong Hai Commune	\N	\N
+c0a8-010b-17a010949de-955d6cd8-138c2-	19852	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Hiền	Phong Hien Commune	\N	\N
+c0a8-010b-17a010949e8-5e6f6a20-138c3-	19846	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Hòa	Phong Hoa Commune	\N	\N
+c0a8-010b-17a010949f3-63861c27-138c4-	19855	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Mỹ	Phong My Commune	\N	\N
+c0a8-010b-17a010949fb-11a83337-138c5-	19864	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Sơn	Phong Son Commune	\N	\N
+c0a8-010b-17a01094a06-5207dff6-138c6-	19849	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Thu	Phong Thu Commune	\N	\N
+c0a8-010b-17a01094a10-cd7d5916-138c7-	19861	c0a8-010b-17a01094749-af53da9d-13883-	Xã Phong Xuân	Phong Xuan Commune	\N	\N
+c0a8-010b-17a01094a1a-1f18cd4-138c8-b	20110	c0a8-010b-17a01094753-37af4471-13884-	Thị trấn Lăng Cô	Lang Co Township	\N	\N
+c0a8-010b-17a01094a25-2ac7fcb5-138c9-	20107	c0a8-010b-17a01094753-37af4471-13884-	Thị trấn Phú Lộc	Phu Loc Township	\N	\N
+c0a8-010b-17a01094a2f-b4c2ab85-138ca-	20122	c0a8-010b-17a01094753-37af4471-13884-	Xã Giang Hải	Giang Hai Commune	\N	\N
+c0a8-010b-17a01094a3b-95a7542-138cb-f	20140	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc An	Loc An Commune	\N	\N
+c0a8-010b-17a01094a45-10651e4e-138cc-	20134	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Bình	Loc Binh Commune	\N	\N
+c0a8-010b-17a01094a4e-283e53e5-138cd-	20128	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Bổn	Loc Bon Commune	\N	\N
+c0a8-010b-17a01094a58-641dbfe6-138ce-	20143	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Điền	Loc Dien Commune	\N	\N
+c0a8-010b-17a01094a62-ef599647-138cf-	20155	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Hòa	Loc Hoa Commune	\N	\N
+c0a8-010b-17a01094a6c-1e2ebe9d-138d0-	20131	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Sơn	Loc Son Commune	\N	\N
+c0a8-010b-17a01094a78-8c8078e4-138d1-	20146	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Thủy	Loc Thuy Commune	\N	\N
+c0a8-010b-17a01094a83-ec4d7960-138d2-	20152	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Tiến	Loc Tien Commune	\N	\N
+c0a8-010b-17a01094a94-b11f4533-138d3-	20149	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Trì	Loc Tri Commune	\N	\N
+c0a8-010b-17a01094a9f-30b80da0-138d4-	20137	c0a8-010b-17a01094753-37af4471-13884-	Xã Lộc Vĩnh	Loc Vinh Commune	\N	\N
+c0a8-010b-17a01094aa9-ea8a43d7-138d5-	20125	c0a8-010b-17a01094753-37af4471-13884-	Xã Vinh Hiền	Vinh Hien Commune	\N	\N
+c0a8-010b-17a01094ab3-3509ec8e-138d6-	20116	c0a8-010b-17a01094753-37af4471-13884-	Xã Vinh Hưng	Vinh Hung Commune	\N	\N
+c0a8-010b-17a01094abc-a0c9edda-138d7-	20113	c0a8-010b-17a01094753-37af4471-13884-	Xã Vinh Mỹ	Vinh My Commune	\N	\N
+c0a8-010b-17a01094ac5-8113e18-138d8-2	20158	c0a8-010b-17a01094753-37af4471-13884-	Xã Xuân Lộc	Xuan Loc Commune	\N	\N
+c0a8-010b-17a01094acf-d00cb3-138d9-77	19942	c0a8-010b-17a0109475f-f12d3c6c-13885-	Thị trấn Phú Đa	Phu Da Township	\N	\N
+c0a8-010b-17a01094ad9-b6bde0f4-138da-	19912	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú An	Phu An Commune	\N	\N
+c0a8-010b-17a01094ae3-8b89ce67-138db-	19921	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Diên	Phu Dien Commune	\N	\N
+c0a8-010b-17a01094aec-c88b297a-138dc-	19954	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Gia	Phu Gia Commune	\N	\N
+c0a8-010b-17a01094af6-21389c1c-138dd-	19915	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Hải	Phu Hai Commune	\N	\N
+c0a8-010b-17a01094b01-cfc35d52-138de-	19933	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Hồ	Phu Ho Commune	\N	\N
+c0a8-010b-17a01094b0a-6e65d703-138df-	19939	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Lương	Phu Luong Commune	\N	\N
+c0a8-010b-17a01094b15-d9522c30-138e0-	19927	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Mỹ	Phu My Commune	\N	\N
+c0a8-010b-17a01094b1e-f4f2ec01-138e1-	19903	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Thuận	Phu Thuan Commune	\N	\N
+c0a8-010b-17a01094b29-ed734dd5-138e2-	19918	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Phú Xuân	Phu Xuan Commune	\N	\N
+c0a8-010b-17a01094b32-a6ce60b6-138e3-	19948	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Vinh An	Vinh An Commune	\N	\N
+c0a8-010b-17a01094b3d-74f3b34d-138e4-	19957	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Vinh Hà	Vinh Ha Commune	\N	\N
+c0a8-010b-17a01094b46-df737132-138e5-	19945	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Vinh Thanh	Vinh Thanh Commune	\N	\N
+c0a8-010b-17a01094b50-fa01b413-138e6-	19936	c0a8-010b-17a0109475f-f12d3c6c-13885-	Xã Vinh Xuân	Vinh Xuan Commune	\N	\N
+c0a8-010b-17a01094b5a-bcf98add-138e7-	19867	c0a8-010b-17a01094769-7b10136d-13886-	Thị trấn Sịa	Sia Township	\N	\N
+c0a8-010b-17a01094b63-559d9b50-138e8-	19888	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng An	Quang An Commune	\N	\N
+c0a8-010b-17a01094b6e-9dd82899-138e9-	19879	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Công	Quang Cong Commune	\N	\N
+c0a8-010b-17a01094b77-d4440b59-138ea-	19876	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Lợi	Quang Loi Commune	\N	\N
+c0a8-010b-17a01094b82-34423236-138eb-	19873	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Ngạn	Quang Ngan Commune	\N	\N
+c0a8-010b-17a01094b8c-fa20286f-138ec-	19897	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Phú	Quang Phu Commune	\N	\N
+c0a8-010b-17a01094b97-a4750d30-138ed-	19882	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Phước	Quang Phuoc Commune	\N	\N
+c0a8-010b-17a01094ba0-813c2020-138ee-	19870	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Thái	Quang Thai Commune	\N	\N
+c0a8-010b-17a01094bab-69a4b191-138ef-	19891	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Thành	Quang Thanh Commune	\N	\N
+c0a8-010b-17a01094bb4-23648ff4-138f0-	19894	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Thọ	Quang Tho Commune	\N	\N
+c0a8-010b-17a01094bbe-d56f4240-138f1-	19885	c0a8-010b-17a01094769-7b10136d-13886-	Xã Quảng Vinh	Quang Vinh Commune	\N	\N
+c0a8-010b-17a01094bc7-f500a279-138f2-	19801	c0a8-010b-17a01094773-8292d734-13887-	Phường An Cựu	An Cuu Ward	\N	\N
+c0a8-010b-17a01094bd2-282ac5d5-138f3-	19815	c0a8-010b-17a01094773-8292d734-13887-	Phường An Đông	An Dong Ward	\N	\N
+c0a8-010b-17a01094bdd-1b3edd6-138f4-4	19803	c0a8-010b-17a01094773-8292d734-13887-	Phường An Hòa	An Hoa Ward	\N	\N
+c0a8-010b-17a01094be7-c5cd3fb9-138f5-	19816	c0a8-010b-17a01094773-8292d734-13887-	Phường An Tây	An Tay Ward	\N	\N
+c0a8-010b-17a01094bf1-c0433def-138f6-	19768	c0a8-010b-17a01094773-8292d734-13887-	Phường Đông Ba	Dong Ba Ward	\N	\N
+c0a8-010b-17a01094bfa-813fb1f0-138f7-	19756	c0a8-010b-17a01094773-8292d734-13887-	Phường Gia Hội	Gia Hoi Ward	\N	\N
+c0a8-010b-17a01094c05-15dcefc6-138f8-	20023	c0a8-010b-17a01094773-8292d734-13887-	Phường Hương An	Huong An Ward	\N	\N
+c0a8-010b-17a01094c0f-a4fb5363-138f9-	20029	c0a8-010b-17a01094773-8292d734-13887-	Phường Hương Hồ	Huong Ho Ward	\N	\N
+c0a8-010b-17a01094c1a-85649e97-138fa-	19810	c0a8-010b-17a01094773-8292d734-13887-	Phường Hương Long	Huong Long Ward	\N	\N
+c0a8-010b-17a01094c24-6e2b8613-138fb-	19804	c0a8-010b-17a01094773-8292d734-13887-	Phường Hương Sơ	Huong So Ward	\N	\N
+c0a8-010b-17a01094c2e-e1d2c26d-138fc-	20014	c0a8-010b-17a01094773-8292d734-13887-	Phường Hương Vinh	Huong Vinh Ward	\N	\N
+c0a8-010b-17a01094c37-c7253bb7-138fd-	19774	c0a8-010b-17a01094773-8292d734-13887-	Phường Kim Long	Kim Long Ward	\N	\N
+c0a8-010b-17a01094c41-c9a12d8e-138fe-	19759	c0a8-010b-17a01094773-8292d734-13887-	Phường Phú Hậu	Phu Hau Ward	\N	\N
+c0a8-010b-17a01094c4b-f0ae19e7-138ff-	19786	c0a8-010b-17a01094773-8292d734-13887-	Phường Phú Hội	Phu Hoi Ward	\N	\N
+c0a8-010b-17a01094c54-780f2d80-13900-	19789	c0a8-010b-17a01094773-8292d734-13887-	Phường Phú Nhuận	Phu Nhuan Ward	\N	\N
+c0a8-010b-17a01094c5f-58a7ae6a-13901-	19930	c0a8-010b-17a01094773-8292d734-13887-	Phường Phú Thượng	Phu Thuong Ward	\N	\N
+c0a8-010b-17a01094c69-79aaff3c-13902-	19798	c0a8-010b-17a01094773-8292d734-13887-	Phường Phước Vĩnh	Phuoc Vinh Ward	\N	\N
+c0a8-010b-17a01094c72-f4b8848-13903-c	19780	c0a8-010b-17a01094773-8292d734-13887-	Phường Phường Đúc	Duc Ward	\N	\N
+c0a8-010b-17a01094c7d-6e81e36c-13904-	19750	c0a8-010b-17a01094773-8292d734-13887-	Phường Tây Lộc	Tay Loc Ward	\N	\N
+c0a8-010b-17a01094c86-62590f5f-13905-	19900	c0a8-010b-17a01094773-8292d734-13887-	Phường Thuận An	Thuan An Ward	\N	\N
+c0a8-010b-17a01094c91-9c74e96-13906-4	19762	c0a8-010b-17a01094773-8292d734-13887-	Phường Thuận Hòa	Thuan Hoa Ward	\N	\N
+c0a8-010b-17a01094c9b-39e6cd94-13907-	19753	c0a8-010b-17a01094773-8292d734-13887-	Phường Thuận Lộc	Thuan Loc Ward	\N	\N
+c0a8-010b-17a01094ca5-7641056f-13908-	19807	c0a8-010b-17a01094773-8292d734-13887-	Phường Thuỷ Biều	Thuy Bieu Ward	\N	\N
+c0a8-010b-17a01094cae-2d6461db-13909-	19963	c0a8-010b-17a01094773-8292d734-13887-	Phường Thủy Vân	Thuy Van Ward	\N	\N
+c0a8-010b-17a01094cb8-a02c4fd0-1390a-	19813	c0a8-010b-17a01094773-8292d734-13887-	Phường Thuỷ Xuân	Thuy Xuan Ward	\N	\N
+c0a8-010b-17a01094cc2-296a51ba-1390b-	19795	c0a8-010b-17a01094773-8292d734-13887-	Phường Trường An	Truong An Ward	\N	\N
+c0a8-010b-17a01094ccc-2361c046-1390c-	19783	c0a8-010b-17a01094773-8292d734-13887-	Phường Vĩnh Ninh	Vinh Ninh Ward	\N	\N
+c0a8-010b-17a01094cd6-bc54181b-1390d-	19777	c0a8-010b-17a01094773-8292d734-13887-	Phường Vỹ Dạ	Vy Da Ward	\N	\N
+c0a8-010b-17a01094ce0-31162132-1390e-	19792	c0a8-010b-17a01094773-8292d734-13887-	Phường Xuân Phú	Xuan Phu Ward	\N	\N
+c0a8-010b-17a01094cea-696e48c8-1390f-	19999	c0a8-010b-17a01094773-8292d734-13887-	Xã Hải Dương	Hai Duong Commune	\N	\N
+c0a8-010b-17a01094cf4-3bd7ae25-13910-	20002	c0a8-010b-17a01094773-8292d734-13887-	Xã Hương Phong	Huong Phong Commune	\N	\N
+c0a8-010b-17a01094cfd-f44f86ca-13911-	20032	c0a8-010b-17a01094773-8292d734-13887-	Xã Hương Thọ	Huong Tho Commune	\N	\N
+c0a8-010b-17a01094d08-bfd1a10d-13912-	19906	c0a8-010b-17a01094773-8292d734-13887-	Xã Phú Dương	Phu Duong Commune	\N	\N
+c0a8-010b-17a01094d12-4dc68a37-13913-	19909	c0a8-010b-17a01094773-8292d734-13887-	Xã Phú Mậu	Phu Mau Commune	\N	\N
+c0a8-010b-17a01094d1c-99ef0946-13914-	19924	c0a8-010b-17a01094773-8292d734-13887-	Xã Phú Thanh	Phu Thanh Commune	\N	\N
+c0a8-010b-17a01094d26-eceb593f-13915-	19981	c0a8-010b-17a01094773-8292d734-13887-	Xã Thủy Bằng	Thuy Bang Commune	\N	\N
+c0a8-010b-17a01094d30-dba86d9f-13916-	19960	c0a8-010b-17a0109477e-84865d7d-13888-	Phường Phú Bài	Phu Bai Ward	\N	\N
+c0a8-010b-17a01094d3b-8a87d4bc-13917-	19975	c0a8-010b-17a0109477e-84865d7d-13888-	Phường Thủy Châu	Thuy Chau Ward	\N	\N
+c0a8-010b-17a01094dd7-503bf7fb-13925-	19969	c0a8-010b-17a0109477e-84865d7d-13888-	Phường Thủy Dương	Thuy Duong Ward	\N	\N
+c0a8-010b-17a01094de3-2c35cfeb-13926-	19978	c0a8-010b-17a0109477e-84865d7d-13888-	Phường Thủy Lương	Thuy Luong Ward	\N	\N
+c0a8-010b-17a01094def-76fccbe-13927-5	19972	c0a8-010b-17a0109477e-84865d7d-13888-	Phường Thủy Phương	Thuy Phuong Ward	\N	\N
+c0a8-010b-17a01094df8-50e39348-13928-	19993	c0a8-010b-17a0109477e-84865d7d-13888-	Xã Dương Hòa	Duong Hoa Commune	\N	\N
+c0a8-010b-17a01094e03-998def64-13929-	19990	c0a8-010b-17a0109477e-84865d7d-13888-	Xã Phú Sơn	Phu Son Commune	\N	\N
+c0a8-010b-17a01094e0d-7242a2de-1392a-	19987	c0a8-010b-17a0109477e-84865d7d-13888-	Xã Thủy Phù	Thuy Phu Commune	\N	\N
+c0a8-010b-17a01094e17-b890c336-1392b-	19984	c0a8-010b-17a0109477e-84865d7d-13888-	Xã Thủy Tân	Thuy Tan Commune	\N	\N
+c0a8-010b-17a01094e21-1fa817e0-1392c-	19966	c0a8-010b-17a0109477e-84865d7d-13888-	Xã Thủy Thanh	Thuy Thanh Commune	\N	\N
+c0a8-010b-17a01094e2a-3d07a3ff-1392d-	20020	c0a8-010b-17a01094789-d26ec38c-13889-	Phường Hương Chữ	Huong Chu Ward	\N	\N
+c0a8-010b-17a01094e35-850cd7e1-1392e-	20008	c0a8-010b-17a01094789-d26ec38c-13889-	Phường Hương Vân	Huong Van Ward	\N	\N
+c0a8-010b-17a01094e3f-ede337dd-1392f-	20011	c0a8-010b-17a01094789-d26ec38c-13889-	Phường Hương Văn	Huong Van Ward	\N	\N
+c0a8-010b-17a01094e48-65420c10-13930-	20017	c0a8-010b-17a01094789-d26ec38c-13889-	Phường Hương Xuân	Huong Xuan Ward	\N	\N
+c0a8-010b-17a01094e52-41af0e80-13931-	19996	c0a8-010b-17a01094789-d26ec38c-13889-	Phường Tứ Hạ	Tu Ha Ward	\N	\N
+c0a8-010b-17a01094e5c-3d8d9cf9-13932-	20041	c0a8-010b-17a01094789-d26ec38c-13889-	Xã Bình Thành	Binh Thanh Commune	\N	\N
+c0a8-010b-17a01094e65-c4209c2d-13933-	20035	c0a8-010b-17a01094789-d26ec38c-13889-	Xã Bình Tiến	Binh Tien Commune	\N	\N
+c0a8-010b-17a01094e6f-cdf09fbf-13934-	20026	c0a8-010b-17a01094789-d26ec38c-13889-	Xã Hương Bình	Huong Binh Commune	\N	\N
+c0a8-010b-17a01094e7a-25358042-13935-	20005	c0a8-010b-17a01094789-d26ec38c-13889-	Xã Hương Toàn	Huong Toan Commune	\N	\N
+c0a8-010b-17a010957b8-b722120b-13a1d-	46010101	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010957c2-dea7ed71-13a1e-	46010102	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010957cc-8fa01fe-13a1f-5	46010103	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010957d6-77335140-13a20-	46010105	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010957e0-729ee564-13a21-	46010106	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a010957ea-d5d4b74a-13a22-	46010104	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010957f4-afbcc100-13a23-	46010107	c0a8-010b-17a01094851-f0359f26-1389c-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a010957fd-283c551f-13a24-	46010201	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn A Ngo	A Ngo Village 	\N	\N
+c0a8-010b-17a01095807-686c6a10-13a25-	46010202	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn Bình Sơn	Binh Son Village 	\N	\N
+c0a8-010b-17a01095811-4890604-13a26-c	46010203	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn Diên Mai	Dien Mai Village 	\N	\N
+c0a8-010b-17a0109581b-797d39d-13a27-1	46010204	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn Pâr Nghi	Par Nghi Village 	\N	\N
+c0a8-010b-17a01095824-c5d55dc1-13a28-	46010205	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn Pâr Nghi 1	Par Nghi Village 	\N	\N
+c0a8-010b-17a0109582e-d15c069a-13a29-	46010206	c0a8-010b-17a0109485b-b5d9c967-1389d-	Thôn Tà Roi	Ta Roi Village 	\N	\N
+c0a8-010b-17a01095838-b81f92f6-13a2a-	46010301	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn A Chi - Hương Sơn	A Chi - Huong Son Village	\N	\N
+c0a8-010b-17a01095843-a618a46d-13a2b-	46010302	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn A Ka	A Ka Village	\N	\N
+c0a8-010b-17a0109584d-dc59b63e-13a2c-	46010303	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn A Min - C9	A Min - C9 Village	\N	\N
+c0a8-010b-17a01095858-7fd0ee92-13a2d-	46010304	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn A Roàng 1	A Roang 1 Village	\N	\N
+c0a8-010b-17a01095861-5630c2c2-13a2e-	46010305	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn A Roàng 2	A Roang 2 Village	\N	\N
+c0a8-010b-17a0109586b-c6ba88fb-13a2f-	46010306	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn Ka Lô	Ka Lo Village	\N	\N
+c0a8-010b-17a01095876-59d87e2-13a30-e	46010307	c0a8-010b-17a01094866-e1ed6fba-1389e-	Thôn Ka Rôông - A Ho	Ka Roong - A Ho Village	\N	\N
+c0a8-010b-17a01095880-78cee69f-13a31-	46010401	c0a8-010b-17a01094872-81ae64e1-1389f-	Thôn Ka Vá	Ka Va Village	\N	\N
+c0a8-010b-17a0109588b-ed73c7fd-13a32-	46010402	c0a8-010b-17a01094872-81ae64e1-1389f-	Thôn Loah - Ta Vai	Loah - Ta Vai Village	\N	\N
+c0a8-010b-17a01095896-64cecf14-13a33-	46010403	c0a8-010b-17a01094872-81ae64e1-1389f-	Thôn Tru - Chaih	Tru - Chaih Village	\N	\N
+c0a8-010b-17a010958a0-f443ae58-13a34-	46010501	c0a8-010b-17a0109487b-3b1fe32d-138a0-	Thôn Lê Lộc 2	Le Loc 2 Village	\N	\N
+c0a8-010b-17a010958aa-f79c44a1-13a35-	46010502	c0a8-010b-17a0109487b-3b1fe32d-138a0-	Thôn Lê Ninh	Le Ninh Village	\N	\N
+c0a8-010b-17a010958b4-3dc1589c-13a36-	46010503	c0a8-010b-17a0109487b-3b1fe32d-138a0-	Thôn Ra Lóoc - A Sốc	Ra Looc - A Soc Village	\N	\N
+c0a8-010b-17a010958be-457d9bb2-13a37-	46010504	c0a8-010b-17a0109487b-3b1fe32d-138a0-	Thôn Tân Hối	Tan Hoi Village	\N	\N
+c0a8-010b-17a010958c9-1e6ae1f4-13a38-	46010601	c0a8-010b-17a01094887-c1c9ed47-138a1-	Thôn A Rom	A Rom Village	\N	\N
+c0a8-010b-17a010958d2-1bb0d3d3-13a39-	46010602	c0a8-010b-17a01094887-c1c9ed47-138a1-	Thôn Cân Tôm	Can Tom Village	\N	\N
+c0a8-010b-17a010958dd-a5bce865-13a3a-	46010603	c0a8-010b-17a01094887-c1c9ed47-138a1-	Thôn Pa Hy	Pa Hy Village	\N	\N
+c0a8-010b-17a010958e6-c44c2138-13a3b-	46010604	c0a8-010b-17a01094887-c1c9ed47-138a1-	Thôn Pa Ring - Cân Sâm	Pa Ring - Can Sam Village	\N	\N
+c0a8-010b-17a010958f0-2f4a7e73-13a3c-	46010701	c0a8-010b-17a01094893-b7166349-138a2-	Thôn A Tia 1	A Tia 1 Village	\N	\N
+c0a8-010b-17a010958fa-328bc778-13a3d-	46010702	c0a8-010b-17a01094893-b7166349-138a2-	Thôn A Tia 2	A Tia 2 Village	\N	\N
+c0a8-010b-17a01095904-abeead26-13a3e-	46010703	c0a8-010b-17a01094893-b7166349-138a2-	Thôn Đút 1	Dut 1 Village	\N	\N
+c0a8-010b-17a0109590e-402b7bb8-13a3f-	46010704	c0a8-010b-17a01094893-b7166349-138a2-	Thôn Đút 2	Dut 2 Village	\N	\N
+c0a8-010b-17a01095918-a518cd32-13a40-	46010801	c0a8-010b-17a0109489f-6b2977c7-138a3-	Thôn A Đâng 	A Dang Village	\N	\N
+c0a8-010b-17a01095922-a5fc28c8-13a41-	46010802	c0a8-010b-17a0109489f-6b2977c7-138a3-	Thôn A La	A La Village	\N	\N
+c0a8-010b-17a0109592d-d32824f1-13a42-	46010803	c0a8-010b-17a0109489f-6b2977c7-138a3-	Thôn Tu Vay	Tu Vay Village	\N	\N
+c0a8-010b-17a01095938-b312894a-13a43-	46010804	c0a8-010b-17a0109489f-6b2977c7-138a3-	Thôn Y Reo	Y Reo Village	\N	\N
+c0a8-010b-17a01095944-81f49bf6-13a44-	46010901	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn A Đên	A Den Village	\N	\N
+c0a8-010b-17a0109594d-38860564-13a45-	46010902	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn A Xáp	A Xap Village	\N	\N
+c0a8-010b-17a01095958-7f974a7f-13a46-	46010903	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn Căn Sâm	Can Sam Village	\N	\N
+c0a8-010b-17a01095961-dd622fb1-13a47-	46010904	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn Căn Te	Can Te Village	\N	\N
+c0a8-010b-17a0109596a-a9413d1a-13a48-	46010905	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn Căn Tôm	Can Tom Village	\N	\N
+c0a8-010b-17a01095975-a548039d-13a49-	46010906	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn Hợp Thượng	Hop Thuong Village	\N	\N
+c0a8-010b-17a01095980-abdd8639-13a4a-	46010907	c0a8-010b-17a010948aa-917c0ef6-138a4-	Thôn Ky Ré	Ky Re Village	\N	\N
+c0a8-010b-17a010959ef-83ad0cb5-13a55-	46011001	c0a8-010b-17a010948b3-9e123b2f-138a5-	Thôn Kê 1	Ke 1 Village	\N	\N
+c0a8-010b-17a010959fb-51d2e271-13a56-	46011002	c0a8-010b-17a010948b3-9e123b2f-138a5-	Thôn Kê 2	Ke 2 Village	\N	\N
+c0a8-010b-17a01095a05-5574f523-13a57-	46011003	c0a8-010b-17a010948b3-9e123b2f-138a5-	Thôn La Ngà	La Nga Village	\N	\N
+c0a8-010b-17a01095a11-d41da7b1-13a58-	46011004	c0a8-010b-17a010948b3-9e123b2f-138a5-	Thôn Pâr Ay	Par Ay Village	\N	\N
+c0a8-010b-17a01095a1b-fc00a893-13a59-	46011005	c0a8-010b-17a010948b3-9e123b2f-138a5-	Thôn Tru Pỉ	Tru Pi Village	\N	\N
+c0a8-010b-17a01095a25-1fba1dbf-13a5a-	46011101	c0a8-010b-17a010948be-222cf546-138a6-	Thôn A Năm	A Nam Village	\N	\N
+c0a8-010b-17a01095a2f-da44e978-13a5b-	46011102	c0a8-010b-17a010948be-222cf546-138a6-	Thôn Ca Cú 1	Ca Cu 1 Village	\N	\N
+c0a8-010b-17a01095a39-7c67ce19-13a5c-	46011103	c0a8-010b-17a010948be-222cf546-138a6-	Thôn Ca Cú 2	Ca Cu 2 Village	\N	\N
+c0a8-010b-17a01095a43-e8c3f69a-13a5d-	46011104	c0a8-010b-17a010948be-222cf546-138a6-	Thôn Kê	Ke Village	\N	\N
+c0a8-010b-17a01095a4d-8c6e8e0d-13a5e-	46011105	c0a8-010b-17a010948be-222cf546-138a6-	Thôn Ta Lo A Hố	Ta Lo A Ho Village	\N	\N
+c0a8-010b-17a01095a57-d2802522-13a5f-	46011201	c0a8-010b-17a010948c8-3d31fc7b-138a7-	Thôn A Rí	A Ri Village	\N	\N
+c0a8-010b-17a01095a61-ffcebc0b-13a60-	46011202	c0a8-010b-17a010948c8-3d31fc7b-138a7-	Thôn Chi Đu Nghĩa	Chi Du Nghia Village	\N	\N
+c0a8-010b-17a01095a6a-9a7131c8-13a61-	46011203	c0a8-010b-17a010948c8-3d31fc7b-138a7-	Thôn Giồng	Giong Village	\N	\N
+c0a8-010b-17a01095a74-9659b637-13a62-	46011204	c0a8-010b-17a010948c8-3d31fc7b-138a7-	Thôn Mu Nú Ta Rá	Mu Nu Ta Ra Village	\N	\N
+c0a8-010b-17a01095a7f-19cfe3fb-13a63-	46011301	c0a8-010b-17a010948d2-c7076dcd-138a8-	Thôn Hương Phú	Huong Phu Village	\N	\N
+c0a8-010b-17a01095a88-561e30e4-13a64-	46011302	c0a8-010b-17a010948d2-c7076dcd-138a8-	Thôn Hương Thịnh	Huong Thinh Village	\N	\N
+c0a8-010b-17a01095a93-7862489a-13a65-	46011401	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn A Đớt	A Dot Village	\N	\N
+c0a8-010b-17a01095a9d-eb98aa7d-13a66-	46011402	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn A Tin	A Tin Village	\N	\N
+c0a8-010b-17a01095aa7-37347671-13a67-	46011403	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Ba Lạch	Ba Lach Village	\N	\N
+c0a8-010b-17a01095ab0-59f44055-13a68-	46011404	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Chi Hòa	Chi Hoa Village	\N	\N
+c0a8-010b-17a0109603c-7a720ab7-13af2-	46090701	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01095abb-17f05007-13a69-	46011405	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Chi Lanh - A Roh	Chi Lanh - A Roh Village	\N	\N
+c0a8-010b-17a01095ac5-6fdc52f2-13a6a-	46011406	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Cưr Xo	Cur Xo Village	\N	\N
+c0a8-010b-17a01095acf-3b6fd20e-13a6b-	46011407	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Ka Nôn 1	Ka Non 1 Village	\N	\N
+c0a8-010b-17a01095ad9-74c6aea-13a6c-e	46011408	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Ka Nôn 2	Ka Non 2 Village	\N	\N
+c0a8-010b-17a01095ae4-a9b59b9d-13a6d-	46011409	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn La Tưng	La Tung Village	\N	\N
+c0a8-010b-17a01095aee-1c5d746e-13a6e-	46011410	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn Liên Hiệp	Lien Hiep Village	\N	\N
+c0a8-010b-17a01095af8-ac51bf44-13a6f-	46011411	c0a8-010b-17a010948db-590a6aaf-138a9-	Thôn PaRis - Ka Vin	PaRis - Ka Vin Village	\N	\N
+c0a8-010b-17a01095b03-52a42681-13a70-	46011501	c0a8-010b-17a010948e6-6a0f915c-138aa-	Thôn Phú Thành	Phu Thanh Village	\N	\N
+c0a8-010b-17a01095b10-a53f39f8-13a71-	46011502	c0a8-010b-17a010948e6-6a0f915c-138aa-	Thôn Phú Thượng	Phu Thuong Village	\N	\N
+c0a8-010b-17a01095b1d-1fc48c72-13a72-	46011503	c0a8-010b-17a010948e6-6a0f915c-138aa-	Thôn Phú Xuân 	Phu Xuan Village	\N	\N
+c0a8-010b-17a01095b29-5c0365c1-13a73-	46011601	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn A Hươr Pa E	A Huor Pa E Village	\N	\N
+c0a8-010b-17a01095b35-c82de51c-13a74-	46011602	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn A Lưới	A Luoi Village	\N	\N
+c0a8-010b-17a01095b40-6580c70c-13a75-	46011603	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn Âr Bả Nhâm	Ar Ba Nham Village	\N	\N
+c0a8-010b-17a01095b4a-8f63a43f-13a76-	46011604	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn Âr Kêu Nhâm 	Ar Keu Nham Village	\N	\N
+c0a8-010b-17a01095b56-d390ab41-13a77-	46011605	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn KLeng A Bung	KLeng A Bung Village	\N	\N
+c0a8-010b-17a01095b60-e9c4b10-13a78-1	46011606	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn Pất Đuh	Pat Duh Village	\N	\N
+c0a8-010b-17a01095b6a-4de96adc-13a79-	46011607	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn Pi Ây 1	Pi Ay 1 Village	\N	\N
+c0a8-010b-17a01095b73-ea46dd94-13a7a-	46011608	c0a8-010b-17a010948f0-abd50dbd-138ab-	Thôn Pi Ây 2	Pi Ay 2 Village	\N	\N
+c0a8-010b-17a01095b7e-d11c95a1-13a7b-	46011701	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Vinh Lợi	Vinh Loi Village	\N	\N
+c0a8-010b-17a01095b87-b7c5135a-13a7c-	46011702	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Quảng Hợp	Quang Hop Village	\N	\N
+c0a8-010b-17a01095b91-bdabfef-13a7d-8	46011703	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Quảng Lộc	Quang Loc Village	\N	\N
+c0a8-010b-17a01095b9b-8692f2e-13a7e-3	46011704	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Quảng Ngạn	Quang Ngan Village	\N	\N
+c0a8-010b-17a01095ba5-b8b21437-13a7f-	46011705	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Quảng Phú	Quang Phu Village	\N	\N
+c0a8-010b-17a01095baf-3a40726a-13a80-	46011706	c0a8-010b-17a010948fa-1fbee5a4-138ac-	Thôn Quảng Thọ	Quang Tho Village	\N	\N
+c0a8-010b-17a01095bb9-c193fe2b-13a81-	46011801	c0a8-010b-17a01094906-cd34a1-138ad-5b	Thôn A Đeeng Par Lieng 2	A Deeng Par Lieng 2 Village	\N	\N
+c0a8-010b-17a01095bc3-da4cc4e0-13a82-	46011802	c0a8-010b-17a01094906-cd34a1-138ad-5b	Thôn A Niêng Lê Triêng 1	A Nieng Le Trieng 1 Village	\N	\N
+c0a8-010b-17a01095bcd-75b77de5-13a83-	46011803	c0a8-010b-17a01094906-cd34a1-138ad-5b	Thôn Đụt Lê Triêng 2 	Dut Le Trieng 2 Village	\N	\N
+c0a8-010b-17a01095bd7-1c2c8786-13a84-	46011804	c0a8-010b-17a01094906-cd34a1-138ad-5b	Thôn Ta Ay Ta	Ta Ay Ta Village Village	\N	\N
+c0a8-010b-17a01095be0-f2c319de-13a85-	46011805	c0a8-010b-17a01094906-cd34a1-138ad-5b	Thôn A Đeeng Par Lieng 1	A Deeng Par Lieng 1 Village	\N	\N
+c0a8-010b-17a01095bea-d6a5f0d0-13a86-	46080101	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01095bf5-bbd36f9b-13a87-	46080102	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01095c02-c5af7de1-13a88-	46080103	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01095c0d-95b52b94-13a89-	46080104	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01095c17-6f2557d8-13a8a-	46080105	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01095c21-49484d-13a8b-93	46080106	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01095c2b-3e3ec64d-13a8c-	46080107	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01095c36-5055c9df-13a8d-	46080108	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01095c40-9a4ea276-13a8e-	46080109	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01095c49-86f59577-13a8f-	46080110	c0a8-010b-17a01094d30-dba86d9f-13916-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01095c53-67011f51-13a90-	46080201	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01095c5c-7cc6f64d-13a91-	46080202	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01095c66-2bb0a4f8-13a92-	46080203	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01095c70-60b85b11-13a93-	46080204	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01095c7a-cb204385-13a94-	46080205	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01095c84-37424f49-13a95-	46080206	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01095c8e-3689be75-13a96-	46080207	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01095c97-d20559da-13a97-	46080208	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01095ca2-73302c13-13a98-	46080209	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01095cac-9a411109-13a99-	46080210	c0a8-010b-17a01094d3b-8a87d4bc-13917-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01095cb7-e11cefe6-13a9a-	46080301	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01095cc1-e25a4f4f-13a9b-	46080302	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01095ccb-dfa83cab-13a9c-	46080303	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01095cd5-b5f13f47-13a9d-	46080304	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01095cde-50c2d2c2-13a9e-	46080305	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01095d5b-d37ea7fb-13aaa-	46080306	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01095d65-7da19c3a-13aab-	46080307	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01095d6f-e36e4db7-13aac-	46080308	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01095d7a-958f82b2-13aad-	46080309	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01095d85-74204e49-13aae-	46080310	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01095d8f-839b105d-13aaf-	46080311	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01095d9a-3126834a-13ab0-	46080312	c0a8-010b-17a01094dd7-503bf7fb-13925-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01095da4-b1e74090-13ab1-	46080401	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01095dae-a53bc59e-13ab2-	46080402	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01095db7-72b1fe57-13ab3-	46080403	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01095dc2-87a6e64d-13ab4-	46080404	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01095dcb-452f218a-13ab5-	46080405	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01095dd5-f1fe4eaf-13ab6-	46080406	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01095ddf-81de4f93-13ab7-	46080407	c0a8-010b-17a01094de3-2c35cfeb-13926-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01095dea-9264d61f-13ab8-	46080501	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01095df3-8d93f0cb-13ab9-	46080502	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01095dfc-1bc6b3bf-13aba-	46080503	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01095e08-970d6b7f-13abb-	46080504	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01095e11-9ee63fad-13abc-	46080505	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01095e1c-f845cd1a-13abd-	46080506	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01095e26-bd70d6a4-13abe-	46080507	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01095e31-7ffdd6ce-13abf-	46080508	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01095e3b-cf50de80-13ac0-	46080509	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01095e44-e7630fcf-13ac1-	46080510	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01095e4e-abe9f114-13ac2-	46080511	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01095e58-3345e758-13ac3-	46080512	c0a8-010b-17a01094def-76fccbe-13927-5	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01095e62-f52aa21b-13ac4-	46080601	c0a8-010b-17a01094df8-50e39348-13928-	Thôn Buồng Tằm	Buong Tam Village 	\N	\N
+c0a8-010b-17a01095e6c-22a07220-13ac5-	46080602	c0a8-010b-17a01094df8-50e39348-13928-	Thôn Hạ	Ha Village 	\N	\N
+c0a8-010b-17a01095e76-fcbae7be-13ac6-	46080603	c0a8-010b-17a01094df8-50e39348-13928-	Thôn Hộ	Ho Village 	\N	\N
+c0a8-010b-17a01095e7f-abd15117-13ac7-	46080604	c0a8-010b-17a01094df8-50e39348-13928-	Thôn Khe Sòng	Khe Song Village 	\N	\N
+c0a8-010b-17a01095e8a-385e94d3-13ac8-	46080605	c0a8-010b-17a01094df8-50e39348-13928-	Thôn Thanh Vân	Thanh Van Village 	\N	\N
+c0a8-010b-17a01095e93-49bf91a1-13ac9-	46080701	c0a8-010b-17a01094e03-998def64-13929-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01095e9e-ccffa443-13aca-	46080702	c0a8-010b-17a01094e03-998def64-13929-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a01095ea8-7010242d-13acb-	46080703	c0a8-010b-17a01094e03-998def64-13929-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01095eb1-96fefab2-13acc-	46080704	c0a8-010b-17a01094e03-998def64-13929-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01095ebb-7eeb6103-13acd-	46080801	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 1A	Village 1A	\N	\N
+c0a8-010b-17a01095ec6-bacab18b-13ace-	46080802	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 1B	Village 1B	\N	\N
+c0a8-010b-17a01095f47-c92fcd80-13adb-	46080803	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a01095f52-caf929a6-13adc-	46080804	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01095f61-1fd63ed0-13add-	46080805	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01095f6c-66cf8318-13ade-	46080806	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a01095f76-a0512fa-13adf-d	46080807	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 6	Village 6	\N	\N
+c0a8-010b-17a01095f82-7d6b0e46-13ae0-	46080808	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 7	Village 7	\N	\N
+c0a8-010b-17a01095f8c-23dacde5-13ae1-	46080809	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 8A	Village 8A	\N	\N
+c0a8-010b-17a01095f95-50bec06f-13ae2-	46080810	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 8B	Village 8B	\N	\N
+c0a8-010b-17a01095fa0-ea310a93-13ae3-	46080811	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 9	Village 9	\N	\N
+c0a8-010b-17a01095fa9-d51622f3-13ae4-	46080812	c0a8-010b-17a01094e0d-7242a2de-1392a-	Thôn 10	Village 10	\N	\N
+c0a8-010b-17a01095fb3-4e8496c0-13ae5-	46080901	c0a8-010b-17a01094e17-b890c336-1392b-	Thôn Chiết Bi	Chiet Bi Village	\N	\N
+c0a8-010b-17a01095fbd-c08f7fe2-13ae6-	46080902	c0a8-010b-17a01094e17-b890c336-1392b-	Thôn Hòa Phong	Hoa Phong Village	\N	\N
+c0a8-010b-17a01095fff-e29aad49-13aec-	46090602	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Hiệp Hòa	Hiep Hoa Village	\N	\N
+c0a8-010b-17a0109600a-7f4fb163-13aed-	46090603	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Hòa Dương	Hoa Duong Village	\N	\N
+c0a8-010b-17a01096014-70a19de1-13aee-	46090604	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Hòa Hợp	Hoa Hop Village	\N	\N
+c0a8-010b-17a0109601e-a03cdf4d-13aef-	46090605	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Phú Tuyên	Phu Tuyen Village	\N	\N
+c0a8-010b-17a01096027-a8169799-13af0-	46090606	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Tam Hiệp	Tam Hiep Village	\N	\N
+c0a8-010b-17a01096032-214426cd-13af1-	46090607	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Tân Thọ	Tan Tho Village	\N	\N
+c0a8-010b-17a01096046-5f9b4a2d-13af3-	46090702	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a01096050-a9e8e432-13af4-	46090703	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a0109605a-9bbdaf72-13af5-	46090704	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01096063-f972be28-13af6-	46090705	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a0109606e-f722b7b1-13af7-	46090706	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn An Vinh	An Vinh Village	\N	\N
+c0a8-010b-17a01096078-2d27f45c-13af8-	46090707	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn Đông Hòa	Dong Hoa Village	\N	\N
+c0a8-010b-17a01096081-b15ced01-13af9-	46090708	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn Phú Lợi	Phu Loi Village	\N	\N
+c0a8-010b-17a0109608b-db9e98a1-13afa-	46090709	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn Thuận Lộc	Thuan Loc Village	\N	\N
+c0a8-010b-17a01096095-bfb8051-13afb-6	46090710	c0a8-010b-17a01094e65-c4209c2d-13933-	Thôn Thuận Lợi	Thuan Loi Village	\N	\N
+c0a8-010b-17a0109609f-629209de-13afc-	46090801	c0a8-010b-17a01094e6f-cdf09fbf-13934-	Thôn Bình Dương	Binh Duong Village	\N	\N
+c0a8-010b-17a010960a9-943b1bd5-13afd-	46090802	c0a8-010b-17a01094e6f-cdf09fbf-13934-	Thôn Bình Sơn	Binh Son Village	\N	\N
+c0a8-010b-17a010960b3-9aa1a746-13afe-	46090803	c0a8-010b-17a01094e6f-cdf09fbf-13934-	Thôn Hải Tân	Hai Tan Village	\N	\N
+c0a8-010b-17a010960bc-c8e107ec-13aff-	46090804	c0a8-010b-17a01094e6f-cdf09fbf-13934-	Thôn Quang Lộc	Quang Loc Village	\N	\N
+c0a8-010b-17a010960c6-be749c0e-13b00-	46090805	c0a8-010b-17a01094e6f-cdf09fbf-13934-	Thôn Tân Phong	Tan Phong Village	\N	\N
+c0a8-010b-17a010960d0-5da11aef-13b01-	46090901	c0a8-010b-17a01094e7a-25358042-13935-	Thôn An Thuận	An Thuan Village	\N	\N
+c0a8-010b-17a010960da-269f62b-13b02-f	46090902	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Cổ Lão	Co Lao Village	\N	\N
+c0a8-010b-17a010960e5-9cc58319-13b03-	46090903	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Dương Sơn	Duong Son Village	\N	\N
+c0a8-010b-17a010960ef-ed0baf59-13b04-	46090904	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Giáp Đông	Giap Dong Village	\N	\N
+c0a8-010b-17a010960fb-5fabfd63-13b05-	46090905	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Giáp Kiền	Giap Kien Village	\N	\N
+c0a8-010b-17a01096106-f647a8f2-13b06-	46090906	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Giáp Tây	Giap Tay Village	\N	\N
+c0a8-010b-17a01096119-715f8182-13b07-	46090907	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Giáp Thượng	Giap Thuong Village	\N	\N
+c0a8-010b-17a01096123-2eb8ada3-13b08-	46090908	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Giáp Trung	Giap Trung Village	\N	\N
+c0a8-010b-17a0109612c-7ff90901-13b09-	46090909	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Liễu Cốc Hạ	Lieu Coc Ha Village	\N	\N
+c0a8-010b-17a01096136-772c941-13b0a-7	46090910	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Triều Sơn Trung	Trieu Son Trung Village	\N	\N
+c0a8-010b-17a0109613f-412e277d-13b0b-	46090911	c0a8-010b-17a01094e7a-25358042-13935-	Thôn Vân Cù – Nam Thanh	Van Cu - Nam Thanh Village	\N	\N
+c0a8-010b-17a0109614a-855e59f9-13b0c-	46030101	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Khánh Mỹ	Khanh My Urban Section	\N	\N
+c0a8-010b-17a01096154-d2285d2d-13b0d-	46030102	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Tân Lập	Tan Lap Urban Section	\N	\N
+c0a8-010b-17a0109615e-150ad723-13b0e-	46030103	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Trạch Tả	Trach Ta Urban Section	\N	\N
+c0a8-010b-17a01096168-16daaf2a-13b0f-	46030104	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Trạch Thượng 1	Trach Thuong 1 Urban Section	\N	\N
+c0a8-010b-17a01096171-f07b0278-13b10-	46030105	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Trạch Thượng 2	Trach Thuong 2 Urban Section	\N	\N
+c0a8-010b-17a0109617c-c3984ca1-13b11-	46030106	c0a8-010b-17a01094975-2986af5e-138b8-	Tổ dân phố Vĩnh Nguyên	Vinh Nguyen Urban Section	\N	\N
+c0a8-010b-17a01096186-a31d5a07-13b12-	46030201	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01096190-8654ca3c-13b13-	46030202	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a0109619b-dfd8cabe-13b14-	46030203	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a010961a4-e38885db-13b15-	46030204	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a010961ae-b20b4226-13b16-	46030205	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a010961b8-6d022bf5-13b17-	46080903	c0a8-010b-17a01094e17-b890c336-1392b-	Thôn Tân Tô	Tan To Village	\N	\N
+c0a8-010b-17a010961c4-e4b5903b-13b18-	46080904	c0a8-010b-17a01094e17-b890c336-1392b-	Thôn Tô Đà 1	To Da 1 Village	\N	\N
+c0a8-010b-17a010961ce-25441643-13b19-	46080905	c0a8-010b-17a01094e17-b890c336-1392b-	Thôn Tô Đà 2	To Da 2 Village	\N	\N
+c0a8-010b-17a010961d8-581521e7-13b1a-	46081001	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Lang Xá Bàu	Lang Xa Bau Village 	\N	\N
+c0a8-010b-17a010961e3-83502c5a-13b1b-	46081002	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Lang Xá Cồn	Lang Xa Con Village 	\N	\N
+c0a8-010b-17a010961ec-39e9c81a-13b1c-	46081003	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Thanh Thủy	Thanh Thuy Village 	\N	\N
+c0a8-010b-17a010961f7-985e8258-13b1d-	46081004	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Thanh Toàn	Thanh Toan Village	\N	\N
+c0a8-010b-17a01096200-7c793827-13b1e-	46081005	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Thanh Tuyền	Thanh Tuyen Village 	\N	\N
+c0a8-010b-17a0109620b-e8c57eb8-13b1f-	46081006	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Vân Thê Đập	Van The Dap Village 	\N	\N
+c0a8-010b-17a01096215-d7c6e04b-13b20-	46081007	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Vân Thê Nam	Van The Nam Village 	\N	\N
+c0a8-010b-17a0109621e-afecbc86-13b21-	46081008	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Vân Thê Thượng	Van The Thuong Village	\N	\N
+c0a8-010b-17a01096228-fdb7041e-13b22-	46081009	c0a8-010b-17a01094e21-1fa817e0-1392c-	Thôn Vân Thê Trung	Van The Trung Village 	\N	\N
+c0a8-010b-17a01096232-f81354c7-13b23-	46090101	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố An Đô	An Do Urban Section	\N	\N
+c0a8-010b-17a0109623c-bf30a60a-13b24-	46090102	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố La Chữ Đông	La Chu Dong Urban Section	\N	\N
+c0a8-010b-17a01096247-cfba2e1f-13b25-	46090103	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố La Chữ Nam	La Chu Nam Urban Section	\N	\N
+c0a8-010b-17a01096253-fd1fdda0-13b26-	46090104	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố La Chữ Thượng	La Chu Thuong Urban Section	\N	\N
+c0a8-010b-17a0109711d-fe27920a-13c97-	46020301	c0a8-010b-17a01094924-5301535b-138b0-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a0109625c-67337786-13b27-	46090105	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố La Chữ Trung	La Chu Trung Urban Section	\N	\N
+c0a8-010b-17a01096266-79a6395c-13b28-	46090106	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố Phụ Ổ 1	Phu O 1 Urban Section	\N	\N
+c0a8-010b-17a01096271-4d68759e-13b29-	46090107	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố Phụ Ổ 2	Phu O 2 Urban Section	\N	\N
+c0a8-010b-17a0109627b-6d62c778-13b2a-	46090108	c0a8-010b-17a01094e2a-3d07a3ff-1392d-	Tổ dân phố Quê Chữ	Que Chu Urban Section	\N	\N
+c0a8-010b-17a01096284-8477e068-13b2b-	46090201	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Lại Bằng 1	Lai Bang 1 Urban Section	\N	\N
+c0a8-010b-17a0109628e-d45731c8-13b2c-	46090202	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Lại Bằng 2	Lai Bang 2 Urban Section	\N	\N
+c0a8-010b-17a01096298-cb097b60-13b2d-	46090203	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Lai Thành 1	Lai Thanh 1 Urban Section	\N	\N
+c0a8-010b-17a010962a2-3e071e8-13b2e-b	46090204	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Lai Thành 2	Lai Thanh 2 Urban Section	\N	\N
+c0a8-010b-17a010962ac-edb7f3c9-13b2f-	46090205	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Long Khê	Long Khe Urban Section	\N	\N
+c0a8-010b-17a010962b7-b0b4fb68-13b30-	46090206	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Sơn Công 1	Son Cong 1 Urban Section	\N	\N
+c0a8-010b-17a010962c2-9f79d437-13b31-	46090207	c0a8-010b-17a01094e35-850cd7e1-1392e-	Tổ dân phố Sơn Công 2	Son Cong 2 Urban Section	\N	\N
+c0a8-010b-17a010962cc-b5423e43-13b32-	46090301	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Bàu Đưng	Bau Dung Urban Section	\N	\N
+c0a8-010b-17a010962d6-821be7ec-13b33-	46090302	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Nhất	Giap Nhat Urban Section	\N	\N
+c0a8-010b-17a010962e0-f75d90a7-13b34-	46090303	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Nhì	Giap Nhi Urban Section	\N	\N
+c0a8-010b-17a010962ea-5e2e2494-13b35-	46090304	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Ba	Giap Ba Urban Section	\N	\N
+c0a8-010b-17a010962f4-e7601bb7-13b36-	46090305	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Tư	Giap Tu Urban Section	\N	\N
+c0a8-010b-17a010962fe-f1f5fb55-13b37-	46090306	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Thượng 1	Giap Thuong 1 Urban Section	\N	\N
+c0a8-010b-17a01096308-67171410-13b38-	46090307	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Thượng 2	Giap Thuong 2 Urban Section	\N	\N
+c0a8-010b-17a01096311-5fe6d89d-13b39-	46090308	c0a8-010b-17a01094e3f-ede337dd-1392f-	Tổ dân phố Giáp Trung	Giap Trung Urban Section	\N	\N
+c0a8-010b-17a0109631c-f725c35-13b3a-7	46090401	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Liễu Nam	Lieu Nam Urban Section	\N	\N
+c0a8-010b-17a01096325-43d0e6de-13b3b-	46090402	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Thanh Lương 2	Thanh Luong 2 Urban Section	\N	\N
+c0a8-010b-17a0109632f-1121fa17-13b3c-	46090403	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Thanh Lương 3	Thanh Luong 3 Urban Section	\N	\N
+c0a8-010b-17a0109633a-da80271f-13b3d-	46090404	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Thanh Lương 4	Thanh Luong 4 Urban Section	\N	\N
+c0a8-010b-17a01096343-97759e6-13b3e-a	46090405	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Thanh Tiên	Thanh Tien Urban Section	\N	\N
+c0a8-010b-17a0109634d-991a8588-13b3f-	46090406	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Thượng Khê	Thuong Khe Urban Section	\N	\N
+c0a8-010b-17a01096357-9d36ece3-13b40-	46090407	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Trung Thôn	Trung Thon Urban Section	\N	\N
+c0a8-010b-17a01096361-f2ed143b-13b41-	46090408	c0a8-010b-17a01094e48-65420c10-13930-	Tổ dân phố Xuân Tháp	Xuan Thap Urban Section	\N	\N
+c0a8-010b-17a0109636c-6137d6e0-13b42-	46090501	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01096375-3a603bae-13b43-	46090502	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109637e-7e1a946d-13b44-	46090503	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01096388-b6d160ff-13b45-	46090504	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01096392-3b66a760-13b46-	46090505	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a0109639c-e9c31489-13b47-	46030206	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 6	Village 6	\N	\N
+c0a8-010b-17a010963a9-c10ae02c-13b48-	46030207	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 7	Village 7	\N	\N
+c0a8-010b-17a010963c4-9fce8d4d-13b49-	46030208	c0a8-010b-17a0109497f-cc45c889-138b9-	Thôn 8	Village 8	\N	\N
+c0a8-010b-17a010963d6-95c94281-13b4a-	46030301	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a010963e3-38a72ff6-13b4b-	46030302	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a010963ec-d5873948-13b4c-	46030303	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a010963f6-628d77bc-13b4d-	46030304	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01096401-24000beb-13b4e-	46030305	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a0109640c-ee9341b0-13b4f-	46030306	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 6	Village 6	\N	\N
+c0a8-010b-17a01096415-80d068a7-13b50-	46030307	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 7	Village 7	\N	\N
+c0a8-010b-17a01096420-e87266e1-13b51-	46030308	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 8	Village 8	\N	\N
+c0a8-010b-17a01096429-ffd437fa-13b52-	46030309	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 9	Village 9	\N	\N
+c0a8-010b-17a01096433-23c61c64-13b53-	46090506	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a0109643f-c41ea027-13b54-	46090507	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a0109644a-98871e6-13b55-8	46090508	c0a8-010b-17a01094e52-41af0e80-13931-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01096454-546687e5-13b56-	46090601	c0a8-010b-17a01094e5c-3d8d9cf9-13932-	Thôn Bồ Hòn	Bo Hon Village	\N	\N
+c0a8-010b-17a0109645e-fdaafd50-13b57-	46030501	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Giáp Nam	Giap Nam Village	\N	\N
+c0a8-010b-17a01096469-73445f40-13b58-	46030502	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Mỹ Hòa	My Hoa Village	\N	\N
+c0a8-010b-17a01096472-664d96ad-13b59-	46030503	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Nhất Đông	Nhat Dong Village	\N	\N
+c0a8-010b-17a0109647c-a107fcad-13b5a-	46030504	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Nhất Tây	Nhat Tay Village	\N	\N
+c0a8-010b-17a01096486-9a3373e8-13b5b-	46030505	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Nhì Đông	Nhi Dong Village	\N	\N
+c0a8-010b-17a01096490-334b6e7-13b5c-9	46030506	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Nhì Tây	Nhi Tay Village	\N	\N
+c0a8-010b-17a0109649b-71fad678-13b5d-	46030507	c0a8-010b-17a010949a0-43472bde-138bc-	Thôn Tân Hội	Tan Hoi Village	\N	\N
+c0a8-010b-17a010964a5-d274e494-13b5e-	46030601	c0a8-010b-17a010949ab-126ef15b-138bd-	Thôn 1 Kế Môn	Village 1 Ke Mon	\N	\N
+c0a8-010b-17a010964ae-9d8629c6-13b5f-	46030602	c0a8-010b-17a010949ab-126ef15b-138bd-	Thôn 2 Kế Môn	Village 2 Ke Mon	\N	\N
+c0a8-010b-17a010964b8-4ea606af-13b60-	46030603	c0a8-010b-17a010949ab-126ef15b-138bd-	Thôn Vĩnh Xương	Vinh Xuong Village	\N	\N
+c0a8-010b-17a010964c5-7234a1ab-13b61-	46030701	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Bồ Điền	Bo Dien Village	\N	\N
+c0a8-010b-17a010964cf-2e6334c3-13b62-	46030702	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Đông An	Dong An Village	\N	\N
+c0a8-010b-17a010964d9-9c0b49e5-13b63-	46030703	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Đông Lâm	Dong Lam Village	\N	\N
+c0a8-010b-17a010964e3-3c4e30cb-13b64-	46030704	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Phò Ninh	Pho Ninh Village	\N	\N
+c0a8-010b-17a010964ef-5f225778-13b65-	46030705	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Phường Hóp	Phuong Hop Village	\N	\N
+c0a8-010b-17a010964fa-42273708-13b66-	46030706	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Thượng An 1	Thuong An 1 Village	\N	\N
+c0a8-010b-17a01096505-12743776-13b67-	46030707	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Thượng An 2	Thuong An 2 Village	\N	\N
+c0a8-010b-17a01096510-93dbb70e-13b68-	46030708	c0a8-010b-17a010949b4-841b684a-138be-	Thôn Vĩnh Hương	Vinh Huong Village	\N	\N
+c0a8-010b-17a0109651a-4fa8444b-13b69-	46030801	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Đông Mỹ	Dong My Village	\N	\N
+c0a8-010b-17a01096525-6c8c3bb8-13b6a-	46030802	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Đông Phú	Dong Phu Village	\N	\N
+c0a8-010b-17a0109652e-6f4e4249-13b6b-	46030803	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Đông Trung Tây Hồ	Dong Trung Tay Ho Village	\N	\N
+c0a8-010b-17a0109653b-3a93a16f-13b6c-	46030804	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Hòa Viện	Hoa Vien Village	\N	\N
+c0a8-010b-17a01096544-d295d0-13b6d-54	46030805	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Rú Hóp	Ru Hop Village	\N	\N
+c0a8-010b-17a0109654e-6d7f4f7b-13b6e-	46030806	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Siêu Quần	Sieu Quan Village	\N	\N
+c0a8-010b-17a01096559-5849f780-13b6f-	46030807	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Tả Hữu Tự	Ta Huu Tu Village	\N	\N
+c0a8-010b-17a01096563-29d38226-13b70-	46030808	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Tây Phú Phò Trạch	Tay Phu Pho Trach Village	\N	\N
+c0a8-010b-17a0109656d-58c7f1b1-13b71-	46030809	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Tây Phú Vân Trình	Tay Phu Van Trinh Village	\N	\N
+c0a8-010b-17a01096577-95eb79ab-13b72-	46030810	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Triều Quý	Trieu Quy Village	\N	\N
+c0a8-010b-17a01096581-a8105246-13b73-	46030811	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Trung Thạnh	Trung Thanh Village	\N	\N
+c0a8-010b-17a0109658b-ad7d7ff2-13b74-	46030812	c0a8-010b-17a010949bf-ec5e89ad-138bf-	Thôn Vĩnh An	Vinh An Village	\N	\N
+c0a8-010b-17a01096594-ac2cf12e-13b75-	46030901	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Bàu	Bau Village	\N	\N
+c0a8-010b-17a0109659e-30efccf7-13b76-	46030902	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Chính An	Chinh An Village	\N	\N
+c0a8-010b-17a010965a8-42d7d2fe-13b77-	46030903	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Đại Phú	Dai Phu Village	\N	\N
+c0a8-010b-17a010965b2-864f883f-13b78-	46030904	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Lương Mai	Luong Mai Village	\N	\N
+c0a8-010b-17a010965bb-d97b8aab-13b79-	46030905	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Ma Nê	Ma Ne Village	\N	\N
+c0a8-010b-17a010965c5-8ecec600-13b7a-	46030906	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Mỹ Phú	My Phu Village	\N	\N
+c0a8-010b-17a010965cf-cefa53fe-13b7b-	46030907	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Nhất Phong	Nhat Phong Village	\N	\N
+c0a8-010b-17a010965d8-672e4dbb-13b7c-	46030908	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Phú Lộc	Phu Loc Village	\N	\N
+c0a8-010b-17a010965e3-4c74be0e-13b7d-	46030909	c0a8-010b-17a010949ca-c3f46ba4-138c0-	Thôn Trung Thạnh	Trung Thanh Village	\N	\N
+c0a8-010b-17a010965ec-e1c43130-13b7e-	46031001	c0a8-010b-17a010949d4-b3a7e50e-138c1-	Thôn Hải Đông	Hai Dong Village	\N	\N
+c0a8-010b-17a010965f7-417b84d4-13b7f-	46031002	c0a8-010b-17a010949d4-b3a7e50e-138c1-	Thôn Hải Nhuận	Hai Nhuan Village	\N	\N
+c0a8-010b-17a01096600-a6e75416-13b80-	46031003	c0a8-010b-17a010949d4-b3a7e50e-138c1-	Thôn Hải Phú	Hai Phu Village	\N	\N
+c0a8-010b-17a0109660a-54b47a97-13b81-	46031004	c0a8-010b-17a010949d4-b3a7e50e-138c1-	Thôn Hải Thành	Hai Thanh Village	\N	\N
+c0a8-010b-17a01096614-443eb9ec-13b82-	46031005	c0a8-010b-17a010949d4-b3a7e50e-138c1-	Thôn Hải Thế	Hai The Village	\N	\N
+c0a8-010b-17a0109661e-75ccb04d-13b83-	46031101	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn An Lỗ	An Lo Village	\N	\N
+c0a8-010b-17a01096627-f6748aa3-13b84-	46031102	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Bắc - Triều - Vịnh	Bac - Trieu - Vinh Village	\N	\N
+c0a8-010b-17a01096632-d5ec4314-13b85-	46031103	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Cao Ban - Truông Cầu - La Vần	Cao Ban - Truong Cau - La Van Village	\N	\N
+c0a8-010b-17a0109663b-c181ebf9-13b86-	46030310	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 10 (Thế Mỹ A)	Village 10 (The My A)	\N	\N
+c0a8-010b-17a01096646-f01921e4-13b87-	46030311	c0a8-010b-17a01094989-30c4126f-138ba-	Thôn 11 (Thế Mỹ B)	Village 11 (The My B)	\N	\N
+c0a8-010b-17a01096651-35e4d4e6-13b88-	46030401	c0a8-010b-17a01094995-b2c58304-138bb-	Thôn Thanh Hương Đông	Thanh Huong Dong Village	\N	\N
+c0a8-010b-17a0109665b-ce3b930-13b89-6	46030402	c0a8-010b-17a01094995-b2c58304-138bb-	Thôn Thanh Hương Lâm	Thanh Huong Lam Village	\N	\N
+c0a8-010b-17a01096665-84dcf085-13b8a-	46030403	c0a8-010b-17a01094995-b2c58304-138bb-	Thôn Thanh Hương Tây	Thanh Huong Tay Village	\N	\N
+c0a8-010b-17a0109666f-e4d151ac-13b8b-	46030404	c0a8-010b-17a01094995-b2c58304-138bb-	Thôn Trung Đồng	Trung Dong Village	\N	\N
+c0a8-010b-17a01096679-70062944-13b8c-	46031210	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Trạch Phổ	Trach Pho Village	\N	\N
+c0a8-010b-17a01096684-2ca66091-13b8d-	46031211	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Trung Cọ Mè	Trung Co Me Village	\N	\N
+c0a8-010b-17a0109668d-8d377e0d-13b8e-	46031212	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Tư	Tu Village	\N	\N
+c0a8-010b-17a01096698-6c1b72ef-13b8f-	46031301	c0a8-010b-17a010949f3-63861c27-138c4-	Bản Hạ Long	Ha Long Village	\N	\N
+c0a8-010b-17a010966a2-50274c-13b90-c7	46031302	c0a8-010b-17a010949f3-63861c27-138c4-	Bản Khe Trăn	Khe Tran Village	\N	\N
+c0a8-010b-17a010966ac-cdd94b79-13b91-	46031303	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Đông Thái	Dong Thai Village	\N	\N
+c0a8-010b-17a010966b6-96338287-13b92-	46031104	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Cao Xá	Cao Xa Village	\N	\N
+c0a8-010b-17a010966c2-d63ed67d-13b93-	46031105	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Gia Viên	Gia Vien Village	\N	\N
+c0a8-010b-17a010966cd-b25ae20-13b94-d	46031106	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Hiền Lương	Hien Luong Village	\N	\N
+c0a8-010b-17a010966d7-cfbe4db3-13b95-	46031107	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Hưng Long - Thượng Hòa	Hung Long - Thuong Hoa Village	\N	\N
+c0a8-010b-17a010966e1-b6e7e165-13b96-	46031108	c0a8-010b-17a010949de-955d6cd8-138c2-	Thôn Sơn Tùng	Son Tung Village	\N	\N
+c0a8-010b-17a010966eb-e56226c4-13b97-	46031201	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Ba Bàu Chợ	Ba Bau Cho Village	\N	\N
+c0a8-010b-17a010966f5-5c054519-13b98-	46031202	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Cang Cư Nam	Cang Cu Nam Village	\N	\N
+c0a8-010b-17a010966ff-10bf9ad3-13b99-	46031203	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Chùa Thiềm Thượng	Chua Thiem Thuong Village	\N	\N
+c0a8-010b-17a01096709-486fcf3c-13b9a-	46031204	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Đông Thượng	Dong Thuong Village	\N	\N
+c0a8-010b-17a01096713-f0154b35-13b9b-	46031205	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Đức Phú	Duc Phu Village	\N	\N
+c0a8-010b-17a0109671d-8901de46-13b9c-	46031206	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Hòa Đức	Hoa Duc Village	\N	\N
+c0a8-010b-17a01096727-2318852-13b9d-9	46031207	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Niêm	Niem Village	\N	\N
+c0a8-010b-17a01096731-3afa113-13b9e-3	46031208	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Phước Phú	Phuoc Phu Village	\N	\N
+c0a8-010b-17a0109673b-c83dcbb8-13b9f-	46031209	c0a8-010b-17a010949e8-5e6f6a20-138c3-	Thôn Thuận Hòa	Thuan Hoa Village	\N	\N
+c0a8-010b-17a01096745-56e1d618-13ba0-	46040206	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a0109674f-ef33036a-13ba1-	46040207	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01096759-1d48dcbe-13ba2-	46040208	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01096762-96c18c45-13ba3-	46040209	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố Mũi Né	Mui Ne Urban Section	\N	\N
+c0a8-010b-17a0109676c-127d1d5b-13ba4-	46040301	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01096776-bc2cfcf8-13ba5-	46040302	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01096781-736a5bb5-13ba6-	46040303	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn Giang Chế	Giang Che Village	\N	\N
+c0a8-010b-17a0109678a-1579268-13ba7-b	46040304	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn Mỹ Cảnh	My Canh Village	\N	\N
+c0a8-010b-17a01096795-cf09a14d-13ba8-	46040305	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn Nam Trường	Nam Truong Village	\N	\N
+c0a8-010b-17a0109679e-547aae99-13ba9-	46040306	c0a8-010b-17a01094a2f-b4c2ab85-138ca-	Thôn Nghi Xuân	Nghi Xuan Village	\N	\N
+c0a8-010b-17a010967a8-cfb08df7-13baa-	46040401	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn An Lại	An Lai Village	\N	\N
+c0a8-010b-17a010967b2-d064fb59-13bab-	46040402	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Bắc Thượng	Bac Thuong Village	\N	\N
+c0a8-010b-17a010967bc-68eb4118-13bac-	46031304	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Hòa Bắc	Hoa Bac Village	\N	\N
+c0a8-010b-17a010967c6-1c508aa9-13bad-	46031306	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Hưng Thái	Hung Thai Village	\N	\N
+c0a8-010b-17a010967d0-58118bfe-13bae-	46031305	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Huỳnh Trúc	Huynh Truc Village	\N	\N
+c0a8-010b-17a010967db-3ef8a570-13baf-	46031307	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Lưu Hiền Hòa	Luu Hien Hoa Village	\N	\N
+c0a8-010b-17a010967e5-cb13a913-13bb0-	46031308	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Phong Thu	Phong Thu Village	\N	\N
+c0a8-010b-17a010967ee-a4a9c0ec-13bb1-	46031309	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Phú Kinh Phường	Phu Kinh Phuong Village	\N	\N
+c0a8-010b-17a010967f8-4f35d602-13bb2-	46031310	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Phước Thọ	Phuoc Tho Village	\N	\N
+c0a8-010b-17a01096803-442e6154-13bb3-	46031311	c0a8-010b-17a010949f3-63861c27-138c4-	Thôn Tân Mỹ	Tan My Village	\N	\N
+c0a8-010b-17a0109680d-8e3756bf-13bb4-	46031401	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Cổ By 1	Co By 1 Village	\N	\N
+c0a8-010b-17a01096818-a9950f80-13bb5-	46031402	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Cổ By 2	Co By 2 Village	\N	\N
+c0a8-010b-17a01096821-94508cb4-13bb6-	46031403	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Cổ By 3	Co By 3 Village	\N	\N
+c0a8-010b-17a0109682b-1c41cc1b-13bb7-	46031404	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Công Thành	Cong Thanh Village	\N	\N
+c0a8-010b-17a01096836-7f8017b0-13bb8-	46031405	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Đông Dạ	Dong Da Village	\N	\N
+c0a8-010b-17a01096840-2f29134a-13bb9-	46031406	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Hiền An	Hien An Village	\N	\N
+c0a8-010b-17a0109684a-54946354-13bba-	46031407	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Hiền Sỹ	Hien Sy Village	\N	\N
+c0a8-010b-17a01096853-df1b3a23-13bbb-	46031408	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Phe Tư	Phe Tu Village	\N	\N
+c0a8-010b-17a0109685d-776d6ef8-13bbc-	46031409	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Phổ lại	Pho lai Village	\N	\N
+c0a8-010b-17a01096867-e54cc7f1-13bbd-	46031410	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Sơn Bồ	Son Bo Village	\N	\N
+c0a8-010b-17a01096871-dfbd5578-13bbe-	46031411	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Sơn Quả	Son Qua Village	\N	\N
+c0a8-010b-17a0109687b-7787873-13bbf-a	46031412	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Thanh Tân	Thanh Tan Village	\N	\N
+c0a8-010b-17a01096885-71fef018-13bc0-	46031413	c0a8-010b-17a010949fb-11a83337-138c5-	Thôn Tứ Chánh	Tu Chanh Village	\N	\N
+c0a8-010b-17a0109688f-f56b9c78-13bc1-	46031501	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn An Thôn	An Thon Village	\N	\N
+c0a8-010b-17a01096899-25ab3b7a-13bc2-	46031502	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Đông Lái	Dong Lai Village	\N	\N
+c0a8-010b-17a010968a4-2d37ade5-13bc3-	46031503	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Huỳnh Liên	Huynh Lien Village	\N	\N
+c0a8-010b-17a01097127-21074a56-13c98-	46020302	c0a8-010b-17a01094924-5301535b-138b0-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a010968ad-5f740144-13bc4-	46040403	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Bắc Trung	Bac Trung Village	\N	\N
+c0a8-010b-17a010968ba-dde89670-13bc5-	46040404	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Châu Thành	Chau Thanh Village	\N	\N
+c0a8-010b-17a010968c4-d2bc95d4-13bc6-	46040405	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Đông	Dong Village	\N	\N
+c0a8-010b-17a010968ce-6ea38066-13bc7-	46040406	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Hai Hà	Hai Ha Village	\N	\N
+c0a8-010b-17a010968da-13ee652c-13bc8-	46040407	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Nam	Nam Village	\N	\N
+c0a8-010b-17a010968e5-536e7b5e-13bc9-	46040408	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Nam Phổ Hạ	Nam Pho Ha Village	\N	\N
+c0a8-010b-17a010968f0-4dd991e1-13bca-	46040409	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Nam Phước	Nam Phuoc Village	\N	\N
+c0a8-010b-17a010968fb-5f78b12a-13bcb-	46040410	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Nam Trạch	Nam Trach Village	\N	\N
+c0a8-010b-17a01096904-f9bed35f-13bcc-	46040411	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Phú Môn	Phu Mon Village	\N	\N
+c0a8-010b-17a0109690e-558baffc-13bcd-	46040412	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Tây	Tay Village	\N	\N
+c0a8-010b-17a01096918-13560e85-13bce-	46031504	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Khúc Lý - Ba Lạp	Khuc Ly - Ba Lap Village	\N	\N
+c0a8-010b-17a01096922-ba5a6b98-13bcf-	46031505	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Phú Xuân	Phu Xuan Village	\N	\N
+c0a8-010b-17a0109692c-e6687cc3-13bd0-	46031506	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Tây Lái	Tay Lai Village	\N	\N
+c0a8-010b-17a01096936-3a90ee1f-13bd1-	46031507	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Trạch Hữu	Trach Huu Village	\N	\N
+c0a8-010b-17a01096940-8d7a1591-13bd2-	46031508	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Ưu Thượng	Uu Thuong Village	\N	\N
+c0a8-010b-17a0109694a-ddc38a45-13bd3-	46031509	c0a8-010b-17a01094a06-5207dff6-138c6-	Thôn Văn Trạch Hòa	Van Trach Hoa Village	\N	\N
+c0a8-010b-17a01096954-a879f7be-13bd4-	46031601	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Bình An	Binh An Village	\N	\N
+c0a8-010b-17a0109695f-1b2c2872-13bd5-	46031602	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Cổ Xuân - Quảng Lộc	Co Xuan - Quang Loc Village	\N	\N
+c0a8-010b-17a01096969-61cd7f98-13bd6-	46031603	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Hiền An - Bến Củi	Hien An - Ben Cui Village	\N	\N
+c0a8-010b-17a01096973-32d74789-13bd7-	46031604	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Hiền An 2	Hien An 2 Village	\N	\N
+c0a8-010b-17a0109697d-c2af98cb-13bd8-	46031605	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Hòa Xuân	Hoa Xuan Village	\N	\N
+c0a8-010b-17a01096987-2e6dca0d-13bd9-	46031606	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Quảng Lợi	Quang Loi Village	\N	\N
+c0a8-010b-17a01096991-5aaa6894-13bda-	46031607	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Tân Lập	Tan Lap Village	\N	\N
+c0a8-010b-17a0109699c-e1840375-13bdb-	46040413	c0a8-010b-17a01094a3b-95a7542-138cb-f	Thôn Xuân Lai	Xuan Lai Village	\N	\N
+c0a8-010b-17a010969a8-8fb7174a-13bdc-	46040501	c0a8-010b-17a01094a45-10651e4e-138cc-	Thôn Hòa An	Hoa An Village	\N	\N
+c0a8-010b-17a010969b3-70053cd6-13bdd-	46040502	c0a8-010b-17a01094a45-10651e4e-138cc-	Thôn Mai Gia Phường	Mai Gia Phuong Village	\N	\N
+c0a8-010b-17a010969bc-2bdbb76f-13bde-	46040503	c0a8-010b-17a01094a45-10651e4e-138cc-	Thôn Tân An	Tan An Village	\N	\N
+c0a8-010b-17a010969c7-4566a883-13bdf-	46040504	c0a8-010b-17a01094a45-10651e4e-138cc-	Thôn Tân An Hải	Tan An Hai Village	\N	\N
+c0a8-010b-17a010969d1-a2987b5f-13be0-	46040601	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Bình An	Binh An Village	\N	\N
+c0a8-010b-17a010969da-4199f7d7-13be1-	46040602	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Dương Lộc	Duong Loc Village	\N	\N
+c0a8-010b-17a010969e5-9a290ec7-13be2-	46040603	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Lộc	Hoa Loc Village	\N	\N
+c0a8-010b-17a010969ef-77262293-13be3-	46040604	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Mỹ	Hoa My Village	\N	\N
+c0a8-010b-17a010969fa-ca66601f-13be4-	46040605	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Vang 1	Hoa Vang 1 Village	\N	\N
+c0a8-010b-17a01096a03-9952f0ba-13be5-	46040606	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Vang 2	Hoa Vang 2 Village	\N	\N
+c0a8-010b-17a01096a0c-77b89f84-13be6-	46040607	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Vang 3	Hoa Vang 3 Village	\N	\N
+c0a8-010b-17a01096a17-961487b8-13be7-	46040608	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Hòa Vang 4	Hoa Vang 4 Village	\N	\N
+c0a8-010b-17a01096a22-bf46d41d-13be8-	46031608	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Vinh Ngạn	Vinh Ngan Village	\N	\N
+c0a8-010b-17a01096a2e-97e7241d-13be9-	46031609	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Vinh Phú	Vinh Phu Village	\N	\N
+c0a8-010b-17a01096a39-bffbe23b-13bea-	46031610	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Xuân Điền Lộc	Xuan Dien Loc Village	\N	\N
+c0a8-010b-17a01096a43-52d47588-13beb-	46031611	c0a8-010b-17a01094a10-cd7d5916-138c7-	Thôn Xuân Lộc	Xuan Loc Village	\N	\N
+c0a8-010b-17a01096a4c-801941db-13bec-	46040101	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố An Cư Đông 	An Cu Dong  Urban Section	\N	\N
+c0a8-010b-17a01096a56-bae69a6-13bed-b	46040102	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố An Cư Đông 1	An Cu Dong 1 Urban Section	\N	\N
+c0a8-010b-17a01096a61-218dd802-13bee-	46040103	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố An Cư Tân	An Cu Tan Urban Section	\N	\N
+c0a8-010b-17a01096a6a-96a0f797-13bef-	46040104	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố An Cư Tây	An Cu Tay Urban Section	\N	\N
+c0a8-010b-17a01096a74-811e50e8-13bf0-	46040105	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố Đồng Dương	Dong Duong Urban Section	\N	\N
+c0a8-010b-17a01096a7f-eafb58dd-13bf1-	46040106	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố Hải Vân	Hai Van Urban Section	\N	\N
+c0a8-010b-17a01096a88-3bbf6ab3-13bf2-	46040107	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố Hói Dừa	Hoi Dua Urban Section	\N	\N
+c0a8-010b-17a01096a92-3ea54704-13bf3-	46040108	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố Lập An	Lap An Urban Section	\N	\N
+c0a8-010b-17a01096a9d-bf469be4-13bf4-	46040109	c0a8-010b-17a01094a1a-1f18cd4-138c8-b	Tổ dân phố Loan Lý	Loan Ly Urban Section	\N	\N
+c0a8-010b-17a01096aa7-1349e516-13bf5-	46040201	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01096ab1-e1d29982-13bf6-	46040202	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01096aba-40105f8e-13bf7-	46040203	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01096ac5-1400433c-13bf8-	46040204	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01096ad0-5646fc4-13bf9-7	46040205	c0a8-010b-17a01094a25-2ac7fcb5-138c9-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01096ada-5cf66ed7-13bfa-	46041006	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Thủy Yên Thôn	Thuy Yen Thon Village	\N	\N
+c0a8-010b-17a01096ae3-892f9163-13bfb-	46041007	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Thủy Yên Thượng	Thuy Yen Thuong Village	\N	\N
+c0a8-010b-17a01096aed-75ff573b-13bfc-	46041101	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Phú Gia	Phu Gia Village	\N	\N
+c0a8-010b-17a01096af7-5ae4232c-13bfd-	46041102	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Phước An	Phuoc An Village	\N	\N
+c0a8-010b-17a01096b01-3d0050b2-13bfe-	46041103	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Phước Lộc	Phuoc Loc Village	\N	\N
+c0a8-010b-17a01096b0a-fd282923-13bff-	46041104	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Thổ sơn	Tho son Village	\N	\N
+c0a8-010b-17a01096b15-10f98e05-13c00-	46041105	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Thủy Dương	Thuy Duong Village	\N	\N
+c0a8-010b-17a01096b1f-4555ade1-13c01-	46041106	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Thủy Tụ	Thuy Tu Village	\N	\N
+c0a8-010b-17a01096b28-933cd4f4-13c02-	46041107	c0a8-010b-17a01094a83-ec4d7960-138d2-	Thôn Trung Kiền	Trung Kien Village	\N	\N
+c0a8-010b-17a01096b32-2f585c7d-13c03-	46041201	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Cao Đôi Xã	Cao Doi Xa Village	\N	\N
+c0a8-010b-17a01096b3c-81427072-13c04-	46041202	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Đông Hải	Dong Hai Village	\N	\N
+c0a8-010b-17a01096b47-7b4a1875-13c05-	46041203	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Đông Lưu	Dong Luu Village	\N	\N
+c0a8-010b-17a01096b51-e64d4694-13c06-	46041204	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Hòa Mậu	Hoa Mau Village	\N	\N
+c0a8-010b-17a01096b5b-3303e1ed-13c07-	46041205	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Khe Su	Khe Su Village	\N	\N
+c0a8-010b-17a01096b65-3412aae9-13c08-	46041206	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Lê Thái Thiện	Le Thai Thien Village	\N	\N
+c0a8-010b-17a01096b70-4191fe8f-13c09-	46041207	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Trung An	Trung An Village	\N	\N
+c0a8-010b-17a01096b7b-b4b3db6e-13c0a-	46041208	c0a8-010b-17a01094a94-b11f4533-138d3-	Thôn Trung Phước Tượng	Trung Phuoc Tuong Village	\N	\N
+c0a8-010b-17a01096b85-f9965246-13c0b-	46041301	c0a8-010b-17a01094a9f-30b80da0-138d4-	Thôn Bình An	Binh An Village	\N	\N
+c0a8-010b-17a01096b8f-f1f29971-13c0c-	46040609	c0a8-010b-17a01094a4e-283e53e5-138cd-	Thôn Thuận Hóa	Thuan Hoa Village	\N	\N
+c0a8-010b-17a01096b9b-fb191968-13c0d-	46040701	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Bạch Thạch	Bach Thach Village	\N	\N
+c0a8-010b-17a01096ba5-179361aa-13c0e-	46040702	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Bát Sơn	Bat Son Village	\N	\N
+c0a8-010b-17a01096bb0-3181f9fa-13c0f-	46040703	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Đông An	Dong An Village	\N	\N
+c0a8-010b-17a01096bbd-295416c1-13c10-	46040704	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Đồng Xuân	Dong Xuan Village	\N	\N
+c0a8-010b-17a01096bc9-3223b95e-13c11-	46040705	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Lương Điền Đông	Luong Dien Dong Village	\N	\N
+c0a8-010b-17a01096bd3-b59c5a05-13c12-	46040706	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Lương Điền Thượng	Luong Dien Thuong Village	\N	\N
+c0a8-010b-17a01096bde-9d8a4e92-13c13-	46040707	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Lương Quý Phú	Luong Quy Phu Village	\N	\N
+c0a8-010b-17a01096bea-eca24834-13c14-	46040708	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Miêu Nha	Mieu Nha Village	\N	\N
+c0a8-010b-17a01096bf6-77efe260-13c15-	46040709	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Quê Chữ	Que Chu Village	\N	\N
+c0a8-010b-17a01096c00-fd61f6e3-13c16-	46040710	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Sư Lỗ	Su Lo Village	\N	\N
+c0a8-010b-17a01096c0b-ece6d93b-13c17-	46040711	c0a8-010b-17a01094a58-641dbfe6-138ce-	Thôn Trung Chánh	Trung Chanh Village	\N	\N
+c0a8-010b-17a01096c14-c9628d7d-13c18-	46040801	c0a8-010b-17a01094a62-ef599647-138cf-	Thôn An Hà	An Ha Village	\N	\N
+c0a8-010b-17a01096c1f-3c4d5b54-13c19-	46040802	c0a8-010b-17a01094a62-ef599647-138cf-	Thôn Bắc Khe Dài	Bac Khe Dai Village	\N	\N
+c0a8-010b-17a01096c29-628fcbb2-13c1a-	46040803	c0a8-010b-17a01094a62-ef599647-138cf-	Thôn La Phú	La Phu Village	\N	\N
+c0a8-010b-17a01096c34-9d9ae70f-13c1b-	46040804	c0a8-010b-17a01094a62-ef599647-138cf-	Thôn Làng Đông	Lang Dong Village	\N	\N
+c0a8-010b-17a01096c3e-31fe266c-13c1c-	46040805	c0a8-010b-17a01094a62-ef599647-138cf-	Thôn Nam Khe Dài	Nam Khe Dai Village	\N	\N
+c0a8-010b-17a01096c48-e81059b9-13c1d-	46040901	c0a8-010b-17a01094a6c-1e2ebe9d-138d0-	Thôn An Sơn	An Son Village	\N	\N
+c0a8-010b-17a01096c51-35d89c9b-13c1e-	46040902	c0a8-010b-17a01094a6c-1e2ebe9d-138d0-	Thôn La Sơn	La Son Village	\N	\N
+c0a8-010b-17a01096c5b-69441911-13c1f-	46040903	c0a8-010b-17a01094a6c-1e2ebe9d-138d0-	Thôn Vinh Sơn 	Vinh Son  Village	\N	\N
+c0a8-010b-17a01096c65-1ce88e4f-13c20-	46040904	c0a8-010b-17a01094a6c-1e2ebe9d-138d0-	Thôn Xuân Sơn	Xuan Son Village	\N	\N
+c0a8-010b-17a01096c6f-2d6c8884-13c21-	46041001	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn An Bàng	An Bang Village	\N	\N
+c0a8-010b-17a01096c79-ae92160b-13c22-	46041002	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Phú Cường Xuyên	Phu Cuong Xuyen Village	\N	\N
+c0a8-010b-17a01096c82-1e2c7e6e-13c23-	46041003	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Phước Hưng	Phuoc Hung Village	\N	\N
+c0a8-010b-17a01096c8b-1cef7cd9-13c24-	46041004	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Thủy Cam	Thuy Cam Village	\N	\N
+c0a8-010b-17a01096c96-2192dde8-13c25-	46041005	c0a8-010b-17a01094a78-8c8078e4-138d1-	Thôn Thủy Yên Hạ	Thuy Yen Ha Village	\N	\N
+c0a8-010b-17a01096ca0-d69e31b2-13c26-	46050402	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Hà Kênh	Ha Kenh Village	\N	\N
+c0a8-010b-17a01096caa-f47c9b81-13c27-	46050403	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Hà Trữ Thượng	Ha Tru Thuong Village	\N	\N
+c0a8-010b-17a01096cb4-f26df2fb-13c28-	46050404	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Mộc Trụ	Moc Tru Village	\N	\N
+c0a8-010b-17a01096cbf-288ea5c3-13c29-	46050405	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Mong A	Mong A Village	\N	\N
+c0a8-010b-17a01096ccb-1becd02b-13c2a-	46050406	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Mong B	Mong B Village	\N	\N
+c0a8-010b-17a01096cd6-f04b0a90-13c2b-	46050407	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Mong C	Mong C Village	\N	\N
+c0a8-010b-17a01096ce0-82c55eb8-13c2c-	46050408	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Nghĩa Lập	Nghia Lap Village	\N	\N
+c0a8-010b-17a01096cea-c9626a4-13c2d-b	46050409	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Tân Phú	Tan Phu Village	\N	\N
+c0a8-010b-17a01096cf5-ac0704ff-13c2e-	46050410	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Thanh Lam Bồ	Thanh Lam Bo Village	\N	\N
+c0a8-010b-17a01096cff-94d4b29c-13c2f-	46050411	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Trừng Hà	Trung Ha Village	\N	\N
+c0a8-010b-17a01096d09-cacda050-13c30-	46050501	c0a8-010b-17a01094af6-21389c1c-138dd-	Thôn Cự Lại Bắc	Cu Lai Bac Village	\N	\N
+c0a8-010b-17a01096d14-b289d3f6-13c31-	46050502	c0a8-010b-17a01094af6-21389c1c-138dd-	Thôn Cự Lại Đông	Cu Lai Dong Village	\N	\N
+c0a8-010b-17a01096d1e-8f5dd44c-13c32-	46050503	c0a8-010b-17a01094af6-21389c1c-138dd-	Thôn Cự Lại Nam	Cu Lai Nam Village	\N	\N
+c0a8-010b-17a01096d27-2af1b6d-13c33-3	46050504	c0a8-010b-17a01094af6-21389c1c-138dd-	Thôn Cự Lại Trung	Cu Lai Trung Village	\N	\N
+c0a8-010b-17a01096d32-6a2fd651-13c34-	46050601	c0a8-010b-17a01094b01-cfc35d52-138de-	Thôn Đồng Di	Dong Di Village	\N	\N
+c0a8-010b-17a01096d3b-a972a938-13c35-	46050602	c0a8-010b-17a01094b01-cfc35d52-138de-	Thôn Sư Lỗ	Su Lo Village	\N	\N
+c0a8-010b-17a01096d46-77559963-13c36-	46050603	c0a8-010b-17a01094b01-cfc35d52-138de-	Thôn Tây Hồ	Tay Ho Village	\N	\N
+c0a8-010b-17a01096d4f-2b17cc20-13c37-	46050701	c0a8-010b-17a01094b0a-6e65d703-138df-	Thôn Lê Xá	Le Xa Village	\N	\N
+c0a8-010b-17a01096d59-69e870b8-13c38-	46050702	c0a8-010b-17a01094b0a-6e65d703-138df-	Thôn Văn Giang	Van Giang Village	\N	\N
+c0a8-010b-17a01096d63-82d04a0c-13c39-	46050703	c0a8-010b-17a01094b0a-6e65d703-138df-	Thôn Vĩnh Lương Khê	Vinh Luong Khe Village	\N	\N
+c0a8-010b-17a01096d6d-c8a951b3-13c3a-	46041302	c0a8-010b-17a01094a9f-30b80da0-138d4-	Thôn Bình An 2	Binh An 2 Village	\N	\N
+c0a8-010b-17a01096d77-824b952d-13c3b-	46041303	c0a8-010b-17a01094a9f-30b80da0-138d4-	Thôn Cảnh Dương	Canh Duong Village	\N	\N
+c0a8-010b-17a01096d83-3287c27b-13c3c-	46041304	c0a8-010b-17a01094a9f-30b80da0-138d4-	Thôn Phú Hải	Phu Hai Village	\N	\N
+c0a8-010b-17a01096d8c-82fb63a0-13c3d-	46041401	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Đông Dương	Dong Duong Village	\N	\N
+c0a8-010b-17a01096d96-a2798a0f-13c3e-	46041402	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền An 1	Hien An 1 Village	\N	\N
+c0a8-010b-17a01096da2-9f07dcb8-13c3f-	46041403	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền An 2	Hien An 2 Village	\N	\N
+c0a8-010b-17a01096dac-1fe14d5d-13c40-	46041404	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền Hòa 1	Hien Hoa 1 Village	\N	\N
+c0a8-010b-17a01096db6-9d71696e-13c41-	46041405	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền Hòa 2	Hien Hoa 2 Village	\N	\N
+c0a8-010b-17a01096dc0-11f85b67-13c42-	46041406	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền Vân 1	Hien Van 1 Village	\N	\N
+c0a8-010b-17a01096dca-f41bc2a5-13c43-	46041407	c0a8-010b-17a01094aa9-ea8a43d7-138d5-	Thôn Hiền Vân 2	Hien Van 2 Village	\N	\N
+c0a8-010b-17a01096dd4-3a5e7d45-13c44-	46041501	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Diêm Trường 1	Diem Truong 1 Village	\N	\N
+c0a8-010b-17a01096dde-47a750f8-13c45-	46041502	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Diêm Trường 2	Diem Truong 2 Village	\N	\N
+c0a8-010b-17a01096de8-5bc8087a-13c46-	46041503	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Lương Viện	Luong Vien Village	\N	\N
+c0a8-010b-17a01096df2-80e29533-13c47-	46041504	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Phụng Chánh 1	Phung Chanh 1 Village	\N	\N
+c0a8-010b-17a01096dfd-1965f2a0-13c48-	46041505	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Phụng Chánh 2	Phung Chanh 2 Village	\N	\N
+c0a8-010b-17a01096e06-d37cb582-13c49-	46041506	c0a8-010b-17a01094ab3-3509ec8e-138d6-	Thôn Trung Hưng	Trung Hung Village	\N	\N
+c0a8-010b-17a01096e10-71e344ab-13c4a-	46041601	c0a8-010b-17a01094abc-a0c9edda-138d7-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01096e1a-7f6c7eb9-13c4b-	46041602	c0a8-010b-17a01094abc-a0c9edda-138d7-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a01096e24-57117c31-13c4c-	46041603	c0a8-010b-17a01094abc-a0c9edda-138d7-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01096e2e-92e29df2-13c4d-	46041604	c0a8-010b-17a01094abc-a0c9edda-138d7-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01096e38-8adb1ca4-13c4e-	46041605	c0a8-010b-17a01094abc-a0c9edda-138d7-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a01096e41-3c9272dd-13c4f-	46041701	c0a8-010b-17a01094ac5-8113e18-138d8-2	Bản Phúc Lộc	Phuc Loc Village	\N	\N
+c0a8-010b-17a01096e4b-f371ac6c-13c50-	46041702	c0a8-010b-17a01094ac5-8113e18-138d8-2	Thôn Hưng An	Hung An Village	\N	\N
+c0a8-010b-17a01096e55-2a64aeb2-13c51-	46041703	c0a8-010b-17a01094ac5-8113e18-138d8-2	Thôn Hưng Lộc	Hung Loc Village	\N	\N
+c0a8-010b-17a01096e60-ce549313-13c52-	46050801	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn An Hạ	An Ha Village	\N	\N
+c0a8-010b-17a01096e6b-81f42fe6-13c53-	46050802	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn An Lưu	An Luu Village	\N	\N
+c0a8-010b-17a01096e78-414c3705-13c54-	46050803	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn Dưỡng Mong	Duong Mong Village	\N	\N
+c0a8-010b-17a01096e83-65f6643c-13c55-	46050804	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn Mong An	Mong An Village	\N	\N
+c0a8-010b-17a01096e8d-2898d038-13c56-	46050805	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn Mỹ Lam	My Lam Village	\N	\N
+c0a8-010b-17a01096e98-b660f715-13c57-	46050806	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn Phước Linh	Phuoc Linh Village	\N	\N
+c0a8-010b-17a01096ea2-abb23c85-13c58-	46050807	c0a8-010b-17a01094b15-d9522c30-138e0-	Thôn Vinh Vệ	Vinh Ve Village	\N	\N
+c0a8-010b-17a01096eac-d1b2f731-13c59-	46050901	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn An Dương 1	An Duong 1 Village	\N	\N
+c0a8-010b-17a01096eb6-10ae01fd-13c5a-	46050902	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn An Dương 2	An Duong 2 Village	\N	\N
+c0a8-010b-17a01096ec1-db9a0991-13c5b-	46050903	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn An Dương 3	An Duong 3 Village	\N	\N
+c0a8-010b-17a01096ecb-5c5d2e05-13c5c-	46050904	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn Tân An	Tan An Village	\N	\N
+c0a8-010b-17a01096ed4-14266fa8-13c5d-	46050905	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn Trung An	Trung An Village	\N	\N
+c0a8-010b-17a01096ede-a3276451-13c5e-	46050906	c0a8-010b-17a01094b1e-f4f2ec01-138e1-	Thôn Xuân An	Xuan An Village	\N	\N
+c0a8-010b-17a01096ee8-3f28bd55-13c5f-	46051001	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Ba Lăng	Ba Lang Village	\N	\N
+c0a8-010b-17a01096ef2-70f5ed42-13c60-	46051002	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Diên Đại	Dien Dai Village	\N	\N
+c0a8-010b-17a01096efe-cc731b14-13c61-	46051003	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Lộc Sơn	Loc Son Village	\N	\N
+c0a8-010b-17a01097131-5de98911-13c99-	46020303	c0a8-010b-17a01094924-5301535b-138b0-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01096f08-ee5ea394-13c62-	46051004	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Quảng Xuyên	Quang Xuyen Village	\N	\N
+c0a8-010b-17a01096f11-9134e54c-13c63-	46051005	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Thủy Diện	Thuy Dien Village	\N	\N
+c0a8-010b-17a01096f1c-774a1def-13c64-	46051006	c0a8-010b-17a01094b29-ed734dd5-138e2-	Thôn Xuân Ổ	Xuan O Village	\N	\N
+c0a8-010b-17a01096f26-3af582fa-13c65-	46051101	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn An Mỹ	An My Village	\N	\N
+c0a8-010b-17a01096f30-f4deb9a5-13c66-	46051102	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Bắc Thượng	Bac Thuong Village	\N	\N
+c0a8-010b-17a01096f3a-17235e2b-13c67-	46051103	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Hà Úc 1	Ha Uc 1 Village	\N	\N
+c0a8-010b-17a01096f44-a8d11d4d-13c68-	46051104	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Hà Úc 2	Ha Uc 2 Village	\N	\N
+c0a8-010b-17a01096f4e-efca3373-13c69-	46051105	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Hà Úc 3	Ha Uc 3 Village	\N	\N
+c0a8-010b-17a01096f58-aa439f5e-13c6a-	46051106	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Hà Úc 4	Ha Uc 4 Village	\N	\N
+c0a8-010b-17a01096f61-a9f4aeae-13c6b-	46051107	c0a8-010b-17a01094b32-a6ce60b6-138e3-	Thôn Trung Định Hải	Trung Dinh Hai Village	\N	\N
+c0a8-010b-17a01096f6b-ed3f45fb-13c6c-	46051201	c0a8-010b-17a01094b3d-74f3b34d-138e4-	Thôn Phường Nhất	Phuong Nhat Village	\N	\N
+c0a8-010b-17a01096f75-67a0a812-13c6d-	46051202	c0a8-010b-17a01094b3d-74f3b34d-138e4-	Thôn Phường 2	Phuong 2 Village	\N	\N
+c0a8-010b-17a01096f7f-38a9ccb1-13c6e-	46051203	c0a8-010b-17a01094b3d-74f3b34d-138e4-	Thôn Phường 3	Phuong 3 Village	\N	\N
+c0a8-010b-17a01096f89-ed0e2a9a-13c6f-	46051204	c0a8-010b-17a01094b3d-74f3b34d-138e4-	Thôn Phường 4	Phuong 4 Village	\N	\N
+c0a8-010b-17a01096f93-c647d530-13c70-	46051205	c0a8-010b-17a01094b3d-74f3b34d-138e4-	Thôn Phường 5	Phuong 5 Village	\N	\N
+c0a8-010b-17a01096f9d-64725d90-13c71-	46051301	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01096fa7-e7d1cf0-13c72-7	46051302	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a01096fb0-3eabb0e3-13c73-	46051303	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01096fba-98130c24-13c74-	46051304	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01096fc4-32fe012c-13c75-	46051305	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 5	Village 5	\N	\N
+c0a8-010b-17a01096fcf-c7251230-13c76-	46041704	c0a8-010b-17a01094ac5-8113e18-138d8-2	Thôn Phụng Sơn	Phung Son Village	\N	\N
+c0a8-010b-17a01096fda-824f1563-13c77-	46041705	c0a8-010b-17a01094ac5-8113e18-138d8-2	Thôn Xuân Mỹ	Xuan My Village	\N	\N
+c0a8-010b-17a01096fe4-3918248f-13c78-	46050101	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Đức Lam Trung	Duc Lam Trung Urban Section	\N	\N
+c0a8-010b-17a01096fee-f8ae865d-13c79-	46050102	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Hòa Đông	Hoa Dong Urban Section	\N	\N
+c0a8-010b-17a01096ff8-aaae2a8d-13c7a-	46050103	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Hòa Tây	Hoa Tay Urban Section	\N	\N
+c0a8-010b-17a01097001-534bb67d-13c7b-	46050104	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Lương Viện	Luong Vien Urban Section	\N	\N
+c0a8-010b-17a0109700b-9d637297-13c7c-	46050105	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Trường Lưu	Truong Luu Urban Section	\N	\N
+c0a8-010b-17a01097015-319e003c-13c7d-	46050106	c0a8-010b-17a01094acf-d00cb3-138d9-77	Tổ dân phố Viễn Trình	Vien Trinh Urban Section	\N	\N
+c0a8-010b-17a0109701f-e2df3d27-13c7e-	46050201	c0a8-010b-17a01094ad9-b6bde0f4-138da-	Thôn An Truyền	An Truyen Village	\N	\N
+c0a8-010b-17a01097029-6d604f02-13c7f-	46050202	c0a8-010b-17a01094ad9-b6bde0f4-138da-	Thôn Thủy Diện	Thuy Dien Village	\N	\N
+c0a8-010b-17a01097033-5883355f-13c80-	46050203	c0a8-010b-17a01094ad9-b6bde0f4-138da-	Thôn Triều Thủy	Trieu Thuy Village	\N	\N
+c0a8-010b-17a0109703c-b6542043-13c81-	46050204	c0a8-010b-17a01094ad9-b6bde0f4-138da-	Thôn Truyền Nam	Truyen Nam Village	\N	\N
+c0a8-010b-17a01097047-b069cb13-13c82-	46050301	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Diên Lộc	Dien Loc Village	\N	\N
+c0a8-010b-17a01097051-ed3390a2-13c83-	46050302	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Kế Sung	Ke Sung Village	\N	\N
+c0a8-010b-17a0109705d-e3219941-13c84-	46050303	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Kế Thượng Thanh	Ke Thuong Thanh Village	\N	\N
+c0a8-010b-17a01097068-80a4728-13c85-f	46050304	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Mỹ Khánh	My Khanh Village	\N	\N
+c0a8-010b-17a01097073-8824e525-13c86-	46050305	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Phương Diên	Phuong Dien Village	\N	\N
+c0a8-010b-17a0109707c-38a4a95a-13c87-	46050306	c0a8-010b-17a01094ae3-8b89ce67-138db-	Thôn Thanh Dương	Thanh Duong Village	\N	\N
+c0a8-010b-17a01097086-5ba78db4-13c88-	46050401	c0a8-010b-17a01094aec-c88b297a-138dc-	Thôn Diêm Trụ	Diem Tru Village	\N	\N
+c0a8-010b-17a01097090-31f74265-13c89-	46051405	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Xuân Thiên Hạ	Xuan Thien Ha Village	\N	\N
+c0a8-010b-17a0109709a-b28a30fd-13c8a-	46051406	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Xuân Thiên Thượng	Xuan Thien Thuong Village	\N	\N
+c0a8-010b-17a010970a4-6263a00-13c8b-a	46020101	c0a8-010b-17a0109490f-4c28862b-138ae-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010970af-1b06f6f7-13c8c-	46020102	c0a8-010b-17a0109490f-4c28862b-138ae-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010970ba-5752bf57-13c8d-	46020103	c0a8-010b-17a0109490f-4c28862b-138ae-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010970c4-5ad87ecf-13c8e-	46020104	c0a8-010b-17a0109490f-4c28862b-138ae-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010970ce-6afb294b-13c8f-	46020105	c0a8-010b-17a0109490f-4c28862b-138ae-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010970d7-1e19e8a2-13c90-	46020201	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Bá Tang	Ba Tang Village	\N	\N
+c0a8-010b-17a010970e1-e4855540-13c91-	46020202	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Con Gia	Con Gia Village	\N	\N
+c0a8-010b-17a010970eb-67274316-13c92-	46020203	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Gia Hin	Gia Hin Village	\N	\N
+c0a8-010b-17a010970f5-fbb243c9-13c93-	46020204	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Ra Đang	Ra Dang Village	\N	\N
+c0a8-010b-17a010970ff-d407993-13c94-e	46020205	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Ra Rang	Ra Rang Village	\N	\N
+c0a8-010b-17a0109710a-86655e56-13c95-	46020206	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Rung Gềnh 	Rung Genh Village	\N	\N
+c0a8-010b-17a01097113-16eefb0-13c96-f	46020207	c0a8-010b-17a0109491a-2c3e0420-138af-	Thôn Ư Rang	U Rang Village	\N	\N
+c0a8-010b-17a0109713b-6469e8d5-13c9a-	46020401	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Đa Phú	Da Phu Village	\N	\N
+c0a8-010b-17a01097144-dc0bffe2-13c9b-	46051306	c0a8-010b-17a01094b46-df737132-138e5-	Thôn 6	Village 6	\N	\N
+c0a8-010b-17a01097151-2e34a59-13c9c-f	46051401	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Kế Võ	Ke Vo Village	\N	\N
+c0a8-010b-17a0109715b-738756b5-13c9d-	46051402	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Khánh Mỹ	Khanh My Village	\N	\N
+c0a8-010b-17a01097165-3c237a1f-13c9e-	46051403	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Mai Vĩnh	Mai Vinh Village	\N	\N
+c0a8-010b-17a01097170-84036125-13c9f-	46051404	c0a8-010b-17a01094b50-fa01b413-138e6-	Thôn Tân Sa	Tan Sa Village	\N	\N
+c0a8-010b-17a01097179-7497ad76-13ca0-	46021007	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 7 (Vinh Mỹ)	Village 7 (Vinh My)	\N	\N
+c0a8-010b-17a01097184-197a2cc5-13ca1-	46060101	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố An Gia	An Gia Urban Section	\N	\N
+c0a8-010b-17a0109718e-2d33a9c4-13ca2-	46060102	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Giang Đông	Giang Dong Urban Section	\N	\N
+c0a8-010b-17a01097197-629c9a9a-13ca3-	46060103	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Khuông Phò Nam 	Khuong Pho Nam Urban Section	\N	\N
+c0a8-010b-17a010971a1-c2b1c22e-13ca4-	46060104	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Lương Cổ	Luong Co Urban Section	\N	\N
+c0a8-010b-17a010971ab-869ee96b-13ca5-	46020402	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Hà An	Ha An Village	\N	\N
+c0a8-010b-17a010971b8-dffde198-13ca6-	46020403	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Ka Tư	Ka Tu Village	\N	\N
+c0a8-010b-17a010971c3-a9aaa09c-13ca7-	46020404	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Phú Hòa	Phu Hoa Village	\N	\N
+c0a8-010b-17a010971cd-344ea31-13ca8-f	46020405	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Phú Mậu	Phu Mau Village	\N	\N
+c0a8-010b-17a010971d7-2cf803e9-13ca9-	46020406	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Phú Nam	Phu Nam Village	\N	\N
+c0a8-010b-17a010971e2-c5239742-13caa-	46020407	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Thanh An	Thanh An Village	\N	\N
+c0a8-010b-17a010971ec-a71d1200-13cab-	46020408	c0a8-010b-17a0109492e-49a919f3-138b1-	Thôn Xuân Phú	Xuan Phu Village	\N	\N
+c0a8-010b-17a010971f5-4973fc5-13cac-a	46020501	c0a8-010b-17a01094938-76f521fd-138b2-	Thôn A2	A2 Village	\N	\N
+c0a8-010b-17a01097200-8b2e6e1d-13cad-	46020502	c0a8-010b-17a01094938-76f521fd-138b2-	Thôn Bha Bhar	Bha Bhar Village	\N	\N
+c0a8-010b-17a0109720a-2de1dbde-13cae-	46020503	c0a8-010b-17a01094938-76f521fd-138b2-	Thôn Pa Noong	Pa Noong Village	\N	\N
+c0a8-010b-17a01097214-a3e2bea7-13caf-	46020504	c0a8-010b-17a01094938-76f521fd-138b2-	Thôn Ta Rung	Ta Rung Village	\N	\N
+c0a8-010b-17a0109721e-71e423cb-13cb0-	46020601	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn 8	Village 8	\N	\N
+c0a8-010b-17a01097228-e7c4e34-13cb1-c	46060105	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Thạch Bình	Thach Binh Urban Section	\N	\N
+c0a8-010b-17a01097232-f66a3674-13cb2-	46060106	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Thủ Lễ Nam	Thu Le Nam Urban Section	\N	\N
+c0a8-010b-17a01097243-6876ef98-13cb3-	46060107	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Tráng Lực	Trang Luc Urban Section	\N	\N
+c0a8-010b-17a01097257-819c0044-13cb4-	46060108	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Uất Mậu	Uat Mau Urban Section	\N	\N
+c0a8-010b-17a01097264-f115f073-13cb5-	46060109	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Vân Căn 	Van Can Urban Section	\N	\N
+c0a8-010b-17a0109726f-73c08cb-13cb6-4	46060110	c0a8-010b-17a01094b5a-bcf98add-138e7-	Tổ dân phố Vĩnh Hòa	Vinh Hoa Urban Section	\N	\N
+c0a8-010b-17a01097278-60e73a97-13cb7-	46060201	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn An Xuân Bắc	Phu Luong B Village	\N	\N
+c0a8-010b-17a01097282-19f83432-13cb8-	46060202	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn An Xuân Đông	An Xuan Tay Village	\N	\N
+c0a8-010b-17a0109728c-b6792cfd-13cb9-	46060203	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn An Xuân Tây	An Xuan Dong Village	\N	\N
+c0a8-010b-17a01097297-25f392de-13cba-	46060204	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn Đông Xuyên	An Xuan Bac Village	\N	\N
+c0a8-010b-17a010972a0-e43848ae-13cbb-	46060205	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn Mỹ Xá	Dong Xuyen Village	\N	\N
+c0a8-010b-17a010972ab-1ebbbaf2-13cbc-	46060206	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn Phú Lương B	My Xa Village	\N	\N
+c0a8-010b-17a010972b4-3e864aae-13cbd-	46060207	c0a8-010b-17a01094b63-559d9b50-138e8-	Thôn Phước Thanh	Phuoc Thanh Village	\N	\N
+c0a8-010b-17a010972bd-fab25490-13cbe-	46020602	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn 9	Village 9	\N	\N
+c0a8-010b-17a010972c9-93be9cf5-13cbf-	46020603	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn 10	Village 10	\N	\N
+c0a8-010b-17a010972d3-df86ebb9-13cc0-	46020604	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn 11	Village 11	\N	\N
+c0a8-010b-17a010972de-14516133-13cc1-	46020605	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn Phú Nhuận	Phu Nhuan Village	\N	\N
+c0a8-010b-17a010972e9-e452f5be-13cc2-	46020606	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn Phú Thuận	Phu Thuan Village	\N	\N
+c0a8-010b-17a010972f2-a7887939-13cc3-	46020607	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn Tây Linh	Tay Linh Village	\N	\N
+c0a8-010b-17a010972fd-3fc28725-13cc4-	46020608	c0a8-010b-17a01094942-4e7152f5-138b3-	Thôn Thuận Lộc	Thuan Loc Village	\N	\N
+c0a8-010b-17a01097306-915ba922-13cc5-	46020701	c0a8-010b-17a0109494d-b66c48fc-138b4-	Thôn Cha Măng	Cha Mang Village	\N	\N
+c0a8-010b-17a01097310-a161de6f-13cc6-	46020702	c0a8-010b-17a0109494d-b66c48fc-138b4-	Thôn Dỗi	Doi Village	\N	\N
+c0a8-010b-17a0109731a-9d99d0b0-13cc7-	46020703	c0a8-010b-17a0109494d-b66c48fc-138b4-	Thôn Ria Hố	Ria Ho Village	\N	\N
+c0a8-010b-17a01097323-7baceb9f-13cc8-	46020801	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn A Chiếu	A Chieu Village	\N	\N
+c0a8-010b-17a0109732e-12cb9a88-13cc9-	46020802	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn A Dài	A Dai Village	\N	\N
+c0a8-010b-17a01097337-d367f51-13cca-7	46020803	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn A Gôn	A Gon Village	\N	\N
+c0a8-010b-17a01097349-161a1c69-13ccb-	46020804	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn A Xăng	A Xang Village	\N	\N
+c0a8-010b-17a01097355-fdf5ad40-13ccc-	46020805	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn Áp Rung	Ap Rung Village	\N	\N
+c0a8-010b-17a01097360-a42e7e2d-13ccd-	46020806	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn Cha Ke	Cha Ke Village	\N	\N
+c0a8-010b-17a0109736a-6a90168a-13cce-	46020807	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn Ka Đông	Ka Dong Village	\N	\N
+c0a8-010b-17a01097374-1409fca3-13ccf-	46020808	c0a8-010b-17a01094957-96d47dec-138b5-	Thôn Ta Vác	Ta Vac Village	\N	\N
+c0a8-010b-17a0109737e-d02c7665-13cd0-	46020901	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn A Xách	A Xach Village	\N	\N
+c0a8-010b-17a01097387-c7d49c5f-13cd1-	46020902	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn ATin	ATin Village	\N	\N
+c0a8-010b-17a01097391-4f1a0e6f-13cd2-	46020903	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn Hợp Hòa	Hop Hoa Village	\N	\N
+c0a8-010b-17a0109739b-bf159c49-13cd3-	46020904	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn La Vân	La Van Village	\N	\N
+c0a8-010b-17a010973a4-ffbfdd2-13cd4-2	46020905	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn Lấp	Lap Village	\N	\N
+c0a8-010b-17a010973ae-9dec5935-13cd5-	46020906	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn Ta Lu	Ta Lu Village	\N	\N
+c0a8-010b-17a010973b8-e344e12d-13cd6-	46020907	c0a8-010b-17a01094962-c640c33-138b6-3	Thôn Ta Rinh	Ta Rinh Village	\N	\N
+c0a8-010b-17a010973c2-83c0560c-13cd7-	46021001	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 1 (Cha Rầu)	Village 1 (Cha Rau)	\N	\N
+c0a8-010b-17a010973cc-fec223bb-13cd8-	46021002	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 2 (Aròng)	Village 2 (Arong)	\N	\N
+c0a8-010b-17a010973d6-b6d6f3b5-13cd9-	46021003	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 3 (AKa)	Village 3 (AKa)	\N	\N
+c0a8-010b-17a010973e0-d01d7a92-13cda-	46021004	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 4 (ARò)	Village 4 (ARo)	\N	\N
+c0a8-010b-17a010973e9-86ecb27c-13cdb-	46021005	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 5 (Vinh Giang)	Village 5 (Vinh Giang)	\N	\N
+c0a8-010b-17a010973f3-19ec9cfe-13cdc-	46021006	c0a8-010b-17a0109496c-700321e9-138b7-	Thôn 6 (Vinh Hưng)	Village 6 (Vinh Hung)	\N	\N
+c0a8-010b-17a010973fc-82a8165b-13cdd-	46060803	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Nam Giảng	Nam Giang Village	\N	\N
+c0a8-010b-17a01097406-5f26927-13cde-6	46060804	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Tây Hoàng	Tay Hoang Village	\N	\N
+c0a8-010b-17a01097410-77276d0f-13cdf-	46060805	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Trằm Ngang	Tram Ngang Village	\N	\N
+c0a8-010b-17a0109741a-2166a7ea-13ce0-	46060806	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Trung Kiều	Trung Kieu Village	\N	\N
+c0a8-010b-17a01097424-37827606-13ce1-	46060807	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Trung Làng	Trung Lang Village	\N	\N
+c0a8-010b-17a0109742d-ac71c65c-13ce2-	46060901	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn An Thành	 An Thanh Village	\N	\N
+c0a8-010b-17a01097438-6b7a73f2-13ce3-	46060301	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a01097443-7b4ba8ef-13ce4-	46060302	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a0109744e-ba87fc6e-13ce5-	46060303	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01097458-59e224ac-13ce6-	46060304	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn 4	Village 4	\N	\N
+c0a8-010b-17a01097462-dba45aeb-13ce7-	46060305	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn Am Thiền	Am Thien Village	\N	\N
+c0a8-010b-17a0109746c-ec865ac4-13ce8-	46060306	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn An Lộc	An Loc Village	\N	\N
+c0a8-010b-17a01097475-4a5bb8c0-13ce9-	46060307	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn Cương Giáng	Cuong Giang Village	\N	\N
+c0a8-010b-17a0109747f-4df49b9c-13cea-	46060308	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn Tân Thành	Tan Thanh Village	\N	\N
+c0a8-010b-17a0109748b-3e289632-13ceb-	46060309	c0a8-010b-17a01094b6e-9dd82899-138e9-	Thôn Tiến Công	Tien Cong Village	\N	\N
+c0a8-010b-17a01097496-ecaad6c4-13cec-	46060401	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Cư Lạc	Cu Lac Village	\N	\N
+c0a8-010b-17a010974a0-1a9d6fd9-13ced-	46060402	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Hà Công	Ha Cong Village	\N	\N
+c0a8-010b-17a010974ac-141cbbe0-13cee-	46060403	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Hà Lạc	Ha Lac Village	\N	\N
+c0a8-010b-17a010974b6-142f5f6e-13cef-	46060404	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Mỹ Thạnh	My Thanh Village	\N	\N
+c0a8-010b-17a010974c0-27b2da10-13cf0-	46060405	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Ngư Mỹ Thạnh	Ngu My Thanh Village	\N	\N
+c0a8-010b-17a010974cb-6b6e56c7-13cf1-	46060406	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Sơn Công	Son Cong Village	\N	\N
+c0a8-010b-17a010974d7-3b8d3371-13cf2-	46060407	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Tháp Nhuận	Thap Nhuan Village	\N	\N
+c0a8-010b-17a010974e1-ea321de4-13cf3-	46060408	c0a8-010b-17a01094b77-d4440b59-138ea-	Thôn Thuỷ Lập 	Thuy Lap Village	\N	\N
+c0a8-010b-17a010974eb-ea1db385-13cf4-	46060501	c0a8-010b-17a01094b82-34423236-138eb-	Thôn 1	Village 1	\N	\N
+c0a8-010b-17a010974f5-b52847b1-13cf5-	46060502	c0a8-010b-17a01094b82-34423236-138eb-	Thôn 2	Village 2	\N	\N
+c0a8-010b-17a010974ff-e51be07f-13cf6-	46060503	c0a8-010b-17a01094b82-34423236-138eb-	Thôn 3	Village 3	\N	\N
+c0a8-010b-17a01097509-20c0ce04-13cf7-	46060504	c0a8-010b-17a01094b82-34423236-138eb-	Thôn 13	Village 13	\N	\N
+c0a8-010b-17a01097513-4811177c-13cf8-	46060505	c0a8-010b-17a01094b82-34423236-138eb-	Thôn Đông Hải	Dong Hai Village	\N	\N
+c0a8-010b-17a0109751c-cd74a612-13cf9-	46060506	c0a8-010b-17a01094b82-34423236-138eb-	Thôn Tân Mỹ 	Tan My Village	\N	\N
+c0a8-010b-17a01097526-7f6611e-13cfa-d	46060507	c0a8-010b-17a01094b82-34423236-138eb-	Thôn Tây Hải	Tay Hai Village	\N	\N
+c0a8-010b-17a01097530-61787645-13cfb-	46060508	c0a8-010b-17a01094b82-34423236-138eb-	Thôn Vĩnh Tu	Vinh Tu Village	\N	\N
+c0a8-010b-17a0109753a-6b22dbfc-13cfc-	46060601	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Bác Vọng Đông	Bac Vong Dong Village	\N	\N
+c0a8-010b-17a01097544-661d9889-13cfd-	46060602	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Bác Vọng Tây	Bac Vong Tay Village	\N	\N
+c0a8-010b-17a0109754d-5fd4b50c-13cfe-	46060603	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Bao La - Đức Nhuận	Bao La - Duc Nhuan Village	\N	\N
+c0a8-010b-17a01097557-cba5f040-13cff-	46060604	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Hà Cảng	Ha Cang Village	\N	\N
+c0a8-010b-17a01097563-7afe5fd4-13d00-	46060605	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Hạ Lang	Ha Lang Village	\N	\N
+c0a8-010b-17a0109756d-22d61303-13d01-	46060606	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Nam Phù - Nho Lâm	Nam Phu - Nho Lam Village	\N	\N
+c0a8-010b-17a01097577-5f127233-13d02-	46060607	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Nghĩa Lộ	Nghia Lo Village	\N	\N
+c0a8-010b-17a01097581-be0bb900-13d03-	46060608	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Phú Lễ	Phu Le Village	\N	\N
+c0a8-010b-17a0109758b-db1b8ee9-13d04-	46060609	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Vạn Hạ Lang	Van Ha Lang Village	\N	\N
+c0a8-010b-17a01097594-39c1a42f-13d05-	46060610	c0a8-010b-17a01094b8c-fa20286f-138ec-	Thôn Xuân Tuỳ	Xuan Tuy Village	\N	\N
+c0a8-010b-17a0109759e-109e2ecf-13d06-	46060701	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Hà Đồ - Phước Lập 	Ha Do - Phuoc Lap Village	\N	\N
+c0a8-010b-17a010975a8-308119a0-13d07-	46060702	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Khuông Phò Đông	Khuong Pho Dong Village	\N	\N
+c0a8-010b-17a010975b2-f97da6a1-13d08-	46060703	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Lâm Lý	Lam Ly Village	\N	\N
+c0a8-010b-17a010975bc-bc2b2e1e-13d09-	46060704	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Mai Dương	Mai Duong Village	\N	\N
+c0a8-010b-17a010975c5-3151beb0-13d0a-	46060705	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Thủ Lễ 2	Thu Le 2 Village	\N	\N
+c0a8-010b-17a010975d0-5c75393b-13d0b-	46060706	c0a8-010b-17a01094b97-a4750d30-138ed-	Thôn Thủ Lễ 3	Thu Le 3 Village	\N	\N
+c0a8-010b-17a010975da-cb547815-13d0c-	46060801	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Đông Hồ	Dong Ho Village	\N	\N
+c0a8-010b-17a010975e4-b5aca751-13d0d-	46060802	c0a8-010b-17a01094ba0-813c2020-138ee-	Thôn Lai Hà	Lai Ha Village	\N	\N
+c0a8-010b-17a010975ed-6da1373b-13d0e-	46070214	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 20-21	Urban Section 20-21	\N	\N
+c0a8-010b-17a010975f8-e56d8069-13d0f-	46070215	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 22	Urban Section 22	\N	\N
+c0a8-010b-17a01097601-1e40c800-13d10-	46070216	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố Nhì Đông	Nhi Dong Urban Section	\N	\N
+c0a8-010b-17a0109760d-57bc0627-13d11-	46070301	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097617-34e98455-13d12-	46070302	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097620-418ae308-13d13-	46070303	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a0109762b-67b6c0c3-13d14-	46070304	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097635-228d6b8f-13d15-	46070305	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a0109763e-4e5cab30-13d16-	46070306	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097648-2e792404-13d17-	46070307	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097653-4d1ed087-13d18-	46070308	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a0109765f-51f3c1df-13d19-	46070309	c0a8-010b-17a01094bdd-1b3edd6-138f4-4	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01097668-37f0e92b-13d1a-	46070401	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097672-d6e401d1-13d1b-	46070402	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109767c-d0d93879-13d1c-	46070403	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097685-c46fd6f9-13d1d-	46070404	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a0109768f-a757d9e9-13d1e-	46070405	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097699-bc40ef5b-13d1f-	46070406	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a010976a4-49fd4d48-13d20-	46070407	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a010976ad-c12bf2be-13d21-	46070408	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a010976b7-a29135e3-13d22-	46070409	c0a8-010b-17a01094be7-c5cd3fb9-138f5-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a010976c1-4edfc081-13d23-	46070501	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010976cc-8b1b76ca-13d24-	46070502	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010976d5-2f62d7f5-13d25-	46070503	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010976df-34d98fd1-13d26-	46070504	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010976e9-51a3ea81-13d27-	46070505	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010976f3-7d2e8b52-13d28-	46070506	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a010976fc-c5a70301-13d29-	46070507	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097706-ff85ea2c-13d2a-	46070508	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097711-cfafff30-13d2b-	46070509	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a0109771b-2a2f03cc-13d2c-	46060902	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Kim Đôi	 Kim Doi Village	\N	\N
+c0a8-010b-17a01097727-7c6b8ab-13d2d-5	46060903	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Phú Lương A	 Phu Luong A Village	\N	\N
+c0a8-010b-17a01097731-e1f554d5-13d2e-	46060904	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Phú Ngạn	 Phu Ngan Village	\N	\N
+c0a8-010b-17a0109773b-2947cbb2-13d2f-	46060905	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Quán Hòa	 Quan Hoa Village	\N	\N
+c0a8-010b-17a01097745-427f9a85-13d30-	46060906	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Tây Thành	 Tay Thanh Village	\N	\N
+c0a8-010b-17a0109774f-c72f45f2-13d31-	46060907	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Thanh Hà	 Thanh Ha Village	\N	\N
+c0a8-010b-17a0109775a-d109e162-13d32-	46060908	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Thành Trung	 Thanh Trung Village	\N	\N
+c0a8-010b-17a01097764-3da6c60b-13d33-	46060909	c0a8-010b-17a01094bab-69a4b191-138ef-	Thôn Thủy Điền	 Thuy Dien Village	\N	\N
+c0a8-010b-17a0109776f-e3068249-13d34-	46061001	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn La Vân Hạ	La Van Ha Village	\N	\N
+c0a8-010b-17a01097779-239e0137-13d35-	46061002	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn La Vân Thượng	La Van Thuong Village	\N	\N
+c0a8-010b-17a01097784-c600bea8-13d36-	46070510	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a0109778e-b399c3a2-13d37-	46070511	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097799-9d41883d-13d38-	46070512	c0a8-010b-17a01094bf1-c0433def-138f6-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a010977a3-582ec280-13d39-	46070601	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010977ad-3aeffcc8-13d3a-	46070602	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010977b7-31ec1953-13d3b-	46070603	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010977c1-86023351-13d3c-	46070604	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010977cb-df8639cd-13d3d-	46070605	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010977d5-1c41a4d6-13d3e-	46070606	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a010977df-267adc5c-13d3f-	46070607	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a010977e9-73c5e68f-13d40-	46070608	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a010977f3-60500f2-13d41-f	46070609	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a010977fc-5cb55b45-13d42-	46070610	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01097807-1135f948-13d43-	46070611	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097813-333ca125-13d44-	46061003	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Lương Cổ	Luong Co Village	\N	\N
+c0a8-010b-17a01097821-ffee3cef-13d45-	46061004	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Niêm Phò	Niem Pho Village	\N	\N
+c0a8-010b-17a0109782b-f23156f-13d46-e	46061005	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Phò Nam	Pho Nam Village	\N	\N
+c0a8-010b-17a01097836-4d921286-13d47-	46061006	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Phò Nam B	Pho Nam B Village	\N	\N
+c0a8-010b-17a0109783f-7fd2ae9d-13d48-	46061007	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Phước Yên	Phuoc Yen Village	\N	\N
+c0a8-010b-17a0109784a-53209a7f-13d49-	46061008	c0a8-010b-17a01094bb4-23648ff4-138f0-	Thôn Tân Xuân Lai	Tan Xuan Lai Village	\N	\N
+c0a8-010b-17a01097854-59c9bd1e-13d4a-	46061101	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Cao Xá	Cao Xa Village	\N	\N
+c0a8-010b-17a0109785e-27aee521-13d4b-	46061102	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Cổ Tháp	Co Thap Village	\N	\N
+c0a8-010b-17a01097867-52be2119-13d4c-	46061103	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Đồng Bào	Dong Bao Village	\N	\N
+c0a8-010b-17a01097873-97c48b65-13d4d-	46061104	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Đông Lâm	Dong Lam Village	\N	\N
+c0a8-010b-17a0109787d-8011ff77-13d4e-	46070612	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a0109788a-d60a58d6-13d4f-	46070613	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01097894-d5ec3def-13d50-	46070614	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 14	Urban Section 14	\N	\N
+c0a8-010b-17a0109789f-c71fa6f8-13d51-	46070615	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 15	Urban Section 15	\N	\N
+c0a8-010b-17a010978a9-2ddcb21e-13d52-	46070616	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 16	Urban Section 16	\N	\N
+c0a8-010b-17a010978b2-e55e3e0d-13d53-	46070617	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 17	Urban Section 17	\N	\N
+c0a8-010b-17a010978bd-4c8fcbb-13d54-e	46070618	c0a8-010b-17a01094bfa-813fb1f0-138f7-	Tổ dân phố 18	Urban Section 18	\N	\N
+c0a8-010b-17a010978c6-1d2e1e08-13d55-	46070701	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố An Hòa	An Hoa Urban Section	\N	\N
+c0a8-010b-17a010978d1-5c65bd71-13d56-	46070702	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố An Lưu	An Luu Urban Section	\N	\N
+c0a8-010b-17a010978dc-50e81532-13d57-	46070703	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố An Vân	An Van Urban Section	\N	\N
+c0a8-010b-17a010978e7-7658990a-13d58-	46070704	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố Bồn Phổ	Bon Pho Urban Section	\N	\N
+c0a8-010b-17a010978f0-330a2aae-13d59-	46070705	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố Bồn Trì	Bon Tri Urban Section	\N	\N
+c0a8-010b-17a010978fa-4a481a61-13d5a-	46070706	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố Cổ Bưu	Co Buu Urban Section	\N	\N
+c0a8-010b-17a01097904-fff0dbb8-13d5b-	46070707	c0a8-010b-17a01094c05-15dcefc6-138f8-	Tổ dân phố Thanh Chữ	Thanh Chu Urban Section	\N	\N
+c0a8-010b-17a0109790f-21cdaaaa-13d5c-	46061105	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Đức Trọng	Duc Trong Village	\N	\N
+c0a8-010b-17a0109791a-8ef8ee4-13d5d-2	46061106	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Lai Lâm	Lai Lam Village	\N	\N
+c0a8-010b-17a01097924-674380ae-13d5e-	46061107	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Lai Trung	Lai Trung Village	\N	\N
+c0a8-010b-17a0109792e-7cc9ae6b-13d5f-	46061108	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Nam Dương	Nam Duong Village	\N	\N
+c0a8-010b-17a01097938-9f7df974-13d60-	46061109	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Ô Sa	O Sa Village	\N	\N
+c0a8-010b-17a01097941-9983377c-13d61-	46061110	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Phe Ba	Phe Ba Village	\N	\N
+c0a8-010b-17a0109794c-bff8eaa-13d62-2	46061111	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Phổ Lại	Pho Lai Village	\N	\N
+c0a8-010b-17a01097955-2897ba3f-13d63-	46061112	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Sơn Tùng	Son Tung Village	\N	\N
+c0a8-010b-17a0109795f-a1af39-13d64-ec	46061113	c0a8-010b-17a01094bbe-d56f4240-138f1-	Thôn Thanh Cần - Trọng Đức	Thanh Can - Trong Duc Village	\N	\N
+c0a8-010b-17a01097969-feedc300-13d65-	46070101	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097973-d2cd6b53-13d66-	46070102	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109797c-3da12a19-13d67-	46070103	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097986-f762e21b-13d68-	46070104	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097991-5396adca-13d69-	46070105	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a0109799b-bd6ca445-13d6a-	46070106	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a010979a5-6e4bc545-13d6b-	46070107	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a010979ae-9265e776-13d6c-	46070108	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a010979b8-a8b1e58a-13d6d-	46070109	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a010979c2-ddb3a831-13d6e-	46070110	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a010979cc-67baa9ef-13d6f-	46070111	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a010979d5-1402536a-13d70-	46070112	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a010979df-6fb8d1f6-13d71-	46070113	c0a8-010b-17a01094bc7-f500a279-138f2-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a010979e9-e91ff6b4-13d72-	46070801	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố An Bình	An Binh Urban Section	\N	\N
+c0a8-010b-17a010979f3-5551de08-13d73-	46070802	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Chầm	Cham Urban Section	\N	\N
+c0a8-010b-17a010979fe-52a4e577-13d74-	46070803	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Long Hồ Hạ 1	Long Ho Ha 1 Urban Section	\N	\N
+c0a8-010b-17a01097a08-fc34a07-13d75-c	46070804	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Long Hồ Hạ 2	Long Ho Ha 2 Urban Section	\N	\N
+c0a8-010b-17a01097a12-cda69578-13d76-	46070805	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Long Hồ Thượng 1	Long Ho Thuong 1 Urban Section	\N	\N
+c0a8-010b-17a01097a1c-76f0e330-13d77-	46070806	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Long Hồ Thượng 2	Long Ho Thuong 2 Urban Section	\N	\N
+c0a8-010b-17a01097a26-fb76c40e-13d78-	46070807	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Ngọc Hồ	Ngoc Ho Urban Section	\N	\N
+c0a8-010b-17a01097a30-82e7e54f-13d79-	46070808	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Nham Biều - Lựu Bảo	Nham Bieu - Luu Bao Urban Section	\N	\N
+c0a8-010b-17a01097a3b-e2f0b5bf-13d7a-	46070809	c0a8-010b-17a01094c0f-a4fb5363-138f9-	Tổ dân phố Xước Dũ	Xuoc Du Urban Section	\N	\N
+c0a8-010b-17a01097a46-343142a8-13d7b-	46070901	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097a50-8d7976ff-13d7c-	46070902	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097a5a-cd814f28-13d7d-	46070903	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097a63-80914231-13d7e-	46070904	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097a6d-30b432e4-13d7f-	46070201	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 1-2	Urban Section 1-2	\N	\N
+c0a8-010b-17a01097a7e-f43896c6-13d80-	46070202	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097a8d-7523ae28-13d81-	46070203	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097a98-85bacdd7-13d82-	46070204	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 7-8	Urban Section 7-8	\N	\N
+c0a8-010b-17a01097aa2-a5cc7ea3-13d83-	46070205	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097aac-fcb97d12-13d84-	46070206	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 10-11	Urban Section 10-11	\N	\N
+c0a8-010b-17a01097ab7-505e66c-13d85-a	46070207	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097ac1-fddfb3df-13d86-	46070208	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01097aca-acb5744a-13d87-	46070209	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 14	Urban Section 14	\N	\N
+c0a8-010b-17a01097ad4-2a533aa9-13d88-	46070210	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 15	Urban Section 15	\N	\N
+c0a8-010b-17a01097ade-96d65075-13d89-	46070211	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 16	Urban Section 16	\N	\N
+c0a8-010b-17a01097ae8-b01e6d41-13d8a-	46070212	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 17-18	Urban Section 17-18	\N	\N
+c0a8-010b-17a01097af1-59ecf0ab-13d8b-	46070213	c0a8-010b-17a01094bd2-282ac5d5-138f3-	Tổ dân phố 19	Urban Section 19	\N	\N
+c0a8-010b-17a01097afa-5363d569-13d8c-	46070905	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097b08-adc685bd-13d8d-	46070906	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097b12-ed60092-13d8e-7	46070907	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097b1b-2975384d-13d8f-	46070908	c0a8-010b-17a01094c1a-85649e97-138fa-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097b25-43810e2a-13d90-	46071001	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097b2f-768b688c-13d91-	46071002	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097b39-5f120211-13d92-	46071003	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097b44-e05356ea-13d93-	46071004	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097b4d-e55b808e-13d94-	46071005	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097b57-3d6e57e4-13d95-	46071006	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097b61-7fc2f6cc-13d96-	46071007	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097b6b-5f5ed6bd-13d97-	46071408	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097b76-611634fb-13d98-	46071501	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097b7f-ffb54d8e-13d99-	46071502	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097b8a-e0b47742-13d9a-	46071503	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097b94-b770ad1d-13d9b-	46071504	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097b9d-a23e86d-13d9c-9	46071505	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097ba9-a7c1b2df-13d9d-	46071506	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097bb4-1e6a0807-13d9e-	46071507	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097bbe-dfe1a888-13d9f-	46071508	c0a8-010b-17a01094c54-780f2d80-13900-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097bc8-5105c4af-13da0-	46071601	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Chiết Bi	Chiet Bi Urban Section	\N	\N
+c0a8-010b-17a01097bd2-24f03a4a-13da1-	46071602	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố La Ỷ	La Y Urban Section	\N	\N
+c0a8-010b-17a01097bdc-9eaaebc-13da2-3	46071603	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Lại Thế 1	Lai The 1 Urban Section	\N	\N
+c0a8-010b-17a01097be6-dee00777-13da3-	46071604	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Lại Thế 2	Lai The 2 Urban Section	\N	\N
+c0a8-010b-17a01097bf0-4f726f99-13da4-	46071605	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Nam Thượng	Nam Thuong Urban Section	\N	\N
+c0a8-010b-17a01097bfa-55f414f0-13da5-	46071606	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Ngọc Anh	Ngoc Anh Urban Section	\N	\N
+c0a8-010b-17a01097c04-575b6775-13da6-	46071607	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Tây Thượng	Tay Thuong Urban Section	\N	\N
+c0a8-010b-17a01097c0d-bfaf298b-13da7-	46071608	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Tây Trì Nhơn	Tay Tri Nhon Urban Section	\N	\N
+c0a8-010b-17a01097c18-e416190a-13da8-	46071609	c0a8-010b-17a01094c5f-58a7ae6a-13901-	Tổ dân phố Trung Đông	Trung Dong Urban Section	\N	\N
+c0a8-010b-17a01097c22-cad4f02f-13da9-	46071701	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097c2c-f0b0ec2c-13daa-	46071702	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097c35-24dbd854-13dab-	46071703	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097c3f-d3fe20e3-13dac-	46071704	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097c49-5bb703fe-13dad-	46071705	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097c54-2794935c-13dae-	46071706	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097c5f-a9c549b3-13daf-	46071707	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097c6a-47f93c18-13db0-	46071008	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097c77-5fc0477e-13db1-	46071009	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097c83-5c5f742a-13db2-	46071010	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097c8c-a9f3c5b8-13db3-	46071011	c0a8-010b-17a01094c24-6e2b8613-138fb-	Tổ dân phố 16	Urban Section 16	\N	\N
+c0a8-010b-17a01097c96-a6f82140-13db4-	46071101	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Bao Vinh	Bao Vinh Urban Section	\N	\N
+c0a8-010b-17a01097ca0-2c863ed4-13db5-	46071102	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Địa Linh	Dia Linh Urban Section	\N	\N
+c0a8-010b-17a01097cab-b86e7453-13db6-	46071103	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố La Khê	La Khe Urban Section	\N	\N
+c0a8-010b-17a01097cb4-7ae781f6-13db7-	46071104	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Minh Thanh	Minh Thanh Urban Section	\N	\N
+c0a8-010b-17a01097cbe-2678452-13db8-5	46071105	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Thế Lại Thượng	The Lai Thuong Urban Section	\N	\N
+c0a8-010b-17a01097cc8-5c15edf2-13db9-	46071106	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Thuỷ Phú	Thuy Phu Urban Section	\N	\N
+c0a8-010b-17a01097cd2-317bceca-13dba-	46071107	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Triều Sơn Đông	Trieu Son Dong Urban Section	\N	\N
+c0a8-010b-17a01097cdc-a563e07-13dbb-b	46071108	c0a8-010b-17a01094c2e-e1d2c26d-138fc-	Tổ dân phố Triều Sơn Nam	Trieu Son Nam Urban Section	\N	\N
+c0a8-010b-17a01097ce6-e2a4e38a-13dbc-	46071201	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097cf0-657ac0cb-13dbd-	46071202	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097cfa-13459dee-13dbe-	46071203	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097d04-f134af16-13dbf-	46071204	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097d10-8eec423e-13dc0-	46071205	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097d1a-2209d2c9-13dc1-	46071206	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097d24-cf0481df-13dc2-	46071207	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097d2e-e5144de1-13dc3-	46071208	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097d38-9a34172-13dc4-5	46071209	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097d42-4ca6d07d-13dc5-	46071210	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01097d4c-ca0402b2-13dc6-	46071211	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097d57-8816f74e-13dc7-	46071212	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097d61-727f41e5-13dc8-	46071213	c0a8-010b-17a01094c37-c7253bb7-138fd-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01097d6a-a4c0eee7-13dc9-	46071301	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097d74-57ac6a9f-13dca-	46071302	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097d7e-9c7c8ca7-13dcb-	46071303	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097d89-7031d9c3-13dcc-	46071304	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097d92-307df1b1-13dcd-	46071305	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097d9c-a1cd996e-13dce-	46071306	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097da6-59e98f03-13dcf-	46071307	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097db0-79a2aee6-13dd0-	46071308	c0a8-010b-17a01094c41-c9a12d8e-138fe-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097db9-fe42826b-13dd1-	46071401	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097dc3-b49049a0-13dd2-	46071402	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097dcd-5e18b141-13dd3-	46071708	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097dd7-255b7281-13dd4-	46071709	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097de2-165a5e1-13dd5-d	46071710	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01097ded-bfa1d65d-13dd6-	46071711	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097df7-2c3d014-13dd7-2	46071712	c0a8-010b-17a01094c69-79aaff3c-13902-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097e01-66951188-13dd8-	46071801	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097e0a-cb70b9a-13dd9-f	46071802	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097e14-bea349a9-13dda-	46071803	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097e1f-f6557ff8-13ddb-	46071804	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097e28-519287eb-13ddc-	46071805	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097e32-bd9f28a3-13ddd-	46071806	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097e3c-d109c800-13dde-	46071807	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097e4a-775d0937-13ddf-	46071808	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097e5f-499d3d8a-13de0-	46071809	c0a8-010b-17a01094c72-f4b8848-13903-c	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097e74-342f637c-13de1-	46071901	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097e81-1cfa8df2-13de2-	46071902	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097e8c-4d1b6935-13de3-	46071903	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097e96-58f731ef-13de4-	46071904	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097ea1-3159eb4d-13de5-	46071905	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097eaa-530da09e-13de6-	46071906	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097eb4-5ebe00ed-13de7-	46071907	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097ebe-b5d5eaef-13de8-	46071908	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097ec8-7ca71b98-13de9-	46071909	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097ed2-4ee4a437-13dea-	46071403	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097edd-11e3fa8c-13deb-	46071404	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097ee7-5a58386a-13dec-	46071405	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097ef2-bd1cccb7-13ded-	46071406	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097efd-2539aee4-13dee-	46071407	c0a8-010b-17a01094c4b-f0ae19e7-138ff-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097f07-dcc1b431-13def-	46072004	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Diên Trường	Dien Truong Urban Section	\N	\N
+c0a8-010b-17a01097f12-d3c0683d-13df0-	46072005	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Hải Thành	Hai Thanh Urban Section	\N	\N
+c0a8-010b-17a01097f1c-fbfee127-13df1-	46072006	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Minh Hải	Minh Hai Urban Section	\N	\N
+c0a8-010b-17a01097f26-16e2884b-13df2-	46072007	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân An	Tan An Urban Section	\N	\N
+c0a8-010b-17a01097f30-8f274422-13df3-	46072008	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân Bình	Tan Binh Urban Section	\N	\N
+c0a8-010b-17a01097f39-32215d3-13df4-c	46072009	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân Cảng	Tan Cang Urban Section	\N	\N
+c0a8-010b-17a01097f44-b0a6c1c8-13df5-	46072010	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân Dương	Tan Duong Urban Section	\N	\N
+c0a8-010b-17a01097f4e-df6670a4-13df6-	46072011	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân Lập	Tan Lap Urban Section	\N	\N
+c0a8-010b-17a01097f58-cd8f684c-13df7-	46072012	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Tân Mỹ	Tan My Urban Section	\N	\N
+c0a8-010b-17a01097f62-146a2c56-13df8-	46072101	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01097f6e-b6010d13-13df9-	46072102	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01097f78-79025568-13dfa-	46072103	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01097f82-aa440870-13dfb-	46072104	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01097f8b-c4c8f724-13dfc-	46072105	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01097f96-3a95cdfd-13dfd-	46072106	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01097fa0-3d9fc73d-13dfe-	46072107	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01097faa-5e5a9e66-13dff-	46072108	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01097fb3-ca105de8-13e00-	46072109	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01097fbd-75d4afd5-13e01-	46072110	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01097fc7-daf74437-13e02-	46072111	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097fd0-1da80c69-13e03-	46072112	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097fda-f5a11c31-13e04-	46071910	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01097fe5-ff35ef9e-13e05-	46071911	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01097ff3-52b6a02d-13e06-	46071912	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01097ffd-6b5f6358-13e07-	46071913	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01098007-c3361095-13e08-	46071914	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 14	Urban Section 14	\N	\N
+c0a8-010b-17a01098011-4c29b14a-13e09-	46071915	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 15	Urban Section 15	\N	\N
+c0a8-010b-17a0109801b-ee6ea04d-13e0a-	46071916	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 16	Urban Section 16	\N	\N
+c0a8-010b-17a01098025-4f0c6313-13e0b-	46071917	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 17	Urban Section 17	\N	\N
+c0a8-010b-17a0109802e-d0b16d6b-13e0c-	46071918	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 18	Urban Section 18	\N	\N
+c0a8-010b-17a01098039-44c8803-13e0d-a	46071919	c0a8-010b-17a01094c7d-6e81e36c-13904-	Tổ dân phố 19	Urban Section 19	\N	\N
+c0a8-010b-17a01098043-a86483f3-13e0e-	46072001	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố An Hải	An Hai Urban Section	\N	\N
+c0a8-010b-17a0109804e-9eab7fbe-13e0f-	46072113	c0a8-010b-17a01094c91-9c74e96-13906-4	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a0109805a-b9bb2595-13e10-	46072201	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01098065-a2b0e68e-13e11-	46072202	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109806f-4920f585-13e12-	46072203	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01098079-4ba3d9bb-13e13-	46072204	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01098083-1691444e-13e14-	46072205	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a0109808d-832960c9-13e15-	46072206	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01098097-2ff3122c-13e16-	46072207	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a010980a1-4c901bd-13e17-6	46072208	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a010980ac-bee298a3-13e18-	46072209	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a010980b5-98fc2bfe-13e19-	46072210	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a010980bf-beb559aa-13e1a-	46072211	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a010980c9-eebf529a-13e1b-	46072212	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a010980d2-87f0fc7e-13e1c-	46072213	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a010980e3-20305ff2-13e1d-	46072002	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Hải Tiến	Hai Tien Urban Section	\N	\N
+c0a8-010b-17a010980fc-1ae66a9b-13e1e-	46072003	c0a8-010b-17a01094c86-62590f5f-13905-	Tổ dân phố Hải Tình	Hai Tinh Urban Section	\N	\N
+c0a8-010b-17a0109810d-94a4d7e2-13e1f-	46072601	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a0109811c-ebf2e99d-13e20-	46072602	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109812c-cfc4cf2c-13e21-	46072603	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01098138-19b25ee7-13e22-	46072604	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01098143-482a08d8-13e23-	46072605	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a0109814c-82fff4a4-13e24-	46072606	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01098157-844088ff-13e25-	46072607	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01098160-30d96043-13e26-	46072608	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a0109816a-f839e29d-13e27-	46072609	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01098174-402b7b43-13e28-	46072610	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01098181-9514d0e7-13e29-	46072611	c0a8-010b-17a01094cc2-296a51ba-1390b-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a0109818a-1a2ed62b-13e2a-	46072701	c0a8-010b-17a01094ccc-2361c046-1390c-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01098195-3d87205c-13e2b-	46072702	c0a8-010b-17a01094ccc-2361c046-1390c-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a0109819e-f44b5e96-13e2c-	46072703	c0a8-010b-17a01094ccc-2361c046-1390c-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010981a9-665a2aa9-13e2d-	46072704	c0a8-010b-17a01094ccc-2361c046-1390c-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010981b2-afe413e4-13e2e-	46072705	c0a8-010b-17a01094ccc-2361c046-1390c-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010981bd-585560e1-13e2f-	46072801	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010981c6-c436a971-13e30-	46072802	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010981d0-52d6eb95-13e31-	46072803	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a010981da-32bb48c7-13e32-	46072804	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a010981e4-4c637a5d-13e33-	46072805	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a010981ee-a85b3475-13e34-	46072806	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a010981f7-fff26115-13e35-	46072807	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01098201-d56c8928-13e36-	46072808	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a0109820b-9bc6d3c8-13e37-	46072809	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01098214-2b09296e-13e38-	46072810	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a0109821e-c6d344e6-13e39-	46072811	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01098229-7ad759f5-13e3a-	46072812	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a01098233-43da0c7b-13e3b-	46072813	c0a8-010b-17a01094cd6-bc54181b-1390d-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a0109823e-706de4fd-13e3c-	46072901	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a01098249-aaf6b698-13e3d-	46072902	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a01098253-e2887bcc-13e3e-	46072903	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a0109825d-9f66ec8c-13e3f-	46072904	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a01098267-c5db12d9-13e40-	46072214	c0a8-010b-17a01094c9b-39e6cd94-13907-	Tổ dân phố 14	Urban Section 14	\N	\N
+c0a8-010b-17a01098272-30a8feda-13e41-	46072301	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Đông Phước 1	Dong Phuoc 1 Urban Section	\N	\N
+c0a8-010b-17a0109827d-c3bfcde7-13e42-	46072302	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Đông Phước 2	Dong Phuoc 2 Urban Section	\N	\N
+c0a8-010b-17a01098287-b9fc05fd-13e43-	46072303	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Long Thọ	Long Tho Urban Section	\N	\N
+c0a8-010b-17a01098290-f5f59b94-13e44-	46072304	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Lương Quán	Luong Quan Urban Section	\N	\N
+c0a8-010b-17a0109829a-8b299522-13e45-	46072305	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Trung Thượng	Trung Thuong Urban Section	\N	\N
+c0a8-010b-17a010982a4-76f2a5f2-13e46-	46072306	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Trường Đá	Truong Da Urban Section	\N	\N
+c0a8-010b-17a010982ae-c2f078aa-13e47-	46072307	c0a8-010b-17a01094ca5-7641056f-13908-	Tổ dân phố Trường Sơn	Truong Son Urban Section	\N	\N
+c0a8-010b-17a010982b9-f55960ec-13e48-	46072401	c0a8-010b-17a01094cae-2d6461db-13909-	Tổ dân phố Công Lương	Cong Luong Urban Section	\N	\N
+c0a8-010b-17a010982c4-63e18d8f-13e49-	46072402	c0a8-010b-17a01094cae-2d6461db-13909-	Tổ dân phố Dạ Lê	Da Le Urban Section	\N	\N
+c0a8-010b-17a010982cf-2eabe30a-13e4a-	46072403	c0a8-010b-17a01094cae-2d6461db-13909-	Tổ dân phố Vân Dương	Van Duong Urban Section	\N	\N
+c0a8-010b-17a010982d9-11efe666-13e4b-	46072404	c0a8-010b-17a01094cae-2d6461db-13909-	Tổ dân phố Xuân Hòa	Xuan Hoa Urban Section	\N	\N
+c0a8-010b-17a010982e3-48532f05-13e4c-	46072501	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 1	Urban Section 1	\N	\N
+c0a8-010b-17a010982ee-c30eeada-13e4d-	46072502	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 2	Urban Section 2	\N	\N
+c0a8-010b-17a010982f8-4c36895a-13e4e-	46072503	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 3	Urban Section 3	\N	\N
+c0a8-010b-17a01098302-64061c5a-13e4f-	46072504	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 4	Urban Section 4	\N	\N
+c0a8-010b-17a0109830c-7db3acb0-13e50-	46072505	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01098316-3d6b706d-13e51-	46072506	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01098320-602e6420-13e52-	46072507	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01098329-f6158595-13e53-	46072508	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01098333-4774c45c-13e54-	46072509	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a0109833d-5a461359-13e55-	46072510	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a01098347-155ac975-13e56-	46072511	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a01098351-a3f68f7b-13e57-	46072512	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 12	Urban Section 12	\N	\N
+c0a8-010b-17a0109835b-4ce91c6c-13e58-	46072513	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 13	Urban Section 13	\N	\N
+c0a8-010b-17a01098365-f4405977-13e59-	46072514	c0a8-010b-17a01094cb8-a02c4fd0-1390a-	Tổ dân phố 14	Urban Section 14	\N	\N
+c0a8-010b-17a01098370-2217be9d-13e5a-	46073302	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Dương Nổ Đông	Duong No Dong Urban Section	\N	\N
+c0a8-010b-17a01098379-37e57c2b-13e5b-	46073303	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Dương Nổ Nam	Duong No Nam Urban Section	\N	\N
+c0a8-010b-17a01098382-16763436-13e5c-	46073304	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Dương Nổ Tây	Duong No Tay Urban Section	\N	\N
+c0a8-010b-17a01098391-df1f6655-13e5d-	46073305	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Lưu Khánh	Luu Khanh Urban Section	\N	\N
+c0a8-010b-17a0109839c-d980f9ec-13e5e-	46073306	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Mỹ An	My An Urban Section	\N	\N
+c0a8-010b-17a010983a5-c025f0a2-13e5f-	46073307	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Phò An	Pho An Urban Section	\N	\N
+c0a8-010b-17a010983b0-be38b31c-13e60-	46073308	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Phú Khê	Phu Khe Urban Section	\N	\N
+c0a8-010b-17a010983b9-a42ff251-13e61-	46073309	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Thạch Căn	Thach Can Urban Section	\N	\N
+c0a8-010b-17a010983c3-9b49e38e-13e62-	46073401	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Lại Ân	Lai An Urban Section	\N	\N
+c0a8-010b-17a010983cd-8b7daca7-13e63-	46073402	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Lại Tân	Lai Tan Urban Section	\N	\N
+c0a8-010b-17a010983d7-76bed103-13e64-	46073403	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Mậu Tài	Mau Tai Urban Section	\N	\N
+c0a8-010b-17a010983e1-f2439a84-13e65-	46073404	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Thanh Vinh	Thanh Vinh Urban Section	\N	\N
+c0a8-010b-17a010983ec-5631624c-13e66-	46073405	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Tiên Nộn	Tien Non Urban Section	\N	\N
+c0a8-010b-17a010983f6-95f962cc-13e67-	46073406	c0a8-010b-17a01094d12-4dc68a37-13913-	Thôn Vọng Trì	Vong Tri Urban Section	\N	\N
+c0a8-010b-17a010983ff-bada6435-13e68-	46073501	c0a8-010b-17a01094d1c-99ef0946-13914-	Thôn Hải Thanh	Hai Thanh Urban Section	\N	\N
+c0a8-010b-17a0109840a-200fecd-13e69-9	46073502	c0a8-010b-17a01094d1c-99ef0946-13914-	Thôn Hòa An	Hoa An Urban Section	\N	\N
+c0a8-010b-17a01098413-90ec128a-13e6a-	46073503	c0a8-010b-17a01094d1c-99ef0946-13914-	Thôn Lại Lộc	Lai Loc Urban Section	\N	\N
+c0a8-010b-17a0109841d-b2d20d38-13e6b-	46073504	c0a8-010b-17a01094d1c-99ef0946-13914-	Thôn Quy Lai	Quy Lai Urban Section	\N	\N
+c0a8-010b-17a01098429-d962a185-13e6c-	46073601	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn An Dương	An Duong Urban Section	\N	\N
+c0a8-010b-17a01098434-1fd3f8e7-13e6d-	46073602	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Bằng Lãng	Bang Lang Urban Section	\N	\N
+c0a8-010b-17a0109843e-85f6b8fb-13e6e-	46073603	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Châu Chữ	Chau Chu Urban Section	\N	\N
+c0a8-010b-17a01098448-47064086-13e6f-	46073604	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Cư Chánh 1	Cu Chanh 1 Urban Section	\N	\N
+c0a8-010b-17a01098453-ac9b80ea-13e70-	46073605	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Cư Chánh 2	Cu Chanh 2 Urban Section	\N	\N
+c0a8-010b-17a0109845d-90322911-13e71-	46072905	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 5	Urban Section 5	\N	\N
+c0a8-010b-17a01098469-7a18bea2-13e72-	46072906	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 6	Urban Section 6	\N	\N
+c0a8-010b-17a01098475-9c63f391-13e73-	46072907	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 7	Urban Section 7	\N	\N
+c0a8-010b-17a01098480-f6b9009b-13e74-	46072908	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 8	Urban Section 8	\N	\N
+c0a8-010b-17a01098489-945b683a-13e75-	46072909	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 9	Urban Section 9	\N	\N
+c0a8-010b-17a01098493-2f7301ba-13e76-	46072910	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 10	Urban Section 10	\N	\N
+c0a8-010b-17a0109849d-46f22478-13e77-	46072911	c0a8-010b-17a01094ce0-31162132-1390e-	Tổ dân phố 11	Urban Section 11	\N	\N
+c0a8-010b-17a010984a7-847dacd2-13e78-	46073001	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Thai Dương Hạ Bắc	Thai Duong Ha Bac Urban Section	\N	\N
+c0a8-010b-17a010984b0-56c15b85-13e79-	46073002	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Thai Dương Hạ Nam	Thai Duong Ha Nam Urban Section	\N	\N
+c0a8-010b-17a010984ba-181c3e45-13e7a-	46073003	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Thai Dương Hạ Trung	Thai Duong Ha Trung Urban Section	\N	\N
+c0a8-010b-17a010984c5-632a317-13e7b-4	46073004	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Thai Dương Thượng Đông	Thai Duong Thuong Dong Urban Section	\N	\N
+c0a8-010b-17a010984ce-5b37f1a2-13e7c-	46073005	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Thai Dương Thượng Tây	Thai Duong Thuong Tay Urban Section	\N	\N
+c0a8-010b-17a010984d9-49f74cc5-13e7d-	46073006	c0a8-010b-17a01094cea-696e48c8-1390f-	Thôn Vĩnh Trị	Vinh Tri Urban Section	\N	\N
+c0a8-010b-17a010984e4-92a42213-13e7e-	46073101	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn An Lai	An Lai Urban Section	\N	\N
+c0a8-010b-17a010984ed-bfac2e28-13e7f-	46073102	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn Thanh Phước	Thanh Phuoc Urban Section	\N	\N
+c0a8-010b-17a010984f8-ba6521f0-13e80-	46073103	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn Thuận Hòa	Thuan Hoa Urban Section	\N	\N
+c0a8-010b-17a01098501-36b920f-13e81-9	46073104	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn Tiền Thành	Tien Thanh Urban Section	\N	\N
+c0a8-010b-17a0109850b-88726547-13e82-	46073105	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn Vân Quật Đông	Van Quat Dong Urban Section	\N	\N
+c0a8-010b-17a01098515-2272ff3b-13e83-	46073106	c0a8-010b-17a01094cf4-3bd7ae25-13910-	Thôn Vân Quật Thượng	Van Quat Thuong Urban Section	\N	\N
+c0a8-010b-17a0109851f-e66c4803-13e84-	46073201	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Định Môn	Dinh Mon Urban Section	\N	\N
+c0a8-010b-17a01098528-f75edce-13e85-c	46073202	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Hải Cát	Hai Cat Urban Section	\N	\N
+c0a8-010b-17a01098532-85b2cb50-13e86-	46073203	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Hòa An	Hoa An Urban Section	\N	\N
+c0a8-010b-17a0109853c-898fb200-13e87-	46073204	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Kim Ngọc	Kim Ngoc Urban Section	\N	\N
+c0a8-010b-17a01098545-ed5d286f-13e88-	46073205	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn La Khê Bãi	La Khe Bai Urban Section	\N	\N
+c0a8-010b-17a01098550-d847c53e-13e89-	46073606	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Dạ Khê	Da Khe Urban Section	\N	\N
+c0a8-010b-17a0109855e-d66c5e17-13e8a-	46073607	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Kim Sơn	Kim Son Urban Section	\N	\N
+c0a8-010b-17a01098568-c5b7d17c-13e8b-	46073608	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn La Khê	La Khe Urban Section	\N	\N
+c0a8-010b-17a01098573-8530a6ed-13e8c-	46073609	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Nguyệt Biều	Nguyet Bieu Urban Section	\N	\N
+c0a8-010b-17a0109857d-822edbd1-13e8d-	46073610	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Tân Ba	Tan Ba Urban Section	\N	\N
+c0a8-010b-17a01098586-2efe0788-13e8e-	46073611	c0a8-010b-17a01094d26-eceb593f-13915-	Thôn Vỹ Xá	Vy Xa Urban Section	\N	\N
+c0a8-010b-17a010985d7-4527fae1-13e96-	46073206	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn La Khê Trẹm	La Khe Trem Urban Section	\N	\N
+c0a8-010b-17a010985e3-ab2ae41f-13e97-	46073207	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Liên Bằng	Lien Bang Urban Section	\N	\N
+c0a8-010b-17a010985ec-b03cdbb8-13e98-	46073208	c0a8-010b-17a01094cfd-f44f86ca-13911-	Thôn Thạch Hàn	Thach Han Urban Section	\N	\N
+c0a8-010b-17a010985f6-1724ec56-13e99-	46073301	c0a8-010b-17a01094d08-bfd1a10d-13912-	Thôn Dương Nổ Cồn	Duong No Con Urban Section	\N	\N
+c0a8-003e-17e712d40f3-c946ffe9-3-81bf	46	\N	Tỉnh Thừa Thiên Huế	Thua Thien Hue Province	\N	\N
+\.
+
+
+--
+-- TOC entry 2034 (class 0 OID 46323)
+-- Dependencies: 175
+-- Data for Name: Gazetteer_TT; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "Gazetteer_TT" ("Gazetteer_localid", "Long", "Lat") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2035 (class 0 OID 46326)
+-- Dependencies: 176
+-- Data for Name: News; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "News" ("NewsId", "Title", "Description", "Slug", "Content", "Author", "Published", "AuthorId", "DateCreated", "DateUpdated", "ContentEn", "DescriptionEn", "TitleEn", "SlugEn", "StrUrlImage") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2036 (class 0 OID 46334)
+-- Dependencies: 177
+-- Data for Name: NewsCategorys; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "NewsCategorys" ("NewsID", "CategoryID", "PostID") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2037 (class 0 OID 46339)
+-- Dependencies: 179
+-- Data for Name: OperationPlanWeek; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "OperationPlanWeek" ("OperationPlanWeekID", "Week", "Year", "FromDate", "ToDate") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2038 (class 0 OID 46344)
+-- Dependencies: 181
+-- Data for Name: OperationPlans; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "OperationPlans" ("Id", "Week", "Org", "Team", "Activity", "ProvinceID", "DistictID", "CommuneID", "VillageID", "TaskID", "Areas", "StartDate", "EndDate", "Comment", "UserCreated", "DateCreated", "DateUpdated") FROM stdin;
+\.
+
+
+--
+-- TOC entry 2039 (class 0 OID 46352)
+-- Dependencies: 183
+-- Data for Name: Organization; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "Organization" ("Id", "OrganizationCode", "ParentId", "OrganizationName", "OganizationNameEN") FROM stdin;
+5	VN_QB_MAT01	1	VN_QB_MAT01	VN_QB_MAT01
+6	VN_QB_MAT02	1	VN_QB_MAT02	VN_QB_MAT02
+7	VN_QB_MAT03	1	VN_QB_MAT03	VN_QB_MAT03
+8	VN_QB_MAT04	1	VN_QB_MAT04	VN_QB_MAT04
+9	VN_QB_MAT05	1	VN_QB_MAT05	VN_QB_MAT05
+10	VN_QB_MAT06	1	VN_QB_MAT06	VN_QB_MAT06
+11	VN_QB_MAT07	1	VN_QB_MAT07	VN_QB_MAT07
+12	VN_QB_MAT08	1	VN_QB_MAT08	VN_QB_MAT08
+13	VN_QB_MAT09	1	VN_QB_MAT09	VN_QB_MAT09
+14	VN_QB_MAT10	1	VN_QB_MAT10	VN_QB_MAT10
+15	VN_QB_MTT01	1	VN_QB_MTT01	VN_QB_MTT01
+16	VN_QB_CST01	1	VN_QB_CST01	VN_QB_CST01
+17	VN_QB_CST02	1	VN_QB_CST02	VN_QB_CST02
+18	VN_QB_CST03	1	VN_QB_CST03	VN_QB_CST03
+19	VN_QB_CST04	1	VN_QB_CST04	VN_QB_CST04
+20	VN_QB_CST05	1	VN_QB_CST05	VN_QB_CST05
+21	MTT1	2	MTT1	MTT1
+22	MTT2	2	MTT2	MTT2
+23	MTT3	2	MTT3	MTT3
+24	MTT4	2	MTT4	MTT4
+25	TS1	4	TS1	TS1
+26	TS2	4	TS2	TS2
+27	TS3	4	TS3	TS3
+28	TS4	4	TS4	TS4
+29	NTS1	4	NTS1	NTS1
+30	NTS2	4	NTS2	NTS2
+31	NTS3	4	NTS3	NTS3
+32	NTS4	4	NTS4	NTS4
+33	NTS5	4	NTS5	NTS5
+1	MAG	\N	MAG-Mines Advisory Group	MAG
+2	PTVN	\N	PTVN-Peacetrees VietNam	PTVN
+4	NPA	\N	NPA-NPA VietNam	NPA
+35	BAC1	2	BAC1	BAC1
+36	BAC2	2	BAC2	BAC2
+38	CST1	2	CST1	CST1
+34	PMCTTHue	\N	PMC Thua Thien Hue	PMCQB
+\.
+
+
+--
+-- TOC entry 2040 (class 0 OID 46360)
+-- Dependencies: 185
+-- Data for Name: __EFMigrationsHistory; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY "__EFMigrationsHistory" ("MigrationId", "ProductVersion") FROM stdin;
+20210416063855_InitialCreate	3.1.13
+20210506022721_InitialCreate1	3.1.13
+20210506051940_InitialCreate2	3.1.13
+20210506074206_InitialCreate3	3.1.13
+20210506074721_InitialCreate4	3.1.13
+\.
+
+
+--
+-- TOC entry 2041 (class 0 OID 46363)
+-- Dependencies: 186
+-- Data for Name: bombingqb; Type: TABLE DATA; Schema: public; Owner: imsma
+--
+
+COPY bombingqb ("FID", latitude, longitude, date_bom, "NUM_ACRFT", "AIRCRAFT", "LOAD_QTY", "LOAD_LBS", "ORDNANCE", "ORD_CLASS", "CATEGORY", "TARGET", "BDA") FROM stdin;
+\.
+
+
+--
+-- TOC entry 1954 (class 2606 OID 46407)
+-- Dependencies: 161 161
+-- Name: PK_ActivityMA; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "ActivityMA"
+    ADD CONSTRAINT "PK_ActivityMA" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1957 (class 2606 OID 46409)
+-- Dependencies: 163 163
+-- Name: PK_AspNetRoleClaims; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetRoleClaims"
+    ADD CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1959 (class 2606 OID 46411)
+-- Dependencies: 165 165
+-- Name: PK_AspNetRoles; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetRoles"
+    ADD CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1963 (class 2606 OID 46413)
+-- Dependencies: 166 166
+-- Name: PK_AspNetUserClaims; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetUserClaims"
+    ADD CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1966 (class 2606 OID 46415)
+-- Dependencies: 168 168 168
+-- Name: PK_AspNetUserLogins; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetUserLogins"
+    ADD CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey");
+
+
+--
+-- TOC entry 1969 (class 2606 OID 46417)
+-- Dependencies: 169 169 169
+-- Name: PK_AspNetUserRoles; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetUserRoles"
+    ADD CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId");
+
+
+--
+-- TOC entry 1971 (class 2606 OID 46419)
+-- Dependencies: 170 170 170 170
+-- Name: PK_AspNetUserTokens; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetUserTokens"
+    ADD CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name");
+
+
+--
+-- TOC entry 1974 (class 2606 OID 46421)
+-- Dependencies: 171 171
+-- Name: PK_AspNetUsers; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "AspNetUsers"
+    ADD CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1979 (class 2606 OID 46423)
+-- Dependencies: 172 172
+-- Name: PK_Category; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "Category"
+    ADD CONSTRAINT "PK_Category" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 1982 (class 2606 OID 46425)
+-- Dependencies: 174 174
+-- Name: PK_Gazetteer; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "Gazetteer"
+    ADD CONSTRAINT "PK_Gazetteer" PRIMARY KEY ("Gazetteer_guid");
+
+
+--
+-- TOC entry 1984 (class 2606 OID 46427)
+-- Dependencies: 176 176
+-- Name: PK_News; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "News"
+    ADD CONSTRAINT "PK_News" PRIMARY KEY ("NewsId");
+
+
+--
+-- TOC entry 1988 (class 2606 OID 46429)
+-- Dependencies: 177 177 177
+-- Name: PK_NewsCategorys; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "NewsCategorys"
+    ADD CONSTRAINT "PK_NewsCategorys" PRIMARY KEY ("NewsID", "CategoryID");
+
+
+--
+-- TOC entry 1990 (class 2606 OID 46431)
+-- Dependencies: 179 179
+-- Name: PK_OperationPlanWeek; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "OperationPlanWeek"
+    ADD CONSTRAINT "PK_OperationPlanWeek" PRIMARY KEY ("OperationPlanWeekID");
+
+
+--
+-- TOC entry 2000 (class 2606 OID 46433)
+-- Dependencies: 181 181
+-- Name: PK_OperationPlans; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "PK_OperationPlans" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 2003 (class 2606 OID 46435)
+-- Dependencies: 183 183
+-- Name: PK_Organization; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "Organization"
+    ADD CONSTRAINT "PK_Organization" PRIMARY KEY ("Id");
+
+
+--
+-- TOC entry 2005 (class 2606 OID 46437)
+-- Dependencies: 185 185
+-- Name: PK___EFMigrationsHistory; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY "__EFMigrationsHistory"
+    ADD CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId");
+
+
+--
+-- TOC entry 2007 (class 2606 OID 46439)
+-- Dependencies: 186 186
+-- Name: bombingqb_pkey; Type: CONSTRAINT; Schema: public; Owner: imsma; Tablespace: 
+--
+
+ALTER TABLE ONLY bombingqb
+    ADD CONSTRAINT bombingqb_pkey PRIMARY KEY ("FID");
+
+
+--
+-- TOC entry 1972 (class 1259 OID 46440)
+-- Dependencies: 171
+-- Name: EmailIndex; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "EmailIndex" ON "AspNetUsers" USING btree ("NormalizedEmail");
+
+
+--
+-- TOC entry 1955 (class 1259 OID 46441)
+-- Dependencies: 163
+-- Name: IX_AspNetRoleClaims_RoleId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" USING btree ("RoleId");
+
+
+--
+-- TOC entry 1961 (class 1259 OID 46442)
+-- Dependencies: 166
+-- Name: IX_AspNetUserClaims_UserId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" USING btree ("UserId");
+
+
+--
+-- TOC entry 1964 (class 1259 OID 46443)
+-- Dependencies: 168
+-- Name: IX_AspNetUserLogins_UserId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" USING btree ("UserId");
+
+
+--
+-- TOC entry 1967 (class 1259 OID 46444)
+-- Dependencies: 169
+-- Name: IX_AspNetUserRoles_RoleId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" USING btree ("RoleId");
+
+
+--
+-- TOC entry 1976 (class 1259 OID 46445)
+-- Dependencies: 172
+-- Name: IX_Category_ParentId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_Category_ParentId" ON "Category" USING btree ("ParentId");
+
+
+--
+-- TOC entry 1977 (class 1259 OID 46446)
+-- Dependencies: 172
+-- Name: IX_Category_Slug; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_Category_Slug" ON "Category" USING btree ("Slug");
+
+
+--
+-- TOC entry 1980 (class 1259 OID 46447)
+-- Dependencies: 174
+-- Name: IX_Gazetteer_Parentgazetteer_guid; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_Gazetteer_Parentgazetteer_guid" ON "Gazetteer" USING btree ("Parentgazetteer_guid");
+
+
+--
+-- TOC entry 1985 (class 1259 OID 46448)
+-- Dependencies: 177
+-- Name: IX_NewsCategorys_CategoryID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_NewsCategorys_CategoryID" ON "NewsCategorys" USING btree ("CategoryID");
+
+
+--
+-- TOC entry 1986 (class 1259 OID 46449)
+-- Dependencies: 177
+-- Name: IX_NewsCategorys_PostID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_NewsCategorys_PostID" ON "NewsCategorys" USING btree ("PostID");
+
+
+--
+-- TOC entry 1991 (class 1259 OID 46450)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_Activity; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_Activity" ON "OperationPlans" USING btree ("Activity");
+
+
+--
+-- TOC entry 1992 (class 1259 OID 46451)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_CommuneID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_CommuneID" ON "OperationPlans" USING btree ("CommuneID");
+
+
+--
+-- TOC entry 1993 (class 1259 OID 46452)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_DistictID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_DistictID" ON "OperationPlans" USING btree ("DistictID");
+
+
+--
+-- TOC entry 1994 (class 1259 OID 46453)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_Org; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_Org" ON "OperationPlans" USING btree ("Org");
+
+
+--
+-- TOC entry 1995 (class 1259 OID 46454)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_ProvinceID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_ProvinceID" ON "OperationPlans" USING btree ("ProvinceID");
+
+
+--
+-- TOC entry 1996 (class 1259 OID 46455)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_Team; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_Team" ON "OperationPlans" USING btree ("Team");
+
+
+--
+-- TOC entry 1997 (class 1259 OID 46456)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_VillageID; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_VillageID" ON "OperationPlans" USING btree ("VillageID");
+
+
+--
+-- TOC entry 1998 (class 1259 OID 46457)
+-- Dependencies: 181
+-- Name: IX_OperationPlans_Week; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_OperationPlans_Week" ON "OperationPlans" USING btree ("Week");
+
+
+--
+-- TOC entry 2001 (class 1259 OID 46458)
+-- Dependencies: 183
+-- Name: IX_Organization_ParentId; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE INDEX "IX_Organization_ParentId" ON "Organization" USING btree ("ParentId");
+
+
+--
+-- TOC entry 1960 (class 1259 OID 46459)
+-- Dependencies: 165
+-- Name: RoleNameIndex; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" USING btree ("NormalizedName");
+
+
+--
+-- TOC entry 1975 (class 1259 OID 46460)
+-- Dependencies: 171
+-- Name: UserNameIndex; Type: INDEX; Schema: public; Owner: imsma; Tablespace: 
+--
+
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" USING btree ("NormalizedUserName");
+
+
+--
+-- TOC entry 2008 (class 2606 OID 46461)
+-- Dependencies: 1958 163 165
+-- Name: FK_AspNetRoleClaims_AspNetRoles_RoleId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetRoleClaims"
+    ADD CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2009 (class 2606 OID 46466)
+-- Dependencies: 171 166 1973
+-- Name: FK_AspNetUserClaims_AspNetUsers_UserId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserClaims"
+    ADD CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2010 (class 2606 OID 46471)
+-- Dependencies: 1973 168 171
+-- Name: FK_AspNetUserLogins_AspNetUsers_UserId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserLogins"
+    ADD CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2011 (class 2606 OID 46476)
+-- Dependencies: 169 165 1958
+-- Name: FK_AspNetUserRoles_AspNetRoles_RoleId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserRoles"
+    ADD CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2012 (class 2606 OID 46481)
+-- Dependencies: 169 171 1973
+-- Name: FK_AspNetUserRoles_AspNetUsers_UserId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserRoles"
+    ADD CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2013 (class 2606 OID 46486)
+-- Dependencies: 1973 170 171
+-- Name: FK_AspNetUserTokens_AspNetUsers_UserId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "AspNetUserTokens"
+    ADD CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2014 (class 2606 OID 46491)
+-- Dependencies: 1978 172 172
+-- Name: FK_Category_Category_ParentId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "Category"
+    ADD CONSTRAINT "FK_Category_Category_ParentId" FOREIGN KEY ("ParentId") REFERENCES "Category"("Id") ON DELETE RESTRICT;
+
+
+--
+-- TOC entry 2015 (class 2606 OID 46552)
+-- Dependencies: 1981 174 174
+-- Name: FK_Gazetteer_Gazetteer_Parentgazetteer_guid; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "Gazetteer"
+    ADD CONSTRAINT "FK_Gazetteer_Gazetteer_Parentgazetteer_guid" FOREIGN KEY ("Parentgazetteer_guid") REFERENCES "Gazetteer"("Gazetteer_guid") ON DELETE RESTRICT;
+
+
+--
+-- TOC entry 2016 (class 2606 OID 46501)
+-- Dependencies: 172 177 1978
+-- Name: FK_NewsCategorys_Category_CategoryID; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "NewsCategorys"
+    ADD CONSTRAINT "FK_NewsCategorys_Category_CategoryID" FOREIGN KEY ("CategoryID") REFERENCES "Category"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2017 (class 2606 OID 46506)
+-- Dependencies: 177 1983 176
+-- Name: FK_NewsCategorys_News_PostID; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "NewsCategorys"
+    ADD CONSTRAINT "FK_NewsCategorys_News_PostID" FOREIGN KEY ("PostID") REFERENCES "News"("NewsId") ON DELETE RESTRICT;
+
+
+--
+-- TOC entry 2018 (class 2606 OID 46511)
+-- Dependencies: 1953 161 181
+-- Name: FK_OperationPlans_ActivityMA_Activity; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "FK_OperationPlans_ActivityMA_Activity" FOREIGN KEY ("Activity") REFERENCES "ActivityMA"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2019 (class 2606 OID 46516)
+-- Dependencies: 181 1981 174
+-- Name: FK_OperationPlans_Gazetteer_ProvinceID; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "FK_OperationPlans_Gazetteer_ProvinceID" FOREIGN KEY ("ProvinceID") REFERENCES "Gazetteer"("Gazetteer_guid") ON DELETE RESTRICT;
+
+
+--
+-- TOC entry 2020 (class 2606 OID 46521)
+-- Dependencies: 181 179 1989
+-- Name: FK_OperationPlans_OperationPlanWeek_Week; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "FK_OperationPlans_OperationPlanWeek_Week" FOREIGN KEY ("Week") REFERENCES "OperationPlanWeek"("OperationPlanWeekID") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2021 (class 2606 OID 46526)
+-- Dependencies: 181 183 2002
+-- Name: FK_OperationPlans_Organization_Org; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "FK_OperationPlans_Organization_Org" FOREIGN KEY ("Org") REFERENCES "Organization"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2022 (class 2606 OID 46531)
+-- Dependencies: 183 181 2002
+-- Name: FK_OperationPlans_Organization_Team; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "OperationPlans"
+    ADD CONSTRAINT "FK_OperationPlans_Organization_Team" FOREIGN KEY ("Team") REFERENCES "Organization"("Id") ON DELETE CASCADE;
+
+
+--
+-- TOC entry 2023 (class 2606 OID 46536)
+-- Dependencies: 183 183 2002
+-- Name: FK_Organization_Organization_ParentId; Type: FK CONSTRAINT; Schema: public; Owner: imsma
+--
+
+ALTER TABLE ONLY "Organization"
+    ADD CONSTRAINT "FK_Organization_Organization_ParentId" FOREIGN KEY ("ParentId") REFERENCES "Organization"("Id") ON DELETE RESTRICT;
+
+
+--
+-- TOC entry 2046 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2022-11-15 17:16:32
+
+--
+-- PostgreSQL database dump complete
+--
+

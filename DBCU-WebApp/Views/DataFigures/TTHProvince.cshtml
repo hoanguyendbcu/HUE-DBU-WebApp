@@ -3,6 +3,8 @@
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
     ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+
 }
 <style>
 
@@ -135,52 +137,27 @@
             <div class="row">
 
                 <div class="col-lg-12">
-                    <h3 class="entry-title">@ViewLocalizer["lblStatitictis"]</h3>
-
-                    <div class="row">
-
-                        <div class="col-lg-12">
-                            <div id="clearncechart2"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis5"]</p>
-                                <div id="ampiechart11"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis6"]</p>
-                                <div id="ampiechart111"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis9"]</p>
-                                <div id="ampiechart22"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis10"]</p>
-                                <div id="ampiechart222"></div>
-                            </div>
-                        </div>
-                    </div>
+                    @if(lang == "vi")
+                    {
+                        <iframe title="TTH_SURVEY_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiM2JmOGVhYTctMWQ3NS00YjAyLWFlOWItMjc0YjBiYjE5ODEwIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="TTH_CLC_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzk4MjlmMTYtNmYwZC00NjY1LWE0YTQtOTE5OGRjODhmNzFhIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                        
+                    
+                    
+                    }
+                    else if (lang == "en")
+                    {
+                        <iframe title="TTH_SURVEY_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiM2JmOGVhYTctMWQ3NS00YjAyLWFlOWItMjc0YjBiYjE5ODEwIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection51bd5a33230ec1e03437" frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="TTH_CLC_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzk4MjlmMTYtNmYwZC00NjY1LWE0YTQtOTE5OGRjODhmNzFhIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectionc5018560ed005b11c60e" frameborder="0" allowFullScreen="true"></iframe>
+                       
+                    }
                 </div>
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="sidebar-item tags">
                         <br />
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
