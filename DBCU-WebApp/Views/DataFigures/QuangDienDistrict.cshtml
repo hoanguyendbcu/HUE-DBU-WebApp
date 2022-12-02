@@ -3,6 +3,7 @@
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
     ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["TTHProvince"].Value + " - " + ViewLocalizer["lblQuangDienDistrict"].Value;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
     figure {
@@ -138,41 +139,23 @@
                     <div class="row">
 
                         <div class="col-lg-12">
-                            <div id="clearncechart2"></div>
-                        </div>
-                    </div>
 
+                            @if (lang == "vi")
+                            {
+                                <iframe title="CLC_Item_QDien477" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 
-                    <div class="row">
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis5"]</p>
-                                <div id="ampiechart11"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis6"]</p>
-                                <div id="ampiechart111"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis9"]</p>
-                                <div id="ampiechart22"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-2">
-                            <div class="card">
-                                <p>&nbsp;@ViewLocalizer["lblStatitictis10"]</p>
-                                <div id="ampiechart222"></div>
-                            </div>
+                            }
+                            else if (lang == "en")
+                            {
+                                <iframe title="CLC_Item_QDien477" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectiona9b4b6c15008ed8c05b3" frameborder="0" allowFullScreen="true"></iframe>
+
+                            }
+
                         </div>
                     </div>
                 </div>
+
+
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="sidebar-item tags">
                         <br />
