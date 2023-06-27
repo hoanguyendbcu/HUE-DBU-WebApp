@@ -199,13 +199,13 @@
     <value>13 communes: Phú An, Phú Diên, Phú Gia, Phú Hải, Phú Hồ, Phú Lương, Phú Mỹ, Phú Thuận, Phú Xuân, Vinh An, Vinh Hà, Vinh Thanh, Vinh Xuân.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Vung Chua - Yen Island</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblPhuVang" xml:space="preserve">
     <value>PhuVang District</value>
@@ -214,7 +214,7 @@
     <value>Quang Binh Province</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -255,6 +255,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>

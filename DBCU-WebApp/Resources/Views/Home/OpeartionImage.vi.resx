@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>Giới thiệu</value>
   </data>
+  <data name="AccidentVictim" xml:space="preserve">
+    <value>Tai nạn &amp; nạn nhân</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>Tất cả</value>
   </data>
@@ -138,6 +141,9 @@
   <data name="Event" xml:space="preserve">
     <value>Sự kiện</value>
   </data>
+  <data name="Field" xml:space="preserve">
+    <value>Hiện trường</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
   </data>
@@ -147,10 +153,16 @@
   <data name="OperationPlan" xml:space="preserve">
     <value>Kế hoạch hoạt động</value>
   </data>
+  <data name="Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
   <data name="Photos" xml:space="preserve">
     <value>Hình ảnh hoạt động</value>
   </data>
   <data name="Scene" xml:space="preserve">
     <value>Hiện trường</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Tập huấn</value>
   </data>
 </root>

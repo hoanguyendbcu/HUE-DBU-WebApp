@@ -2,7 +2,8 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["DataAndFigures"].Value + " - " + ViewLocalizer["lblMineActionVictim"].Value;
+    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["DataAndFigures"].Value + " - " + ViewLocalizer["lblMineActionSurvey"].Value;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 
 <style>
@@ -56,20 +57,20 @@
                 }
 </style>
 
-<!-- ======= Breadcrumbs ======= -->
-<section class="breadcrumbs">
-    <div class="container">
 
-        <ol>
+<!-- ======= Breadcrumbs ======= -->
+
+<section class="breadcrumbs" style="background-image: url('../images/bg/banner-khaosat1.jpg');height:45vh;background-size: 100% 100%;">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2 class="text-uppercase">@ViewLocalizer["lblMineActionVictim"]</h2>
+        @*<ol>
             <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
             <li>@ViewLocalizer["DataAndFigures"]</li>
             <li>@ViewLocalizer["lblByAction"]</li>
             <li>@ViewLocalizer["lblMineActionVictim"]</li>
-        </ol>
-
+        </ol>*@
     </div>
-</section>
-<!-- End Breadcrumbs -->
+</section><!-- End Breadcrumbs -->
 <!-- ======= Blog Section ======= -->
 <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
@@ -77,46 +78,33 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-            <!-- Content Row -->
-            <div class="row">
-                <!-- Border Left Utilities -->
-                <div class="col-xl-6 col-md-6 mb-1">
-                    @*@ViewLocalizer["lblIntrodution"]*@
-                    @ViewLocalizer["lblIntrodution"]
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                </div>
-            </div>
+            @* <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary"> @ViewLocalizer["lblDashboard"]</h6>
+
+            </div>*@
+
+            <!-- Insert BI-->
+            @if (lang == "vi")
+            {
+                <iframe title="Victim" width="1200" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzJiOTlhMWQtMzRlYy00OWVlLWJmMzgtYmU5MzljMzQ0MzlkIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+
+            }
+            else if (lang == "en")
+            {
+
+                <iframe title="Victim" width="1200" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzJiOTlhMWQtMzRlYy00OWVlLWJmMzgtYmU5MzljMzQ0MzlkIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectione00685cb696a36450c2a" frameborder="0" allowFullScreen="true"></iframe>
+            }
             <br />
 
-          
+
+
+            <!-- Content Row -->
+            <!--/ xóa phần div class row-->
+            <!-- /.container-fluid -->
+
         </div>
     </div>
 </section>
 
-@section Scripts {
-    <script>
- 
 
-    </script>
-}
+

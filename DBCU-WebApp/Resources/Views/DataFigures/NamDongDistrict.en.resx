@@ -199,7 +199,7 @@
     <value>9 communes: Huong Huu, Huong Loc, Huong Phu, Huong Son, Huong Xuan, Thuong Lo, Thuong Long, Thuong Nhat, Thuong Quang</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Phong nha Cave</value>
@@ -208,13 +208,13 @@
     <value>Nam Dong District</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
     <value>Quang Binh Province</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -255,6 +255,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="TTHProvince" xml:space="preserve">
     <value>Data And Figures - Thua Thien Hue Province</value>

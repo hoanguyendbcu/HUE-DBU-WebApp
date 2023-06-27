@@ -62,12 +62,12 @@
 <section class="breadcrumbs" style="background-image: url('../images/bg/banner-rapha1.jpg');height:45vh;background-size: 100% 100%;"> 
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
         <h2 class="text-uppercase" >@ViewLocalizer["lblMineActionClearance"]</h2>
-        <ol>
+       @* <ol>
             <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
             <li>@ViewLocalizer["DataAndFigures"]</li>
             <li>@ViewLocalizer["lblByAction"]</li>
             <li>@ViewLocalizer["lblMineActionClearance"]</li>
-        </ol>
+        </ol>*@
     </div>
 </section><!-- End Breadcrumbs -->
 <!-- End Breadcrumbs -->
@@ -93,40 +93,18 @@
         @if (lang == "vi")
         {
             <iframe title="CLC_DashBoard_REPORT_VN" width="1280" height="750"
-                src="https://www.arcgis.com/apps/dashboards/41888ac7a3ce4fa5afed0930d4043bcc" frameborder="0" allowFullScreen="true"></iframe>
+                src="https://www.arcgis.com/apps/dashboards/5a25958b11254684bbc585c5bb135ef2" frameborder="0" allowFullScreen="true"></iframe>
 
         }
         else if (lang == "en")
         {
             <iframe title="CLC_DashBoard_REPORT_EL" width="1280" height="750"
-                src="https://www.arcgis.com/apps/dashboards/f1e08452182f4b70aa7b79075f30300a" frameborder="0" allowFullScreen="true"></iframe>
+                src="https://www.arcgis.com/apps/dashboards/e48ac589f84343b2a7715e5306f76ee6" frameborder="0" allowFullScreen="true"></iframe>
         }
 
-        <br />
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        <br /> 
     </div>
-
-
-
-
-
 </section>
-
-
-
-
-
-
-
-
 @section Scripts {
     <script>      
         loadDataMineActionClearance();

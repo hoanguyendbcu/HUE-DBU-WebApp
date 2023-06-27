@@ -1206,26 +1206,26 @@ namespace DBCU_WebApp.Controllers
 
         public async Task<IActionResult> ByMineActionMRE(string org)
         {
-            ViewBag.NavClassByMineAction = "active";
+            //ViewBag.NavClassByMineAction = "active";
 
-            var listOrganization = await _context.Organization
-                .Where(p => p.ParentId == null)
-                .ToListAsync();
-            listOrganization.Insert(0, new Organization { Id = 0, OrganizationName = "All" });
-            ViewData["listOrganization"] = new MultiSelectList(listOrganization, "OrganizationCode", "OrganizationName");
+            //var listOrganization = await _context.Organization
+            //    .Where(p => p.ParentId == null)
+            //    .ToListAsync();
+            //listOrganization.Insert(0, new Organization { Id = 0, OrganizationName = "All" });
+            //ViewData["listOrganization"] = new MultiSelectList(listOrganization, "OrganizationCode", "OrganizationName");
 
-            if (org == null || org == "") org = "0";
+            //if (org == null || org == "") org = "0";
 
-            var jsonDataMREByYear = await dataFiguresRepository.GetMREByYear(org);
-            ViewData["DataMREByYear"] = JsonSerializer.Serialize(jsonDataMREByYear);
+            //var jsonDataMREByYear = await dataFiguresRepository.GetMREByYear(org);
+            //ViewData["DataMREByYear"] = JsonSerializer.Serialize(jsonDataMREByYear);
 
-            ViewData["MREGenderMale"] = await dataFiguresRepository.GetMREGenderMale(org);
-            ViewData["MREGenderFemale"] = await dataFiguresRepository.GetMREGenderFemale(org);
-            ViewData["MREChild"] = await dataFiguresRepository.GetMREChild(org);
-            ViewData["MRETotal"] = await dataFiguresRepository.GetMRETotal(org);
+            //ViewData["MREGenderMale"] = await dataFiguresRepository.GetMREGenderMale(org);
+            //ViewData["MREGenderFemale"] = await dataFiguresRepository.GetMREGenderFemale(org);
+            //ViewData["MREChild"] = await dataFiguresRepository.GetMREChild(org);
+            //ViewData["MRETotal"] = await dataFiguresRepository.GetMRETotal(org);
 
-            if (HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
-                return PartialView("_MineActionMRE");
+            //if (HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            //    return PartialView("_MineActionMRE");
 
             return View();
         }

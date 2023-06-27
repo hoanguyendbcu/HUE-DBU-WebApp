@@ -241,7 +241,7 @@
     <value>EVENT</value>
   </data>
   <data name="lblHeroTop1" xml:space="preserve">
-    <value>If you find a Bomb suspicious object, Call the hotline number at 0988796120</value>
+    <value>If you find ERW, please call hotline number 0988796120</value>
   </data>
   <data name="lblHeroTop2" xml:space="preserve">
     <value>Database Unit of Mine Action in Thua Thue Hue Province</value>
@@ -262,19 +262,19 @@
     <value>Mine Action Activities</value>
   </data>
   <data name="lblMineActionQB" xml:space="preserve">
-    <value>Post-War Clearance Efforts to Release Land</value>
+    <value>EFFORTS TO OVERCOME THE LEGACY OF WAR IN THUA THIEN HUE</value>
   </data>
   <data name="lblNews" xml:space="preserve">
     <value>News</value>
   </data>
   <data name="lblNewsEvent" xml:space="preserve">
-    <value>Tin tức &amp; Sự kiện</value>
+    <value>News &amp; Event</value>
   </data>
   <data name="lblPictures" xml:space="preserve">
     <value>ACTIVITY PICTURES OF NEUTRALIZING THE EFFECT OF ERW</value>
   </data>
   <data name="lblPostWar" xml:space="preserve">
-    <value>POST-WAR CLEARANCE EFFORTS TO RELEASE LAND</value>
+    <value>EFFORTS TO OVERCOME THE LEGACY OF WAR IN THUA THIEN HUE PROVINCE</value>
   </data>
   <data name="lblReadMore" xml:space="preserve">
     <value>Read More</value>
@@ -301,10 +301,10 @@
     <value>PTVN</value>
   </data>
   <data name="QBDOFA" xml:space="preserve">
-    <value>Department of Foreign Affairs of Quang Binh</value>
+    <value>Department of Foreign Affairs of Thua Thien Hue</value>
   </data>
   <data name="QBPPM" xml:space="preserve">
-    <value>Military Command of Quang Binh</value>
+    <value>Military Command of Thua Thien Hue</value>
   </data>
   <data name="RiskEducation" xml:space="preserve">
     <value>Risk Education</value>
@@ -313,13 +313,13 @@
     <value>History of overcoming UXO</value>
   </data>
   <data name="String10" xml:space="preserve">
-    <value>Number of UXO that are safely</value>
+    <value>NUMBER OF ERW FOUND AND DESTROYED</value>
   </data>
   <data name="String17" xml:space="preserve">
-    <value>The total area of confirm hazardous areas established after survey activities.</value>
+    <value />
   </data>
   <data name="String18" xml:space="preserve">
-    <value>The total area of land contaminated by cluster munitions and other UXO are released.</value>
+    <value />
   </data>
   <data name="String19" xml:space="preserve">
     <value> </value>
@@ -328,19 +328,19 @@
     <value>In the period 2016-2020:</value>
   </data>
   <data name="String20" xml:space="preserve">
-    <value>The number of explosive ordnances including cluster submunitions, mines, and other UXO that are detected and safely destroyed.</value>
+    <value />
   </data>
   <data name="String21" xml:space="preserve">
-    <value>NUMBER OF PERSONS SUPPORTED</value>
+    <value>NUMBER OF PEOPLE SUPPORTED</value>
   </data>
   <data name="String22" xml:space="preserve">
-    <value>The number of people receiving support from organizations and individuals to improve their quality of life.</value>
+    <value />
   </data>
   <data name="String23" xml:space="preserve">
-    <value>THE NUMBER TURN OF PEOPLE RECEIVED EORE</value>
+    <value>PEOPLE RECEIVING EORE</value>
   </data>
   <data name="String24" xml:space="preserve">
-    <value>The number turns of people who received explosive ordnance risk education (EORE) to live safely before the land was completely released.</value>
+    <value />
   </data>
   <data name="String3" xml:space="preserve">
     <value>cleared, in which:</value>
@@ -355,28 +355,28 @@
     <value>MAG's site clearance chart</value>
   </data>
   <data name="String7" xml:space="preserve">
-    <value>Surveyed CHA area</value>
+    <value>CLUSTER MUNITION CHA</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>The total Area of land released</value>
+    <value>THE TOTAL AREA OF CLEARED LAND</value>
   </data>
   <data name="String9" xml:space="preserve">
-    <value>Number of EOD tasks completed</value>
+    <value>NUMBER OF EOD TASKS</value>
   </data>
   <data name="Survey" xml:space="preserve">
     <value>Survey</value>
   </data>
   <data name="tabs1" xml:space="preserve">
-    <value>According to the definition of IMAS (2013), this activity refers to the collection and analysis of data, without the use of technical interventions or using appropriate technical interventions, about the presence, type, distribution and surrounding environment of mine/ERW contamination, in order to define better where mine/ERW contamination is present, and where it is not, and to support land release prioritisation and decision-making processes through the provision of evidence.</value>
+    <value>According to the definition of IMAS, this activity refers to the collection and analysis of data, without the use of technical interventions or using appropriate technical interventions, about the presence, type, distribution, and surrounding environment of mine/ERW contamination, in order to define better where mine/ERW contamination is present, and where it is not, and to support land release prioritization and decision-making processes through the provision of evidence.</value>
   </data>
   <data name="tabs1s" xml:space="preserve">
     <value>Survey activity includes non-technical and technical survey.</value>
   </data>
   <data name="tabs2" xml:space="preserve">
-    <value>In the context of mine action, the term “Clearance” refers to tasks or actions to ensure the removal and/or the destruction of all mine and ERW hazards from a specified area to a specified depth. In Quang Tri Province, beside the “static clearance” of a particular area size, a lot of mobile explosive ordnance disposal activities (EOD) have been conducted to immediately remove and destroyed ERW found on the ground and reported by the local people.</value>
+    <value>In the context of mine action, the term “Clearance” refers to tasks or actions to ensure the removal and/or the destruction of all mine and ERW hazards from a specified area to a specified depth. In Thua Thien Hue Province, besides the “static clearance” of a particular area size, many mobile explosive ordnance disposal activities (EOD) have been conducted to immediately remove and destroy ERW found on the ground and reported by the local people.</value>
   </data>
   <data name="tabs2s" xml:space="preserve">
-    <value>According to the definition of IMAS (2013)</value>
+    <value>According to the definition of IMAS</value>
   </data>
   <data name="tabs3" xml:space="preserve">
     <value />
@@ -385,22 +385,22 @@
     <value>Accidents and Victims</value>
   </data>
   <data name="tabs4" xml:space="preserve">
-    <value>Mine Risk Education (MRE) is activities which seek to reduce the risk of injury from mines/ERW by raising awareness of men, women, and children in accordance with their different vulnerabilities, roles and needs, and promoting behavioural change including public information dissemination, education and training, and community mine action liaison…</value>
+    <value>Explosive Ordnance Risk Education (EORE) is activities that seek to reduce the risk of injury from mines/ERW by raising awareness of men, women, and children in accordance with their different vulnerabilities, roles, and needs, and promoting behavioral change including public information dissemination, education and training, and community mine action liaison…</value>
   </data>
   <data name="tabs4s" xml:space="preserve">
-    <value>According to the definition of IMAS (2009)</value>
+    <value>According to the definition of IMAS</value>
   </data>
   <data name="tabs5" xml:space="preserve">
     <value>Victims Assistance / Survivor Assistance refers to all aid, relief, comfort and support provided to victims (including survivors) with the purpose of reducing the immediate and long-term medical and psychological implications of their trauma.</value>
   </data>
   <data name="tabs5s" xml:space="preserve">
-    <value>According to the definition of IMAS (2004)</value>
+    <value>According to the definition of IMAS</value>
   </data>
   <data name="tabs6" xml:space="preserve">
-    <value>Post-clearance development plays an important role in improving the socio-economic situation, strongly concerned by the local people as well as local authorities, and has contributed to the effectiveness of “clearance” in a specified area. Organizations such as Quang Binh Military Command, KOICA, MAG, PTVN… … have supported in building up resettlement villages and other social welfare projects in some particular “cleared lands”.</value>
+    <value>Post-clearance development plays an important role in improving the socio-economic situation, is strongly concerned by the local people as well as local authorities, and has contributed to the effectiveness of “clearance” in a specified area.</value>
   </data>
   <data name="tabs6s" xml:space="preserve">
-    <value>Post-clearance development plays an important</value>
+    <value>Post-clearance development</value>
   </data>
   <data name="UNDP" xml:space="preserve">
     <value>UNDP</value>

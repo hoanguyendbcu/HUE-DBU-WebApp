@@ -61,18 +61,30 @@
 <section class="breadcrumbs" style="background-image: url('../images/bg/banner-mre.jpg');height:45vh;background-size: 100% 100%;"> 
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
         <h2 class="text-uppercase" >@ViewLocalizer["lblMineActionMRE"]</h2>
-        <ol>
+       @* <ol>
             <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
             <li>@ViewLocalizer["DataAndFigures"]</li>
             <li>@ViewLocalizer["lblByAction"]</li>
             <li>@ViewLocalizer["lblMineActionMRE"]</li>
-        </ol>
+        </ol>*@
     </div>
 </section><!-- End Breadcrumbs -->
 <!-- ======= Blog Section ======= -->
+@{
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
 <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
+           @if (lang == "vi")
+                                {
+                                    <h4>Dữ liệu đang được cập nhập!</h4>
+                                }
+                                else if (lang == "en")
+                                {
+                                    <h4>Data are being updated!</h4>
+                                }
         <partial name="_MineActionMRE" model="@Model" />
+     
         <!-- Begin Page Content -->
 
     </div>
@@ -80,7 +92,7 @@
 
 @section Scripts {
     <script>
-        loadDataMineActionMRE();
+        //loadDataMineActionMRE();
  
     </script> 
 }

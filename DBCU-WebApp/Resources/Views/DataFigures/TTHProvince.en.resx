@@ -194,22 +194,25 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Township: Huong Tra, Huong Thuy</value>
+    <value>Town: Huong Tra, Huong Thuy</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
     <value>Districts: A Luoi, Nam Dong, Phong Dien, Phu Loc, Phu Vang, Quang Dien</value>
   </data>
+  <data name="lblContentLeftCity" xml:space="preserve">
+    <value>City: Hue</value>
+  </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Hue City</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -253,6 +256,9 @@ Geographic position: The provincial mainland is located at the coordinates:</val
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Data And Figures - Quang Binh Province</value>

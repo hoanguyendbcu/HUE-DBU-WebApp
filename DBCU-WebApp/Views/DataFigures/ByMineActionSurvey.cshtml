@@ -63,12 +63,12 @@
 <section class="breadcrumbs" style="background-image: url('../images/bg/banner-khaosat1.jpg');height:45vh;background-size: 100% 100%;"> 
     <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
         <h2 class="text-uppercase" >@ViewLocalizer["lblMineActionSurvey"]</h2>
-        <ol>
-            <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+      @*  <ol>
+           <li><a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
             <li>@ViewLocalizer["DataAndFigures"]</li>
             <li>@ViewLocalizer["lblByAction"]</li>
             <li>@ViewLocalizer["lblMineActionSurvey"]</li>
-        </ol>
+        </ol>*@
     </div>
 </section><!-- End Breadcrumbs -->
 
@@ -107,13 +107,13 @@
             <!-- Insert DashBoard-->
             @if(lang == "vi")
                     {
-                        <iframe title="TTH_CLC_ITEM_MRE_REPORT" width="1280" height="750" 
-                            src="https://www.arcgis.com/apps/dashboards/ddacff386c7a4326b6c3f8da0ea3280a" frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="TTH_CLC_ITEM_MRE_REPORT" width="1280" height="750"
+                    src="https://www.arcgis.com/apps/dashboards/8b18762fdf4a41cfb7d105043134dd90" frameborder="0" allowFullScreen="true"></iframe>
                     }
                     else if (lang == "en")
                     {
                         <iframe title="TTH_CLC_ITEM_MRE_REPORT" width="1280" height="750"
-                    src="https://www.arcgis.com/apps/dashboards/d38b50df2575464ab5acb4560d02128d" frameborder="0" allowFullScreen="true"></iframe>
+                    src="https://www.arcgis.com/apps/dashboards/b57c784290774a9b9770b173d3434931" frameborder="0" allowFullScreen="true"></iframe>
                     }
 
             <br />

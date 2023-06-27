@@ -162,8 +162,17 @@
   <data name="Documents" xml:space="preserve">
     <value>Tài liệu</value>
   </data>
+  <data name="DOFA" xml:space="preserve">
+    <value>Sở Ngoại vụ Thừa Thiên Huế</value>
+  </data>
   <data name="DongHoi" xml:space="preserve">
     <value>TP Đồng Hới</value>
+  </data>
+  <data name="ERWSearch" xml:space="preserve">
+    <value>TRA CỨU VẬT NỔ</value>
+  </data>
+  <data name="GICHD" xml:space="preserve">
+    <value>GICHD</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
@@ -176,6 +185,9 @@
   </data>
   <data name="HuongTra" xml:space="preserve">
     <value>Thị xã Hương Trà</value>
+  </data>
+  <data name="IMAS" xml:space="preserve">
+    <value>IMAS</value>
   </data>
   <data name="lblInfor" xml:space="preserve">
     <value>Thông tin</value>
@@ -191,6 +203,9 @@
   </data>
   <data name="Library" xml:space="preserve">
     <value>Thư viện</value>
+  </data>
+  <data name="LINK" xml:space="preserve">
+    <value>Liên kết</value>
   </data>
   <data name="MineAction1" xml:space="preserve">
     <value>Khảo sát</value>
@@ -237,6 +252,12 @@
   <data name="PhuVang" xml:space="preserve">
     <value>Huyện Phú Vang</value>
   </data>
+  <data name="QBDBCU" xml:space="preserve">
+    <value>QB DBCU</value>
+  </data>
+  <data name="QTMAC" xml:space="preserve">
+    <value>QTMAC</value>
+  </data>
   <data name="QuangDien" xml:space="preserve">
     <value>Huyện Quảng Điền</value>
   </data>
@@ -257,5 +278,8 @@
   </data>
   <data name="Video" xml:space="preserve">
     <value>Phim</value>
+  </data>
+  <data name="VNMAC" xml:space="preserve">
+    <value>VNMAC</value>
   </data>
 </root>

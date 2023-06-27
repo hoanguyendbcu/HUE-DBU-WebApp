@@ -121,7 +121,7 @@
     <value>Introduction</value>
   </data>
   <data name="Address1" xml:space="preserve">
-    <value>7 st floor, HCC Building</value>
+    <value>5th floor, HCC Building</value>
   </data>
   <data name="Address2" xml:space="preserve">
     <value>28 Ly Thuong Kiet Street</value>
@@ -148,10 +148,10 @@
     <value>Register</value>
   </data>
   <data name="ByMineAction" xml:space="preserve">
-    <value>By Mine Action</value>
+    <value>By activity</value>
   </data>
   <data name="ByProvince" xml:space="preserve">
-    <value>By Province</value>
+    <value>By Administrative</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
@@ -162,8 +162,17 @@
   <data name="Documents" xml:space="preserve">
     <value>Documents</value>
   </data>
+  <data name="DOFA" xml:space="preserve">
+    <value>Thua Thien Hue Provincial DOFA</value>
+  </data>
   <data name="DongHoi" xml:space="preserve">
     <value>Dong Hoi City</value>
+  </data>
+  <data name="ERWSearch" xml:space="preserve">
+    <value>ERW SEARCH</value>
+  </data>
+  <data name="GICHD" xml:space="preserve">
+    <value>GICHD</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
@@ -176,6 +185,9 @@
   </data>
   <data name="HuongTra" xml:space="preserve">
     <value>Huong Tra Town</value>
+  </data>
+  <data name="IMAS" xml:space="preserve">
+    <value>IMAS</value>
   </data>
   <data name="lblInfor" xml:space="preserve">
     <value>Information</value>
@@ -190,7 +202,10 @@
     <value>Le Thuy District</value>
   </data>
   <data name="Library" xml:space="preserve">
-    <value>Library</value>
+    <value>Gallery</value>
+  </data>
+  <data name="LINK" xml:space="preserve">
+    <value>Link</value>
   </data>
   <data name="MineAction1" xml:space="preserve">
     <value>Survey</value>
@@ -223,7 +238,7 @@
     <value>News</value>
   </data>
   <data name="OperationPlan" xml:space="preserve">
-    <value>Operation Plan</value>
+    <value>Operational plan</value>
   </data>
   <data name="PhongDien" xml:space="preserve">
     <value>Phong Dien District</value>
@@ -236,6 +251,12 @@
   </data>
   <data name="PhuVang" xml:space="preserve">
     <value>Phu Vang District</value>
+  </data>
+  <data name="QBDBCU" xml:space="preserve">
+    <value>QB DBCU</value>
+  </data>
+  <data name="QTMAC" xml:space="preserve">
+    <value>QTMAC</value>
   </data>
   <data name="QuangDien" xml:space="preserve">
     <value>Quang Dien District</value>
@@ -250,12 +271,15 @@
     <value>Thua Thien Hue Province</value>
   </data>
   <data name="TTHBomBing" xml:space="preserve">
-    <value>Map of Thua Thien Hue bombing</value>
+    <value>Map of bombing Thua Thien Hue</value>
   </data>
   <data name="TuyenHoa" xml:space="preserve">
     <value>Tuyen Hoa District</value>
   </data>
   <data name="Video" xml:space="preserve">
     <value>Video</value>
+  </data>
+  <data name="VNMAC" xml:space="preserve">
+    <value>VNMAC</value>
   </data>
 </root>

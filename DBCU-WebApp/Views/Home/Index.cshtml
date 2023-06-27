@@ -7,8 +7,6 @@
        string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 
- 
-
 <style>
     body {
         margin: 0;
@@ -84,7 +82,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(images/slide/slide-2.jpg);">
+        @*<div class="carousel-item" style="background-image: url(images/slide/slide-2.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>@ViewLocalizer["lblHeroTop3"]</h2>
@@ -92,17 +90,17 @@
 			  
             </div>
           </div>
-        </div>
+        </div>*@
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(images/slide/slide-3.jpg);">
+      @*  <div class="carousel-item" style="background-image: url(images/slide/slide-3.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
                <h2>@ViewLocalizer["lblHeroTop5"]</h2>
               <p>@ViewLocalizer["lblHeroTop6"]</p> 
             </div>
           </div>
-        </div>
+        </div>*@
 
       </div>
 
@@ -229,10 +227,12 @@
  <section class="">
      <div class="container" data-aos="fade-up">
          
-            <div style="height:680px; width:100%">
-                <nav id="menu"></nav>
+            <div style="height:750px; width:100%">
+               @* <nav id="menu"></nav>*@
                
-                    <iframe title="DBCU-BaDon" width="1750" height="750" src="https://experience.arcgis.com/experience/ccd52c37841c44288fdd4069033e39cc" frameborder="0" allowFullScreen="true"></iframe></div>
+                    <iframe title="DBCU-BaDon" width="1300" height="750" 
+                    src="https://experience.arcgis.com/experience/90dbb38fe4cc47d39985b212697ead13/" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
 
            
 
@@ -426,7 +426,7 @@
 		<div class="clients-slider swiper">
 			<div class="swiper-wrapper align-items-center">
 			<div class="swiper-slide"> <a title="@ViewLocalizer["QBDOFA"]" data-toggle="tooltip" href="https://sngv.thuathienhue.gov.vn/" target="_blank"><img src="~/images/icon/logo_dofaHue.jpg"></a></div>
-			<div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="" target="_blank"><img src="~/images/icon/logo_PMCTTH.jpg"></a></div>
+                        <div class="swiper-slide">  <a title="@ViewLocalizer["QBPPM"]" data-toggle="tooltip" href="http://bchqsthuathienhue.com.vn/"><img src="~/images/icon/logo_PMCTTH.jpg"></a></div>
 			<div class="swiper-slide">  <a title="@ViewLocalizer["VNMAC"]" data-toggle="tooltip" href="http://vnmac.gov.vn" target="_blank"><img src="~/images/icon/Logo VNMAC.png"></a></div>
 			<div class="swiper-slide"> <a title="@ViewLocalizer["NPA"]" data-toggle="tooltip" href="https://www.npaid.org" target="_blank"><img src="~/images/icon/Logo NPA.png"></a></div>
 			@*<div class="swiper-slide">  <a title="@ViewLocalizer["MAG"]" data-toggle="tooltip" href="https://www.maginternational.org" target="_blank"><img src="~/images/icon/Logo MAG.png"></a></div>*@

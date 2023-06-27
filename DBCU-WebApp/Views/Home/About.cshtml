@@ -2,6 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["Introduction"].Value;
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 
 
@@ -77,73 +78,24 @@
 
 
 <!-- ======= About Section ======= -->
-<section id="about" class="about section-bg">
+@*<section id="about" class="about section-bg">*@
+<section class="">
     <div class="container" data-aos="fade-up">
+        <div style="height:650px; width:80%">
+            @if (lang == "en")
+            {
+                <center>
+                <img src="~/images/bannerToChuc_en.jpg" class="img-fluid" alt="">
+                </center>
+            }
+            else if (lang == "vi")
+            {
+                 <center>
+                <img src="~/images/bannerToChuc_vi.jpg" class="img-fluid" alt="">
+                 </center>
+            }
+        </div>
+        </div>
           <!-- ======= Team Section ======= -->
-    <section id="team" class="team ">
-      <div class="container">
-          		<div class="sectiondbu-title">
-          <h2>Cơ cấu - tổ chức</h2>
-          <p>Cơ cấu - tổ chức</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                        <div class="row">
-              <div class="col-lg-6">
-                <div class="member d-flex align-items-start">
-                  <div class="member-info">
-                    <h4>Quản lý dự án</h4>
-                    <span>01 - Sở ngoại vụ</span>
-                    <p>Quản lý tất cả các hoạt động của DBU</p>
-                   
-                  </div>
-                </div>
-              </div>
-
-             <div class="col-lg-6 mt-4">
-                <div class="member d-flex align-items-start">
-                  <div class="member-info">
-                    <h4>Quản lý thông tin và hoạt đông</h4>
-                    <span>01 - Nhân sự</span>
-                       <p>Quản lý thông tin và hoạt đông của DBU</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 mt-4">
-                <div class="member d-flex align-items-start">
-                  <div class="member-info">
-                    <h4>Nhân viên dữ liệu</h4>
-                    <span>01 - Nhân sự</span>
-                       <p>Nhân viên xử lý dữ liệu</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 mt-4">
-                <div class="member d-flex align-items-start">
-                  <div class="member-info">
-                    <h4>Cán bộ kiểm soát dữ liệu QA,QC</h4>
-                    <span>02 - Bộ chỉ huy quân sự</span>
-                    <p>Quản lý kiểm tra chất lượng dữ liệu</p>
-                   
-                  </div>
-                </div>
-              </div>
-
-              
-
-            </div>
-            </div>
-                        <div class="col-lg-6">
-                                    <div class="row">
-                                   <p><img src="~/images/About/@ViewLocalizer["OrganizationalStructure"]"/></p>
-            </div>
-            </div>
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
- 
-    </div>
+   
 </section><!-- End About Section -->

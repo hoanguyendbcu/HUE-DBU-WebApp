@@ -1,14 +1,10 @@
 ﻿@model IEnumerable<DBCU_WebApp.Models.OperationPlans>
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer ViewLocalizer
-
 @{
-
     ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["OperationPlan"].Value;
     int i = 0;
 }
-
-
 <style>
     #map {
         position: absolute;

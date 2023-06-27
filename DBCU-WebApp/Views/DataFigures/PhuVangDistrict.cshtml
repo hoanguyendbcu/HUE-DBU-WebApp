@@ -6,6 +6,65 @@
 string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
+    em {
+        font-style: italic;
+    }
+
+
+    p a {
+        color: #007bff;
+    }
+
+
+    strong {
+        font-weight: bold;
+    }
+
+    p {
+        color: #000;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .general_title {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #038232;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    #item_detail .overview .general_title {
+        padding-bottom: 37px;
+    }
+
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+
+    #item_detail .overview .main_content .left .short {
+        padding: 0 4.26%;
+        color: #000;
+    }
+
+
     figure {
         display: inline-block;
         float: right;
@@ -51,14 +110,14 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 <section id="HeroData" class="HeroData" style="background-image: url('../images/bg/phuvang.jfif'); background-size: 100%  100%;">
     <div class="HeroData-container" data-aos="fade-up">
         <h1>  @ViewLocalizer["lblPhuVang"] </h1>
-        <h6>
+       @* <h6>
             @ViewLocalizer["lblContentLeft1"]  <b>235,39</b>km2<br />
             @ViewLocalizer["lblContentLeft2"]  <b>137.962</b>   @ViewLocalizer["lblContentLeft21"] (2020)<br />
 
             <b>@ViewLocalizer["lblContentLeft5"]</b> <br />
             @ViewLocalizer["lblContentLeft6"]<br />
             @ViewLocalizer["lblContentLeft7"]<br />
-        </h6>
+        </h6>*@
 
     </div>
 
@@ -76,7 +135,7 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
                             <div class="count-box py-5">
                                 <i><img src="~/images/icon-web/Clearance.jpg" /> </i>
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
-                                <p>@ViewLocalizer["lblStatitictis1"]</p>
+                               @* <p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
                         </div>
 
@@ -84,15 +143,15 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
                             <div class="count-box py-5">
                                 <i><img src="~/images/icon-web/UXO.jpg" /></i>
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
-                                <p>@ViewLocalizer["lblStatitictis2"]</p>
+                               @* <p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
                                 <i><img src="~/images/icon-web/people1.png" /></i>
-                                <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
-                                <p>@ViewLocalizer["lblStatitictis3"]</p>
+                                <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat,"{0:N0}", ViewData["NoMRE"])  </span>
+                               @* <p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
                         </div>
 
@@ -101,25 +160,54 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
                     </div>
                 </div>
             </div>
-
+            <h1 class="general_title text-center">@ViewLocalizer["lblGenaeral"]</h1>
             <div class="row">
 
                 <div class="col-lg-6">
-                    <h3 class="entry-title">@ViewLocalizer["lblGenaeral"]</h3>
-                    <div class="entry-content">
-                        <p>
+                   
+                   @* <div class="entry-content">*@
+                    <div class="left">
+                        <div class="short">
+                            <p>
+                                <strong>
+                                    @ViewLocalizer["lblContentLeft1"]
+                                </strong>
+                                235,39 km2 <br />
+                                <strong>
+                                    @ViewLocalizer["lblContentLeft2"]
+                                </strong>
+                                137,962
+                               
+                                    @ViewLocalizer["lblContentLeft21"]</>
+                               
+                                <br />
+
+                                <strong>
+                                    @ViewLocalizer["lblContentLeft5"]</strong> <br />
+                                @ViewLocalizer["lblContentLeft6"]<br />
+                                @ViewLocalizer["lblContentLeft7"]
 
 
-                            @ViewLocalizer["lblContent1"] <br />
-                            <b>@ViewLocalizer["lblContent2"] </b>@ViewLocalizer["lblContent3"]
-                            <br />
-                            • @ViewLocalizer["lblContent4"]<br />
-                            • @ViewLocalizer["lblContent41"] <br />
-                            • @ViewLocalizer["lblContent42"] <br />
-                            • @ViewLocalizer["lblContent43"] <br />
-                            @ViewLocalizer["lblContent5"]<br />
-                        </p>
+                            </p>
+
+                            <p>
+                                <em>
+                                    @if (lang == "vi")
+                                    {
+                                        <a title="Thông tin thêm" href="https://phuvang.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                    }
+                                    else
+                                    {
+                                        <a title="Thông tin thêm" href="https://phuvang.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+
+                                    }
+                                </em>
+                            </p>
+
+
+                        </div>
                     </div>
+                    @*</div>*@
                 </div>
 
                 <div class="col-lg-6 pt-3 pt-lg-0 content">
@@ -132,11 +220,11 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
             </div>
 
             <br />
-            <div class="row">
+            <h1 class="general_title text-center">@ViewLocalizer["lblStatitictis"]</h1>
+             <div class="row">
 
                 <div class="col-lg-12">
-                    <h3 class="entry-title">@ViewLocalizer["lblStatitictis"]</h3>
-
+                   
                     <div class="row">
 
                         <div class="col-lg-12">

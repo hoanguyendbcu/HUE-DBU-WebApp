@@ -6,6 +6,63 @@
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
+    em {
+        font-style: italic;
+    }
+
+
+    p a {
+        color: #007bff;
+    }
+
+
+    strong {
+        font-weight: bold;
+    }
+
+    p {
+        color: #000;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .general_title {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #038232;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    #item_detail .overview .general_title {
+        padding-bottom: 37px;
+    }
+
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+
+    #item_detail .overview .main_content .left .short {
+        padding: 0 4.26%;
+        color: #000;
+    }
     figure {
         display: inline-block;
         float: right;
@@ -51,14 +108,14 @@
 <section id="HeroData" class="HeroData" style="background-image: url('../images/bg/huongthuy.jpg'); background-size: 100%  100%;">
     <div class="HeroData-container"  data-aos="fade-up">
        <h1>  @ViewLocalizer["lblHuongThuyTown"] </h1>
-        <h6>
+        @*<h6>
             @ViewLocalizer["lblContentLeft1"]  <b>426,96</b>km2<br />
             @ViewLocalizer["lblContentLeft2"]  <b>95.299</b>@ViewLocalizer["lblContentLeft21"] (2020)<br />
 
             <b>@ViewLocalizer["lblContentLeft5"]</b> <br />
             • @ViewLocalizer["lblContentLeft6"]<br />
             • @ViewLocalizer["lblContentLeft7"]<br />
-        </h6>
+        </h6>*@
     </div>
 
 </section>
@@ -76,7 +133,7 @@
                             <div class="count-box py-5">
                                <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>           
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
-                                <p>@ViewLocalizer["lblStatitictis1"]</p>
+                                @*<p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
                         </div>
 
@@ -84,7 +141,7 @@
                             <div class="count-box py-5">
                                   <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div> 
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
-                                <p>@ViewLocalizer["lblStatitictis2"]</p>
+                                @*<p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
                         </div>
 
@@ -92,7 +149,7 @@
                             <div class="count-box pb-5 pt-0 pt-lg-5">
                                 <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div> 
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
-                                <p>@ViewLocalizer["lblStatitictis3"]</p>
+                                @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
                         </div>
 
@@ -101,24 +158,50 @@
                     </div>
                 </div>
             </div>
-
+            <h1 class="general_title text-center">@ViewLocalizer["lblGenaeral"]</h1>
             <div class="row">
 
                 <div class="col-lg-6">
-                    <h3 class="entry-title">@ViewLocalizer["lblGenaeral"]</h3>
-                    <div class="entry-content">
-                        <p>
+
+                    <div class="left">
+                        <div class="short">
+                            <p>
+                                <strong>
+                                    @ViewLocalizer["lblContentLeft1"]
+                                </strong>
+                                650 km2 <br />
+                                <strong>
+                                    @ViewLocalizer["lblContentLeft2"]
+                                </strong>
+                                32,050
+
+                                @ViewLocalizer["lblContentLeft21"]</>
+
+                                <br />
+
+                                <strong>@ViewLocalizer["lblContentLeft5"]</strong> <br />
+                                @ViewLocalizer["lblContentLeft6"]<br />
+                                @ViewLocalizer["lblContentLeft7"]
 
 
-                            @ViewLocalizer["lblContent1"] <br />
-                            <b>@ViewLocalizer["lblContent2"] </b>@ViewLocalizer["lblContent3"]
-                            <br />
-                            • @ViewLocalizer["lblContent4"]<br />
-                            • @ViewLocalizer["lblContent41"] <br />
-                            • @ViewLocalizer["lblContent42"] <br />
-                            • @ViewLocalizer["lblContent43"] <br />
-                            @ViewLocalizer["lblContent5"]<br />
-                        </p>
+                            </p>
+
+                            <p>
+                                <em>
+                                    @if (lang == "vi")
+                                    {
+                                        <a title="Thông tin thêm" href="https://huongthuy.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                    }
+                                    else
+                                    {
+                                        <a title="Thông tin thêm" href="https://huongthuy.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+
+                                    }
+                                </em>
+                            </p>
+
+
+                        </div>
                     </div>
                 </div>
 
@@ -133,7 +216,7 @@
             <div class="row">
 
                     <div class="col-lg-12">
-                        <h3 class="entry-title">@ViewLocalizer["lblStatitictis"]</h3>
+                        <h1 class="general_title text-center">@ViewLocalizer["lblStatitictis"]</h1>
 
                         <div class="row">
 

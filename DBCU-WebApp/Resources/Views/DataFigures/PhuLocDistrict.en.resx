@@ -199,13 +199,13 @@
     <value>15 communes: Giang Hai, Loc An, Loc Binh, Loc Bon, Loc Dien, Loc Hoa, Loc Son, Loc Thuy, Loc Tien, Loc Tri, Loc Vinh, Vinh Hien, Vinh Hung, Vinh My, Xuan Loc.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Dong Le Township</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblPhuLoc" xml:space="preserve">
     <value>Phu Loc District</value>
@@ -214,7 +214,7 @@
     <value>Quang Binh Province</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -255,6 +255,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Facts And Figures - Quang Binh Province - Dong Hoi City</value>

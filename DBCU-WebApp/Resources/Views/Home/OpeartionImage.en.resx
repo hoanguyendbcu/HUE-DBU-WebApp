@@ -120,6 +120,9 @@
   <data name="About" xml:space="preserve">
     <value>Introduction</value>
   </data>
+  <data name="AccidentVictim" xml:space="preserve">
+    <value>Accident &amp; Victim</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
@@ -138,6 +141,9 @@
   <data name="Event" xml:space="preserve">
     <value>Event</value>
   </data>
+  <data name="Field" xml:space="preserve">
+    <value>Field</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -147,10 +153,16 @@
   <data name="OperationPlan" xml:space="preserve">
     <value>Operation Plan</value>
   </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
   <data name="Photos" xml:space="preserve">
     <value>Photo of Operation</value>
   </data>
   <data name="Scene" xml:space="preserve">
     <value>Scene</value>
+  </data>
+  <data name="Training" xml:space="preserve">
+    <value>Training</value>
   </data>
 </root>

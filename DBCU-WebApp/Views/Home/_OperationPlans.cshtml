@@ -157,15 +157,19 @@ function loadDataMap() {
                     el.style.width = '60px';
                     el.style.height = '40px';
                 }
+                else if (marker.properties.org == 'CRS')
+                {
+                    el.style.backgroundImage =
+                    'url(../images/icon/crs_logo_mini.png)';
+                    el.style.width = '60px';
+                    el.style.height = '40px';
+                }
                 else if (marker.properties.org == 'PMCTTH') {
                     el.style.backgroundImage =
                         'url(../images/icon/logo-vn.png)';
                     el.style.width = '60px';
                     el.style.height = '40px';      
-
-                    }
-
-
+                }
                 el.style.backgroundSize = '100%';
 
                  //create the popup

@@ -274,7 +274,7 @@
     <value>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
   </data>
   <data name="lblPostWar" xml:space="preserve">
-    <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
+    <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN TỈNH THỪA THIÊN HUẾ</value>
   </data>
   <data name="lblReadMore" xml:space="preserve">
     <value>Xem tiếp</value>
@@ -313,13 +313,13 @@
     <value>Lịch sử khắc phục hậu quả bom mìn</value>
   </data>
   <data name="String10" xml:space="preserve">
-    <value>Số vật nỗ được hủy nổ an toàn</value>
+    <value>SỐ BOM MÌN VẬT LIỆU NỔ ĐÃ ĐƯỢC XỬ LÝ</value>
   </data>
   <data name="String17" xml:space="preserve">
-    <value>Là tổng diện tích các khoanh vùng khẳng định ô nhiễm bom chùm được xác định sau hoạt động khảo sát kỹ thuật</value>
+    <value />
   </data>
   <data name="String18" xml:space="preserve">
-    <value>Là tổng diện tích đất đai được giải phóng khỏi ô nhiễm bom mìn vật nổ sau hoạt động rà phá.</value>
+    <value />
   </data>
   <data name="String19" xml:space="preserve">
     <value />
@@ -328,19 +328,19 @@
     <value>Trong khoảng 2016-2020:</value>
   </data>
   <data name="String20" xml:space="preserve">
-    <value>Là số bom mìn, vật nổ bao gồm bom chùm, mìn, và các vật nổ khác được phát hiện và hủy nổ an toàn</value>
+    <value />
   </data>
   <data name="String21" xml:space="preserve">
     <value>LƯỢT NGƯỜI ĐƯỢC HỖ TRỢ</value>
   </data>
   <data name="String22" xml:space="preserve">
-    <value>Là số lượt người nhận được hỗ trợ của các tổ chức, cá nhân để nâng cao chất lượng cuộc sống.</value>
+    <value />
   </data>
   <data name="String23" xml:space="preserve">
-    <value>LƯỢT NGƯỜI ĐƯỢC NÂNG CAO NHẬN THỨC VỀ BOM MÌN</value>
+    <value>LƯỢT TIẾP NHẬN GIÁO DỤC NGUY CƠ VỀ BOM MÌN</value>
   </data>
   <data name="String24" xml:space="preserve">
-    <value>Là số lượt người nhận được giáo dục phòng tránh rủi ro bom mìn để chung sống an toàn trước khi đất đai được giải phóng hoàn toàn.</value>
+    <value />
   </data>
   <data name="String3" xml:space="preserve">
     <value>được rà phá, trong đó:</value>
@@ -355,28 +355,28 @@
     <value>Biểu đồ rà phá hiện trường của MAG</value>
   </data>
   <data name="String7" xml:space="preserve">
-    <value>DIỆN TÍCH CHA ĐÃ KHẢO SÁT</value>
+    <value>KHU VỰC KHẲNG ĐỊNH NGUY HIỂM BOM CHÙM</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>TỔNG DIỆN TÍCH ĐẤT ĐƯỢC GIẢI PHÓNG</value>
+    <value>TỔNG DIỆN TÍCH ĐÃ RÀ PHÁ TOÀN TỈNH</value>
   </data>
   <data name="String9" xml:space="preserve">
-    <value>SỐ NHIỆM VỤ EOD ĐÃ HOÀN THÀNH</value>
+    <value>SỐ NHIỆM VỤ XỬ LÝ LƯU ĐỘNG</value>
   </data>
   <data name="Survey" xml:space="preserve">
     <value>Khảo sát</value>
   </data>
   <data name="tabs1" xml:space="preserve">
-    <value>Theo định nghĩa của IMAS (2013), hoạt động này là sự tập hợp và phân tích dữ liệu (không sử dụng can thiệp kỹ thuật hoặc có sử dụng những can thiệp kỹ thuật thích hợp) về sự hiện diện, chủng loại, phân bổ và môi trường xung quanh của một khu vực ô nhiễm bom mìn vật nổ, để xác định tốt hơn vị trí có sự hiện diện của ô nhiễm bom mìn vật nổ và những vị trí không ô nhiễm, nhằm hỗ trợ việc xác định ưu tiên giải phóng đất và những quy trình ra quyết định thông qua cung cấp các bằng chứng.</value>
+    <value>Theo định nghĩa của IMAS, hoạt động này là sự tập hợp và phân tích dữ liệu (không sử dụng can thiệp kỹ thuật hoặc có sử dụng những can thiệp kỹ thuật thích hợp) về sự hiện diện, chủng loại, phân bổ và môi trường xung quanh của một khu vực ô nhiễm bom mìn vật nổ, để xác định tốt hơn vị trí có sự hiện diện của ô nhiễm bom mìn vật nổ và những vị trí không ô nhiễm, nhằm hỗ trợ việc xác định ưu tiên giải phóng đất và những quy trình ra quyết định thông qua cung cấp các bằng chứng.</value>
   </data>
   <data name="tabs1s" xml:space="preserve">
     <value>Hoạt động Khảo sát bao gồm Khảo sát phi kỹ thuật và Khảo sát kỹ thuật.</value>
   </data>
   <data name="tabs2" xml:space="preserve">
-    <value>Trong hoạt động khắc phục hậu quả bom mìn, thuật ngữ “Rà phá bom mìn” nói đến những nhiệm vụ hay hoạt động nhằm đảm bảo sự gỡ bỏ và/hoặc phá hủy tất cả mối nguy hiểm từ bom mìn vật nổ sót lại sau chiến tranh trên một khu vực xác định và đến một độ sâu xác định. ên cạnh “rà phá hiện trường cố định” với một diện tích đất, rất nhiều những hoạt động gom nhặt phá hủy lưu động (EOD) đã được thực hiện để nhanh chóng gỡ bỏ hay phá hủy bom mìn vật nổ sau chiến tranh được phát hiện trên mặt đất và do người dân địa phương báo cáo.</value>
+    <value>Trong hoạt động khắc phục hậu quả bom mìn, thuật ngữ “Rà phá bom mìn” nói đến những nhiệm vụ hay hoạt động nhằm đảm bảo sự gỡ bỏ và/hoặc phá hủy tất cả mối nguy hiểm từ bom mìn vật nổ sót lại sau chiến tranh trên một khu vực xác định và đến một độ sâu xác định. Bên cạnh “rà phá hiện trường cố định” với một diện tích đất, rất nhiều những hoạt động gom nhặt phá hủy lưu động (EOD) đã được thực hiện để nhanh chóng gỡ bỏ hay phá hủy bom mìn vật nổ sau chiến tranh được phát hiện trên mặt đất và do người dân địa phương báo cáo.</value>
   </data>
   <data name="tabs2s" xml:space="preserve">
-    <value>Theo định nghĩa của IMAS (2013)</value>
+    <value>Theo định nghĩa của IMAS</value>
   </data>
   <data name="tabs3" xml:space="preserve">
     <value />
@@ -385,19 +385,19 @@
     <value>Tại nạn bom mìn</value>
   </data>
   <data name="tabs4" xml:space="preserve">
-    <value>Giáo dục Nguy cơ Bom mìn (MRE) là những hoạt động nhằm giảm thiểu nguy cơ thương vong do mìn và các vật nổ sót lại sau chiến tranh bằng cách nâng cao nhận thức của nam giới, phụ nữ, trẻ em tùy theo nhóm nguy cơ, vai trò và nhu cầu khác nhau của họ, và thúc đẩy thay đổi hành vi, bao gồm tuyên truyền thông tin cho cộng đồng, giáo dục và tập huấn, liên lạc cộng đồng phục vụ hoạt động khắc phục hậu quả bom mìn</value>
+    <value>Giáo dục Nguy cơ Bom mìn (EORE) là những hoạt động nhằm giảm thiểu nguy cơ thương vong do mìn và các vật nổ sót lại sau chiến tranh bằng cách nâng cao nhận thức của nam giới, phụ nữ, trẻ em tùy theo nhóm nguy cơ, vai trò và nhu cầu khác nhau của họ, và thúc đẩy thay đổi hành vi, bao gồm tuyên truyền thông tin cho cộng đồng, giáo dục và tập huấn, liên lạc cộng đồng phục vụ hoạt động khắc phục hậu quả bom mìn</value>
   </data>
   <data name="tabs4s" xml:space="preserve">
-    <value>Theo định nghĩa của IMAS (2009)</value>
+    <value>Theo định nghĩa của IMAS</value>
   </data>
   <data name="tabs5" xml:space="preserve">
     <value>Hoạt động hỗ trợ Nạn nhân (Victims Assistance / Survivor Assistance) là tất cả sự viện trợ, hỗ trợ, cứu trợ, xoa dịu và giúp đỡ cho những nạn nhân (bao gồm cả nạn nhân bom mìn còn sống sót) nhằm mục đích giảm thiểu những ảnh hưởng tức thời và lâu dài về mặt tinh thần và thể chất của tai nạn gây ra bi kịch cho họ.</value>
   </data>
   <data name="tabs5s" xml:space="preserve">
-    <value>Theo định nghĩa của IMAS (2004)</value>
+    <value>Theo định nghĩa của IMAS</value>
   </data>
   <data name="tabs6" xml:space="preserve">
-    <value>Phát triển sau rà phá đóng vai trò quan trọng trong việc phát triển kinh tế xã hội, được người dân cũng như chính quyền quan tâm, nâng cao hiệu quả của việc rà phá bom mìn trên một khu vực xác định. Một số tổ chức như BCHQS,KOICA, MAG, PTVN…  đã có những hỗ trợ trong việc lập làng tái định cư, xây dựng những công trình phúc lợi trên những vùng đất ô nhiễm bom mìn đã được rà phá.</value>
+    <value>Phát triển sau rà phá đóng vai trò quan trọng trong việc phát triển kinh tế xã hội, được người dân cũng như chính quyền quan tâm, nâng cao hiệu quả của việc rà phá bom mìn trên một khu vực xác định.&amp;nbsp;</value>
   </data>
   <data name="tabs6s" xml:space="preserve">
     <value>Phát triển sau rà phá đóng vai trò quan trọng</value>

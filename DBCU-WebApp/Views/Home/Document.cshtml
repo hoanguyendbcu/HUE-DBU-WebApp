@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer ViewLocalizer
-@{ ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["Document"].Value; }
+@{ ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["Document"].Value;
+ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString(); }
 
 <!-- ======= Breadcrumbs ======= -->
 <section class="breadcrumbs">
@@ -17,6 +18,48 @@
 
 <div class="container">
     <div class="main-content-inner">
+
+
+         <div class="col-lg-12 col-md-5 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="title">@ViewLocalizer["DocumentTitle1"]</h4>
+                        <div class="single-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="text-uppercase bg-success">
+                                        <tr class="text-white">
+                                            <th class="text-center" width="5%">@ViewLocalizer["No"]</th>
+                                            <th width="57%">@ViewLocalizer["Title"]</th>
+                                            <th width="15%">@ViewLocalizer["Source"]</th>
+                                            <th width="13%">@ViewLocalizer["Format"]</th>
+                                            <th class="text-center" width="10%">@ViewLocalizer["Download"]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td  class="text-center" scope="row">1</td>
+                                            <td>@ViewLocalizer["Title37"]</td>
+                                            <td>@ViewLocalizer["Source37"]</td>
+                                            <td>@ViewLocalizer["Format37"]</td>
+                                             @if(lang == "vi")
+                    {
+                                            <td  class="text-center"><a href="~/document/QTMAC_IM_SOP_VN.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                    }
+                    else 
+                    {
+                                                  <td  class="text-center"><a href="~/document/QTMAC_IM_SOP_EN.pdf" target="_blank"><i class="ti-download"></i></a></td>
+                   
+                    }
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- table success start -->
             <div class="col-lg-12 col-md-5 mt-5">
                 <div class="card">
@@ -154,5 +197,11 @@
                 </div>
             </div>
             <!-- table success end -->
+
+
+
+
+
+
         </div>
 </div>

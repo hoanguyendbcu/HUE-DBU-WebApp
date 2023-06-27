@@ -199,7 +199,7 @@
     <value>4  communes: Bình Thành, Bình Tiến, Hương Bình, Hương Toàn.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblHuongTra" xml:space="preserve">
     <value>Huong Tra  Township</value>
@@ -208,13 +208,13 @@
     <value>Quan Hau Township</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
     <value>Quang Binh Province</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -255,6 +255,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>

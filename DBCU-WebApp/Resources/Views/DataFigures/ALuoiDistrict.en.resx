@@ -202,13 +202,13 @@
     <value> 17 Communes: A Ngo, A Roang, Dong Son, Hong Bac, Hong Ha, Hong Kim, Hong Thai, Hong Thuong, Hong Thuy, Hong Van, Huong Nguyen, Huong Phong, Lam Dot, Phu Vinh, Quang Nham, Son Thuy , Trung Son.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
-    <value>General information</value>
+    <value>Overview</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
-    <value>Other administrative units</value>
+    <value>District</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Statistic after survey , clearance and risk education activities</value>
+    <value>Statistics</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Area of released land</value>
@@ -251,6 +251,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>

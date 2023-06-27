@@ -135,6 +135,9 @@
   <data name="Format" xml:space="preserve">
     <value>Định dạng</value>
   </data>
+  <data name="Format11" xml:space="preserve">
+    <value>PDF</value>
+  </data>
   <data name="Format21" xml:space="preserve">
     <value>PDF</value>
   </data>
@@ -154,6 +157,9 @@
     <value>PDF</value>
   </data>
   <data name="Format36" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="Format37" xml:space="preserve">
     <value>PDF</value>
   </data>
   <data name="Home" xml:space="preserve">
@@ -192,6 +198,9 @@
   <data name="Source36" xml:space="preserve">
     <value>CRS</value>
   </data>
+  <data name="Source37" xml:space="preserve">
+    <value>QTMAC</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Tiêu đề</value>
   </data>
@@ -218,5 +227,8 @@
   </data>
   <data name="Title36" xml:space="preserve">
     <value>Sách tích hợp dành cho cán bộ quản lý và giáo viên</value>
+  </data>
+  <data name="Title37" xml:space="preserve">
+    <value>QUY TRÌNH QUẢN LÝ THÔNG TIN HOẠT ĐỘNG BOM MÌN TỈNH QUẢNG TRỊ</value>
   </data>
 </root>

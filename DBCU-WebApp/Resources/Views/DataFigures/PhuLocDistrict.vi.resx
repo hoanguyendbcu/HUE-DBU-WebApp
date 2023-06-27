@@ -214,7 +214,7 @@
     <value>Tỉnh Quảng Bình</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>Thống kê theo hoạt động khảo sát, rà phá, giáo dục phòng tránh</value>
+    <value>THỐNG KÊ</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Là diện tích đất đai được giải phóng an toàn</value>
@@ -254,6 +254,9 @@
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Đơn vị (m2)</value>
+  </data>
+  <data name="moreinfo" xml:space="preserve">
+    <value>Thông tin thêm...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>

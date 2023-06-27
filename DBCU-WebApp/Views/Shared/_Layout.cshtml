@@ -69,7 +69,9 @@
 @inject IViewLocalizer ViewLocalizer
 @using DBCU_WebApp.core
 @using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
-
+@{
+ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+}
 <body>
  
      <!-- ======= Top Bar ======= -->
@@ -129,11 +131,11 @@
                                     <li class="dropdown @ViewBag.NavClassByMineAction">
                                         <a>@ViewLocalizer["ByMineAction"]<i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li ><a class="@Html.IsActive("DataFigures", "ByMineActionSurvey")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey">@ViewLocalizer["MineAction1"]</a></li>
-                                            <li ><a class="@Html.IsActive("DataFigures", "ByMineActionClearance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance">@ViewLocalizer["MineAction2"]</a></li>
-                                           @* <li ><a class="@Html.IsActive("DataFigures", "ByMineActionMRE")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["MineAction3"]</a></li>
-                                           *@ @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionNTS")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionNTS">@ViewLocalizer["MineAction7"]</a></li>*@
-                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>*@
+                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionSurvey")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey">@ViewLocalizer["MineAction1"]</a></li>
+                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionClearance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance">@ViewLocalizer["MineAction2"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures","ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>
+                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionMRE")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["MineAction3"]</a></li>
+                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionNTS")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionNTS">@ViewLocalizer["MineAction7"]</a></li>*@
                                             @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionVictimAssisstance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictimAssisstance">@ViewLocalizer["MineAction7"]</a></li>*@
                                             @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionPostClc")"asp-area="" asp-controller="DataFigures" asp-action="ByMineActionPostClc">@ViewLocalizer["MineAction5"]</a></li>*@
                                             @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionOther")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionOther">@ViewLocalizer["MineAction6"]</a></li>*@
@@ -143,18 +145,92 @@
                                     <li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
                                 </ul>
                             </li>
+
+
+                    <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
+                        <a>@ViewLocalizer["Library"]<i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a class="@Html.IsActive("Home", "OpeartionImage")" asp-area="" asp-controller="Home" asp-action="OpeartionImage">@ViewLocalizer["Photos"]</a></li>
+                            <li><a class="@Html.IsActive("Home", "Video")" asp-area="" asp-controller="Home" asp-action="Video">@ViewLocalizer["Video"]</a></li>
+                            <li><a class="@Html.IsActive("Home", "Document")" asp-area="" asp-controller="Home" asp-action="Document">@ViewLocalizer["Documents"]</a></li>
+
+                        </ul>
+                    </li>
+                            
                             <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
-                                <a>@ViewLocalizer["Library"]<i class="bi bi-chevron-down"></i></a>
+                                <a>@ViewLocalizer["LINK"]<i class="bi bi-chevron-down"></i></a>
                                 <ul>
-                                    <li><a class="@Html.IsActive("Home", "OpeartionImage")" asp-area="" asp-controller="Home" asp-action="OpeartionImage">@ViewLocalizer["Photos"]</a></li>
-                                    <li><a class="@Html.IsActive("Home", "Video")" asp-area="" asp-controller="Home" asp-action="Video">@ViewLocalizer["Video"]</a></li>
-                                    <li><a class="@Html.IsActive("Home", "Document")" asp-area="" asp-controller="Home" asp-action="Document">@ViewLocalizer["Documents"]</a></li>
-                                   
-                                </ul>
+                            
+                            @if (lang == "vi")
+                            {
+                                <li><a href="https://sngv.thuathienhue.gov.vn/?gd=35" target="_blank">@ViewLocalizer["DOFA"]</a></li>
+                            
+                            }
+                            else
+                            {
+                                <li><a href="https://sngv.thuathienhue.gov.vn/?gd=36" target="_blank">@ViewLocalizer["DOFA"]</a></li>
+                            }
+                           
+                             @if (lang == "vi")
+                            {
+                                <li> <a href="http://vnmac.gov.vn/" target="_blank">@ViewLocalizer["VNMAC"]</a></li>
+                            }
+                            else
+                            {
+                                <li> <a href="http://vnmac.gov.vn/" target="_blank">@ViewLocalizer["VNMAC"]</a></li>
+                            }
+
+                            @if (lang == "vi")
+                            {
+                                <li><a href="https://www.qtmac.vn/vi" target="_blank">@ViewLocalizer["QTMAC"]</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="https://www.qtmac.vn/en" target="_blank">@ViewLocalizer["QTMAC"]</a></li>
+
+                            }
+                            @if (lang == "vi")
+                            {
+                                <li><a href="https://quangbinhdbcu.vn/" target="_blank">@ViewLocalizer["QBDBCU"]</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="https://quangbinhdbcu.vn/home" target="_blank">@ViewLocalizer["QBDBCU"]</a></li>
+                            }
+
+                            @if (lang == "vi")
+                            {
+                                <li><a href="https://www.gichd.org/" target="_blank">@ViewLocalizer["GICHD"]</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="https://www.gichd.org/" target="_blank">@ViewLocalizer["GICHD"]</a></li>
+                            }
+                            
+                            @if (lang == "vi")
+                            {
+                                <li><a href="https://www.mineactionstandards.org/" target="_blank">@ViewLocalizer["IMAS"]</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="https://www.mineactionstandards.org/" target="_blank">@ViewLocalizer["IMAS"]</a></li>
+                            }
+
+                            @if (lang == "vi")
+                            {
+                                <li><a href="http://123.25.117.110:8080/erwsearch/" target="_blank">@ViewLocalizer["ERWSearch"]</a></li>
+
+                            }
+                            else
+                            {
+                                <li><a href="http://123.25.117.110:8080/erwsearch/" target="_blank">@ViewLocalizer["ERWSearch"]</a></li>
+                            }
+                           
+                            
+                        </ul>
                             </li>
 
-                            <li ><a class="@Html.IsActive("Home", "Contact")" asp-area="" asp-controller="Home" asp-action="Contact">@ViewLocalizer["Contact"]</a></li>
-       
+                         
         </ul>
           @await Html.PartialAsync("_SetLanguagePartial")
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -185,7 +261,7 @@
                             @ViewLocalizer["Address3"]<br>
                             @ViewLocalizer["Address4"] <br>
                             @ViewLocalizer["Address5"] <br>
-                            <strong>Phone:</strong> <br>
+                            <strong>Phone:</strong> 0988796120<br>
                             @*<strong>Email:</strong> info@quangbinhdbcu.com<br>*@
                         </p>
             </div>
