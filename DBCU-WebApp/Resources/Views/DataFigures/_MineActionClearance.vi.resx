@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClcAreasize" xml:space="preserve">
-    <value>Diện tích(m2)</value>
+    <value>Diện tích (m² )</value>
   </data>
   <data name="ClcDateIdentification" xml:space="preserve">
     <value>Ngày khẳng định CHA</value>
@@ -214,7 +214,7 @@
     <value>Tổng diện đang rà</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Đơn vị (m2)</value>
+    <value>Đơn vị (m² )</value>
   </data>
   <data name="lblUXOModel" xml:space="preserve">
     <value>Vật nổ</value>

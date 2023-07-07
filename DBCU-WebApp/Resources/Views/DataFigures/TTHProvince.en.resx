@@ -161,22 +161,22 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Northernmost point:  Giap Tay  village, Dien Huong commune, Phong Dien district</value>
+    <value>Northernmost point: Giap Tay village, Dien Huong commune, Phong Dien district</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Southernmost point:  Thuong Nhat commune, Nam Dong district</value>
+    <value>Southernmost point: Thuong Nhat commune, Nam Dong district</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Easternmost point:   The east coast of Son Cha island, Lang Co Town, Phu Loc district</value>
+    <value>Easternmost point: The east coast of Son Cha island, Lang Co Township, Phu Loc district</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Westernmost point: Paré village, Hong Thuy commune, A Luoi district</value>
+    <value>Westernmost point: Hong Thuy commune, A Luoi district</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Thua Thien Hue is 675 km south of Hanoi capital, 94 km north of Da Nang city with the natural boundary of Bach Ma mountain range. It borders Quang Tri province and the East Sea to the north, the East Sea to the east, Quang Tri province and Saravane province of Lao PDR to the west, Quang Nam province, Da Nang city to the south, and Sekong province of Lao PDR.</value>
+    <value>Thua Thien Hue is 675km south of Hanoi capital, 94km north of Da Nang city with the natural boundary of Bach Ma mountain range. It borders Quang Tri province and the East Sea to the north, the East Sea to the east, Quang Tri province and Saravane province of Lao PDR to the west, Quang Nam province, Da Nang city to the south, and Sekong province of Lao PDR.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
-    <value>Area: </value>
+    <value>Area:</value>
   </data>
   <data name="lblContentLeft2" xml:space="preserve">
     <value>Population:</value>
@@ -188,13 +188,13 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Capital: Hue</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
-    <value>Demographics: Kinh, Cơtu, Tà Ôi, Bru-Vân Kiều</value>
+    <value>Demographics: Kinh, CoTu, TaOi, Bru-Van Kieu, PaCo</value>
   </data>
   <data name="lblContentLeft5" xml:space="preserve">
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Town: Huong Tra, Huong Thuy</value>
+    <value>Towns: Huong Tra, Huong Thuy</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
     <value>Districts: A Luoi, Nam Dong, Phong Dien, Phu Loc, Phu Vang, Quang Dien</value>
@@ -221,11 +221,11 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>NTS by child gender </value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
-    <value> Gender</value>
+    <value>Gender</value>
     <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
-    <value> Child gender </value>
+    <value>Child gender </value>
   </data>
   <data name="lblStatitictis2" xml:space="preserve">
     <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
@@ -243,10 +243,10 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Most 5 UXO Model</value>
   </data>
   <data name="lblStatitictis7" xml:space="preserve">
-    <value> UXO Category</value>
+    <value>UXO Category</value>
   </data>
   <data name="lblStatitictis8" xml:space="preserve">
-    <value> UXO Model</value>
+    <value>UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
     <value>NTS by gender</value>
@@ -255,7 +255,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Thua Thien Hue Province</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Unit (m² )</value>
   </data>
   <data name="moreinfo" xml:space="preserve">
     <value>More information...</value>

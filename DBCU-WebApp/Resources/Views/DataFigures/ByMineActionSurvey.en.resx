@@ -244,7 +244,7 @@
     <value>Total worked on area</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Unit (m² )</value>
   </data>
   <data name="lblUXOModelSurvey" xml:space="preserve">
     <value>Most 5 UXO model</value>

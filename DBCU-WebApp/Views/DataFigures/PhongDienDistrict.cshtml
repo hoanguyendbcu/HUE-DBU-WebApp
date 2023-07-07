@@ -130,7 +130,7 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                        <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>   
+                                <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>   
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
                                @* <p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
@@ -138,7 +138,7 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                               <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div> 
+                                <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div> 
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
                                @* <p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
@@ -146,7 +146,7 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
-                              <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div> 
+                                <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div> 
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
                                 @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
@@ -192,7 +192,7 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
                                     }
                                     else
                                     {
-                                        <a title="Thông tin thêm" href="https://phongdien.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://phongdien.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -229,15 +229,14 @@ string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 
                             @if (lang == "vi")
                             {
-                                <iframe title="CHA_Item_PDien476" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMDMzZjQyZTktNDc0My00YzY0LWFlZjAtNGJhNmQ3NmNhYjE3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
-
-                                <iframe title="CLC_Item_PDien476" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiZWY4YjBhNjUtOTc2MS00MmI1LTg1MjEtZjUyN2NiYjRhZjMzIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Khảo sát Phong Điền" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMDMzZjQyZTktNDc0My00YzY0LWFlZjAtNGJhNmQ3NmNhYjE3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Rà phá Phong Điền" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiZWY4YjBhNjUtOTc2MS00MmI1LTg1MjEtZjUyN2NiYjRhZjMzIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 
                             }
                             else if (lang == "en")
                             {
-                                <iframe title="CHA_Item_PDien476" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMDMzZjQyZTktNDc0My00YzY0LWFlZjAtNGJhNmQ3NmNhYjE3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection078f47517a45c2bc07d7" frameborder="0" allowFullScreen="true"></iframe>
-                                <iframe title="CLC_Item_PDien476" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiZWY4YjBhNjUtOTc2MS00MmI1LTg1MjEtZjUyN2NiYjRhZjMzIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection0ce7bff87a38eb23b305" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Survey Phong Dien" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMDMzZjQyZTktNDc0My00YzY0LWFlZjAtNGJhNmQ3NmNhYjE3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection078f47517a45c2bc07d7" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="CLC Phong Dien" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiZWY4YjBhNjUtOTc2MS00MmI1LTg1MjEtZjUyN2NiYjRhZjMzIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection0ce7bff87a38eb23b305" frameborder="0" allowFullScreen="true"></iframe>
                             }
 
                         </div>

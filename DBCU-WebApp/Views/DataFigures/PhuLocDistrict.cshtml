@@ -131,7 +131,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/Clearance.jpg" /> </i>
+                                <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
                                 @*<p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
@@ -139,7 +139,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/UXO.jpg" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div>
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
                                 @*<p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
@@ -147,7 +147,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
-                                <i><img src="~/images/icon-web/people1.png" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div>
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
                                 @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
@@ -195,7 +195,7 @@
                                     }
                                     else
                                     {
-                                        <a title="Thông tin thêm" href="https://phuloc.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://phuloc.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -227,11 +227,11 @@
 
                                 @if (lang == "vi")
                                 {
-                                    <h4>Dữ liệu đang được cập nhập!</h4>
+                                    <h4>Hiện tại trên địa bàn chưa có hoạt động khảo sát và rà phá!</h4>
                                 }
                                 else if (lang == "en")
                                 {
-                                    <h4>Data are being updated!</h4>
+                                    <h4>No data yet!</h4>
                                 }
 
                             </div>
@@ -245,10 +245,10 @@
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                                @*             <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>*@
+                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
+                                @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>*@
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>

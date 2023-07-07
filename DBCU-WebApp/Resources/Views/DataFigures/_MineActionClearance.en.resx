@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClcAreasize" xml:space="preserve">
-    <value>Area size</value>
+    <value>Area size (sqm)</value>
   </data>
   <data name="ClcDateIdentification" xml:space="preserve">
     <value>CHA Identification date</value>
@@ -214,7 +214,7 @@
     <value>Total worked on area</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Unit (m² )</value>
   </data>
   <data name="lblUXOModel" xml:space="preserve">
     <value>Model</value>

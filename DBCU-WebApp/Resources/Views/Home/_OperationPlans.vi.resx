@@ -121,7 +121,7 @@
     <value>Hoạt động</value>
   </data>
   <data name="Area" xml:space="preserve">
-    <value>Diện tích (m2)</value>
+    <value>Diện tích (m² )</value>
   </data>
   <data name="Commune" xml:space="preserve">
     <value>Xã</value>

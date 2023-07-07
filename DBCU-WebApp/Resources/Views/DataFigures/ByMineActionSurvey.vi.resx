@@ -124,10 +124,10 @@
     <value>Thông tin thêm</value>
   </data>
   <data name="CHAID" xml:space="preserve">
-    <value>CHA ID</value>
+    <value>Mã khu vực ô nhiễm bom chùm</value>
   </data>
   <data name="CHAName" xml:space="preserve">
-    <value>CHA Name / Mã nội bộ</value>
+    <value>Mã nội bộ</value>
   </data>
   <data name="CHASlopee" xml:space="preserve">
     <value>Độ dốc</value>
@@ -151,7 +151,7 @@
     <value>Mật độ thảm thực vật</value>
   </data>
   <data name="ClcAreasize" xml:space="preserve">
-    <value>Diện tích(m2)</value>
+    <value>Diện tích (m² )</value>
   </data>
   <data name="ClcDateIdentification" xml:space="preserve">
     <value>Ngày khẳng định CHA</value>
@@ -196,19 +196,19 @@
     <value>Theo hoạt động</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Thừa Thiên Huế</value>
+    <value>Thông tin và bản đồ ô nhiễm bom chùm tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>Huyện</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Các biểu đồ trình bày số liệu về Diện tích và Vật nổ của các hoạt động khảo sát bom chùm tại tỉnh Thừa Thiên Huế</value>
+    <value>Các biểu đồ trình bày số liệu về diện tích và vật nổ của các hoạt động khảo sát bom chùm tại tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="lblMineActionSurvey" xml:space="preserve">
     <value>Khảo sát</value>
   </data>
   <data name="lblStatus" xml:space="preserve">
-    <value>Tình trạng: Dã rà</value>
+    <value>Tình trạng: Đã rà</value>
   </data>
   <data name="lblStatus1" xml:space="preserve">
     <value>Tình trạng: Chưa rà</value>
@@ -244,7 +244,7 @@
     <value>Tổng diện đang rà</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Đơn vị (m2)</value>
+    <value>Đơn vị (m² )</value>
   </data>
   <data name="lblUXOModelSurvey" xml:space="preserve">
     <value>5 vật nổ tìm thấy</value>

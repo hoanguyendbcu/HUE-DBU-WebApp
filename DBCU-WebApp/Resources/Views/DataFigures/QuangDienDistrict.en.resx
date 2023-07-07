@@ -193,10 +193,10 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>10 communes: Quang An, Quang Cong, Quang Loi, Quang Ngan, Quang Phu, Quang Phuoc, Quang Thai, Quang Thanh, Quang Tho, Quang Vinh.</value>
+    <value>1 Township : Sia.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>01 Town : Sia</value>
+    <value>10 Communes: Quang An, Quang Cong, Quang Loi, Quang Ngan, Quang Phu, Quang Phuoc, Quang Thai, Quang Thanh, Quang Tho, Quang Vinh.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
@@ -214,13 +214,13 @@
     <value>Area of released land</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> MRE by child gender </value>
+    <value>MRE by child gender</value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
-    <value> Gender</value>
+    <value>Gender</value>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
-    <value> Child gender </value>
+    <value>Child gender </value>
   </data>
   <data name="lblStatitictis2" xml:space="preserve">
     <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
@@ -238,19 +238,19 @@
     <value>Most 5 UXO Model</value>
   </data>
   <data name="lblStatitictis7" xml:space="preserve">
-    <value> UXO Category</value>
+    <value>UXO Category</value>
   </data>
   <data name="lblStatitictis8" xml:space="preserve">
-    <value> UXO Model</value>
+    <value>UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> MRE by gender</value>
+    <value>MRE by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
     <value>Thua Thien Hue Province</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Unit (m² )</value>
   </data>
   <data name="moreinfo" xml:space="preserve">
     <value>More information...</value>

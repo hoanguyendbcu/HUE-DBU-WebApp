@@ -130,10 +130,10 @@
     <value>Thông tin thêm</value>
   </data>
   <data name="CHAID" xml:space="preserve">
-    <value>CHA ID</value>
+    <value>Mã khu vực khẳng định ô nhiễm bom chùm</value>
   </data>
   <data name="CHAName" xml:space="preserve">
-    <value>CHA Name / Mã nội bộ</value>
+    <value>Mã nội bộ</value>
   </data>
   <data name="CHASlopee" xml:space="preserve">
     <value>Độ dốc</value>
@@ -157,10 +157,10 @@
     <value>Mật độ thảm thực vật</value>
   </data>
   <data name="ClcAreasize" xml:space="preserve">
-    <value>Diện tích(m2)</value>
+    <value>Diện tích (m² )</value>
   </data>
   <data name="ClcDateIdentification" xml:space="preserve">
-    <value>Ngày khẳng định CHA</value>
+    <value>Ngày khẳng định ô nhiễm Bom chùm</value>
   </data>
   <data name="ClcEnddate" xml:space="preserve">
     <value>Ngày kết thúc</value>
@@ -175,7 +175,7 @@
     <value>Mã nhiệm vụ</value>
   </data>
   <data name="ClcLr_Name" xml:space="preserve">
-    <value>Clc name/ Mã nội bộ</value>
+    <value>Mã nội bộ</value>
   </data>
   <data name="ClcReporting_org_name" xml:space="preserve">
     <value>Tổ chức</value>
@@ -196,7 +196,7 @@
     <value>Liên hệ</value>
   </data>
   <data name="CTD" xml:space="preserve">
-    <value>Chữ thập đỏ Quảng Bình</value>
+    <value>Chữ thập đỏ Thừa Thiên Huế</value>
   </data>
   <data name="DataAndFigures" xml:space="preserve">
     <value>Dữ liệu và số liệu</value>
@@ -220,19 +220,19 @@
     <value>Hiện trường rà phá</value>
   </data>
   <data name="LabelEOD" xml:space="preserve">
-    <value>Nhiệm vụ EOD</value>
+    <value>Nhiệm vụ xử lý lưu động</value>
   </data>
   <data name="LabelNTS" xml:space="preserve">
-    <value>Nhiệm vụ NTS</value>
+    <value>Hoạt động khảo sát phi kỹ thuật</value>
   </data>
   <data name="LabelTS" xml:space="preserve">
-    <value>Nhiệm vụ TS</value>
+    <value>Hoạt động khảo sát kỹ thuật</value>
   </data>
   <data name="lblActivities" xml:space="preserve">
     <value>HOẠT ĐỘNG</value>
   </data>
   <data name="lblClearanceQB" xml:space="preserve">
-    <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+    <value>Bản đồ rà phá bom mìn tại Thừa Thiên Huế</value>
   </data>
   <data name="lblEducation" xml:space="preserve">
     <value>ĐÀO TẠO</value>
@@ -301,10 +301,10 @@
     <value>PTVN</value>
   </data>
   <data name="QBDOFA" xml:space="preserve">
-    <value>Sở ngoại vụ Quảng Bình</value>
+    <value>Sở ngoại vụ tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="QBPPM" xml:space="preserve">
-    <value>Bộ CHQS Tỉnh Quảng Bình</value>
+    <value>Bộ CHQS tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="RiskEducation" xml:space="preserve">
     <value>Giáo dục      </value>

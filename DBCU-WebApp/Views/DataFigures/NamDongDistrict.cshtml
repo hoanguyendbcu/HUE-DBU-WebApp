@@ -134,7 +134,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/Clearance.jpg" /> </i>
+                                <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
                                 @*<p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
@@ -142,7 +142,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/UXO.jpg" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div>
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
                                 @*<p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
@@ -150,7 +150,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
-                                <i><img src="~/images/icon-web/people1.png" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div>
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
                                 @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
@@ -197,7 +197,7 @@
                                     }
                                     else
                                     {
-                                        <a title="Thông tin thêm" href="https://namdong.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://namdong.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -230,7 +230,7 @@
 
                             @if (lang == "vi")
                             {
-                              <h4>Dữ liệu đang được cập nhập!</h4> 
+                              <h4>Dữ liệu đang được cập nhật!</h4> 
                             }
                             else if (lang == "en")
                             {

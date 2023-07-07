@@ -142,7 +142,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                  <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div> 
+                                <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div> 
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
                                 @*<p>@ViewLocalizer["lblStatitictis2"]</p*@>
                             </div>
@@ -150,7 +150,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
-                                  <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div> 
+                                <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div> 
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
                                 @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
@@ -188,15 +188,14 @@
                         <p>
                         <em>
                               @if(lang == "vi")
-                                {
-                                    <a title="Thông tin thêm" href="https://thuathienhue.gov.vn/vi-vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
-                                }
-                                else
-                                {
-                                    <a title="Thông tin thêm" href="https://thuathienhue.gov.vn/en-us/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
-
-                                }
-                            </em>
+                              {
+                                <a title="Thông tin thêm" href="https://thuathienhue.gov.vn/vi-vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                              }
+                              else
+                              {
+                                <a title="More information" href="https://thuathienhue.gov.vn/en-us/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                              }
+                         </em>
                             </p>
                         </div>
                         </div>
@@ -207,8 +206,7 @@
                 
                 <div class="col-lg-6 pt-3 pt-lg-0 content">
                     <div>
-
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489980.36625941214!2d107.28530253437496!3d16.37540847907472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31419c87726490f7%3A0xab1c0fcaf7cb84b5!2zVGjhu6thIFRoacOqbiBIdeG6vw!5e0!3m2!1svi!2s!4v1660889591929!5m2!1svi!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489980.36625941214!2d107.28530253437496!3d16.37540847907472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31419c87726490f7%3A0xab1c0fcaf7cb84b5!2zVGjhu6thIFRoacOqbiBIdeG6vw!5e0!3m2!1svi!2s!4v1660889591929!5m2!1svi!2s" width="540" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
@@ -216,8 +214,6 @@
 
             <br />
             <div class="row">
-               
-
                 <div class="col-lg-12">
                     <h1 class="general_title text-center">
                         @ViewLocalizer["lblStatitictis"]</h1>
@@ -225,24 +221,27 @@
                         <div class="col-lg-12">
                     @if(lang == "vi")
                     {
-                        <iframe title="TTH_SURVEY_ITEM_REPORT" width="1280" height="750" 
-                            src="https://app.powerbi.com/view?r=eyJrIjoiM2JmOGVhYTctMWQ3NS00YjAyLWFlOWItMjc0YjBiYjE5ODEwIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="Khảo sát TTHuế" width="1280" height="750"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiOTg2NzQ1ZmMtMmQ4ZC00MDc0LWE1ODEtYThlMDUwZjYwN2I1IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" 
+                            frameborder="0" allowFullScreen="true">
+                        </iframe>
                         
-                        
-                        
-                        
-                        <iframe title="TTH_CLC_ITEM_REPORT" width="1280" height="750"
-                                    src="https://app.powerbi.com/view?r=eyJrIjoiM2E0OGNmOTktMGUwYS00ZGYxLTk3MGMtMzFjYzFkYzYxYTc3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9"
-                            frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="Rà phá TTHuế" width="1280" height="750"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiM2E0OGNmOTktMGUwYS00ZGYxLTk3MGMtMzFjYzFkYzYxYTc3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection"
+                            frameborder="0" allowFullScreen="true">
+                        </iframe>
                     }
                     else if (lang == "en")
                     {
-                        <iframe title="TTH_SURVEY_ITEM_REPORT" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiM2JmOGVhYTctMWQ3NS00YjAyLWFlOWItMjc0YjBiYjE5ODEwIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection51bd5a33230ec1e03437" frameborder="0" allowFullScreen="true"></iframe>
+                        <iframe title="SURVEY TTH Pro" width="1280" height="750"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiOTg2NzQ1ZmMtMmQ4ZC00MDc0LWE1ODEtYThlMDUwZjYwN2I1IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection9bd94c7253eefbf6c5ce"
+                                    frameborder="0" allowFullScreen="true">
+                        </iframe>
                         
-                        <iframe title="TTH_CLC_ITEM_REPORT" width="1280" height="750"
+                        <iframe title="CLC TTH Pro" width="1280" height="750"
                                     src="https://app.powerbi.com/view?r=eyJrIjoiM2E0OGNmOTktMGUwYS00ZGYxLTk3MGMtMzFjYzFkYzYxYTc3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection8ce6ed508132bea7843e"
-                            
-                            frameborder="0" allowFullScreen="true"></iframe>
+                            frameborder="0" allowFullScreen="true">
+                        </iframe>
                        
                     }
                 </div>

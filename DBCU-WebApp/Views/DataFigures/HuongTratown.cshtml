@@ -133,7 +133,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/Clearance.jpg" /> </i>
+                                <div class="icon">  <i><img src="~/images/icon-web/Clearance.png" /> </i></div>
                                 <span data-toggle="counter-up"> @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["areaCLC"]) </span>
                                 @*<p>@ViewLocalizer["lblStatitictis1"]</p>*@
                             </div>
@@ -141,7 +141,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <i><img src="~/images/icon-web/UXO.jpg" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/UXO.png" /></i></div>
                                 <span data-toggle="counter-up">@string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoERW"])</span>
                                 @*<p>@ViewLocalizer["lblStatitictis2"]</p>*@
                             </div>
@@ -149,7 +149,7 @@
 
                         <div class="col-lg-4 col-md-5 col-6 d-md-flex align-items-md-stretch">
                             <div class="count-box pb-5 pt-0 pt-lg-5">
-                                <i><img src="~/images/icon-web/people1.png" /></i>
+                                <div class="icon"> <i><img src="~/images/icon-web/people1.png" /></i></div>
                                 <span data-toggle="counter-up">   @string.Format(CurrentNumberFormat, "{0:N0}", ViewData["NoMRE"])  </span>
                                 @*<p>@ViewLocalizer["lblStatitictis3"]</p>*@
                             </div>
@@ -195,7 +195,7 @@
                                     }
                                     else
                                     {
-                                        <a title="Thông tin thêm" href="https://huongtra.thuathienhue.gov.vn" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://huongtra.thuathienhue.gov.vn" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -230,13 +230,13 @@
 
                             @if (lang == "vi")
                             {
-                                <iframe title="CLC_Item_HTra" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiN2FhOTVjM2MtZjVmMC00ZmI4LTgxZmMtMGM1MWRiYTI0OWNjIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
-                                <iframe title="CHA_Item_HTra480" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMGNjMGE5MjItNmFlOS00MTdiLWE4MzgtZGMxOGI5NTZkZDY0IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Khảo sát Hương Trà" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMGNjMGE5MjItNmFlOS00MTdiLWE4MzgtZGMxOGI5NTZkZDY0IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Rà phá Hương Trà" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiN2FhOTVjM2MtZjVmMC00ZmI4LTgxZmMtMGM1MWRiYTI0OWNjIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
                             }
                             else if (lang == "en")
                             {
-                                <iframe title="CLC_Item_HTra" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiN2FhOTVjM2MtZjVmMC00ZmI4LTgxZmMtMGM1MWRiYTI0OWNjIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectionc34db20011a5d5795808" frameborder="0" allowFullScreen="true"></iframe>
-                                <iframe title="CHA_Item_HTra480" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMGNjMGE5MjItNmFlOS00MTdiLWE4MzgtZGMxOGI5NTZkZDY0IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection59af532eecd7ea1341c2" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="Survey Huong Tra" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiMGNjMGE5MjItNmFlOS00MTdiLWE4MzgtZGMxOGI5NTZkZDY0IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection59af532eecd7ea1341c2" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="CLC Huong Tra" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiN2FhOTVjM2MtZjVmMC00ZmI4LTgxZmMtMGM1MWRiYTI0OWNjIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectionc34db20011a5d5795808" frameborder="0" allowFullScreen="true"></iframe>
                             }
 
                         </div>
@@ -248,13 +248,13 @@
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                            @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>*@
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>
+                            @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>*@
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["lblButtonLeft9"]</a></li>
 
                         </ul>

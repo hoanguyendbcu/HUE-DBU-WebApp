@@ -175,7 +175,7 @@
     <value>Task ID</value>
   </data>
   <data name="ClcLr_Name" xml:space="preserve">
-    <value>Clc name/ Internal ID</value>
+    <value>CLC name/ Internal ID</value>
   </data>
   <data name="ClcReporting_org_name" xml:space="preserve">
     <value>Organization</value>
@@ -196,7 +196,7 @@
     <value>Contact</value>
   </data>
   <data name="CTD" xml:space="preserve">
-    <value>Quang Binh Red Cross Society</value>
+    <value>Thua Thien Hue Red Cross Society</value>
   </data>
   <data name="DataAndFigures" xml:space="preserve">
     <value>Data &amp; Figures</value>
@@ -232,7 +232,7 @@
     <value>ACTIVITIES</value>
   </data>
   <data name="lblClearanceQB" xml:space="preserve">
-    <value>Bản đồ rà phá bom mìn tại Quảng Bình</value>
+    <value>Map of land release of Thua Thien Hue Province</value>
   </data>
   <data name="lblEducation" xml:space="preserve">
     <value>EDUCATION</value>

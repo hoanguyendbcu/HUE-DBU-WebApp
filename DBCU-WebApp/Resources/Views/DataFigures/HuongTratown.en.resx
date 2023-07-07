@@ -193,16 +193,16 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>5 ward:  Hương Chữ, Hương Văn, Hương Vân, Hương Xuân, Tứ Hạ</value>
+    <value>5 Ward: Huong Chu, Huong Van, Huong Van, Huong Xuan, Tu Ha.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>4  communes: Bình Thành, Bình Tiến, Hương Bình, Hương Toàn.</value>
+    <value>4 Communes: Binh Thanh, Binh Tien, Huong Binh, Huong Toan.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
   </data>
   <data name="lblHuongTra" xml:space="preserve">
-    <value>Huong Tra  Township</value>
+    <value>Huong Tra Town</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Quan Hau Township</value>
@@ -220,14 +220,14 @@
     <value>Area of released land</value>
   </data>
   <data name="lblStatitictis10" xml:space="preserve">
-    <value> MRE by child gender </value>
+    <value>MRE by child gender </value>
   </data>
   <data name="lblStatitictis11" xml:space="preserve">
-    <value> Gender</value>
+    <value>Gender</value>
     <comment>s</comment>
   </data>
   <data name="lblStatitictis12" xml:space="preserve">
-    <value> Child gender </value>
+    <value>Child gender </value>
   </data>
   <data name="lblStatitictis2" xml:space="preserve">
     <value>Explosive ordnances including cluster munitions, mines and other EOs that are safely demolished</value>
@@ -245,16 +245,16 @@
     <value>Most 5 UXO Model</value>
   </data>
   <data name="lblStatitictis7" xml:space="preserve">
-    <value> UXO Category</value>
+    <value>UXO Category</value>
   </data>
   <data name="lblStatitictis8" xml:space="preserve">
-    <value> UXO Model</value>
+    <value>UXO Model</value>
   </data>
   <data name="lblStatitictis9" xml:space="preserve">
-    <value> MRE by gender</value>
+    <value>MRE by gender</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Unit (m2)</value>
+    <value>Unit (m² )</value>
   </data>
   <data name="moreinfo" xml:space="preserve">
     <value>More information...</value>

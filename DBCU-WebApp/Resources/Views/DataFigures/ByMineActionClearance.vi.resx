@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClcAreasize" xml:space="preserve">
-    <value>Diện tích(m2)</value>
+    <value>Diện tích (m² )</value>
   </data>
   <data name="ClcDateIdentification" xml:space="preserve">
-    <value>Ngày khẳng định CHA</value>
+    <value>Ngày khẳng định ô nhiễm</value>
   </data>
   <data name="ClcEnddate" xml:space="preserve">
     <value>Ngày kết thúc</value>
@@ -136,7 +136,7 @@
     <value>Mã nhiệm vụ</value>
   </data>
   <data name="ClcLr_Name" xml:space="preserve">
-    <value>Clc name/ Mã nội bộ</value>
+    <value>Mã nội bộ</value>
   </data>
   <data name="ClcReporting_org_name" xml:space="preserve">
     <value>Tổ chức</value>
@@ -169,13 +169,13 @@
     <value>Huyện</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Dashboard sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Tỉnh Thừa Thiên Huế</value>
+    <value>Bảng biểu sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Tỉnh Thừa Thiên Huế</value>
   </data>
   <data name="lblMineActionClearance" xml:space="preserve">
     <value>Rà phá</value>
   </data>
   <data name="lblStatus" xml:space="preserve">
-    <value>Tình trạng: Dã rà</value>
+    <value>Tình trạng: Đã rà</value>
   </data>
   <data name="lblStatus1" xml:space="preserve">
     <value>Tình trạng: Chưa rà</value>
@@ -187,7 +187,7 @@
     <value>Tổng diện tích rà phá theo năm</value>
   </data>
   <data name="lblTitleCHAchart2" xml:space="preserve">
-    <value>Tổng diện tích Vùng khẳng định nguy hiểm theo huyện và tình trạng</value>
+    <value>Tổng diện tích khu vực khẳng định nguy hiểm theo huyện và tình trạng</value>
   </data>
   <data name="lblTitleCHAchart3" xml:space="preserve">
     <value>5 loại vật nổ tìm thấy nhiều nhất</value>
@@ -211,7 +211,7 @@
     <value>Tổng diện đang rà</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
-    <value>Đơn vị (m2)</value>
+    <value>Đơn vị (m² )</value>
   </data>
   <data name="lblUXOModelClearance" xml:space="preserve">
     <value>5 vật nổ tìm thấy</value>

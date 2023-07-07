@@ -133,10 +133,10 @@
     <value>Risk education</value>
   </data>
   <data name="lblOrg" xml:space="preserve">
-    <value>Organisation</value>
+    <value>Organization</value>
   </data>
   <data name="lblTitleChartMRE" xml:space="preserve">
-    <value>Total MRE by year</value>
+    <value>Total EORE by year</value>
   </data>
   <data name="lblTitleChild" xml:space="preserve">
     <value>Children</value>

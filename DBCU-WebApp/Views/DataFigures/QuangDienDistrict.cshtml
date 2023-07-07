@@ -199,7 +199,7 @@
                                     }
                                     else
                                     {
-                                        <a title="Thông tin thêm" href="https://quangdien.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://quangdien.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -233,12 +233,15 @@
 
                             @if (lang == "vi")
                             {
-                                <iframe title="CLC_Item_QDien477" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
-
+                                <iframe title="Rà phá Quảng Điền" width="1280" height="750" 
+                                src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" 
+                                frameborder="0" allowFullScreen="true"></iframe>
                             }
                             else if (lang == "en")
                             {
-                                <iframe title="CLC_Item_QDien477" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectiona9b4b6c15008ed8c05b3" frameborder="0" allowFullScreen="true"></iframe>
+                                <iframe title="CLC Quang Dien" width="1280" height="750" 
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiYzA2OTEzOTYtZTNkZi00MmEzLTliYWUtOGUyNmFiZTQyZGYxIiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectiona9b4b6c15008ed8c05b3" 
+                                    frameborder="0" allowFullScreen="true"></iframe>
 
                             }
 
@@ -253,12 +256,12 @@
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-               @*             <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>*@
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>
+                            @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["lblButtonLeft7"]</a></li>*@
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["lblButtonLeft8"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["lblButtonLeft9"]</a></li>
 

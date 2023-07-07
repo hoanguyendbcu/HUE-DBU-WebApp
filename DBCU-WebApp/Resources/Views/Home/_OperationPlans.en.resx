@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="activities" xml:space="preserve">
-    <value>activities</value>
+    <value>Activities</value>
   </data>
   <data name="Area" xml:space="preserve">
-    <value>Area  (m2)</value>
+    <value>Area (sqm)</value>
   </data>
   <data name="Commune" xml:space="preserve">
     <value>Commune</value>

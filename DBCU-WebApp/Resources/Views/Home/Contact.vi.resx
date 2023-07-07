@@ -139,10 +139,10 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblemail" xml:space="preserve">
-    <value>Email</value>
+    <value>Thư điện tử</value>
   </data>
   <data name="lblemail1" xml:space="preserve">
-    <value>Hãy nhập email đúng định dạng</value>
+    <value>Hãy nhập thư điện tử đúng định dạng</value>
   </data>
   <data name="lblmessage" xml:space="preserve">
     <value>Nội dung</value>
@@ -172,7 +172,7 @@
     <value>Kế hoạch hoạt động</value>
   </data>
   <data name="Our Address" xml:space="preserve">
-    <value>Địa chỉ Thừa Thiên Huế DBU</value>
+    <value>Địa chỉ Đơn vị CSDL bom mìn Thừa Thiên Huế</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Điện thoại</value>
