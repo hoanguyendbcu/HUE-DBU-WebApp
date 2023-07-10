@@ -171,7 +171,7 @@ namespace DBCU_WebApp.Repository
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT CAST(coalesce(SUM(coalesce(a.qty,0)+ coalesce(b.totalaudience,0) + coalesce(b.malepercentage,0) + coalesce(b.femalepercentage,0)),0) AS INT) qty   FROM public.mre a left join public.mredetail b on a.mre_guid =b.mre_guid ";
+                string strQuery = "SELECT CAST(coalesce(SUM(coalesce(cdf_total_boy,0)+ coalesce(cdf_total_men,0) + coalesce(cdf_total_girl,0) + coalesce(cdf_total_women,0)),0) AS INT) qty FROM public.mre";
                 var returnValue = await dbConnection.QueryFirstOrDefaultAsync<int>(strQuery);
                 dbConnection.Close();
 

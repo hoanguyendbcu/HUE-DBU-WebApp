@@ -36,7 +36,7 @@ namespace DBCU_WebApp.Controllers
             ViewData["areaCLC"] = await missonEODRepository.GetAreaCLC();
             ViewData["areaCHA"] = await missonEODRepository.GetAreaCHA();
             ViewData["NoERW"] = await missonEODRepository.GetNoERW();
-
+            ViewData["NoMRE"] = await missonEODRepository.GetNoMRE();
             ViewData["NoVictimACC"] = await missonEODRepository.NoVictimACC();
 
             var data = await missonEODRepository.GetGeoClearance();
