@@ -75,15 +75,16 @@
 }
 <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
-           @if (lang == "vi")
-                                {
-                                    <h4>Dữ liệu đang được cập nhật!</h4>
-                                }
-                                else if (lang == "en")
-                                {
-                                    <h4>Data are being updated!</h4>
-                                }
-        <partial name="_MineActionMRE" model="@Model" />
+        @if (lang == "vi")
+        {
+            <iframe title="Truyền thông TTHuế" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYWNiODgzZDctNDEzMi00NjFiLTgwNDItZThmY2FlOGFjN2I2IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+        }
+        else if (lang == "en")
+        {
+            <iframe title="EORE_TTHue" width="1280" height="750" src="https://app.powerbi.com/view?r=eyJrIjoiYWNiODgzZDctNDEzMi00NjFiLTgwNDItZThmY2FlOGFjN2I2IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSectionb6459dbaf9dc748c6f9e" frameborder="0" allowFullScreen="true"></iframe>
+            //<h4>Data are being updated!</h4>
+        }
+        <!--<partial name="_MineActionMRE" model="@Model" />-->
      
         <!-- Begin Page Content -->
 

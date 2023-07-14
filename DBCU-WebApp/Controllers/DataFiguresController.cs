@@ -1229,26 +1229,26 @@ namespace DBCU_WebApp.Controllers
 
             return View();
         }
-        public async Task<IActionResult> ByMineActionVictim()
-        {
-            ViewBag.NavClassByMineAction = "active";
-            return View();
-        }
-        public async Task<IActionResult> ByMineActionVictimAssisstance()
-        {
-            ViewBag.NavClassByMineAction = "active";
-            return View();
-        }
-        public async Task<IActionResult> ByMineActionPostClc()
-        {
-            ViewBag.NavClassByMineAction = "active";
-            return View();
-        }
+        //public async Task<IActionResult> ByMineActionVictim()
+        //{
+            //ViewBag.NavClassByMineAction = "active";
+            //return View();
+        //}
+        //public async Task<IActionResult> ByMineActionVictimAssisstance()
+        //{
+            //ViewBag.NavClassByMineAction = "active";
+            //return View();
+        //}
+        //public async Task<IActionResult> ByMineActionPostClc()
+        //{
+            //ViewBag.NavClassByMineAction = "active";
+            //return View();
+        //}
 
-        public async Task<IActionResult> ByMineActionOther()
-        {
-            ViewBag.NavClassByMineAction = "active";
-            return View();
-        }
+        //public async Task<IActionResult> ByMineActionOther()
+        //{
+            //ViewBag.NavClassByMineAction = "active";
+            //return View();
+        //}
     }
 }
