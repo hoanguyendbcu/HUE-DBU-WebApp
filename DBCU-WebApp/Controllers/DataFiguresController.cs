@@ -1204,9 +1204,10 @@ namespace DBCU_WebApp.Controllers
             return View(DataUXOModel);
         }
 
-        public async Task<IActionResult> ByMineActionMRE(string org)
+        //public async Task<IActionResult> ByMineActionMRE(string org)
+        public async Task<IActionResult> ByMineActionMRE()
         {
-            //ViewBag.NavClassByMineAction = "active";
+            ViewBag.NavClassByMineAction = "active";
 
             //var listOrganization = await _context.Organization
             //    .Where(p => p.ParentId == null)
@@ -1229,11 +1230,11 @@ namespace DBCU_WebApp.Controllers
 
             return View();
         }
-        //public async Task<IActionResult> ByMineActionVictim()
-        //{
-            //ViewBag.NavClassByMineAction = "active";
-            //return View();
-        //}
+        public async Task<IActionResult> ByMineActionVictim()
+        {
+            ViewBag.NavClassByMineAction = "active";
+            return View();
+        }
         //public async Task<IActionResult> ByMineActionVictimAssisstance()
         //{
             //ViewBag.NavClassByMineAction = "active";

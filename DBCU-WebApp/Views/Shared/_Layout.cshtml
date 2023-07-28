@@ -113,14 +113,13 @@
                                 <ul>                                   
                                     <li class="dropdown @ViewBag.NavClassByProvince">
                                         <a>@ViewLocalizer["ByProvince"] <i class="bi bi-chevron-right"></i></a>
-
                                         <ul>
                                             @*<li><a href="#">@ViewLocalizer["QuangBinh"]</a></li>*@
                                             <li><a class="@Html.IsActive("DataFigures", "TTHProvince")" asp-area="" asp-controller="DataFigures" asp-action="TTHProvince">@ViewLocalizer["TTH"]</a></li>
                                             <li><a class="@Html.IsActive("DataFigures", "ALuoiDistrict")" asp-area="" asp-controller="DataFigures" asp-action="AluoiDistrict"> @ViewLocalizer["ALuoi"]</a></li>
                                             <li><a class="@Html.IsActive("DataFigures", "NamDongDistrict")" asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["NamDong"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "PhongDienhDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["PhongDien"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "PhuLocTown")" asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["PhuLoc"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "PhongDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["PhongDien"]</a></li>
+                                            <li><a class="@Html.IsActive("DataFigures", "PhuLocDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["PhuLoc"]</a></li>
                                             <li><a class="@Html.IsActive("DataFigures", "PhuVangDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["PhuVang"]</a></li>
                                             <li><a class="@Html.IsActive("DataFigures", "QuangDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["QuangDien"]</a></li>
                                             <li><a class="@Html.IsActive("DataFigures", "HueCity")"asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["Hue"]</a></li>
@@ -133,7 +132,7 @@
                                         <ul>
                                             <li ><a class="@Html.IsActive("DataFigures","ByMineActionSurvey")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey">@ViewLocalizer["MineAction1"]</a></li>
                                             <li ><a class="@Html.IsActive("DataFigures","ByMineActionClearance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance">@ViewLocalizer["MineAction2"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures","ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>
+                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>
                                             <li ><a class="@Html.IsActive("DataFigures","ByMineActionMRE")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["MineAction3"]</a></li>
                                             @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionNTS")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionNTS">@ViewLocalizer["MineAction7"]</a></li>*@
                                             @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionVictimAssisstance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictimAssisstance">@ViewLocalizer["MineAction7"]</a></li>*@
@@ -142,7 +141,8 @@
 
                                         </ul>
                                     </li>
-                                    <li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
+                                    @*<li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>*@
+                                    <li class="@ViewBag.NavClassByProvince"><a class="@Html.IsActive("BomBingTTH", "Index")" asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
                                 </ul>
                             </li>
 
@@ -157,9 +157,9 @@
                         </ul>
                     </li>
                             
-                            <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
-                                <a>@ViewLocalizer["LINK"]<i class="bi bi-chevron-down"></i></a>
-                                <ul>
+                    <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
+                        <a>@ViewLocalizer["LINK"]<i class="bi bi-chevron-down"></i></a>
+                        <ul>
                             
                             @if (lang == "vi")
                             {
@@ -228,7 +228,7 @@
                            
                             
                         </ul>
-                            </li>
+                     </li>
 
                          
         </ul>
@@ -379,9 +379,9 @@
     <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="~/vendor/venobox/venobox.min.js"></script>
     <script src="~/vendor/aos/aos.js"></script>
-      <script src="~/vendor/glightbox/js/glightbox.min.js"></script> 
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script> 
     <script src="~/vendor/swiper/swiper-bundle.min.js"></script> 
-     <script src="~/vendor/purecounter/purecounter.js"></script>
+    <script src="~/vendor/purecounter/purecounter.js"></script>
 
  
     <!-- Template Main JS File -->
