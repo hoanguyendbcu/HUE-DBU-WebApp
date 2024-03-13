@@ -139,12 +139,13 @@ namespace DBCU_WebApp.Repository
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT  SUM(qty) qty   ";
-                strQuery = strQuery + " FROM hazreduc_point, hazreduc, hazreducdeviceinfo ";
-                strQuery = strQuery + " WHERE hazreduc_point.point_type::text = 'Evidence Point'::text ";
-                strQuery = strQuery + " AND hazreduc.hazreduc_guid::text = hazreduc_point.hazreduc_guid::text ";
-                strQuery = strQuery + " AND hazreduc_point.hazreduc_guid::text = hazreducdeviceinfo.hazreduc_guid::text ";
-                strQuery = strQuery + " AND hazreduc_point.point_local_id::text = hazreducdeviceinfo.resource::text ";
+                //string strQuery = "SELECT  SUM(qty) qty   ";
+                //strQuery = strQuery + " FROM hazreduc_point, hazreduc, hazreducdeviceinfo ";
+                //strQuery = strQuery + " WHERE hazreduc_point.point_type::text = 'Evidence Point'::text ";
+                //strQuery = strQuery + " AND hazreduc.hazreduc_guid::text = hazreduc_point.hazreduc_guid::text ";
+                //strQuery = strQuery + " AND hazreduc_point.hazreduc_guid::text = hazreducdeviceinfo.hazreduc_guid::text ";
+                //strQuery = strQuery + " AND hazreduc_point.point_local_id::text = hazreducdeviceinfo.resource::text ";
+                string strQuery = "SELECT coalesce(SUM(qty),0) qty FROM tthdbu_erw";
                 var returnValue = await dbConnection.QueryFirstOrDefaultAsync<int>(strQuery);
                 dbConnection.Close();
 

@@ -56,12 +56,13 @@ namespace DBCU_WebApp.Repository
             using (IDbConnection dbConnection = ConnectionStaging)
             {
                 dbConnection.Open();
-                string strQuery = "SELECT  coalesce(SUM(qty),0) qty  FROM hazreduc_point, hazreduc, hazreducdeviceinfo";
-                strQuery = strQuery + " WHERE hazreduc_point.point_type::text = 'Evidence Point'::text";
-                strQuery = strQuery + " AND hazreduc.hazreduc_guid::text = hazreduc_point.hazreduc_guid::text";
-                strQuery = strQuery + " AND hazreduc_point.hazreduc_guid::text = hazreducdeviceinfo.hazreduc_guid::text";
-                strQuery = strQuery + " AND hazreduc_point.point_local_id::text = hazreducdeviceinfo.resource::text";
-                strQuery = strQuery + " AND('0'= '" + distict + "' OR hazreduc.gazetteer_level3_name = '" + distict + "') ";
+                //string strQuery = "SELECT coalesce(SUM(qty),0) qty FROM hazreduc_point, hazreduc, hazreducdeviceinfo";
+                //strQuery = strQuery + " WHERE hazreduc_point.point_type::text = 'Evidence Point'::text";
+                //strQuery = strQuery + " AND hazreduc.hazreduc_guid::text = hazreduc_point.hazreduc_guid::text";
+                //strQuery = strQuery + " AND hazreduc_point.hazreduc_guid::text = hazreducdeviceinfo.hazreduc_guid::text";
+                //strQuery = strQuery + " AND hazreduc_point.point_local_id::text = hazreducdeviceinfo.resource::text";
+                //strQuery = strQuery + " AND ('0'= '" + distict + "' OR hazreduc.gazetteer_level3_name = '" + distict + "')";
+                string strQuery = "SELECT coalesce(SUM(qty),0) qty FROM tthdbu_erw WHERE ('0' = '" + distict + "' OR tthdbu_erw.district_name = '" + distict + "')";
                 var returnValue = await dbConnection.QueryFirstOrDefaultAsync<int>(strQuery);
                 dbConnection.Close();
 
