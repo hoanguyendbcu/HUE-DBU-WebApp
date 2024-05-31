@@ -127,8 +127,8 @@ function loadDataMap() {
                 zoom: 10
             });
             map.addControl(new mapboxgl.FullscreenControl());
-             map.addControl(new mapboxgl.NavigationControl());
-    map.resize();
+            map.addControl(new mapboxgl.NavigationControl());
+            map.resize();
 
             geojson =  @Html.Raw(ViewData["lstGeoOperationPlan"]);
 
@@ -140,37 +140,37 @@ function loadDataMap() {
                 el.className = 'marker';
 
                 if (marker.properties.org == 'NPA') {
-                    el.style.backgroundImage =
-                        'url(../images/icon/NPA.png)';
+                    el.style.backgroundImage = 'url(../images/icon/NPA.png)';
                     el.style.width = '60px';
                     el.style.height = '60px';
                 }
                 else if (marker.properties.org == 'PTVN') {
-                    el.style.backgroundImage =
-                        'url(../images/icon/PTVN.png)';
+                    el.style.backgroundImage = 'url(../images/icon/PTVN.png)';
                     el.style.width = '60px';
                     el.style.height = '45px';
                 }
                 else if (marker.properties.org == 'MAG') {
-                    el.style.backgroundImage =
-                        'url(../images/icon/MAG.png)';
+                    el.style.backgroundImage = 'url(../images/icon/MAG.png)';
                     el.style.width = '60px';
                     el.style.height = '40px';
                 }
                 else if (marker.properties.org == 'CRS')
                 {
-                    el.style.backgroundImage =
-                    'url(../images/icon/crs_logo_mini.png)';
+                    el.style.backgroundImage = 'url(../images/icon/crs_logo_mini.png)';
                     el.style.width = '60px';
                     el.style.height = '40px';
                 }
                 else if (marker.properties.org == 'PMCTTH') {
-                    el.style.backgroundImage =
-                        'url(../images/icon/logo-vn.png)';
+                    el.style.backgroundImage = 'url(../images/icon/logo-vn.png)';
                     el.style.width = '60px';
                     el.style.height = '40px';      
                 }
-                el.style.backgroundSize = '100%';
+                else if (marker.properties.org == 'VNMAC') {
+                el.style.backgroundImage = 'url(../images/icon/LogoVNMAC.png)';
+                    el.style.width = '60px';
+                    el.style.height = '40px';
+                }
+            el.style.backgroundSize = '100%';
 
                  //create the popup
                 var popup = new mapboxgl.Popup({ offset: 5 }).setHTML(
