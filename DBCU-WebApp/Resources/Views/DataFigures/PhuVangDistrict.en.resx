@@ -166,7 +166,7 @@
     <value>Adjacent to Ba Don township to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to Huong Thuy and Phu Loc district  to the West</value>
+    <value>Adjacent to Huong Thuy and Phu Loc district to the West</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
     <value>Adjacent to Phuc Loc and East Sea to the East</value>
@@ -196,7 +196,7 @@
     <value>1 Township: Phu Da.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>13 Communes: Phú An, Phú Diên, Phú Gia, Phú Hải, Phú Hồ, Phú Lương, Phú Mỹ, Phú Thuận, Phú Xuân, Vinh An, Vinh Hà, Vinh Thanh, Vinh Xuân.</value>
+    <value>13 Communes: Phu An, Phu Dien, Phu Gia, Phu Hai, Phu Ho, Phu Luong, Phu My, Phu Thuan, Phu Xuan, Vinh An, Vinh Ha, Vinh Thanh, Vinh Xuan.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
@@ -208,7 +208,7 @@
     <value>District</value>
   </data>
   <data name="lblPhuVang" xml:space="preserve">
-    <value>PhuVang District</value>
+    <value>Phu Vang District</value>
   </data>
   <data name="lblQuangBinhProvince" xml:space="preserve">
     <value>Quang Binh Province</value>

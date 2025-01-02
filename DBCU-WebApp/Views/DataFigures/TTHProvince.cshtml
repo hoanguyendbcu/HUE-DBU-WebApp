@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value;
+    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["QuangBinhProvince"].Value;
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 
 }
@@ -171,7 +171,7 @@
                             <div class="short">
                         <p>
 
-                                <strong>@ViewLocalizer["lblContentLeft1"]</strong> 5,025 km² <br />
+                            <strong>@ViewLocalizer["lblContentLeft1"]</strong> 5,025 km² <br />
                             <strong>
                                 @ViewLocalizer["lblContentLeft2"]</strong>
                                     1,153,795
@@ -221,24 +221,24 @@
                         <div class="col-lg-12">
                     @if(lang == "vi")
                     {
-                        <iframe title="Khảo sát TTHuế" width="1280" height="750"
+                        <iframe title="Khảo sát TpHuế" width="1280" height="750"
                             src="https://app.powerbi.com/view?r=eyJrIjoiOTg2NzQ1ZmMtMmQ4ZC00MDc0LWE1ODEtYThlMDUwZjYwN2I1IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection" 
                             frameborder="0" allowFullScreen="true">
                         </iframe>
                         
-                        <iframe title="Rà phá TTHuế" width="1280" height="750"
+                        <iframe title="Rà phá TpHuế" width="1280" height="750"
                                     src="https://app.powerbi.com/view?r=eyJrIjoiM2E0OGNmOTktMGUwYS00ZGYxLTk3MGMtMzFjYzFkYzYxYTc3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection"
                             frameborder="0" allowFullScreen="true">
                         </iframe>
                     }
                     else if (lang == "en")
                     {
-                        <iframe title="SURVEY TTH Pro" width="1280" height="750"
+                        <iframe title="SURVEY Hue city" width="1280" height="750"
                                     src="https://app.powerbi.com/view?r=eyJrIjoiOTg2NzQ1ZmMtMmQ4ZC00MDc0LWE1ODEtYThlMDUwZjYwN2I1IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection9bd94c7253eefbf6c5ce"
                                     frameborder="0" allowFullScreen="true">
                         </iframe>
-                        
-                        <iframe title="CLC TTH Pro" width="1280" height="750"
+
+                                <iframe title="CLC Hue city" width="1280" height="750"
                                     src="https://app.powerbi.com/view?r=eyJrIjoiM2E0OGNmOTktMGUwYS00ZGYxLTk3MGMtMzFjYzFkYzYxYTc3IiwidCI6Ijg3Yzk2ZjcyLTY3OWMtNDFlYi1iZmU3LWVjMWFlMjQ4NmYyNiIsImMiOjh9&pageName=ReportSection8ce6ed508132bea7843e"
                             frameborder="0" allowFullScreen="true">
                         </iframe>

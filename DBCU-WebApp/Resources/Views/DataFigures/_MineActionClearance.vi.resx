@@ -163,13 +163,13 @@
     <value>Theo hoạt động</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Thừa Thiên Huế</value>
+    <value>Thông tin và Bản đồ ô nhiễm bom chùm Thành phố Huế</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>Huyện</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Dashboard sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Tỉnh Thừa Thiên Huế</value>
+    <value>Biểu đồ sau đây trình bày số liệu diện tích, vật nổ của các hoạt động rà phá bom mình tại Thành phố Huế</value>
   </data>
   <data name="lblMineActionClearance" xml:space="preserve">
     <value>Rà phá</value>
@@ -178,13 +178,13 @@
     <value>Tổ chức</value>
   </data>
   <data name="lblStatus" xml:space="preserve">
-    <value>Tình trạng: Dã rà</value>
+    <value>Tình trạng: Đã rà</value>
   </data>
   <data name="lblStatus1" xml:space="preserve">
     <value>Tình trạng: Chưa rà</value>
   </data>
   <data name="lblTitleCHAchart" xml:space="preserve">
-    <value>Tổng diện tích rà phá  theo huyện</value>
+    <value>Tổng diện tích rà phá theo huyện</value>
   </data>
   <data name="lblTitleCHAchart1" xml:space="preserve">
     <value>Tổng diện tích rà phá theo năm</value>

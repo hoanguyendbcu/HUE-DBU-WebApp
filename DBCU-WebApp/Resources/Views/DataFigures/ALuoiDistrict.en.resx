@@ -136,7 +136,7 @@
     <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Phong Dien</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Phu Loc</value>
@@ -163,13 +163,13 @@
     <value>The geographical coordinates of the mainland are:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Adjacent to Dakrong district of Quang Tri province, Phong Dien district to the North</value>
+    <value>Adjacent to Dakrong district of Quang Tri province, Phong Dien Town to the North</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
     <value>Adjacent to Tay Giang district of Quang Nam province to the South</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Adjacent to the Nam Dong district, Huong Tra Township, Huong Thuy Township to the East </value>
+    <value>Adjacent to the Phu Loc district, Huong Tra Town, Huong Thuy Town to the East </value>
   </data>
   <data name="lblContent43" xml:space="preserve">
     <value>Adjacent to LAOS to the West</value>
@@ -199,7 +199,7 @@
     <value>1 Township: A Luoi.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value> 17 Communes: A Ngo, A Roang, Dong Son, Hong Bac, Hong Ha, Hong Kim, Hong Thai, Hong Thuong, Hong Thuy, Hong Van, Huong Nguyen, Huong Phong, Lam Dot, Phu Vinh, Quang Nham, Son Thuy, Trung Son.</value>
+    <value>17 Communes: A Ngo, A Roang, Dong Son, Hong Bac, Hong Ha, Hong Kim, Hong Thai, Hong Thuong, Hong Thuy, Hong Van, Huong Nguyen, Huong Phong, Lam Dot, Phu Vinh, Quang Nham, Son Thuy, Trung Son.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
@@ -247,7 +247,7 @@
     <value>NTS by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue City</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m² )</value>

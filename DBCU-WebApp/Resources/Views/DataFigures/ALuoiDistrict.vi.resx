@@ -127,7 +127,7 @@
     <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Thành phố Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
@@ -136,7 +136,7 @@
     <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Huyện Phú Lộc</value>
@@ -163,19 +163,19 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Phía bắc giáp huyện Đakrông, tỉnh Quảng Trị và huyện Phong Điền</value>
+    <value>Phía bắc giáp huyện Đakrông, tỉnh Quảng Trị và thị xã Phong Điền</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
     <value>Phía nam giáp huyện Tây Giang, tỉnh Quảng Nam</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía đông giáp huyện Nam Đông và các thị xã Hương Trà, Hương Thủy</value>
+    <value>Phía đông giáp huyện Phú Lộc và các thị xã Hương Trà, thị xã Hương Thủy</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
     <value>Phía tây giáp nước CHDCND Lào.</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Huyện A Lưới nằm trên trục đường Hồ Chí Minh chạy qua địa phận 14 xã, thị trấn trong huyện đã phá thế ngõ cụt, nối liền A Lưới thông suốt với hai miền Bắc-Nam đất nước; cách không xa quốc lộ 9- trục đường xuyên Á, có thể thông thương thuận lợi với các nước trong khu vực qua cửa khẩu Lao Bảo-Quảng Trị; đồng thời, Quốc lộ 49 nối đường Hồ Chí Minh với Quốc lộ 1, đây là trục giao thông Đông-Tây quan trọng kết nối A Lưới với Quốc lộ 1, thành phố Huế và các huyện đồng bằng. Có 85 km đường biên giới giáp với nước CHDCND Lào và là huyện duy nhất trong tỉnh có 2 khẩu quốc tế A Đớt-Tà Vàng (tỉnh Sê Kông) và cửa khẩu Hồng Vân-Kutai (tỉnh SaLavan) liên thông với CHDCND Lào, đây là các cửa ngõ phía Tây quan trọng, là lợi thế để huyện mở rộng hợp tác kinh tế, văn hóa với nước bạn Lào và các nước trong Khu vực.</value>
+    <value>Huyện A Lưới nằm trên trục đường Hồ Chí Minh chạy qua địa phận 14 xã, thị trấn trong huyện đã phá thế ngõ cụt, nối liền A Lưới thông suốt với hai miền Bắc-Nam đất nước; cách không xa quốc lộ 9 - trục đường xuyên Á, có thể thông thương thuận lợi với các nước trong khu vực qua cửa khẩu Lao Bảo-Quảng Trị; đồng thời, Quốc lộ 49 nối đường Hồ Chí Minh với Quốc lộ 1, đây là trục giao thông Đông-Tây quan trọng kết nối A Lưới với Quốc lộ 1, thành phố Huế và các huyện đồng bằng. Có 85 km đường biên giới giáp với nước CHDCND Lào và là huyện duy nhất trong tỉnh có 2 khẩu quốc tế A Đớt-Tà Vàng (tỉnh Sê Kông) và cửa khẩu Hồng Vân-Kutai (tỉnh SaLavan) liên thông với CHDCND Lào, đây là các cửa ngõ phía Tây quan trọng, là lợi thế để huyện mở rộng hợp tác kinh tế, văn hóa với nước bạn Lào và các nước trong Khu vực.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>

@@ -124,7 +124,7 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Huế</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
@@ -133,7 +133,7 @@
     <value>Huyện Nam Đông</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Huyện Phú Lộc</value>
@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 5.025,29  km2, dân số năm 2021 có 1.153.795  (recorded in 2021) người.</value>
+    <value>Thành phố Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 5.025,29  km², dân số năm 2021 có 1.153.795 người.</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Vị trí địa lý:</value>
@@ -172,7 +172,7 @@
     <value>Điểm cực Tây: xã Hồng Thủy, huyện A Lưới. </value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế cách thủ đô Hà Nội 675km về phía nam, cách thành phố Đà Nẵng 94km về phía bắc với ranh giới tự nhiên là dãy núi Bạch Mã. Phía bắc giáp tỉnh Quảng Trị và Biển Đông, phía đông giáp biển Đông, phía tây giáp tỉnh Quảng Trị và tỉnh Saravane của CHDCND Lào, phía nam giáp tỉnh Quảng Nam, thành phố Đà Nẵng và giáp tỉnh Sekong của CHDCND Lào.</value>
+    <value>Thành phố Huế cách thủ đô Hà Nội 675km về phía nam, cách thành phố Đà Nẵng 94km về phía bắc với ranh giới tự nhiên là dãy núi Bạch Mã. Phía bắc giáp tỉnh Quảng Trị và Biển Đông, phía đông giáp biển Đông, phía tây giáp tỉnh Quảng Trị và tỉnh Saravane của CHDCND Lào, phía nam giáp tỉnh Quảng Nam, thành phố Đà Nẵng và giáp tỉnh Sekong của CHDCND Lào.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -184,7 +184,7 @@
     <value>người</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Thành phố: Huế</value>
+    <value>Quận: Thuận Hóa, Phú Xuân</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
     <value>Dân tộc: Kinh, Cơ tu, Tà Ôi, Bru-Vân Kiều, Pa Cô</value>
@@ -193,19 +193,19 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Thị xã: Hương Trà, Hương Thủy</value>
+    <value>Thị xã: Hương Trà, Hương Thủy, Phong Điền</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>Huyện: A Lưới, Nam Đông, Phong Điền, Phú Lộc, Phú Vang, Quảng Điền</value>
+    <value>Huyện: A Lưới, Phú Lộc, Phú Vang, Quảng Điền</value>
   </data>
   <data name="lblContentLeftCity" xml:space="preserve">
-    <value>Thành phố: Huế</value>
+    <value>Quận: Thuận Hóa, Phú Xuân</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
   </data>
   <data name="lblImgCaption" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Thành phố Huế</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
@@ -250,7 +250,7 @@
     <value>Tổng hợp số lượt phỏng vấn khảo sát phi kỹ thuật theo giới tính</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế</value>
+    <value>Thành phố Huế</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Đơn vị (m² )</value>
@@ -259,6 +259,6 @@
     <value>Thông tin thêm...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
-    <value>Dữ liệu và số liệu - Tỉnh Thừa Thiên Huế</value>
+    <value>Dữ liệu và số liệu - Thành phố Huế</value>
   </data>
 </root>

@@ -124,7 +124,7 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Hue</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>A Luoi</value>
@@ -133,7 +133,7 @@
     <value>Nam Dong</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Phong Dien</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Phu Loc</value>
@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thua Thien Hue  province is situated in the North Central region of Vietnam and has the total natural area of 5.025,29 km2 and population of 1.153.795  (recorded in 2021)
+    <value>Hue city is situated in the North Central region of Vietnam and has the total natural area of 5.025,29 km² and population of 1.153.795 (recorded in 2021)
 Geographic position: The provincial mainland is located at the coordinates:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
@@ -173,7 +173,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Westernmost point: Hong Thuy commune, A Luoi district</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Thua Thien Hue is 675km south of Hanoi capital, 94km north of Da Nang city with the natural boundary of Bach Ma mountain range. It borders Quang Tri province and the East Sea to the north, the East Sea to the east, Quang Tri province and Saravane province of Lao PDR to the west, Quang Nam province, Da Nang city to the south, and Sekong province of Lao PDR.</value>
+    <value>Hue city is 675km south of Hanoi capital, 94km north of Da Nang city with the natural boundary of Bach Ma mountain range. It borders Quang Tri province and the East Sea to the north, the East Sea to the east, Quang Tri province and Saravane province of Lao PDR to the west, Quang Nam province, Da Nang city to the south, and Sekong province of Lao PDR.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Area:</value>
@@ -185,7 +185,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>people</value>
   </data>
   <data name="lblContentLeft3" xml:space="preserve">
-    <value>Capital: Hue</value>
+    <value>Districts: Thuan Hoa, Phu Xuan</value>
   </data>
   <data name="lblContentLeft4" xml:space="preserve">
     <value>Demographics: Kinh, CoTu, TaOi, Bru-Van Kieu, PaCo</value>
@@ -194,13 +194,13 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>Towns: Huong Tra, Huong Thuy</value>
+    <value>Towns: Huong Tra, Huong Thuy, Phong Dien</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>Districts: A Luoi, Nam Dong, Phong Dien, Phu Loc, Phu Vang, Quang Dien</value>
+    <value>Districts: A Luoi, Phu Loc, Phu Vang, Quang Dien</value>
   </data>
   <data name="lblContentLeftCity" xml:space="preserve">
-    <value>City: Hue</value>
+    <value>Districts: Thuan Hoa, Phu Xuan</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
@@ -252,7 +252,7 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>NTS by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue city</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m² )</value>
@@ -261,6 +261,6 @@ Geographic position: The provincial mainland is located at the coordinates:</val
     <value>More information...</value>
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
-    <value>Data And Figures - Quang Binh Province</value>
+    <value>Data And Figures - Hue city</value>
   </data>
 </root>
