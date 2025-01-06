@@ -163,13 +163,13 @@
     <value>By Mine action component</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thua Thien Hue information and Cluster Munitions contamination map</value>
+    <value>Hue City information and Cluster Munitions contamination map</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>District</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>This Dashboard includes charts showing Area and total number of found item during clearance activites in Thua Thien Hue Province</value>
+    <value>This Dashboard includes charts showing Area and total number of found item during clearance activites in Hue City</value>
   </data>
   <data name="lblMineActionClearance" xml:space="preserve">
     <value>Clearance</value>

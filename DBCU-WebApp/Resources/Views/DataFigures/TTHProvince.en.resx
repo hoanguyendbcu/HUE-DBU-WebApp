@@ -124,13 +124,13 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Hue</value>
+    <value>Phu Xuan District</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Nam Dong</value>
+    <value>Thuan Hoa District</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
     <value>Phong Dien Town</value>

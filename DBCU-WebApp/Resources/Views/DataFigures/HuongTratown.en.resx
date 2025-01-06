@@ -124,13 +124,13 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Phu Xuan District</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Nam Dong</value>
+    <value>Thuan Hoa District</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
     <value>Phong Dien</value>
@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Huong Tra town is located in the central area of ​​Thua Thien Hue province, northwest of Hue city</value>
+    <value>Huong Tra town is located in the central area of ​​Hue City</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative borders:</value>

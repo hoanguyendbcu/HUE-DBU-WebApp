@@ -196,7 +196,7 @@
     <value>Liên hệ</value>
   </data>
   <data name="CTD" xml:space="preserve">
-    <value>Chữ thập đỏ Thừa Thiên Huế</value>
+    <value>Chữ thập đỏ TP Huế</value>
   </data>
   <data name="DataAndFigures" xml:space="preserve">
     <value>Dữ liệu và số liệu</value>
@@ -232,7 +232,7 @@
     <value>HOẠT ĐỘNG</value>
   </data>
   <data name="lblClearanceQB" xml:space="preserve">
-    <value>Bản đồ rà phá bom mìn tại Thừa Thiên Huế</value>
+    <value>Bản đồ rà phá bom mìn tại TP Huế</value>
   </data>
   <data name="lblEducation" xml:space="preserve">
     <value>ĐÀO TẠO</value>
@@ -244,7 +244,7 @@
     <value>Khi phát hiện bom mìn, hãy gọi 0988796120</value>
   </data>
   <data name="lblHeroTop2" xml:space="preserve">
-    <value>Đơn vị Cơ sở dữ liệu khắc phục hậu quả bom mìn tỉnh Thừa Thiên Huế</value>
+    <value>Đơn vị Cơ sở dữ liệu khắc phục hậu quả bom mìn TP Huế</value>
   </data>
   <data name="lblHeroTop3" xml:space="preserve">
     <value>VẤN ĐỀ ĐƯỢC GIẢI QUYẾT</value>
@@ -274,7 +274,7 @@
     <value>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
   </data>
   <data name="lblPostWar" xml:space="preserve">
-    <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN TỈNH THỪA THIÊN HUẾ</value>
+    <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN THÀNH PHỐ HUẾ</value>
   </data>
   <data name="lblReadMore" xml:space="preserve">
     <value>Xem tiếp</value>
@@ -301,10 +301,10 @@
     <value>PTVN</value>
   </data>
   <data name="QBDOFA" xml:space="preserve">
-    <value>Sở ngoại vụ tỉnh Thừa Thiên Huế</value>
+    <value>Sở ngoại vụ tỉnh TP HUẾ</value>
   </data>
   <data name="QBPPM" xml:space="preserve">
-    <value>Bộ CHQS tỉnh Thừa Thiên Huế</value>
+    <value>Bộ CHQS TP HUẾ</value>
   </data>
   <data name="RiskEducation" xml:space="preserve">
     <value>Giáo dục      </value>
@@ -358,7 +358,7 @@
     <value>KHU VỰC KHẲNG ĐỊNH NGUY HIỂM BOM CHÙM</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>TỔNG DIỆN TÍCH ĐÃ RÀ PHÁ TOÀN TỈNH</value>
+    <value>TỔNG DIỆN TÍCH ĐÃ RÀ PHÁ TOÀN TP</value>
   </data>
   <data name="String9" xml:space="preserve">
     <value>SỐ NHIỆM VỤ XỬ LÝ LƯU ĐỘNG</value>

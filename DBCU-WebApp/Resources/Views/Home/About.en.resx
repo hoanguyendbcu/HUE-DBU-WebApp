@@ -127,7 +127,7 @@
     <value>Home</value>
   </data>
   <data name="Intro" xml:space="preserve">
-    <value>About Thua Thien Hue DBU</value>
+    <value>About Hue DBU</value>
   </data>
   <data name="Introduction" xml:space="preserve">
     <value>Introduction</value>
@@ -139,10 +139,10 @@
     <value>Database unit</value>
   </data>
   <data name="lblIntro" xml:space="preserve">
-    <value>The project of establishment and support to the Thua Thien Hue Mine Action Database Unit is cooperated by the People's Committee of Thua Thien Hue Province and Norwegian People's Aid in Vietnam to implement the mine action activities in Thua Thien Hue in the period 2020-2025.</value>
+    <value>The project of establishment and support to the Hue City Mine Action Database Unit is cooperated by the People's Committee of Hue City and Norwegian People's Aid in Vietnam to implement the mine action activities in Hue City in the period 2020-2025.</value>
   </data>
   <data name="lblIntro1" xml:space="preserve">
-    <value>The objectives of the project are to support Thua Thien Hue to establish, develop and implement a province database information management system, to enhance data collection, processing, safe storage and analysis for more informed mine action decision-making processes by province and national authorities.</value>
+    <value>The objectives of the project are to support Hue City to establish, develop and implement a province database information management system, to enhance data collection, processing, safe storage and analysis for more informed mine action decision-making processes by province and national authorities.</value>
   </data>
   <data name="lblOrganizationalStructure" xml:space="preserve">
     <value>Organizational structure</value>
@@ -158,6 +158,6 @@
   </data>
   <data name="PolicyAndTerms1" xml:space="preserve">
     <value>The data on website is confidential according to the security policy in accordance with the relevant laws on information and electronic data.
-Thua Thien Hue DBU retains all rights and rights to protect and use the information (under any form) published and presented on the Website (except it is notified or referred to as property of other parties) at any time. It is not allowed to copy, publish, duplicate, rent, sell, distribute for commercial or personal purpose without our written consent.</value>
+Hue DBU retains all rights and rights to protect and use the information (under any form) published and presented on the Website (except it is notified or referred to as property of other parties) at any time. It is not allowed to copy, publish, duplicate, rent, sell, distribute for commercial or personal purpose without our written consent.</value>
   </data>
 </root>

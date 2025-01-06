@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Thua Thien Hue DBU - " + ViewLocalizer["TTHProvince"].Value + " - " + ViewLocalizer["lblQuangDienDistrict"].Value;
+    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["TTHProvince"].Value + " - " + ViewLocalizer["lblQuangDienDistrict"].Value;
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
@@ -257,8 +257,9 @@
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft3"]</a></li>
+
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>

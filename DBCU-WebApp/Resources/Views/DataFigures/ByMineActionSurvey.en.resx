@@ -196,13 +196,13 @@
     <value>By Mine action component</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thua Thien Hue information and Cluster Munitions contamination map</value>
+    <value>Hue City information and Cluster Munitions contamination map</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>District</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Charts showing total area and total number of found item during CMRS activities in Thua Thien Hue</value>
+    <value>Charts showing total area and total number of found item during CMRS activities in Hue City</value>
   </data>
   <data name="lblMineActionSurvey" xml:space="preserve">
     <value>Survey</value>

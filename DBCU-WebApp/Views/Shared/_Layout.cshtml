@@ -11,8 +11,8 @@
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/png" href="~/favicon.ico">
     <link rel="stylesheet" href="~/css/bootstrap.min.css">
@@ -41,10 +41,10 @@
     <link href="~/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="~/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="~/vendor/venobox/venobox.css" rel="stylesheet">
- 
+
     <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-     <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- Template Main CSS File -->
     <link href="~/css/style.css" rel="stylesheet">
 
@@ -59,10 +59,8 @@
     <link href="~/lib/select2-bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet" />
 
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
-    <link
-    href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css"
-    rel="stylesheet"
-    />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css"
+          rel="stylesheet" />
 
 </head>
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -70,81 +68,82 @@
 @using DBCU_WebApp.core
 @using DBCU_WebApp.Areas.Identity.Pages.Account.Manage
 @{
- string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
+    string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <body>
- 
-     <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        @*<i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">dbu.thuathienhue@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+840234</span></i>*@
-      </div>
-      <div class="social-links d-none d-md-flex align-items-center">
-        @*<a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>*@
-     
-      </div>
-    </div>
-  </section>
 
-      <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                @*<i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">dbu.thuathienhue@gmail.com</a></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+840234</span></i>*@
+            </div>
+            <div class="social-links d-none d-md-flex align-items-center">
+                @*<a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>*@
 
-      <div class="logo">
-  
-     <a style="text-align:center" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icon/logoTTHDBU.jpg" alt="logo"></a>
-     
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
+            </div>
+        </div>
+    </section>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-    
-                            <li><a class="@Html.IsActive("Home", "Index")" id="Home" asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
-                            <li><a class="@Html.IsActive("Home", "About")" id="about" asp-area="" asp-controller="Home" asp-action="About">@ViewLocalizer["About"]</a></li>
-                            <li ><a class="@Html.IsActive("News", "Index")" id="News" asp-area="" asp-controller="News" asp-action="Index">@ViewLocalizer["News"]</a></li>
-                            <li ><a class="@Html.IsActive("Home", "OpeartionPlan")"asp-area="" asp-controller="Home" asp-action="OpeartionPlan">@ViewLocalizer["OperationPlan"]</a></li>
-                            <li class="dropdown">
-                                <a class="@ManageNavPages.DataAndFiguresClass(ViewContext) @Html.IsActiveNav("DataFigures", "")">@ViewLocalizer["DataAndFigures"] <i class="bi bi-chevron-down"></i></a>
-                                <ul>                                   
-                                    <li class="dropdown @ViewBag.NavClassByProvince">
-                                        <a>@ViewLocalizer["ByProvince"] <i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            @*<li><a href="#">@ViewLocalizer["QuangBinh"]</a></li>*@
-                                            <li><a class="@Html.IsActive("DataFigures", "TTHProvince")" asp-area="" asp-controller="DataFigures" asp-action="TTHProvince">@ViewLocalizer["TTH"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "ALuoiDistrict")" asp-area="" asp-controller="DataFigures" asp-action="AluoiDistrict"> @ViewLocalizer["ALuoi"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "NamDongDistrict")" asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["NamDong"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "PhongDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["PhongDien"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "PhuLocDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["PhuLoc"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "PhuVangDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["PhuVang"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "QuangDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["QuangDien"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "HueCity")"asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["Hue"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "HuongTraTown")"asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["HuongTra"]</a></li>
-                                            <li><a class="@Html.IsActive("DataFigures", "HuongThuyTown")"asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["HuongThuy"]</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown @ViewBag.NavClassByMineAction">
-                                        <a>@ViewLocalizer["ByMineAction"]<i class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionSurvey")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey">@ViewLocalizer["MineAction1"]</a></li>
-                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionClearance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance">@ViewLocalizer["MineAction2"]</a></li>
-                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>
-                                            <li ><a class="@Html.IsActive("DataFigures","ByMineActionMRE")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["MineAction3"]</a></li>
-                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionNTS")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionNTS">@ViewLocalizer["MineAction7"]</a></li>*@
-                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionVictimAssisstance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictimAssisstance">@ViewLocalizer["MineAction7"]</a></li>*@
-                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionPostClc")"asp-area="" asp-controller="DataFigures" asp-action="ByMineActionPostClc">@ViewLocalizer["MineAction5"]</a></li>*@
-                                            @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionOther")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionOther">@ViewLocalizer["MineAction6"]</a></li>*@
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
 
-                                        </ul>
-                                    </li>
-                                    @*<li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>*@
-                                    <li class="@ViewBag.NavClassByProvince"><a class="@Html.IsActive("BomBingTTH", "Index")" asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
+            <div class="logo">
+
+                <a style="text-align:center" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/icon/logoTTHDBU.jpg" alt="logo"></a>
+
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+
+                    <li><a class="@Html.IsActive("Home", "Index")" id="Home" asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a></li>
+                    <li><a class="@Html.IsActive("Home", "About")" id="about" asp-area="" asp-controller="Home" asp-action="About">@ViewLocalizer["About"]</a></li>
+                    <li><a class="@Html.IsActive("News", "Index")" id="News" asp-area="" asp-controller="News" asp-action="Index">@ViewLocalizer["News"]</a></li>
+                    <li><a class="@Html.IsActive("Home", "OpeartionPlan")" asp-area="" asp-controller="Home" asp-action="OpeartionPlan">@ViewLocalizer["OperationPlan"]</a></li>
+                    <li class="dropdown">
+                        <a class="@ManageNavPages.DataAndFiguresClass(ViewContext) @Html.IsActiveNav("DataFigures", "")">@ViewLocalizer["DataAndFigures"] <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li class="dropdown @ViewBag.NavClassByProvince">
+                                <a>@ViewLocalizer["ByProvince"] <i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    @*<li><a href="#">@ViewLocalizer["QuangBinh"]</a></li>*@
+                                    <li><a class="@Html.IsActive("DataFigures", "TTHProvince")" asp-area="" asp-controller="DataFigures" asp-action="TTHProvince">@ViewLocalizer["TTH"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "ALuoiDistrict")" asp-area="" asp-controller="DataFigures" asp-action="AluoiDistrict"> @ViewLocalizer["ALuoi"]</a></li>
+                                    @* <li><a class="@Html.IsActive("DataFigures", "NamDongDistrict")" asp-area="" asp-controller="DataFigures" asp-action="NamDongDistrict">@ViewLocalizer["NamDong"]</a></li> *@
+                                    <li><a class="@Html.IsActive("DataFigures", "PhongDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["PhongDien"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "PhuLocDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["PhuLoc"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "PhuVangDistrict")" asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["PhuVang"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "QuangDienDistrict")" asp-area="" asp-controller="DataFigures" asp-action="QuangDienDistrict">@ViewLocalizer["QuangDien"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "HueCity")" asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["PhuXuan"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "HueCity")" asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["ThuanHoa"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "HuongTraTown")" asp-area="" asp-controller="DataFigures" asp-action="HuongTraTown">@ViewLocalizer["HuongTra"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures", "HuongThuyTown")" asp-area="" asp-controller="DataFigures" asp-action="HuongThuyTown">@ViewLocalizer["HuongThuy"]</a></li>
                                 </ul>
                             </li>
+                            <li class="dropdown @ViewBag.NavClassByMineAction">
+                                <a>@ViewLocalizer["ByMineAction"]<i class="bi bi-chevron-right"></i></a>
+                                <ul>
+                                    <li><a class="@Html.IsActive("DataFigures","ByMineActionSurvey")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionSurvey">@ViewLocalizer["MineAction1"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures","ByMineActionClearance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionClearance">@ViewLocalizer["MineAction2"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures","ByMineActionVictim")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictim">@ViewLocalizer["MineAction4"]</a></li>
+                                    <li><a class="@Html.IsActive("DataFigures","ByMineActionMRE")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionMRE">@ViewLocalizer["MineAction3"]</a></li>
+                                    @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionNTS")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionNTS">@ViewLocalizer["MineAction7"]</a></li>*@
+                                    @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionVictimAssisstance")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionVictimAssisstance">@ViewLocalizer["MineAction7"]</a></li>*@
+                                    @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionPostClc")"asp-area="" asp-controller="DataFigures" asp-action="ByMineActionPostClc">@ViewLocalizer["MineAction5"]</a></li>*@
+                                    @*<li ><a class="@Html.IsActive("DataFigures", "ByMineActionOther")" asp-area="" asp-controller="DataFigures" asp-action="ByMineActionOther">@ViewLocalizer["MineAction6"]</a></li>*@
+
+                                </ul>
+                            </li>
+                            @*<li class="@Html.IsActive("BomBingTTH", "Index")"><a asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>*@
+                            <li class="@ViewBag.NavClassByProvince"><a class="@Html.IsActive("BomBingTTH", "Index")" asp-area="" asp-controller="BomBingTTH" asp-action="Index">@ViewLocalizer["TTHBomBing"]</a></li>
+                        </ul>
+                    </li>
 
 
                     <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
@@ -156,22 +155,22 @@
 
                         </ul>
                     </li>
-                            
+
                     <li class="dropdown @ManageNavPages.LibraryClass(ViewContext)">
                         <a>@ViewLocalizer["LINK"]<i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            
+
                             @if (lang == "vi")
                             {
                                 <li><a href="https://sngv.hue.gov.vn/" target="_blank">@ViewLocalizer["DOFA"]</a></li>
-                            
+
                             }
                             else
                             {
                                 <li><a href="https://sngv.hue.gov.vn/p/foreign-affairs-department-of-hue-city/" target="_blank">@ViewLocalizer["DOFA"]</a></li>
                             }
-                           
-                             @if (lang == "vi")
+
+                            @if (lang == "vi")
                             {
                                 <li> <a href="http://vnmac.gov.vn/" target="_blank">@ViewLocalizer["VNMAC"]</a></li>
                             }
@@ -197,7 +196,7 @@
                             {
                                 <li><a href="https://quangbinhdbcu.vn/home" target="_blank">@ViewLocalizer["QBDBCU"]</a></li>
                             }
-                            
+
                             @if (lang == "vi")
                             {
                                 <li><a href="https://giaoducbommin.vn/landing" target="_blank">@ViewLocalizer["GD Tuyên truyền"]</a></li>
@@ -215,7 +214,7 @@
                             {
                                 <li><a href="https://www.gichd.org/" target="_blank">@ViewLocalizer["GICHD"]</a></li>
                             }
-                            
+
                             @if (lang == "vi")
                             {
                                 <li><a href="https://www.mineactionstandards.org/" target="_blank">@ViewLocalizer["IMAS"]</a></li>
@@ -234,50 +233,49 @@
                             {
                                 <li><a href="http://123.25.117.110:8080/erwsearch/" target="_blank">@ViewLocalizer["ERWSearch"]</a></li>
                             }
-                           
-                            
+
+
                         </ul>
-                     </li>
+                    </li>
 
-                         
-        </ul>
-          @await Html.PartialAsync("_SetLanguagePartial")
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    
-    </div>
-  </header><!-- End Header -->
+
+                </ul>
+                @await Html.PartialAsync("_SetLanguagePartial")
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
     <!-- ======= Header ======= -->
-   
+
     <main id="main">
         @RenderBody()
     </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
 
-       <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+        <div class="footer-content position-relative">
+            <div class="container">
+                <div class="row">
 
-    <div class="footer-content position-relative">
-      <div class="container">
-        <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <h3>Hue DBU</h3>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Hue DBU</h3>
-            
-                        <p>
-                            @ViewLocalizer["Address1"]<br>
-                            @ViewLocalizer["Address2"] <br>
-                            @ViewLocalizer["Address3"]<br>
-                            @ViewLocalizer["Address4"] <br>
-                            @ViewLocalizer["Address5"] <br>
-                            <strong>Phone:</strong> 0988796120<br>
-                            @*<strong>Email:</strong> info@quangbinhdbcu.com<br>*@
-                        </p>
-            </div>
-          </div><!-- End footer info column-->
+                            <p>
+                                @ViewLocalizer["Address1"]<br>
+                                @ViewLocalizer["Address2"] <br>
+                                @ViewLocalizer["Address3"]<br>
+                                @ViewLocalizer["Address4"] <br>
+                                @ViewLocalizer["Address5"] <br>
+                                <strong>Phone:</strong> 0988796120<br>
+                                @*<strong>Email:</strong> info@quangbinhdbcu.com<br>*@
+                            </p>
+                        </div>
+                    </div><!-- End footer info column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>@ViewLocalizer["lblInfor"]</h4>
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>@ViewLocalizer["lblInfor"]</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="Index">@ViewLocalizer["Home"]</a>  </li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="About">@ViewLocalizer["About"]</a></li>
@@ -285,45 +283,43 @@
                             <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="OpeartionImage">@ViewLocalizer["Photos"]</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="Contact">@ViewLocalizer["Contact"]</a></li>
                         </ul>
-          </div><!-- End footer links column-->
+                    </div><!-- End footer links column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-           <h4>@ViewLocalizer["lblSupport"]</h4>
+                    <div class="col-lg-2 col-md-3 footer-links">
+                        <h4>@ViewLocalizer["lblSupport"]</h4>
                         <ul>
 
                             <li><i class="bx bx-chevron-right"></i> <a href="/Identity/Account/Login">Log In</a></li>
                             @*<li><i class="bx bx-chevron-right"></i> <a href="/Identity/Account/Register">Sign  In</a></li>*@
                         </ul>
-          </div><!-- End footer links column-->
-		  
-		<div class="col-lg-2 col-md-6 footer-links">
-            <h4>Follow us</h4>
-          
-          </div><!-- End footer links column-->
+                    </div><!-- End footer links column-->
 
-          
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Follow us</h4>
 
+                    </div><!-- End footer links column-->
+
+
+
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="footer-legal text-center position-relative">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Hue DBU</span></strong>. All Rights Reserved
+        <div class="footer-legal text-center position-relative">
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Hue DBU</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                </div>
+            </div>
         </div>
-        <div class="credits">
-       
-         
-        </div>
-      </div>
-    </div>
 
-  </footer>
-  <!-- End Footer -->
+    </footer>
+    <!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
- 
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
     <!-- jquery latest version -->
     <script src="~/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -388,11 +384,11 @@
     <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="~/vendor/venobox/venobox.min.js"></script>
     <script src="~/vendor/aos/aos.js"></script>
-    <script src="~/vendor/glightbox/js/glightbox.min.js"></script> 
-    <script src="~/vendor/swiper/swiper-bundle.min.js"></script> 
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="~/vendor/purecounter/purecounter.js"></script>
 
- 
+
     <!-- Template Main JS File -->
     <script src="~/js/main.js"></script>
 

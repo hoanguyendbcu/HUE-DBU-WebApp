@@ -124,25 +124,19 @@
     <value>5th floor, HCC Building</value>
   </data>
   <data name="Address2" xml:space="preserve">
-    <value>28 Ly Thuong Kiet Street</value>
+    <value>28 Ly Thuong Kiet Street, Vinh Ninh Ward</value>
   </data>
   <data name="Address3" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Thuan Hoa District</value>
   </data>
   <data name="Address4" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue City</value>
   </data>
   <data name="Address5" xml:space="preserve">
     <value>Viet Nam</value>
   </data>
   <data name="ALuoi" xml:space="preserve">
     <value>A Luoi District</value>
-  </data>
-  <data name="BaDon" xml:space="preserve">
-    <value>Ba Don Town</value>
-  </data>
-  <data name="BoTrach" xml:space="preserve">
-    <value>Bo Trach District</value>
   </data>
   <data name="btnRegister" xml:space="preserve">
     <value>Register</value>
@@ -163,10 +157,7 @@
     <value>Documents</value>
   </data>
   <data name="DOFA" xml:space="preserve">
-    <value>Thua Thien Hue Provincial DOFA</value>
-  </data>
-  <data name="DongHoi" xml:space="preserve">
-    <value>Dong Hoi City</value>
+    <value>Hue City Provincial DOFA</value>
   </data>
   <data name="ERWSearch" xml:space="preserve">
     <value>ERW SEARCH</value>
@@ -241,7 +232,7 @@
     <value>Operational plan</value>
   </data>
   <data name="PhongDien" xml:space="preserve">
-    <value>Phong Dien District</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="Photos" xml:space="preserve">
     <value>Photos</value>
@@ -252,6 +243,9 @@
   <data name="PhuVang" xml:space="preserve">
     <value>Phu Vang District</value>
   </data>
+  <data name="PhuXuan" xml:space="preserve">
+    <value>Phu Xuan District</value>
+  </data>
   <data name="QBDBCU" xml:space="preserve">
     <value>QB DBCU</value>
   </data>
@@ -261,20 +255,14 @@
   <data name="QuangDien" xml:space="preserve">
     <value>Quang Dien District</value>
   </data>
-  <data name="QuangNinh" xml:space="preserve">
-    <value>Quang Ninh District</value>
-  </data>
-  <data name="QuangTrach" xml:space="preserve">
-    <value>Quang Trach District</value>
+  <data name="ThuanHoa" xml:space="preserve">
+    <value>Thuan Hoa District</value>
   </data>
   <data name="TTH" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue City</value>
   </data>
   <data name="TTHBomBing" xml:space="preserve">
-    <value>Map of bombing Thua Thien Hue Province</value>
-  </data>
-  <data name="TuyenHoa" xml:space="preserve">
-    <value>Tuyen Hoa District</value>
+    <value>Map of bombing Hue City</value>
   </data>
   <data name="Video" xml:space="preserve">
     <value>Video</value>

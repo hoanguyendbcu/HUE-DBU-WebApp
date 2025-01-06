@@ -163,13 +163,13 @@
     <value>Theo hoạt động</value>
   </data>
   <data name="lblDashboard" xml:space="preserve">
-    <value>Thông tin và Bản đồ ô nhiễm bom chùm tỉnh Thừa Thiên Huế</value>
+    <value>Thông tin và Bản đồ ô nhiễm bom chùm Thành phố Huế</value>
   </data>
   <data name="lblDistrict" xml:space="preserve">
     <value>Huyện</value>
   </data>
   <data name="lblIntrodution" xml:space="preserve">
-    <value>Bảng biểu sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Tỉnh Thừa Thiên Huế</value>
+    <value>Bảng biểu sau đây gồm các biểu đồ trình bày số liệu diện tích vật nổ của các hoạt động rà phá bom mình tại Thành phố Huế</value>
   </data>
   <data name="lblMineActionClearance" xml:space="preserve">
     <value>Rà phá</value>

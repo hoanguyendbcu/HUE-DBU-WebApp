@@ -124,16 +124,16 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Phu Xuan District</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Nam Dong</value>
+    <value>Thuan Hoa Distict</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Phong Dien</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Phu Loc</value>
@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Huong Thuy town is located in the central area of ​​Thua Thien Hue province, southeast of Hue city and has a geographical location:</value>
+    <value>Huong Thuy town is located in the central area of ​​Hue City, southeast of Hue city and has a geographical location:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative borders:</value>
@@ -247,7 +247,7 @@
     <value>MRE by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue City</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m² )</value>

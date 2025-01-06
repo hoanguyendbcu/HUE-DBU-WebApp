@@ -124,25 +124,19 @@
     <value>Tầng 5, Tòa nhà HCC Building</value>
   </data>
   <data name="Address2" xml:space="preserve">
-    <value>28 Lý Thường Kiệt</value>
+    <value>28 Lý Thường Kiệt, Phường Vĩnh Ninh</value>
   </data>
   <data name="Address3" xml:space="preserve">
-    <value>Thành phố Huế</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="Address4" xml:space="preserve">
-    <value>Thừa Thiên Huế</value>
+    <value>Thành Phố Huế</value>
   </data>
   <data name="Address5" xml:space="preserve">
     <value>Việt Nam</value>
   </data>
   <data name="ALuoi" xml:space="preserve">
     <value>Huyện A Lưới</value>
-  </data>
-  <data name="BaDon" xml:space="preserve">
-    <value>TX Ba Đồn</value>
-  </data>
-  <data name="BoTrach" xml:space="preserve">
-    <value>Huyện Bố Trạch</value>
   </data>
   <data name="btnRegister" xml:space="preserve">
     <value>Đăng ký</value>
@@ -163,10 +157,7 @@
     <value>Tài liệu</value>
   </data>
   <data name="DOFA" xml:space="preserve">
-    <value>Sở Ngoại vụ tỉnh Thừa Thiên Huế</value>
-  </data>
-  <data name="DongHoi" xml:space="preserve">
-    <value>TP Đồng Hới</value>
+    <value>Sở Ngoại vụ Thành phố Huế</value>
   </data>
   <data name="ERWSearch" xml:space="preserve">
     <value>TRA CỨU VẬT NỔ</value>
@@ -198,9 +189,6 @@
   <data name="lblSupport" xml:space="preserve">
     <value>Hỗ trợ</value>
   </data>
-  <data name="LeThuy" xml:space="preserve">
-    <value>Huyện Lệ Thủy</value>
-  </data>
   <data name="Library" xml:space="preserve">
     <value>Thư viện</value>
   </data>
@@ -228,9 +216,6 @@
   <data name="MineAction7" xml:space="preserve">
     <value>Hỗ trợ nạn nhân</value>
   </data>
-  <data name="MinhHoa" xml:space="preserve">
-    <value>Huyện Minh Hóa</value>
-  </data>
   <data name="NamDong" xml:space="preserve">
     <value>Huyện Nam Đông</value>
   </data>
@@ -241,7 +226,7 @@
     <value>Kế hoạch hoạt động</value>
   </data>
   <data name="PhongDien" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="Photos" xml:space="preserve">
     <value>Hình ảnh</value>
@@ -252,6 +237,9 @@
   <data name="PhuVang" xml:space="preserve">
     <value>Huyện Phú Vang</value>
   </data>
+  <data name="PhuXuan" xml:space="preserve">
+    <value>Quận Phú Xuân</value>
+  </data>
   <data name="QBDBCU" xml:space="preserve">
     <value>QB DBCU</value>
   </data>
@@ -261,20 +249,14 @@
   <data name="QuangDien" xml:space="preserve">
     <value>Huyện Quảng Điền</value>
   </data>
-  <data name="QuangNinh" xml:space="preserve">
-    <value>Huyện Quảng Ninh</value>
-  </data>
-  <data name="QuangTrach" xml:space="preserve">
-    <value>Huyện Quảng Trạch</value>
+  <data name="ThuanHoa" xml:space="preserve">
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="TTH" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế</value>
+    <value>Thành Phố Huế</value>
   </data>
   <data name="TTHBomBing" xml:space="preserve">
-    <value>Bản đồ ném bom tỉnh Thừa Thiên Huế</value>
-  </data>
-  <data name="TuyenHoa" xml:space="preserve">
-    <value>Huyện Tuyên Hóa</value>
+    <value>Bản đồ ném bom Thành phố Huế</value>
   </data>
   <data name="Video" xml:space="preserve">
     <value>Phim</value>

@@ -127,7 +127,7 @@
     <value>Trang chủ</value>
   </data>
   <data name="Intro" xml:space="preserve">
-    <value>Giới thiệu Đơn vị Cơ sở dữ liệu bom mìn Thừa Thiên Huế</value>
+    <value>Giới thiệu Đơn vị Cơ sở dữ liệu bom mìn Thành phố Huế</value>
   </data>
   <data name="Introduction" xml:space="preserve">
     <value>Giới thiệu</value>
@@ -139,10 +139,10 @@
     <value>Đơn vị cơ sở dữ liệu</value>
   </data>
   <data name="lblIntro" xml:space="preserve">
-    <value>Dự án Thiết lập và hỗ trợ Đơn vị Cơ sở dữ liệu bom mìn tỉnh Thừa Thiên Huế (DBU) do UBND tỉnh Thừa Thiên Huế và Tổ chức Viện trợ Nhân dân Na Uy về việc hợp tác thực hiện các dự án khắc phục hậu quả bom mìn tại tỉnh Thừa Thiên Huế, giai đoạn 2021-2025</value>
+    <value>Dự án Thiết lập và hỗ trợ Đơn vị Cơ sở dữ liệu bom mìn Thành phố Huế (DBU) do UBND Thành phố Huế và Tổ chức Viện trợ Nhân dân Na Uy về việc hợp tác thực hiện các dự án khắc phục hậu quả bom mìn tại Thành phố Huế, giai đoạn 2021-2025</value>
   </data>
   <data name="lblIntro1" xml:space="preserve">
-    <value>Mục tiêu dự án giúp tỉnh Thừa Thiên Huế thiết lập, phát triển và triển khai hệ thống quản lý 
+    <value>Mục tiêu dự án giúp Thành phố Huế thiết lập, phát triển và triển khai hệ thống quản lý 
 thông tin cơ sở dữ liệu cấp tỉnh, giúp củng cố hoạt động thu thập, xử lý, lưu trữ an toàn và phân tích các dữ liệu phục vụ các quy trình ra quyết định liên quan đến các hoạt động bom mìn của chính quyền cấp tỉnh và cấp quốc gia.</value>
   </data>
   <data name="lblOrganizationalStructure" xml:space="preserve">
@@ -158,6 +158,6 @@ thông tin cơ sở dữ liệu cấp tỉnh, giúp củng cố hoạt động t
     <value>Các thông tin trong Website sẽ được bảo mật theo chính sách bảo mật phù hợp với quy định của pháp luật về thông tin, dữ liệu điện tử có liên quan.</value>
   </data>
   <data name="PolicyAndTerms1" xml:space="preserve">
-    <value>Đơn vị Cơ sở dữ liệu bom mìn Thừa Thiên Huế giữ tất cả các quyền lợi, quyền để bảo vệ và sử dụng các thông tin (bất kỳ hình thức) được Chúng tôi công bố, giới thiệu trên Website (trừ trường hợp được chú thích khác đi hoặc thông tin được giới thiệu, được hiểu là tài sản của một bên khác) vào mọi thời điểm. Chúng tôi không mục đích cho phép để sao chép, xuất bản, nhân bản, cho thuê, bán, phân phối thương mại hoặc mục đích cá nhân khi chưa có sự đồng ý bằng văn bản của Chúng tôi.</value>
+    <value>Đơn vị Cơ sở dữ liệu bom mìn Thành phố Huế giữ tất cả các quyền lợi, quyền để bảo vệ và sử dụng các thông tin (bất kỳ hình thức) được Chúng tôi công bố, giới thiệu trên Website (trừ trường hợp được chú thích khác đi hoặc thông tin được giới thiệu, được hiểu là tài sản của một bên khác) vào mọi thời điểm. Chúng tôi không mục đích cho phép để sao chép, xuất bản, nhân bản, cho thuê, bán, phân phối thương mại hoặc mục đích cá nhân khi chưa có sự đồng ý bằng văn bản của Chúng tôi.</value>
   </data>
 </root>

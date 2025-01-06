@@ -1,3 +1,5 @@
+ 
+
 {
   "iisSettings": {
     "windowsAuthentication": false,
@@ -8,9 +10,21 @@
     }
   },
   "profiles": {
-    "DBCU-WebApp": {
+    "IISExpress": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:60896;http://localhost:50896",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
       "commandName": "IISExpress",
-      "nativeDebugging": true
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

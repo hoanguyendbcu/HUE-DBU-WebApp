@@ -124,16 +124,16 @@
     <value>Home</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Phu Xuan Distict</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>A Luoi</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Nam Dong</value>
+    <value>Thuan Hoa Distict</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Phong Dien</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Phu Loc</value>
@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Hue city is located in the center of Thua Thien Hue province, the location stretches along the Perfume River and has a geographical location:</value>
+    <value>Hue city is located in the center of Hue City, the location stretches along the Perfume River and has a geographical location:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative borders:</value>
@@ -172,7 +172,7 @@
     <value>Adjacent to Huong Tra Townshio to the West</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Hue is the provincial capital city of Thua Thien Hue province, Vietnam. Hue used to be the capital (Hue Ancient Capital) of Vietnam during the Tay Son Dynasty (1788–1801) and the Nguyen Dynasty (1802–1945). Show this, city is an in the center about text - tourism, specialized health care, education and training, science and technology of the Central - Central Highlands and the whole country.</value>
+    <value>Hue is the provincial capital city of Hue City, Vietnam. Hue used to be the capital (Hue Ancient Capital) of Vietnam during the Tay Son Dynasty (1788–1801) and the Nguyen Dynasty (1802–1945). Show this, city is an in the center about text - tourism, specialized health care, education and training, science and technology of the Central - Central Highlands and the whole country.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Area: </value>
@@ -202,7 +202,7 @@
     <value>Overview</value>
   </data>
   <data name="lblHueCity" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Phu Xuan District</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>District</value>
@@ -248,7 +248,7 @@
     <value>MRE by gender</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Thua Thien Hue Province</value>
+    <value>Hue City</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m² )</value>

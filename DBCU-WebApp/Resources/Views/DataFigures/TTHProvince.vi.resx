@@ -124,13 +124,13 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Huế</value>
+    <value>Quận Phú Xuân</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Huyện Nam Đông</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
     <value>Thị xã Phong Điền</value>
@@ -160,7 +160,7 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Điểm cực Bắc: thôn Giáp Tây, xã Điền Hương, huyện Phong Điền.</value>
+    <value>Điểm cực Bắc: thôn Giáp Tây, xã Điền Hương, Thị xã Phong Điền.</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
     <value>Điểm cực Nam: xã Thượng Nhật, huyện Nam Đông.</value>

@@ -124,13 +124,13 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>Huế</value>
+    <value>Quận Phú Xuân</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Huyện Nam Đông</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
     <value>Thị xã Phong Điền</value>
@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Quảng Điền là huyện đồng bằng ven biển và đầm phá nằm ở phía bắc tỉnh Thừa Thiên Huế có vị trí địa lý:</value>
+    <value>Quảng Điền là huyện đồng bằng ven biển và đầm phá nằm ở phía bắc Thành phố Huế có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -169,7 +169,7 @@
     <value>Phía đông giáp Thị xã Hương Trà</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía tây giáp huyện Phong Điền</value>
+    <value>Phía tây giáp Thị xã Phong Điền</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value>Sông Bồ là ranh giới tự nhiên phía nam giữa huyện Quảng Điền với thị xã Hương Trà. Ngoài ra, huyện còn có phần lớn diện tích của phá Tam Giang nằm trên địa bàn. Hầu hết các xã, thị trấn của huyện đều nằm ven phá Tam Giang, trong đó hai xã Quảng Công và Quảng Ngạn nằm ven biển ở phía bắc của phá.</value>

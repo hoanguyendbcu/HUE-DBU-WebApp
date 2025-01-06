@@ -124,16 +124,16 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Quận Phú Xuân</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Huyện Nam Đông</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Huyện Phú Lộc</value>
@@ -208,7 +208,7 @@
     <value>Các đơn vị hành chính khác</value>
   </data>
   <data name="lblPhongDien" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>THỐNG KÊ</value>
@@ -259,6 +259,6 @@
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
   </data>
   <data name="TTHProvince" xml:space="preserve">
-    <value>Tỉnh Thừa Thiên Huế</value>
+    <value>Thành phố Huế</value>
   </data>
 </root>

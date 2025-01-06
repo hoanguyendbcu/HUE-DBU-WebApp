@@ -124,16 +124,16 @@
     <value>Trang chủ</value>
   </data>
   <data name="lblButtonLeft1" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Quận Phú Xuân</value>
   </data>
   <data name="lblButtonLeft2" xml:space="preserve">
     <value>Huyện A Lưới</value>
   </data>
   <data name="lblButtonLeft3" xml:space="preserve">
-    <value>Huyện Nam Đông</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="lblButtonLeft4" xml:space="preserve">
-    <value>Huyện Phong Điền</value>
+    <value>Thị xã Phong Điền</value>
   </data>
   <data name="lblButtonLeft5" xml:space="preserve">
     <value>Huyện Phú Lộc</value>
@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thành phố Huế nằm ở trung tâm tỉnh Thừa Thiên Huế, địa bàn nằm trải dài theo dòng sông Hương và có vị trí địa lý:</value>
+    <value>Quận Phú Xuân nằm ở trung tâm Thành phố Huế, địa bàn nằm trải dài theo dòng sông Hương và có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -172,7 +172,7 @@
     <value>Phía tây giáp Thị xã Hương Trà</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Huế là thành phố tỉnh lỵ của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô (Cố đô Huế) của Việt Nam dưới triều Tây Sơn (1788–1801) và triều Nguyễn (1802–1945). Hiện nay, thành phố là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</value>
+    <value>Quận Phú Xuân đơn vị hành chính của tỉnh Thành phố Huế, Việt Nam. Huế từng là kinh đô (Cố đô Huế) của Việt Nam dưới triều Tây Sơn (1788–1801) và triều Nguyễn (1802–1945). Hiện nay, Quận là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -202,7 +202,7 @@
     <value>Tổng quan</value>
   </data>
   <data name="lblHueCity" xml:space="preserve">
-    <value>TP Huế</value>
+    <value>Quận Phú Xuân</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
