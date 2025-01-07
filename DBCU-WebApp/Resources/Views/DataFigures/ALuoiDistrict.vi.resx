@@ -207,9 +207,6 @@
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
   </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
-  </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>THỐNG KÊ</value>
   </data>
@@ -249,6 +246,9 @@
   <data name="lblStatitictis9" xml:space="preserve">
     <value>Tổng hợp giáo dục phòng tránh bom mìn theo giới tính</value>
   </data>
+  <data name="lblTTHProvince" xml:space="preserve">
+    <value>Thành phố Huế</value>
+  </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Đơn vị (m² )</value>
   </data>
@@ -257,5 +257,8 @@
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblQuangBinhProvince" xml:space="preserve">
+    <value>Tỉnh Quảng Bình</value>
   </data>
 </root>

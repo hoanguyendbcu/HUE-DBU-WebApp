@@ -193,16 +193,13 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>1 Thị trấn: Phong Điền.</value>
+    <value>6 Phường: Phong Thu, Phong Phú, Phong Hải, Phong Hòa, Phong Hiền, Phong An.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>15 Xã: Điền Hải, Điền Hòa, Điền Hương, Điền Lộc, Điền Môn, Phong An, Phong Bình, Phong Chương, Phong Hải, Phong Hiền, Phong Hòa, Phong Mỹ, Phong Sơn, Phong Thu, Phong Xuân.</value>
+    <value>6 Xã: Phong Thạnh, Phong Bình, Phong Chương, Phong Mỹ, Phong Sơn, Phong Xuân.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
-  </data>
-  <data name="lblImgCaption" xml:space="preserve">
-    <value>Thị trấn Quy Đạt</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
@@ -260,5 +257,8 @@
   </data>
   <data name="TTHProvince" xml:space="preserve">
     <value>Thành phố Huế</value>
+  </data>
+  <data name="lblImgCaption" xml:space="preserve">
+    <value>Thị trấn Quy Đạt</value>
   </data>
 </root>

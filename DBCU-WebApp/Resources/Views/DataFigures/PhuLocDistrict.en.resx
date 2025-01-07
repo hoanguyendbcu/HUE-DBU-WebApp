@@ -193,10 +193,10 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>2 Townships: Phu Loc, Lang Co.</value>
+    <value>4 Townships: Phu Loc, Lang Co, Loc Son, Khe Tre.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>15 Communes: Giang Hai, Loc An, Loc Binh, Loc Bon, Loc Dien, Loc Hoa, Loc Son, Loc Thuy, Loc Tien, Loc Tri, Loc Vinh, Vinh Hien, Vinh Hung, Vinh My, Xuan Loc.</value>
+    <value>23 Communes: Giang Hai, Loc An, Loc Binh, Loc Bon, Loc Dien, Loc Hoa, Loc Thuy, Loc Tien, Loc Tri, Loc Vinh, Vinh Hien, Vinh Hung, Vinh My, Xuan Loc, Huong Huu, Huong Phu, Huong Son, Huong Loc, Huong Xuan, Thuong Long, Thuong Lo, Thuong Nhat, Thuong Quang.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>

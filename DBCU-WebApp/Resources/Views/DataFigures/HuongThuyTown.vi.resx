@@ -142,7 +142,7 @@
     <value>Huyện Phú Vang</value>
   </data>
   <data name="lblButtonLeft7" xml:space="preserve">
-    <value>Thị xã Quảng Điền</value>
+    <value>Huyện Quảng Điền</value>
   </data>
   <data name="lblButtonLeft8" xml:space="preserve">
     <value>Thị xã Hương Trà</value>
@@ -169,7 +169,7 @@
     <value>Phía đông giáp huyện Phú Lộc</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía tây giáp thành phố Huế, thị xã Hương Trà và huyện A Lưới</value>
+    <value>Phía tây giáp quận Thuận Hóa, thị xã Hương Trà và huyện A Lưới</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value>Hương Thủy nằm tiếp cận phía nam Thành phố Huế, kéo dài về phía đông nam đến Phú Lộc và tây nam đến Nam Đông, đồng thời, trải rộng ra hai phía đông tây đến tận địa giới Phú Vang, Hương Trà, A Lưới; hầu hết phần lãnh thổ phía tây đường quốc lộ 1A là đồi núi. Đồi núi là quang cảnh nổi bật trong địa hình và thiên nhiên Hương Thủy, chiếm đến 76,33% diện tích. Đồng bằng hẹp, chạy thành một dải phía đông và đông bắc dọc Lợi Nông và Đại Giang.</value>
@@ -206,9 +206,6 @@
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
-  </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>THỐNG KÊ</value>
@@ -249,6 +246,9 @@
   <data name="lblStatitictis9" xml:space="preserve">
     <value>Tổng hợp giáo dục phòng tránh bom mìn theo giới tính</value>
   </data>
+  <data name="lblTTHProvince" xml:space="preserve">
+    <value>Thành phố Huế</value>
+  </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Đơn vị (m² )</value>
   </data>
@@ -257,5 +257,8 @@
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
+  </data>
+  <data name="lblQuangBinhProvince" xml:space="preserve">
+    <value>Tỉnh Quảng Bình</value>
   </data>
 </root>

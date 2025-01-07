@@ -163,13 +163,13 @@
     <value>Phía bắc giáp Phong Điền và Biển Đông</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
-    <value>Phía nam giáp huyện Tây Giang, tỉnh Quảng Nam</value>
+    <value>Phía nam giáp thị xã Hương Trà</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía đông giáp Thị xã Hương Trà</value>
+    <value>Phía đông giáp biển Đông</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía tây giáp Thị xã Phong Điền</value>
+    <value>Phía tây giáp tỉnh Quảng Trị</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
     <value>Sông Bồ là ranh giới tự nhiên phía nam giữa huyện Quảng Điền với thị xã Hương Trà. Ngoài ra, huyện còn có phần lớn diện tích của phá Tam Giang nằm trên địa bàn. Hầu hết các xã, thị trấn của huyện đều nằm ven phá Tam Giang, trong đó hai xã Quảng Công và Quảng Ngạn nằm ven biển ở phía bắc của phá.</value>
@@ -203,9 +203,6 @@
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
-  </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
   </data>
   <data name="lblQuangDienDistrict" xml:space="preserve">
     <value>Huyện Quảng Điền</value>
@@ -257,5 +254,8 @@
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Thành phố Huế</value>
+  </data>
+  <data name="lblQuangBinhProvince" xml:space="preserve">
+    <value>Tỉnh Quảng Bình</value>
   </data>
 </root>

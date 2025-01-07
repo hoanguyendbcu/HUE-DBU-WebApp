@@ -193,10 +193,10 @@
     <value>Administrative Division:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>1 Township: Phong Dien.</value>
+    <value>6 Wards: Phong Thu, Phong Phu, Phong Hai, Phong Hoa, Phong Hien, Phong An.</value>
   </data>
   <data name="lblContentLeft7" xml:space="preserve">
-    <value>15 Communes: Dien Hai, Dien Hoa, Dien Huong, Dien Loc, Dien Mon, Phong An, Phong Binh, Phong Chuong, Phong Hai, Phong Hien, Phong Hoa, Phong My, Phong Son, Phong Thu, Phong Xuan.</value>
+    <value>6 Communes: Phong Thanh, Phong Binh, Phong Chuong, Phong My, Phong Son, Phong Xuan.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
@@ -205,7 +205,7 @@
     <value>District</value>
   </data>
   <data name="lblPhongDien" xml:space="preserve">
-    <value>Phong Dien District</value>
+    <value>Phong Dien Town</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
     <value>Statistics</value>
