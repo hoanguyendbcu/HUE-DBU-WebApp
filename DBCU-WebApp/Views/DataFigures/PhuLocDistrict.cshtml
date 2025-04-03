@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["ThuaThienHueProvince"].Value + " - " + ViewLocalizer["lblPhuLoc"].Value;
+    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["lblHue"].Value + " - " + ViewLocalizer["lblPhuLoc"].Value;
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
@@ -191,11 +191,11 @@
                                 <em>
                                     @if (lang == "vi")
                                     {
-                                        <a title="Thông tin thêm" href="https://phuloc.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="Thông tin thêm" href="https://phuloc.hue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
                                     }
                                     else
                                     {
-                                        <a title="More information" href="https://phuloc.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://phuloc.hue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -227,7 +227,7 @@
 
                                 @if (lang == "vi")
                                 {
-                                    <h4>Hiện tại trên địa bàn chưa có hoạt động khảo sát và rà phá!</h4>
+                                    <h4>Hiện tại trên địa bàn chưa có hoạt động khảo sát và rà phá của các tổ chức Quốc Tế!</h4>
                                 }
                                 else if (lang == "en")
                                 {
@@ -244,9 +244,8 @@
                         <br />
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft3"]</a></li>
-
+                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuXuanDistrict">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="ThuanHoaDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                                 <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
                                 @*<li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>*@

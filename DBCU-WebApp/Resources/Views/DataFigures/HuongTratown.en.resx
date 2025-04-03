@@ -253,6 +253,9 @@
   <data name="lblStatitictis9" xml:space="preserve">
     <value>MRE by gender</value>
   </data>
+  <data name="lblTTHprovince" xml:space="preserve">
+    <value>Data And Figures - Hue city</value>
+  </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Unit (m² )</value>
   </data>

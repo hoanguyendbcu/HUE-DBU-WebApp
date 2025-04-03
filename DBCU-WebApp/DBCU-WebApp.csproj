@@ -16,6 +16,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\bg\phuxuan.jpg" />
+    <Content Remove="wwwroot\images\bg\thuanhoa.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\bg\phuxuan.jpg" />
+    <None Include="wwwroot\images\bg\thuanhoa.jpg" />
     <None Include="wwwroot\lib\select2\js\i18n\af.js" />
     <None Include="wwwroot\lib\select2\js\i18n\ar.js" />
     <None Include="wwwroot\lib\select2\js\i18n\az.js" />

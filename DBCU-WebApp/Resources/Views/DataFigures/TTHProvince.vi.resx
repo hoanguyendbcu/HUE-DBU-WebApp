@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu &amp; số liệu</value>
+    <value>Dữ liệu và số liệu</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Thành phố Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 5.025,29 km², dân số năm 2021 có 1.153.795 người.</value>
+    <value>Thành phố Huế nằm ở Bắc Trung Bộ, Việt Nam, với diện tích tự nhiên 4.947,11 km², dân số có 1.236.393 người.</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Vị trí địa lý:</value>
@@ -211,7 +211,7 @@
     <value>Các đơn vị hành chính khác</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>THỐNG KÊ</value>
+    <value>Thống kê</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Là diện tích đất đai được giải phóng an toàn</value>
@@ -250,7 +250,7 @@
     <value>Tổng hợp số lượt phỏng vấn khảo sát phi kỹ thuật theo giới tính</value>
   </data>
   <data name="lblTTHProvince" xml:space="preserve">
-    <value>Thành phố Huế</value>
+    <value>Dữ liệu và số liệu - Thành phố Huế</value>
   </data>
   <data name="lblUnit" xml:space="preserve">
     <value>Đơn vị (m² )</value>

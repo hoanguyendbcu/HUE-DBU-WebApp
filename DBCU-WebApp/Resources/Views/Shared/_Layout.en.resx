@@ -189,9 +189,6 @@
   <data name="lblSupport" xml:space="preserve">
     <value>Support</value>
   </data>
-  <data name="LeThuy" xml:space="preserve">
-    <value>Le Thuy District</value>
-  </data>
   <data name="Library" xml:space="preserve">
     <value>Gallery</value>
   </data>
@@ -218,9 +215,6 @@
   </data>
   <data name="MineAction7" xml:space="preserve">
     <value>Victim Assisstance</value>
-  </data>
-  <data name="MinhHoa" xml:space="preserve">
-    <value>Minh Hoa District</value>
   </data>
   <data name="NamDong" xml:space="preserve">
     <value>Nam Dong District</value>

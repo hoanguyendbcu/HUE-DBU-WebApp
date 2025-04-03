@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu &amp; số liệu</value>
+    <value>Dữ liệu và số liệu</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
@@ -201,6 +201,9 @@
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
   </data>
+  <data name="lblHue" xml:space="preserve">
+    <value>Dữ liệu và số liệu - Thành phố Huế</value>
+  </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Thị trấn Đồng Lê</value>
   </data>
@@ -214,7 +217,7 @@
     <value>Tỉnh Quảng Bình</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>THỐNG KÊ</value>
+    <value>Thống kê</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Là diện tích đất đai được giải phóng an toàn</value>

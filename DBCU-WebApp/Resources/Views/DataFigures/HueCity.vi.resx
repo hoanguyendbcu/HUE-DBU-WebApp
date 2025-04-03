@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu &amp; số liệu</value>
+    <value>Dữ liệu và số liệu</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Trang chủ</value>
@@ -151,7 +151,7 @@
     <value>Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>Quận Phú Xuân nằm ở trung tâm Thành phố Huế, địa bàn nằm trải dài theo dòng sông Hương và có vị trí địa lý:</value>
+    <value>Quận Thuận Hóa nằm ở trung tâm Thành phố Huế, địa bàn nằm ở bờ Bắc dòng sông Hương và có vị trí địa lý:</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Phạm vi hành chính:</value>
@@ -160,19 +160,19 @@
     <value>Toạ độ địa lý ở phần đất liền là:</value>
   </data>
   <data name="lblContent4" xml:space="preserve">
-    <value>Phía bắc giáp huyện Quảng Điền và Biển Đông</value>
+    <value>Phía bắc giáp huyện Quảng Điền</value>
   </data>
   <data name="lblContent41" xml:space="preserve">
     <value>Phía nam giáp Thị xã Hương Thủy</value>
   </data>
   <data name="lblContent42" xml:space="preserve">
-    <value>Phía đông giáp Thị xã Hương Thủy  và huyện Phú Vang</value>
+    <value>Phía đông giáp Biển Đông và Huyện Phú Vang</value>
   </data>
   <data name="lblContent43" xml:space="preserve">
-    <value>Phía tây giáp Thị xã Hương Trà</value>
+    <value>Phía tây giáp Quận Phú Xuân</value>
   </data>
   <data name="lblContent5" xml:space="preserve">
-    <value>Quận Phú Xuân đơn vị hành chính của tỉnh Thành phố Huế, Việt Nam. Huế từng là kinh đô (Cố đô Huế) của Việt Nam dưới triều Tây Sơn (1788–1801) và triều Nguyễn (1802–1945). Hiện nay, Quận là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</value>
+    <value>Thành phố Huế đơn vị hành chính của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô (Cố đô Huế) của Việt Nam dưới triều Tây Sơn (1788–1801) và triều Nguyễn (1802–1945). Hiện nay, Quận là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</value>
   </data>
   <data name="lblContentLeft1" xml:space="preserve">
     <value>Diện tích: </value>
@@ -193,22 +193,19 @@
     <value>Phân chia hành chính:</value>
   </data>
   <data name="lblContentLeft6" xml:space="preserve">
-    <value>29 Phường:  An Cựu, An Đông, An Hòa, An Tây, Đông Ba, Gia Hội, Hương An, Hương Hồ, Hương Long, Hương Sơ, Hương Vinh, Kim Long, Phú Hậu, Phú Hội, Phú Nhuận, Phú Thượng, Phước Vĩnh, Phường Đúc, Tây Lộc, Thuận An, Thuận Hòa, Thuận Lộc, Thủy Biều, Thủy Vân, Thủy Xuân, Trường An, Vĩnh Ninh, Vỹ Dạ, Xuân Phú.</value>
-  </data>
-  <data name="lblContentLeft7" xml:space="preserve">
-    <value>7 Xã: Hải Dương, Hương Phong, Hương Thọ, Phú Dương, Phú Mậu, Phú Thanh, Thủy Bằng.</value>
+    <value>19 Phường:  An Cựu, An Đông, An Tây, Dương Nỗ, Hương Phong, Phú Hội, Phú Nhuận, Phú Thượng, Phước Vĩnh, Phường Đúc, Thuận An, Thủy Bằng, Thủy Biều, Thủy Vân, Thủy Xuân, Trường An, Vĩnh Ninh, Vỹ Dạ, Xuân Phú.</value>
   </data>
   <data name="lblGenaeral" xml:space="preserve">
     <value>Tổng quan</value>
   </data>
   <data name="lblHueCity" xml:space="preserve">
-    <value>Quận Phú Xuân</value>
+    <value>Quận Thuận Hóa</value>
   </data>
   <data name="lblOtherAdministrative" xml:space="preserve">
     <value>Các đơn vị hành chính khác</value>
   </data>
   <data name="lblStatitictis" xml:space="preserve">
-    <value>THỐNG KÊ</value>
+    <value>Thống kê</value>
   </data>
   <data name="lblStatitictis1" xml:space="preserve">
     <value>Là diện tích đất đai được giải phóng an toàn</value>
@@ -257,8 +254,5 @@
   </data>
   <data name="QuangBinhProvince" xml:space="preserve">
     <value>Dữ liệu và số liệu - Tỉnh Quảng Bình</value>
-  </data>
-  <data name="lblQuangBinhProvince" xml:space="preserve">
-    <value>Tỉnh Quảng Bình</value>
   </data>
 </root>

@@ -201,6 +201,9 @@
   <data name="lblGenaeral" xml:space="preserve">
     <value>Overview</value>
   </data>
+  <data name="lblHue" xml:space="preserve">
+    <value>Data And Figures - Hue city</value>
+  </data>
   <data name="lblImgCaption" xml:space="preserve">
     <value>Dong Le Township</value>
   </data>

@@ -121,7 +121,7 @@
     <value>Introduction</value>
   </data>
   <data name="AccidentsVictims" xml:space="preserve">
-    <value>Accidents &amp; Victims</value>
+    <value>Accidents and Victims</value>
   </data>
   <data name="CHAComment_Land_Use" xml:space="preserve">
     <value>Comment</value>
@@ -358,7 +358,7 @@
     <value>CLUSTER MUNITION CHA</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>THE TOTAL AREA OF CLEARED LAND</value>
+    <value>THE CONTAMINATED AREAS ARE BEING CLEARED WITHIN THE CITY</value>
   </data>
   <data name="String9" xml:space="preserve">
     <value>NUMBER OF EOD TASKS</value>

@@ -121,7 +121,7 @@
     <value>Giới thiệu</value>
   </data>
   <data name="AccidentsVictims" xml:space="preserve">
-    <value>Tai nạn &amp; Nạn nhân</value>
+    <value>Tai nạn và Nạn nhân</value>
   </data>
   <data name="CHAComment_Land_Use" xml:space="preserve">
     <value>Ghi chú</value>
@@ -229,16 +229,16 @@
     <value>Hoạt động khảo sát kỹ thuật</value>
   </data>
   <data name="lblActivities" xml:space="preserve">
-    <value>HOẠT ĐỘNG</value>
+    <value>Hoạt động</value>
   </data>
   <data name="lblClearanceQB" xml:space="preserve">
     <value>Bản đồ rà phá bom mìn tại TP Huế</value>
   </data>
   <data name="lblEducation" xml:space="preserve">
-    <value>ĐÀO TẠO</value>
+    <value>Đào tạo</value>
   </data>
   <data name="lblEvents" xml:space="preserve">
-    <value>SỰ KIỆN</value>
+    <value>Sự kiện</value>
   </data>
   <data name="lblHeroTop1" xml:space="preserve">
     <value>Khi phát hiện bom mìn, hãy gọi 0988796120</value>
@@ -247,13 +247,13 @@
     <value>Đơn vị Cơ sở dữ liệu khắc phục hậu quả bom mìn TP Huế</value>
   </data>
   <data name="lblHeroTop3" xml:space="preserve">
-    <value>VẤN ĐỀ ĐƯỢC GIẢI QUYẾT</value>
+    <value>Vấn đề được giải quyết</value>
   </data>
   <data name="lblHeroTop4" xml:space="preserve">
-    <value>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự tỉnh và các tổ chức, đơn vị liên quan</value>
+    <value>Nâng cao năng lực hợp tác thực hiện các hoạt động bom mìn với sự phối hợp của Sở ngoại vụ, Bộ chỉ huy Quân sự thành phố và các tổ chức, đơn vị liên quan</value>
   </data>
   <data name="lblHeroTop5" xml:space="preserve">
-    <value>MỤC TIÊU</value>
+    <value>Mục tiêu</value>
   </data>
   <data name="lblHeroTop6" xml:space="preserve">
     <value>Giảm thiểu đến mức thấp nhất tai nạn bom mìn và ảnh hưởng của bom mìn, vật nổ đối với cộng đồng, hướng tới tỉnh “an toàn”.</value>
@@ -268,10 +268,10 @@
     <value>Tin tức</value>
   </data>
   <data name="lblNewsEvent" xml:space="preserve">
-    <value>Tin tức &amp; Sự kiện</value>
+    <value>Tin tức và sự kiện</value>
   </data>
   <data name="lblPictures" xml:space="preserve">
-    <value>HÌNH ẢNH HOẠT ĐỘNG KHẮC PHỤC HẬU QUẢ BOM MÌN</value>
+    <value>Hình ảnh khắc phục hậu quả bom mìn</value>
   </data>
   <data name="lblPostWar" xml:space="preserve">
     <value>NỖ LỰC KHẮC PHỤC HẬU QUẢ BOM MÌN THÀNH PHỐ HUẾ</value>
@@ -358,7 +358,7 @@
     <value>KHU VỰC KHẲNG ĐỊNH NGUY HIỂM BOM CHÙM</value>
   </data>
   <data name="String8" xml:space="preserve">
-    <value>TỔNG DIỆN TÍCH ĐÃ RÀ PHÁ TOÀN TP</value>
+    <value>DIỆN TÍCH Ô NHIỄM ĐƯỢC RÀ TOÀN TP</value>
   </data>
   <data name="String9" xml:space="preserve">
     <value>SỐ NHIỆM VỤ XỬ LÝ LƯU ĐỘNG</value>

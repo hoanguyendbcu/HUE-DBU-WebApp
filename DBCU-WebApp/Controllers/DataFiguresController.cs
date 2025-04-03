@@ -482,7 +482,7 @@ namespace DBCU_WebApp.Controllers
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Phong Dien District";
+            string distict = "Phong Dien Town";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -702,12 +702,12 @@ namespace DBCU_WebApp.Controllers
             ViewData["DataClearnceChart"] = JsonSerializer.Serialize(jsonDataClearnceChart);
             return View();
         }
-        public async Task<IActionResult> QuangNinhDistrict()
+        public async Task<IActionResult> PhuXuanDistrict()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Quang Ninh";
+            string distict = "Phu Xuan District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);
@@ -743,12 +743,12 @@ namespace DBCU_WebApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> LeThuyDistrict()
+        public async Task<IActionResult> ThuanHoaDistrict()
         {
             ViewBag.NavClassByProvince = "active";
 
             string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
-            string distict = "Le Thuy";
+            string distict = "Thuan Hoa District";
 
             ViewData["areaCLC"] = await dataFiguresRepository.GetAreaCLC(distict);
             ViewData["NoERW"] = await dataFiguresRepository.GetNoERW(distict);

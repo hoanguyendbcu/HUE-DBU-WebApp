@@ -127,16 +127,16 @@
     <value>Diện tích</value>
   </data>
   <data name="Commune" xml:space="preserve">
-    <value>Xã</value>
+    <value>Xã/Phường/TTrấn</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Liên hệ</value>
   </data>
   <data name="DataAndFigures" xml:space="preserve">
-    <value>Dữ liệu và Số liệu</value>
+    <value>Dữ liệu và số liệu</value>
   </data>
   <data name="District" xml:space="preserve">
-    <value>Huyện</value>
+    <value>Quận/Huyện/Txã</value>
   </data>
   <data name="EndDate" xml:space="preserve">
     <value>Ngày kết thúc</value>
@@ -184,6 +184,6 @@
     <value>Đội</value>
   </data>
   <data name="Village" xml:space="preserve">
-    <value>Thôn</value>
+    <value>Thôn/Bản/TDP</value>
   </data>
 </root>

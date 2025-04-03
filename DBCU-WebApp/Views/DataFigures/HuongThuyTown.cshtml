@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["TTHProvince"].Value + " - " + ViewLocalizer["lblHuongThuyTown"].Value;
+    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["lblTTHProvince"].Value + " - " + ViewLocalizer["lblHuongThuyTown"].Value;
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
@@ -190,11 +190,11 @@
                                 <em>
                                     @if (lang == "vi")
                                     {
-                                        <a title="Thông tin thêm" href="https://huongthuy.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="Thông tin thêm" href="https://huongthuy.hue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
                                     }
                                     else
                                     {
-                                        <a title="More information" href="https://huongthuy.thuathienhue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
+                                        <a title="More information" href="https://huongthuy.hue.gov.vn/" target="_blank" rel="noopener">@ViewLocalizer["moreinfo"]</a>
 
                                     }
                                 </em>
@@ -241,9 +241,9 @@
                         <br />
                         <h5 class="sidebar-title">@ViewLocalizer["lblOtherAdministrative"]</h5>
                         <ul>
-                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft1"]</a></li>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="HueCity">@ViewLocalizer["lblButtonLeft3"]</a></li>
-                                <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuXuanDistrict">@ViewLocalizer["lblButtonLeft1"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="ThuanHoaDistrict">@ViewLocalizer["lblButtonLeft3"]</a></li>
+                            <li><a a asp-area="" asp-controller="DataFigures" asp-action="ALuoiDistrict">@ViewLocalizer["lblButtonLeft2"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhongDienDistrict">@ViewLocalizer["lblButtonLeft4"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuLocDistrict">@ViewLocalizer["lblButtonLeft5"]</a></li>
                             <li><a a asp-area="" asp-controller="DataFigures" asp-action="PhuVangDistrict">@ViewLocalizer["lblButtonLeft6"]</a></li>

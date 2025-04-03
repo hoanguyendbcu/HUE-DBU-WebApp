@@ -151,7 +151,7 @@
     <value>Huong Thuy Town</value>
   </data>
   <data name="lblContent1" xml:space="preserve">
-    <value>The district has diverse topography, including mountains, plains, coastal areas and lagoons. Phong Dien is the hometown of famous celebrities Nguyen Tri Phuong, Nguyen Dinh Chieu, …</value>
+    <value>The town has diverse topography, including mountains, plains, coastal areas and lagoons. Phong Dien is the hometown of famous celebrities Nguyen Tri Phuong, Nguyen Dinh Chieu, …</value>
   </data>
   <data name="lblContent2" xml:space="preserve">
     <value>Administrative border</value>
@@ -257,6 +257,6 @@
     <value>Data And Figures - Quang Binh Province - Dong Hoi City</value>
   </data>
   <data name="TTHProvince" xml:space="preserve">
-    <value>Hue City</value>
+    <value>Data And Figures - Hue city</value>
   </data>
 </root>
