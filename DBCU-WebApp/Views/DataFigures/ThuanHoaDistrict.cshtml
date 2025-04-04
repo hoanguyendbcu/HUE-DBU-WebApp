@@ -2,7 +2,7 @@
 @inject IViewLocalizer ViewLocalizer
 @{
     var CurrentNumberFormat = new System.Globalization.CultureInfo("en-US");
-    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["lblTTHProvince"].Value + " - " + ViewLocalizer["lblHueCity"].Value;
+    ViewData["Title"] = "Hue DBU - " + ViewLocalizer["lblTTHProvince"].Value + " - " + ViewLocalizer["lblThuanHoa"].Value;
     string lang = System.Globalization.CultureInfo.CurrentCulture.ToString();
 }
 <style>
@@ -107,7 +107,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="HeroData" class="HeroData" style="background-image: url('../images/bg/thuanhoa.jpg'); background-size: 100%  100%;">
     <div class="HeroData-container"  data-aos="fade-up">
-       <h1>  @ViewLocalizer["lblHueCity"] </h1>
+        <h1>  @ViewLocalizer["lblThuanHoa"] </h1>
         @*<h6>
             @ViewLocalizer["lblContentLeft1"]  <b>265,99</b>km2<br />
             @ViewLocalizer["lblContentLeft2"]  <b>652.572</b>@ViewLocalizer["lblContentLeft21"] (2020)<br />
